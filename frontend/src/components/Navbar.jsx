@@ -35,6 +35,9 @@ const Navbar = () => {
               <PlusSquareIcon fontSize={20} />
             </Button>
           </Link>
+          <Link to={"/session"}>
+            <Button>Start Learning</Button>
+          </Link>
           <Button onClick={toggleColorMode}>
             {colorMode === "light" ? <IoMoon /> : <LuSun size="20" />}
           </Button>

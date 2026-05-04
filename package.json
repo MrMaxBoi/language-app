@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development nodemon backend/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon backend/server.js",
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
     "start": "NODE_ENV=production node backend/server.js",
     "ci-check": "node backend/server.js & sleep 5 && kill $!"
@@ -19,6 +19,7 @@
     "mongoose": "^8.18.0"
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "nodeman": "^1.1.2",
     "nodemon": "^3.1.10"
   }
