@@ -3,6 +3,7 @@ import Session from "../models/session.model.js";
 import questions from "../data/questions.js";
 import { getSessionReport as fetchSessionReport } from "../services/session.service.js";
 import { analyzeSession } from "../services/analysis.service.js";
+import { generateLearningFeedback } from "../services/ai.service.js";
 
 export const startSession = async (req, res) => {
 	try {
@@ -51,6 +52,11 @@ export const submitAnswer = async (req, res) => {
 			correctAnswer: question.correctAnswer,
 			isCorrect,
 			topic: question.topic,
+			subtopic: question.subtopic,
+			difficulty: question.difficulty,
+			tags: question.tags,
+			learningObjective: question.learningObjective,
+			commonMistakes: question.commonMistakes,
 		};
 
 		session.answers.push(answer);
@@ -81,11 +87,42 @@ export const completeSession = async (req, res) => {
 		const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
 
 		session.score = { correct, total, percentage };
+
+		// ✅ FIX: ensure clean data
 		session.analysis = analyzeSession(session.toObject());
+
+		// ✅ BUILD INPUT FOR AI
+		const aiInput = {
+			...session.analysis,
+			score: session.score,
+			answers: session.answers,
+		};
+
+		console.log("=== ANALYSIS ===", session.analysis);
+
+		// ✅ IMPORTANT: await AI (even if currently sync)
+		const aiFeedback = await generateLearningFeedback(aiInput);
+
+		console.log("=== AI OUTPUT ===", aiFeedback);
+
+		// ✅ SAVE AI RESULT
+		session.analysis.aiFeedback = aiFeedback;
+
 		session.completedAt = new Date();
+		session.status = "completed";
+
 		await session.save();
 
-		res.status(200).json({ success: true, data: { score: session.score, analysis: session.analysis, answers: session.answers } });
+		res.status(200).json({
+			success: true,
+			data: {
+				score: session.score,
+				analysis: session.analysis,
+				answers: session.answers,
+				aiFeedback: session.analysis.aiFeedback, // ✅ include in response
+			}
+		});
+
 	} catch (error) {
 		console.log("error in completing session:", error.message);
 		res.status(500).json({ success: false, message: "Server Error" });

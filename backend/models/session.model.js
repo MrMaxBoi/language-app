@@ -28,6 +28,21 @@ const sessionSchema = new mongoose.Schema(
 					type: String,
 					required: true,
 				},
+				subtopic: {
+					type: String,
+					default: "unknown",
+				},
+				difficulty: {
+					type: String,
+					enum: ["easy", "medium", "hard"],
+					default: "easy",
+				},
+				tags: [String],
+				learningObjective: {
+					type: String,
+					default: "",
+				},
+				commonMistakes: [String],
 			},
 		],
 		score: {
@@ -55,15 +70,70 @@ const sessionSchema = new mongoose.Schema(
 						type: Number,
 						required: true,
 					},
+					_id: false,
 				},
 			],
+			strongestTopics: [
+				{
+					topic: {
+						type: String,
+						required: true,
+					},
+					accuracy: {
+						type: Number,
+						required: true,
+					},
+					_id: false,
+				},
+			],
+			weakestSubtopics: [
+				{
+					subtopic: {
+						type: String,
+						required: true,
+					},
+					accuracy: {
+						type: Number,
+						required: true,
+					},
+					_id: false,
+				},
+			],
+			difficultyBreakdown: {
+				easy: {
+					type: Number,
+					default: 0,
+				},
+				medium: {
+					type: Number,
+					default: 0,
+				},
+				hard: {
+					type: Number,
+					default: 0,
+				},
+			},
+			repeatedMistakes: [String],
+			improvementAreas: [String],
+			estimatedSkillLevel: {
+				type: String,
+				default: "beginner",
+			},
 			overallAccuracy: {
 				type: Number,
 				default: 0,
 			},
-			totalQuestions: {
+			totalCorrect: {
 				type: Number,
 				default: 0,
+			},
+			totalIncorrect: {
+				type: Number,
+				default: 0,
+			},
+			aiFeedback: {
+				type: String,
+				default: "",
 			},
 		},
 
