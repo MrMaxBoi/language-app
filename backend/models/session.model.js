@@ -6,6 +6,8 @@ const sessionSchema = new mongoose.Schema(
 			type: String,
 			default: "guest",
 		},
+		// ⚠️ DEPRECATED: Answers are now stored exclusively in Attempt collection
+		// This field is kept for backward compatibility only - do NOT use for new code
 		answers: [
 			{
 				questionId: {
@@ -136,7 +138,39 @@ const sessionSchema = new mongoose.Schema(
 				default: "",
 			},
 		},
-
+		analytics: {
+			difficultyBreakdown: {
+				easy: {
+					correct: { type: Number, default: 0 },
+					total: { type: Number, default: 0 },
+					accuracy: { type: Number, default: 0 },
+				},
+				medium: {
+					correct: { type: Number, default: 0 },
+					total: { type: Number, default: 0 },
+					accuracy: { type: Number, default: 0 },
+				},
+				hard: {
+					correct: { type: Number, default: 0 },
+					total: { type: Number, default: 0 },
+					accuracy: { type: Number, default: 0 },
+				},
+			},
+			weakTopics: [String],
+			strongTopics: [String],
+			memoryImpact: {
+				strengthened: { type: Number, default: 0 },
+				weakened: { type: Number, default: 0 },
+			},
+			recommendationEffectiveness: {
+				type: Number,
+				default: 0,
+			},
+			accuracyTrend: {
+				type: Number,
+				default: 0,
+			},
+		},
 
 		completedAt: {
 			type: Date,

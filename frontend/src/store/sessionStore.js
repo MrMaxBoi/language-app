@@ -54,6 +54,7 @@ export const useSessionStore = create((set, get) => ({
 
 	completeSession: async () => {
 		const { sessionId } = get();
+		console.log("🚀 Calling completeSession for sessionId:", sessionId);
 		const res = await fetch(`/api/sessions/${sessionId}/complete`, {
 			method: "POST",
 		});

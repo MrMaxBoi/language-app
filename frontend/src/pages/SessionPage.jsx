@@ -16,16 +16,26 @@ const SessionPage = () => {
     const question = getCurrentQuestion();
     if (!question) return;
 
-    await submitAnswer(question.id, userAnswer);
+    const result = await submitAnswer(question._id, userAnswer);
     setUserAnswer('');
 
-    if (currentIndex < questions.length - 1) {
+    if (!result.success) {
+      console.error('Failed to submit answer', result.message);
+      return;
+    }
+
+    const isLastQuestion = currentIndex >= questions.length - 1;
+    if (!isLastQuestion) {
       nextQuestion();
+      return;
+    }
+
+    console.log('🧾 Final question submitted, completing session...');
+    const completionResult = await completeSession();
+    if (completionResult.success) {
+      navigate('/report');
     } else {
-      const result = await completeSession();
-      if (result.success) {
-        navigate('/report');
-      }
+      console.error('Session completion failed', completionResult.message);
     }
   };
 
@@ -45,7 +55,7 @@ const SessionPage = () => {
 
   return (
     <VStack spacing={4}>
-      <Text>{question.question}</Text>
+      <Text>{question.questionText}</Text>
       <Input
         value={userAnswer}
         onChange={(e) => setUserAnswer(e.target.value)}

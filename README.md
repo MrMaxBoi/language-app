@@ -1,140 +1,91 @@
-# Hotelify
+# Language Learning App (In Development)
 
-A full-stack hotel management application built with the MERN stack (MongoDB, Express.js, React, Node.js).
+This project is an AI-powered adaptive language learning system currently in active development. The application is designed to explore how intelligent tutoring systems can personalize learning experiences through user performance, memory tracking, and adaptive questioning.
 
-## Features
+The project is still in an early stage and does not yet have a finalized product name.
 
-- 🏨 Product/Room management system
-- ➕ Add new products/rooms
-- 📋 View all products/rooms
-- 🎨 Modern UI with Chakra UI
-- 🌙 Dark/Light mode support
-- 📱 Responsive design
-- 🔄 Real-time state management with Zustand
+---
 
-## Tech Stack
+## 🌱 Overview
 
-**Frontend:**
-- React 19
-- Chakra UI
-- React Router DOM
-- Zustand (State Management)
-- Vite (Build Tool)
+The system focuses on creating a more intelligent and responsive way of learning languages by analyzing user interactions in real time and adapting future learning content accordingly.
 
-**Backend:**
-- Node.js
-- Express.js
-- MongoDB with Mongoose
-- dotenv for environment variables
+Instead of static quizzes, the platform evolves with the learner, adjusting difficulty, repetition, and focus areas based on individual strengths and weaknesses.
 
-## Prerequisites
+---
 
-- Node.js (v16 or higher)
-- MongoDB (local installation or MongoDB Atlas)
-- npm or yarn
+## 🧠 Kokoro Engine (Core Learning System)
 
-## Installation
+At the heart of the application is the **Kokoro Engine**, an experimental adaptive learning system that powers personalization.
 
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd mern-hotel
-   ```
+Kokoro is responsible for:
 
-2. **Install dependencies**
-   ```bash
-   # Install backend dependencies
-   npm install
+- Tracking user performance across questions and sessions  
+- Identifying weak and strong topics over time  
+- Managing memory strength for spaced repetition-style learning  
+- Generating session-level analytics and learning insights  
+- Supporting early-stage adaptive question selection logic  
 
-   # Install frontend dependencies
-   npm install --prefix frontend
-   ```
+The goal of Kokoro is to simulate a lightweight intelligent tutor that gradually understands how each learner improves and where they struggle.
 
-3. **Environment Setup**
-   
-   Create a `.env` file in the root directory:
-   ```env
-   MONGO_URI=mongodb://localhost:27017/mern-hotel
-   PORT=5050
-   NODE_ENV=development
-   ```
+---
 
-4. **Start the application**
-   
-   **Development mode (both frontend and backend):**
-   ```bash
-   # Start backend
-   npm run dev
+## 📊 Current Capabilities
 
-   # In another terminal, start frontend
-   cd frontend
-   npm run dev
-   ```
+The system currently supports:
 
-   **Production mode:**
-   ```bash
-   npm run build
-   npm start
-   ```
+- Session-based learning flow  
+- Question answering and attempt tracking  
+- Basic skill aggregation by topic and subtopic  
+- Learning memory tracking system  
+- Session analytics (accuracy trends, topic breakdowns, performance summaries)  
+- Early adaptive logic foundation for question selection  
 
-## API Endpoints
+---
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/products` | Get all products |
-| POST | `/api/products` | Create a new product |
-| PUT | `/api/products/:id` | Update a product |
-| DELETE | `/api/products/:id` | Delete a product |
+## 🚧 In Progress / Future Development
 
-## Project Structure
+The project is actively evolving. Planned improvements include:
 
-```
-mern-hotel/
-├── backend/
-│   ├── config/
-│   │   └── db.js
-│   ├── controllers/
-│   │   └── product.controller.js
-│   ├── models/
-│   │   └── product.model.js
-│   ├── routes/
-│   │   └── product.route.js
-│   └── server.js
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── store/
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   └── package.json
-├── .env
-├── .gitignore
-└── package.json
-```
+### 🧩 Advanced Adaptation
+- Stronger personalization based on weak/strong topic modeling  
+- Dynamic difficulty adjustment per user  
+- Smarter question selection strategies  
 
-## Available Scripts
+### 🧠 Enhanced Learning Intelligence
+- Improved memory decay and spaced repetition system  
+- More accurate skill mastery modeling  
+- Better learning progression tracking over time  
 
-**Root directory:**
-- `npm run dev` - Start backend in development mode
-- `npm run build` - Build the application for production
-- `npm start` - Start the application in production mode
-- `npm run ci-check` - CI health check
+### 📈 Recommendation Engine
+- Personalized study recommendations  
+- Learning path suggestions  
+- Performance-based feedback generation  
 
-**Frontend directory:**
-- `npm run dev` - Start frontend development server
-- `npm run build` - Build frontend for production
-- `npm run lint` - Run ESLint
-- `npm run preview` - Preview production build
+### 🤖 AI Enhancements
+- More structured AI feedback on learning behavior  
+- Deeper explanation of mistakes  
+- Learning pattern detection over time  
 
-## Contributing
+---
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## 🎯 Goal of the Project
 
-## License
+The long-term goal is to build a system that behaves like a personal AI tutor:
 
-This project is licensed under the ISC License.
+- Understands what the learner knows  
+- Identifies what they struggle with  
+- Adapts in real time  
+- Guides them toward mastery efficiently  
+
+---
+
+## ⚠️ Status
+
+This project is currently under active development and is not production-ready. Features and architecture may change significantly as the system evolves.
+
+---
+
+## 📌 Note
+
+The current implementation is a foundational prototype designed to validate adaptive learning concepts before scaling into a full intelligent tutoring platform.
