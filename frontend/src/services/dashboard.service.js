@@ -52,3 +52,17 @@ export const fetchRecommendationInsights = async (userId = "guest") => {
 		throw error;
 	}
 };
+
+export const fetchEngineIntelligence = async (userId = "guest") => {
+	try {
+		const response = await fetch(
+			`${API_BASE}/debug/engine-intelligence/${userId}`
+		);
+		if (!response.ok) throw new Error("Failed to fetch engine intelligence");
+		const json = await response.json();
+		return json.data;
+	} catch (error) {
+		console.error("Error fetching engine intelligence:", error);
+		throw error;
+	}
+};

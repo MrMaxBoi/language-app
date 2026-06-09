@@ -1,0 +1,116 @@
+{
+  "failures": [
+    {
+      "type": "overlap_excessive",
+      "severity": "HIGH",
+      "detail": "USER_A_HIGH_PERFORMER_vs_USER_B_AVERAGE overlap is 100% (> 70% threshold)",
+      "pair": "USER_A_HIGH_PERFORMER_vs_USER_B_AVERAGE",
+      "value": 100,
+      "threshold": 70
+    },
+    {
+      "type": "overlap_excessive",
+      "severity": "HIGH",
+      "detail": "USER_A_HIGH_PERFORMER_vs_USER_C_GRAMMAR_SPECIALIST overlap is 100% (> 70% threshold)",
+      "pair": "USER_A_HIGH_PERFORMER_vs_USER_C_GRAMMAR_SPECIALIST",
+      "value": 100,
+      "threshold": 70
+    },
+    {
+      "type": "overlap_excessive",
+      "severity": "HIGH",
+      "detail": "USER_A_HIGH_PERFORMER_vs_USER_D_VOCAB_SPECIALIST overlap is 100% (> 70% threshold)",
+      "pair": "USER_A_HIGH_PERFORMER_vs_USER_D_VOCAB_SPECIALIST",
+      "value": 100,
+      "threshold": 70
+    },
+    {
+      "type": "overlap_excessive",
+      "severity": "HIGH",
+      "detail": "USER_B_AVERAGE_vs_USER_C_GRAMMAR_SPECIALIST overlap is 100% (> 70% threshold)",
+      "pair": "USER_B_AVERAGE_vs_USER_C_GRAMMAR_SPECIALIST",
+      "value": 100,
+      "threshold": 70
+    },
+    {
+      "type": "overlap_excessive",
+      "severity": "HIGH",
+      "detail": "USER_B_AVERAGE_vs_USER_D_VOCAB_SPECIALIST overlap is 100% (> 70% threshold)",
+      "pair": "USER_B_AVERAGE_vs_USER_D_VOCAB_SPECIALIST",
+      "value": 100,
+      "threshold": 70
+    },
+    {
+      "type": "overlap_excessive",
+      "severity": "HIGH",
+      "detail": "USER_C_GRAMMAR_SPECIALIST_vs_USER_D_VOCAB_SPECIALIST overlap is 100% (> 70% threshold)",
+      "pair": "USER_C_GRAMMAR_SPECIALIST_vs_USER_D_VOCAB_SPECIALIST",
+      "value": 100,
+      "threshold": 70
+    },
+    {
+      "type": "repeat_rate_high",
+      "severity": "MEDIUM",
+      "detail": "High Performer final repeat rate is 80.0% (> 30% threshold)",
+      "persona": "USER_A_HIGH_PERFORMER",
+      "value": 0.8,
+      "threshold": 0.3
+    },
+    {
+      "type": "repeat_rate_high",
+      "severity": "MEDIUM",
+      "detail": "Average Learner final repeat rate is 80.0% (> 30% threshold)",
+      "persona": "USER_B_AVERAGE",
+      "value": 0.8,
+      "threshold": 0.3
+    },
+    {
+      "type": "repeat_rate_high",
+      "severity": "MEDIUM",
+      "detail": "Grammar Specialist final repeat rate is 80.0% (> 30% threshold)",
+      "persona": "USER_C_GRAMMAR_SPECIALIST",
+      "value": 0.8,
+      "threshold": 0.3
+    },
+    {
+      "type": "repeat_rate_high",
+      "severity": "MEDIUM",
+      "detail": "Vocabulary Specialist final repeat rate is 80.0% (> 30% threshold)",
+      "persona": "USER_D_VOCAB_SPECIALIST",
+      "value": 0.8,
+      "threshold": 0.3
+    },
+    {
+      "type": "persona_differentiation_lost",
+      "severity": "CRITICAL",
+      "detail": "All persona pairs have > 80% question overlap. Personalization has effectively disappeared.",
+      "pairwiseOverlaps": [
+        {
+          "pair": "USER_A_HIGH_PERFORMER_vs_USER_B_AVERAGE",
+          "overlap": 1
+        },
+        {
+          "pair": "USER_A_HIGH_PERFORMER_vs_USER_C_GRAMMAR_SPECIALIST",
+          "overlap": 1
+        },
+        {
+          "pair": "USER_A_HIGH_PERFORMER_vs_USER_D_VOCAB_SPECIALIST",
+          "overlap": 1
+        },
+        {
+          "pair": "USER_B_AVERAGE_vs_USER_C_GRAMMAR_SPECIALIST",
+          "overlap": 1
+        },
+        {
+          "pair": "USER_B_AVERAGE_vs_USER_D_VOCAB_SPECIALIST",
+          "overlap": 1
+        },
+        {
+          "pair": "USER_C_GRAMMAR_SPECIALIST_vs_USER_D_VOCAB_SPECIALIST",
+          "overlap": 1
+        }
+      ]
+    }
+  ],
+  "totalFailures": 11
+}

@@ -1,0 +1,2702 @@
+[
+  {
+    "user": "UserA",
+    "session_id": 1,
+    "question_id": 87,
+    "topic": "particles",
+    "mastery": 0.73,
+    "memoryStrength": 0.86,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 1,
+    "question_id": 49,
+    "topic": "grammar",
+    "mastery": 0.87,
+    "memoryStrength": 0.76,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 1,
+    "question_id": 65,
+    "topic": "reading",
+    "mastery": 0.36,
+    "memoryStrength": 0.41,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 2,
+    "question_id": 62,
+    "topic": "particles",
+    "mastery": 0.53,
+    "memoryStrength": 0.65,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 2,
+    "question_id": 46,
+    "topic": "reading",
+    "mastery": 0.86,
+    "memoryStrength": 0.49,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 2,
+    "question_id": 87,
+    "topic": "particles",
+    "mastery": 0.47,
+    "memoryStrength": 0.91,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 3,
+    "question_id": 66,
+    "topic": "reading",
+    "mastery": 0.77,
+    "memoryStrength": 0.75,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 3,
+    "question_id": 12,
+    "topic": "vocabulary",
+    "mastery": 0.58,
+    "memoryStrength": 0.25,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 3,
+    "question_id": 60,
+    "topic": "vocabulary",
+    "mastery": 0.91,
+    "memoryStrength": 0.66,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 4,
+    "question_id": 70,
+    "topic": "reading",
+    "mastery": 0.78,
+    "memoryStrength": 0.36,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 4,
+    "question_id": 5,
+    "topic": "grammar",
+    "mastery": 0.7,
+    "memoryStrength": 0.39,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 4,
+    "question_id": 47,
+    "topic": "listening",
+    "mastery": 0.62,
+    "memoryStrength": 0.96,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 5,
+    "question_id": 84,
+    "topic": "vocabulary",
+    "mastery": 0.44,
+    "memoryStrength": 0.31,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 5,
+    "question_id": 29,
+    "topic": "particles",
+    "mastery": 0.87,
+    "memoryStrength": 0.71,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 5,
+    "question_id": 44,
+    "topic": "particles",
+    "mastery": 0.72,
+    "memoryStrength": 1.0,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 6,
+    "question_id": 19,
+    "topic": "grammar",
+    "mastery": 0.33,
+    "memoryStrength": 0.23,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 6,
+    "question_id": 16,
+    "topic": "vocabulary",
+    "mastery": 0.32,
+    "memoryStrength": 0.35,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 6,
+    "question_id": 98,
+    "topic": "listening",
+    "mastery": 0.68,
+    "memoryStrength": 0.84,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 7,
+    "question_id": 47,
+    "topic": "listening",
+    "mastery": 0.71,
+    "memoryStrength": 0.64,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 7,
+    "question_id": 51,
+    "topic": "particles",
+    "mastery": 0.61,
+    "memoryStrength": 0.39,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 7,
+    "question_id": 70,
+    "topic": "grammar",
+    "mastery": 0.62,
+    "memoryStrength": 0.37,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 8,
+    "question_id": 23,
+    "topic": "vocabulary",
+    "mastery": 0.59,
+    "memoryStrength": 0.65,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 8,
+    "question_id": 34,
+    "topic": "grammar",
+    "mastery": 0.64,
+    "memoryStrength": 0.52,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 8,
+    "question_id": 24,
+    "topic": "reading",
+    "mastery": 0.84,
+    "memoryStrength": 0.7,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 9,
+    "question_id": 71,
+    "topic": "listening",
+    "mastery": 0.72,
+    "memoryStrength": 0.79,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 9,
+    "question_id": 57,
+    "topic": "reading",
+    "mastery": 0.63,
+    "memoryStrength": 0.8,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 9,
+    "question_id": 50,
+    "topic": "listening",
+    "mastery": 0.72,
+    "memoryStrength": 0.54,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 10,
+    "question_id": 82,
+    "topic": "listening",
+    "mastery": 0.65,
+    "memoryStrength": 0.2,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 10,
+    "question_id": 87,
+    "topic": "reading",
+    "mastery": 0.57,
+    "memoryStrength": 0.61,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 10,
+    "question_id": 98,
+    "topic": "listening",
+    "mastery": 0.42,
+    "memoryStrength": 1.0,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 11,
+    "question_id": 49,
+    "topic": "reading",
+    "mastery": 0.8,
+    "memoryStrength": 0.23,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 11,
+    "question_id": 98,
+    "topic": "grammar",
+    "mastery": 0.62,
+    "memoryStrength": 1.0,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 11,
+    "question_id": 14,
+    "topic": "grammar",
+    "mastery": 0.71,
+    "memoryStrength": 0.86,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 12,
+    "question_id": 81,
+    "topic": "particles",
+    "mastery": 0.95,
+    "memoryStrength": 0.41,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 12,
+    "question_id": 1,
+    "topic": "reading",
+    "mastery": 0.9,
+    "memoryStrength": 0.33,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 12,
+    "question_id": 18,
+    "topic": "listening",
+    "mastery": 0.87,
+    "memoryStrength": 0.41,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 13,
+    "question_id": 21,
+    "topic": "grammar",
+    "mastery": 0.63,
+    "memoryStrength": 0.77,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 13,
+    "question_id": 52,
+    "topic": "grammar",
+    "mastery": 0.55,
+    "memoryStrength": 0.66,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 13,
+    "question_id": 28,
+    "topic": "grammar",
+    "mastery": 0.88,
+    "memoryStrength": 0.76,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 14,
+    "question_id": 73,
+    "topic": "vocabulary",
+    "mastery": 0.52,
+    "memoryStrength": 0.95,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 14,
+    "question_id": 88,
+    "topic": "particles",
+    "mastery": 0.35,
+    "memoryStrength": 0.81,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 14,
+    "question_id": 84,
+    "topic": "particles",
+    "mastery": 0.55,
+    "memoryStrength": 0.89,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 15,
+    "question_id": 2,
+    "topic": "vocabulary",
+    "mastery": 0.48,
+    "memoryStrength": 0.96,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 15,
+    "question_id": 18,
+    "topic": "listening",
+    "mastery": 0.31,
+    "memoryStrength": 0.95,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 15,
+    "question_id": 22,
+    "topic": "listening",
+    "mastery": 0.32,
+    "memoryStrength": 0.75,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 16,
+    "question_id": 19,
+    "topic": "particles",
+    "mastery": 0.38,
+    "memoryStrength": 0.47,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 16,
+    "question_id": 67,
+    "topic": "vocabulary",
+    "mastery": 0.62,
+    "memoryStrength": 0.94,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 16,
+    "question_id": 79,
+    "topic": "listening",
+    "mastery": 0.5,
+    "memoryStrength": 0.63,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 17,
+    "question_id": 96,
+    "topic": "grammar",
+    "mastery": 0.8,
+    "memoryStrength": 0.49,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 17,
+    "question_id": 43,
+    "topic": "listening",
+    "mastery": 0.89,
+    "memoryStrength": 0.27,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 17,
+    "question_id": 32,
+    "topic": "listening",
+    "mastery": 0.99,
+    "memoryStrength": 0.81,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 18,
+    "question_id": 38,
+    "topic": "vocabulary",
+    "mastery": 0.81,
+    "memoryStrength": 0.37,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 18,
+    "question_id": 58,
+    "topic": "vocabulary",
+    "mastery": 0.7,
+    "memoryStrength": 0.55,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 18,
+    "question_id": 2,
+    "topic": "particles",
+    "mastery": 0.98,
+    "memoryStrength": 0.91,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 19,
+    "question_id": 98,
+    "topic": "particles",
+    "mastery": 0.75,
+    "memoryStrength": 0.69,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 19,
+    "question_id": 20,
+    "topic": "reading",
+    "mastery": 0.45,
+    "memoryStrength": 0.46,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 19,
+    "question_id": 43,
+    "topic": "particles",
+    "mastery": 0.31,
+    "memoryStrength": 0.29,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 20,
+    "question_id": 36,
+    "topic": "particles",
+    "mastery": 0.71,
+    "memoryStrength": 0.28,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 20,
+    "question_id": 78,
+    "topic": "particles",
+    "mastery": 0.63,
+    "memoryStrength": 0.8,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 20,
+    "question_id": 92,
+    "topic": "vocabulary",
+    "mastery": 0.43,
+    "memoryStrength": 0.22,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 21,
+    "question_id": 98,
+    "topic": "grammar",
+    "mastery": 0.7,
+    "memoryStrength": 0.81,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 21,
+    "question_id": 51,
+    "topic": "vocabulary",
+    "mastery": 0.95,
+    "memoryStrength": 0.89,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 21,
+    "question_id": 92,
+    "topic": "particles",
+    "mastery": 0.6,
+    "memoryStrength": 0.32,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 22,
+    "question_id": 41,
+    "topic": "particles",
+    "mastery": 0.38,
+    "memoryStrength": 0.7,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 22,
+    "question_id": 51,
+    "topic": "grammar",
+    "mastery": 0.89,
+    "memoryStrength": 0.64,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 22,
+    "question_id": 96,
+    "topic": "vocabulary",
+    "mastery": 0.41,
+    "memoryStrength": 0.23,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 23,
+    "question_id": 54,
+    "topic": "listening",
+    "mastery": 0.58,
+    "memoryStrength": 0.99,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 23,
+    "question_id": 74,
+    "topic": "grammar",
+    "mastery": 0.69,
+    "memoryStrength": 0.61,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 23,
+    "question_id": 46,
+    "topic": "listening",
+    "mastery": 0.89,
+    "memoryStrength": 0.99,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 24,
+    "question_id": 79,
+    "topic": "particles",
+    "mastery": 0.65,
+    "memoryStrength": 0.31,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 24,
+    "question_id": 61,
+    "topic": "vocabulary",
+    "mastery": 0.63,
+    "memoryStrength": 0.57,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 24,
+    "question_id": 28,
+    "topic": "particles",
+    "mastery": 0.35,
+    "memoryStrength": 0.8,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 25,
+    "question_id": 20,
+    "topic": "vocabulary",
+    "mastery": 0.65,
+    "memoryStrength": 0.95,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 25,
+    "question_id": 24,
+    "topic": "particles",
+    "mastery": 0.62,
+    "memoryStrength": 0.87,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 25,
+    "question_id": 53,
+    "topic": "particles",
+    "mastery": 0.96,
+    "memoryStrength": 0.42,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 26,
+    "question_id": 2,
+    "topic": "reading",
+    "mastery": 0.92,
+    "memoryStrength": 0.84,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 26,
+    "question_id": 12,
+    "topic": "particles",
+    "mastery": 1.0,
+    "memoryStrength": 0.52,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 26,
+    "question_id": 29,
+    "topic": "vocabulary",
+    "mastery": 0.83,
+    "memoryStrength": 0.27,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 27,
+    "question_id": 13,
+    "topic": "listening",
+    "mastery": 0.66,
+    "memoryStrength": 0.64,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 27,
+    "question_id": 59,
+    "topic": "vocabulary",
+    "mastery": 0.59,
+    "memoryStrength": 0.76,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 27,
+    "question_id": 44,
+    "topic": "particles",
+    "mastery": 0.67,
+    "memoryStrength": 0.79,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 28,
+    "question_id": 99,
+    "topic": "vocabulary",
+    "mastery": 0.42,
+    "memoryStrength": 0.49,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 28,
+    "question_id": 91,
+    "topic": "particles",
+    "mastery": 0.63,
+    "memoryStrength": 0.78,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 28,
+    "question_id": 90,
+    "topic": "particles",
+    "mastery": 0.34,
+    "memoryStrength": 0.33,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 29,
+    "question_id": 8,
+    "topic": "reading",
+    "mastery": 0.78,
+    "memoryStrength": 0.73,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 29,
+    "question_id": 18,
+    "topic": "listening",
+    "mastery": 0.61,
+    "memoryStrength": 0.28,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 29,
+    "question_id": 93,
+    "topic": "listening",
+    "mastery": 0.86,
+    "memoryStrength": 0.27,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 30,
+    "question_id": 49,
+    "topic": "particles",
+    "mastery": 0.32,
+    "memoryStrength": 0.86,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 30,
+    "question_id": 46,
+    "topic": "particles",
+    "mastery": 0.39,
+    "memoryStrength": 0.68,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 30,
+    "question_id": 29,
+    "topic": "particles",
+    "mastery": 0.74,
+    "memoryStrength": 0.23,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 31,
+    "question_id": 67,
+    "topic": "listening",
+    "mastery": 0.34,
+    "memoryStrength": 0.37,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 31,
+    "question_id": 31,
+    "topic": "grammar",
+    "mastery": 0.57,
+    "memoryStrength": 0.78,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 31,
+    "question_id": 13,
+    "topic": "particles",
+    "mastery": 0.54,
+    "memoryStrength": 0.36,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 32,
+    "question_id": 94,
+    "topic": "listening",
+    "mastery": 0.51,
+    "memoryStrength": 0.63,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 32,
+    "question_id": 16,
+    "topic": "grammar",
+    "mastery": 0.83,
+    "memoryStrength": 0.7,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 32,
+    "question_id": 64,
+    "topic": "grammar",
+    "mastery": 0.51,
+    "memoryStrength": 0.53,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 33,
+    "question_id": 92,
+    "topic": "reading",
+    "mastery": 0.44,
+    "memoryStrength": 0.49,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 33,
+    "question_id": 47,
+    "topic": "particles",
+    "mastery": 0.57,
+    "memoryStrength": 0.42,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 33,
+    "question_id": 72,
+    "topic": "listening",
+    "mastery": 0.56,
+    "memoryStrength": 0.65,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 34,
+    "question_id": 53,
+    "topic": "listening",
+    "mastery": 0.54,
+    "memoryStrength": 0.6,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 34,
+    "question_id": 80,
+    "topic": "grammar",
+    "mastery": 0.9,
+    "memoryStrength": 0.34,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 34,
+    "question_id": 87,
+    "topic": "listening",
+    "mastery": 0.31,
+    "memoryStrength": 0.9,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 35,
+    "question_id": 70,
+    "topic": "reading",
+    "mastery": 0.43,
+    "memoryStrength": 0.57,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 35,
+    "question_id": 4,
+    "topic": "listening",
+    "mastery": 0.83,
+    "memoryStrength": 0.72,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 35,
+    "question_id": 57,
+    "topic": "vocabulary",
+    "mastery": 0.92,
+    "memoryStrength": 0.93,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 36,
+    "question_id": 8,
+    "topic": "vocabulary",
+    "mastery": 0.35,
+    "memoryStrength": 0.35,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 36,
+    "question_id": 66,
+    "topic": "listening",
+    "mastery": 0.82,
+    "memoryStrength": 0.7,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 36,
+    "question_id": 72,
+    "topic": "particles",
+    "mastery": 0.37,
+    "memoryStrength": 0.7,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 37,
+    "question_id": 58,
+    "topic": "particles",
+    "mastery": 0.87,
+    "memoryStrength": 0.97,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 37,
+    "question_id": 69,
+    "topic": "grammar",
+    "mastery": 0.71,
+    "memoryStrength": 0.63,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 37,
+    "question_id": 57,
+    "topic": "particles",
+    "mastery": 0.76,
+    "memoryStrength": 0.35,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 38,
+    "question_id": 14,
+    "topic": "particles",
+    "mastery": 0.38,
+    "memoryStrength": 0.23,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 38,
+    "question_id": 43,
+    "topic": "particles",
+    "mastery": 0.81,
+    "memoryStrength": 0.48,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 38,
+    "question_id": 5,
+    "topic": "listening",
+    "mastery": 0.94,
+    "memoryStrength": 0.93,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 39,
+    "question_id": 37,
+    "topic": "grammar",
+    "mastery": 0.52,
+    "memoryStrength": 0.21,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 39,
+    "question_id": 23,
+    "topic": "listening",
+    "mastery": 0.91,
+    "memoryStrength": 0.62,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 39,
+    "question_id": 51,
+    "topic": "vocabulary",
+    "mastery": 0.86,
+    "memoryStrength": 0.22,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 40,
+    "question_id": 31,
+    "topic": "grammar",
+    "mastery": 0.61,
+    "memoryStrength": 0.3,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 40,
+    "question_id": 31,
+    "topic": "reading",
+    "mastery": 0.61,
+    "memoryStrength": 0.99,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 40,
+    "question_id": 43,
+    "topic": "vocabulary",
+    "mastery": 0.88,
+    "memoryStrength": 0.81,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 41,
+    "question_id": 52,
+    "topic": "listening",
+    "mastery": 1.0,
+    "memoryStrength": 0.54,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 41,
+    "question_id": 10,
+    "topic": "vocabulary",
+    "mastery": 0.66,
+    "memoryStrength": 0.2,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 41,
+    "question_id": 6,
+    "topic": "reading",
+    "mastery": 0.81,
+    "memoryStrength": 0.47,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 42,
+    "question_id": 77,
+    "topic": "grammar",
+    "mastery": 0.48,
+    "memoryStrength": 0.94,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 42,
+    "question_id": 63,
+    "topic": "vocabulary",
+    "mastery": 0.37,
+    "memoryStrength": 0.74,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 42,
+    "question_id": 2,
+    "topic": "grammar",
+    "mastery": 0.38,
+    "memoryStrength": 0.21,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 43,
+    "question_id": 13,
+    "topic": "particles",
+    "mastery": 0.93,
+    "memoryStrength": 0.59,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 43,
+    "question_id": 97,
+    "topic": "particles",
+    "mastery": 0.9,
+    "memoryStrength": 0.24,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 43,
+    "question_id": 50,
+    "topic": "particles",
+    "mastery": 0.86,
+    "memoryStrength": 0.62,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 44,
+    "question_id": 97,
+    "topic": "grammar",
+    "mastery": 0.73,
+    "memoryStrength": 0.23,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 44,
+    "question_id": 89,
+    "topic": "listening",
+    "mastery": 0.85,
+    "memoryStrength": 0.27,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 44,
+    "question_id": 88,
+    "topic": "reading",
+    "mastery": 0.63,
+    "memoryStrength": 0.52,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 45,
+    "question_id": 84,
+    "topic": "vocabulary",
+    "mastery": 0.39,
+    "memoryStrength": 0.43,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 45,
+    "question_id": 64,
+    "topic": "grammar",
+    "mastery": 0.38,
+    "memoryStrength": 0.81,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 45,
+    "question_id": 74,
+    "topic": "particles",
+    "mastery": 0.67,
+    "memoryStrength": 0.66,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 46,
+    "question_id": 44,
+    "topic": "listening",
+    "mastery": 0.68,
+    "memoryStrength": 0.45,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 46,
+    "question_id": 63,
+    "topic": "vocabulary",
+    "mastery": 0.32,
+    "memoryStrength": 0.2,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 46,
+    "question_id": 25,
+    "topic": "reading",
+    "mastery": 0.89,
+    "memoryStrength": 0.34,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 47,
+    "question_id": 61,
+    "topic": "reading",
+    "mastery": 0.71,
+    "memoryStrength": 0.65,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 47,
+    "question_id": 48,
+    "topic": "reading",
+    "mastery": 0.52,
+    "memoryStrength": 0.46,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 47,
+    "question_id": 26,
+    "topic": "reading",
+    "mastery": 0.66,
+    "memoryStrength": 0.63,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 48,
+    "question_id": 71,
+    "topic": "vocabulary",
+    "mastery": 0.58,
+    "memoryStrength": 0.32,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 48,
+    "question_id": 27,
+    "topic": "particles",
+    "mastery": 0.84,
+    "memoryStrength": 0.81,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 48,
+    "question_id": 100,
+    "topic": "grammar",
+    "mastery": 0.97,
+    "memoryStrength": 0.66,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 49,
+    "question_id": 13,
+    "topic": "reading",
+    "mastery": 0.78,
+    "memoryStrength": 0.31,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 49,
+    "question_id": 98,
+    "topic": "vocabulary",
+    "mastery": 0.38,
+    "memoryStrength": 0.97,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 49,
+    "question_id": 98,
+    "topic": "grammar",
+    "mastery": 0.69,
+    "memoryStrength": 0.67,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 50,
+    "question_id": 14,
+    "topic": "vocabulary",
+    "mastery": 0.94,
+    "memoryStrength": 0.59,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 50,
+    "question_id": 30,
+    "topic": "reading",
+    "mastery": 0.56,
+    "memoryStrength": 0.28,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 50,
+    "question_id": 52,
+    "topic": "reading",
+    "mastery": 0.37,
+    "memoryStrength": 0.95,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 51,
+    "question_id": 41,
+    "topic": "particles",
+    "mastery": 0.95,
+    "memoryStrength": 0.94,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 51,
+    "question_id": 38,
+    "topic": "reading",
+    "mastery": 0.83,
+    "memoryStrength": 0.57,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 51,
+    "question_id": 57,
+    "topic": "listening",
+    "mastery": 0.74,
+    "memoryStrength": 0.81,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 52,
+    "question_id": 56,
+    "topic": "listening",
+    "mastery": 0.31,
+    "memoryStrength": 0.49,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 52,
+    "question_id": 62,
+    "topic": "listening",
+    "mastery": 0.42,
+    "memoryStrength": 0.47,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 52,
+    "question_id": 50,
+    "topic": "vocabulary",
+    "mastery": 0.56,
+    "memoryStrength": 0.72,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 53,
+    "question_id": 62,
+    "topic": "vocabulary",
+    "mastery": 0.49,
+    "memoryStrength": 0.23,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 53,
+    "question_id": 18,
+    "topic": "particles",
+    "mastery": 0.3,
+    "memoryStrength": 0.9,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 53,
+    "question_id": 62,
+    "topic": "grammar",
+    "mastery": 0.83,
+    "memoryStrength": 0.69,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 54,
+    "question_id": 24,
+    "topic": "listening",
+    "mastery": 0.85,
+    "memoryStrength": 0.24,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 54,
+    "question_id": 80,
+    "topic": "reading",
+    "mastery": 0.61,
+    "memoryStrength": 0.31,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 54,
+    "question_id": 80,
+    "topic": "reading",
+    "mastery": 0.45,
+    "memoryStrength": 0.91,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 55,
+    "question_id": 22,
+    "topic": "particles",
+    "mastery": 0.68,
+    "memoryStrength": 0.7,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 55,
+    "question_id": 22,
+    "topic": "grammar",
+    "mastery": 0.49,
+    "memoryStrength": 0.68,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 55,
+    "question_id": 84,
+    "topic": "particles",
+    "mastery": 0.97,
+    "memoryStrength": 0.61,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 56,
+    "question_id": 6,
+    "topic": "listening",
+    "mastery": 0.67,
+    "memoryStrength": 0.91,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 56,
+    "question_id": 86,
+    "topic": "listening",
+    "mastery": 0.65,
+    "memoryStrength": 0.96,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 56,
+    "question_id": 37,
+    "topic": "vocabulary",
+    "mastery": 0.85,
+    "memoryStrength": 0.65,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 57,
+    "question_id": 82,
+    "topic": "particles",
+    "mastery": 0.3,
+    "memoryStrength": 0.8,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 57,
+    "question_id": 4,
+    "topic": "grammar",
+    "mastery": 0.77,
+    "memoryStrength": 0.28,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 57,
+    "question_id": 22,
+    "topic": "vocabulary",
+    "mastery": 0.71,
+    "memoryStrength": 0.23,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 58,
+    "question_id": 50,
+    "topic": "vocabulary",
+    "mastery": 0.59,
+    "memoryStrength": 0.85,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 58,
+    "question_id": 63,
+    "topic": "grammar",
+    "mastery": 0.45,
+    "memoryStrength": 0.54,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 58,
+    "question_id": 98,
+    "topic": "particles",
+    "mastery": 0.84,
+    "memoryStrength": 0.94,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 59,
+    "question_id": 23,
+    "topic": "reading",
+    "mastery": 0.44,
+    "memoryStrength": 0.22,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 59,
+    "question_id": 78,
+    "topic": "grammar",
+    "mastery": 0.44,
+    "memoryStrength": 0.57,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 59,
+    "question_id": 9,
+    "topic": "grammar",
+    "mastery": 0.98,
+    "memoryStrength": 0.33,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 60,
+    "question_id": 52,
+    "topic": "vocabulary",
+    "mastery": 0.84,
+    "memoryStrength": 0.9,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 60,
+    "question_id": 29,
+    "topic": "particles",
+    "mastery": 0.96,
+    "memoryStrength": 0.83,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 60,
+    "question_id": 53,
+    "topic": "particles",
+    "mastery": 0.99,
+    "memoryStrength": 0.45,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 61,
+    "question_id": 30,
+    "topic": "listening",
+    "mastery": 0.77,
+    "memoryStrength": 0.71,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 61,
+    "question_id": 10,
+    "topic": "grammar",
+    "mastery": 0.94,
+    "memoryStrength": 0.24,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 61,
+    "question_id": 35,
+    "topic": "vocabulary",
+    "mastery": 0.68,
+    "memoryStrength": 0.27,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 62,
+    "question_id": 88,
+    "topic": "listening",
+    "mastery": 0.52,
+    "memoryStrength": 0.88,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 62,
+    "question_id": 20,
+    "topic": "reading",
+    "mastery": 0.91,
+    "memoryStrength": 0.9,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 62,
+    "question_id": 85,
+    "topic": "grammar",
+    "mastery": 0.94,
+    "memoryStrength": 0.5,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 63,
+    "question_id": 89,
+    "topic": "reading",
+    "mastery": 0.66,
+    "memoryStrength": 0.6,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 63,
+    "question_id": 6,
+    "topic": "vocabulary",
+    "mastery": 0.55,
+    "memoryStrength": 0.32,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 63,
+    "question_id": 86,
+    "topic": "particles",
+    "mastery": 0.96,
+    "memoryStrength": 0.65,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 64,
+    "question_id": 26,
+    "topic": "vocabulary",
+    "mastery": 0.53,
+    "memoryStrength": 0.82,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 64,
+    "question_id": 34,
+    "topic": "reading",
+    "mastery": 0.73,
+    "memoryStrength": 0.25,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 64,
+    "question_id": 35,
+    "topic": "reading",
+    "mastery": 0.88,
+    "memoryStrength": 0.61,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 65,
+    "question_id": 37,
+    "topic": "listening",
+    "mastery": 0.45,
+    "memoryStrength": 0.46,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 65,
+    "question_id": 46,
+    "topic": "grammar",
+    "mastery": 0.82,
+    "memoryStrength": 0.49,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 65,
+    "question_id": 23,
+    "topic": "vocabulary",
+    "mastery": 0.85,
+    "memoryStrength": 0.29,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 66,
+    "question_id": 24,
+    "topic": "grammar",
+    "mastery": 0.72,
+    "memoryStrength": 0.65,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 66,
+    "question_id": 92,
+    "topic": "vocabulary",
+    "mastery": 0.92,
+    "memoryStrength": 0.91,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 66,
+    "question_id": 33,
+    "topic": "vocabulary",
+    "mastery": 0.44,
+    "memoryStrength": 0.4,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 67,
+    "question_id": 73,
+    "topic": "particles",
+    "mastery": 0.32,
+    "memoryStrength": 0.6,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 67,
+    "question_id": 62,
+    "topic": "reading",
+    "mastery": 0.91,
+    "memoryStrength": 0.42,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 67,
+    "question_id": 29,
+    "topic": "listening",
+    "mastery": 0.43,
+    "memoryStrength": 0.77,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 68,
+    "question_id": 19,
+    "topic": "grammar",
+    "mastery": 0.66,
+    "memoryStrength": 0.21,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 68,
+    "question_id": 74,
+    "topic": "vocabulary",
+    "mastery": 0.5,
+    "memoryStrength": 0.86,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 68,
+    "question_id": 79,
+    "topic": "particles",
+    "mastery": 0.4,
+    "memoryStrength": 0.42,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 69,
+    "question_id": 17,
+    "topic": "vocabulary",
+    "mastery": 0.96,
+    "memoryStrength": 0.69,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 69,
+    "question_id": 69,
+    "topic": "particles",
+    "mastery": 0.7,
+    "memoryStrength": 0.22,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 69,
+    "question_id": 55,
+    "topic": "reading",
+    "mastery": 0.49,
+    "memoryStrength": 0.73,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 70,
+    "question_id": 91,
+    "topic": "grammar",
+    "mastery": 0.72,
+    "memoryStrength": 0.23,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 70,
+    "question_id": 40,
+    "topic": "reading",
+    "mastery": 0.85,
+    "memoryStrength": 0.43,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 70,
+    "question_id": 89,
+    "topic": "reading",
+    "mastery": 0.59,
+    "memoryStrength": 0.6,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 71,
+    "question_id": 78,
+    "topic": "particles",
+    "mastery": 0.85,
+    "memoryStrength": 0.9,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 71,
+    "question_id": 79,
+    "topic": "reading",
+    "mastery": 0.56,
+    "memoryStrength": 0.63,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 71,
+    "question_id": 69,
+    "topic": "listening",
+    "mastery": 0.38,
+    "memoryStrength": 0.71,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 72,
+    "question_id": 39,
+    "topic": "grammar",
+    "mastery": 0.44,
+    "memoryStrength": 0.41,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 72,
+    "question_id": 41,
+    "topic": "vocabulary",
+    "mastery": 0.48,
+    "memoryStrength": 0.25,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 72,
+    "question_id": 27,
+    "topic": "reading",
+    "mastery": 0.44,
+    "memoryStrength": 0.44,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 73,
+    "question_id": 17,
+    "topic": "listening",
+    "mastery": 0.33,
+    "memoryStrength": 0.66,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 73,
+    "question_id": 39,
+    "topic": "particles",
+    "mastery": 0.54,
+    "memoryStrength": 0.68,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 73,
+    "question_id": 100,
+    "topic": "listening",
+    "mastery": 0.57,
+    "memoryStrength": 0.44,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 74,
+    "question_id": 13,
+    "topic": "vocabulary",
+    "mastery": 0.86,
+    "memoryStrength": 0.67,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 74,
+    "question_id": 3,
+    "topic": "vocabulary",
+    "mastery": 0.33,
+    "memoryStrength": 0.53,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 74,
+    "question_id": 11,
+    "topic": "listening",
+    "mastery": 0.52,
+    "memoryStrength": 0.72,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 75,
+    "question_id": 1,
+    "topic": "grammar",
+    "mastery": 0.74,
+    "memoryStrength": 0.91,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 75,
+    "question_id": 70,
+    "topic": "reading",
+    "mastery": 0.8,
+    "memoryStrength": 0.91,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 75,
+    "question_id": 42,
+    "topic": "vocabulary",
+    "mastery": 0.54,
+    "memoryStrength": 0.46,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 76,
+    "question_id": 58,
+    "topic": "reading",
+    "mastery": 0.9,
+    "memoryStrength": 0.46,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 76,
+    "question_id": 30,
+    "topic": "grammar",
+    "mastery": 0.45,
+    "memoryStrength": 0.74,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 76,
+    "question_id": 8,
+    "topic": "grammar",
+    "mastery": 0.78,
+    "memoryStrength": 0.77,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 77,
+    "question_id": 45,
+    "topic": "listening",
+    "mastery": 0.75,
+    "memoryStrength": 0.82,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 77,
+    "question_id": 54,
+    "topic": "vocabulary",
+    "mastery": 0.68,
+    "memoryStrength": 0.61,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 77,
+    "question_id": 9,
+    "topic": "vocabulary",
+    "mastery": 0.37,
+    "memoryStrength": 0.32,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 78,
+    "question_id": 93,
+    "topic": "vocabulary",
+    "mastery": 0.76,
+    "memoryStrength": 0.34,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 78,
+    "question_id": 56,
+    "topic": "reading",
+    "mastery": 0.47,
+    "memoryStrength": 0.86,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 78,
+    "question_id": 5,
+    "topic": "grammar",
+    "mastery": 0.47,
+    "memoryStrength": 0.74,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 79,
+    "question_id": 65,
+    "topic": "grammar",
+    "mastery": 0.86,
+    "memoryStrength": 0.65,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 79,
+    "question_id": 8,
+    "topic": "particles",
+    "mastery": 0.55,
+    "memoryStrength": 0.27,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 79,
+    "question_id": 9,
+    "topic": "reading",
+    "mastery": 0.74,
+    "memoryStrength": 0.53,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 80,
+    "question_id": 23,
+    "topic": "listening",
+    "mastery": 0.97,
+    "memoryStrength": 0.46,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 80,
+    "question_id": 24,
+    "topic": "listening",
+    "mastery": 0.82,
+    "memoryStrength": 0.74,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 80,
+    "question_id": 79,
+    "topic": "particles",
+    "mastery": 0.52,
+    "memoryStrength": 1.0,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 81,
+    "question_id": 100,
+    "topic": "reading",
+    "mastery": 0.81,
+    "memoryStrength": 0.99,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 81,
+    "question_id": 63,
+    "topic": "grammar",
+    "mastery": 0.58,
+    "memoryStrength": 0.99,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 81,
+    "question_id": 60,
+    "topic": "grammar",
+    "mastery": 0.8,
+    "memoryStrength": 0.81,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 82,
+    "question_id": 89,
+    "topic": "vocabulary",
+    "mastery": 0.8,
+    "memoryStrength": 0.38,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 82,
+    "question_id": 67,
+    "topic": "grammar",
+    "mastery": 0.3,
+    "memoryStrength": 0.69,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 82,
+    "question_id": 39,
+    "topic": "grammar",
+    "mastery": 0.71,
+    "memoryStrength": 0.54,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 83,
+    "question_id": 9,
+    "topic": "particles",
+    "mastery": 0.76,
+    "memoryStrength": 0.81,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 83,
+    "question_id": 36,
+    "topic": "listening",
+    "mastery": 0.88,
+    "memoryStrength": 0.77,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 83,
+    "question_id": 20,
+    "topic": "vocabulary",
+    "mastery": 0.49,
+    "memoryStrength": 0.78,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 84,
+    "question_id": 41,
+    "topic": "grammar",
+    "mastery": 0.86,
+    "memoryStrength": 0.77,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 84,
+    "question_id": 98,
+    "topic": "vocabulary",
+    "mastery": 0.78,
+    "memoryStrength": 0.96,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 84,
+    "question_id": 16,
+    "topic": "particles",
+    "mastery": 0.57,
+    "memoryStrength": 0.28,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 85,
+    "question_id": 46,
+    "topic": "particles",
+    "mastery": 0.49,
+    "memoryStrength": 0.99,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 85,
+    "question_id": 35,
+    "topic": "grammar",
+    "mastery": 0.72,
+    "memoryStrength": 0.26,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 85,
+    "question_id": 15,
+    "topic": "vocabulary",
+    "mastery": 0.9,
+    "memoryStrength": 0.68,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 86,
+    "question_id": 89,
+    "topic": "vocabulary",
+    "mastery": 0.8,
+    "memoryStrength": 0.26,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 86,
+    "question_id": 8,
+    "topic": "vocabulary",
+    "mastery": 0.49,
+    "memoryStrength": 0.85,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 86,
+    "question_id": 87,
+    "topic": "grammar",
+    "mastery": 0.32,
+    "memoryStrength": 0.57,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 87,
+    "question_id": 93,
+    "topic": "particles",
+    "mastery": 0.62,
+    "memoryStrength": 0.87,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 87,
+    "question_id": 78,
+    "topic": "grammar",
+    "mastery": 0.4,
+    "memoryStrength": 0.7,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 87,
+    "question_id": 74,
+    "topic": "vocabulary",
+    "mastery": 0.6,
+    "memoryStrength": 0.73,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 88,
+    "question_id": 83,
+    "topic": "grammar",
+    "mastery": 0.65,
+    "memoryStrength": 0.41,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 88,
+    "question_id": 74,
+    "topic": "reading",
+    "mastery": 0.53,
+    "memoryStrength": 0.83,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 88,
+    "question_id": 99,
+    "topic": "particles",
+    "mastery": 0.73,
+    "memoryStrength": 0.34,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 89,
+    "question_id": 8,
+    "topic": "vocabulary",
+    "mastery": 0.42,
+    "memoryStrength": 0.98,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 89,
+    "question_id": 67,
+    "topic": "particles",
+    "mastery": 0.54,
+    "memoryStrength": 0.8,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 89,
+    "question_id": 85,
+    "topic": "particles",
+    "mastery": 0.34,
+    "memoryStrength": 0.49,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 90,
+    "question_id": 18,
+    "topic": "listening",
+    "mastery": 0.71,
+    "memoryStrength": 0.49,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 90,
+    "question_id": 75,
+    "topic": "vocabulary",
+    "mastery": 0.87,
+    "memoryStrength": 0.58,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 90,
+    "question_id": 72,
+    "topic": "vocabulary",
+    "mastery": 0.94,
+    "memoryStrength": 0.63,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 91,
+    "question_id": 36,
+    "topic": "vocabulary",
+    "mastery": 0.72,
+    "memoryStrength": 0.85,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 91,
+    "question_id": 48,
+    "topic": "particles",
+    "mastery": 0.6,
+    "memoryStrength": 0.47,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 91,
+    "question_id": 83,
+    "topic": "grammar",
+    "mastery": 0.95,
+    "memoryStrength": 0.79,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 92,
+    "question_id": 81,
+    "topic": "particles",
+    "mastery": 0.33,
+    "memoryStrength": 0.7,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 92,
+    "question_id": 87,
+    "topic": "listening",
+    "mastery": 0.49,
+    "memoryStrength": 0.33,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 92,
+    "question_id": 38,
+    "topic": "vocabulary",
+    "mastery": 0.83,
+    "memoryStrength": 0.62,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 93,
+    "question_id": 48,
+    "topic": "grammar",
+    "mastery": 0.7,
+    "memoryStrength": 0.38,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 93,
+    "question_id": 63,
+    "topic": "particles",
+    "mastery": 0.72,
+    "memoryStrength": 0.24,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 93,
+    "question_id": 22,
+    "topic": "vocabulary",
+    "mastery": 0.79,
+    "memoryStrength": 0.71,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 94,
+    "question_id": 55,
+    "topic": "grammar",
+    "mastery": 0.81,
+    "memoryStrength": 0.98,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 94,
+    "question_id": 73,
+    "topic": "listening",
+    "mastery": 0.46,
+    "memoryStrength": 0.74,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 94,
+    "question_id": 29,
+    "topic": "reading",
+    "mastery": 0.41,
+    "memoryStrength": 0.82,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 95,
+    "question_id": 14,
+    "topic": "listening",
+    "mastery": 0.63,
+    "memoryStrength": 0.3,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 95,
+    "question_id": 84,
+    "topic": "vocabulary",
+    "mastery": 0.66,
+    "memoryStrength": 0.98,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 95,
+    "question_id": 68,
+    "topic": "particles",
+    "mastery": 0.33,
+    "memoryStrength": 0.97,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 96,
+    "question_id": 1,
+    "topic": "listening",
+    "mastery": 0.36,
+    "memoryStrength": 0.82,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 96,
+    "question_id": 12,
+    "topic": "listening",
+    "mastery": 0.53,
+    "memoryStrength": 0.93,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 96,
+    "question_id": 8,
+    "topic": "vocabulary",
+    "mastery": 0.87,
+    "memoryStrength": 1.0,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 97,
+    "question_id": 91,
+    "topic": "reading",
+    "mastery": 0.7,
+    "memoryStrength": 0.96,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 97,
+    "question_id": 57,
+    "topic": "reading",
+    "mastery": 0.91,
+    "memoryStrength": 0.5,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 97,
+    "question_id": 34,
+    "topic": "vocabulary",
+    "mastery": 0.42,
+    "memoryStrength": 0.68,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 98,
+    "question_id": 39,
+    "topic": "reading",
+    "mastery": 0.69,
+    "memoryStrength": 0.6,
+    "isRepeat": true
+  },
+  {
+    "user": "UserB",
+    "session_id": 98,
+    "question_id": 60,
+    "topic": "particles",
+    "mastery": 0.92,
+    "memoryStrength": 0.91,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 98,
+    "question_id": 8,
+    "topic": "particles",
+    "mastery": 0.76,
+    "memoryStrength": 0.23,
+    "isRepeat": false
+  },
+  {
+    "user": "UserA",
+    "session_id": 99,
+    "question_id": 71,
+    "topic": "listening",
+    "mastery": 0.41,
+    "memoryStrength": 0.43,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 99,
+    "question_id": 46,
+    "topic": "particles",
+    "mastery": 0.53,
+    "memoryStrength": 0.92,
+    "isRepeat": false
+  },
+  {
+    "user": "UserC",
+    "session_id": 99,
+    "question_id": 52,
+    "topic": "vocabulary",
+    "mastery": 0.75,
+    "memoryStrength": 0.61,
+    "isRepeat": true
+  },
+  {
+    "user": "UserA",
+    "session_id": 100,
+    "question_id": 53,
+    "topic": "grammar",
+    "mastery": 0.76,
+    "memoryStrength": 0.71,
+    "isRepeat": false
+  },
+  {
+    "user": "UserB",
+    "session_id": 100,
+    "question_id": 27,
+    "topic": "vocabulary",
+    "mastery": 0.42,
+    "memoryStrength": 0.77,
+    "isRepeat": true
+  },
+  {
+    "user": "UserC",
+    "session_id": 100,
+    "question_id": 18,
+    "topic": "particles",
+    "mastery": 0.42,
+    "memoryStrength": 0.64,
+    "isRepeat": false
+  }
+]

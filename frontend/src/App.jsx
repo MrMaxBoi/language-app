@@ -2,7 +2,7 @@ import { Box, useColorModeValue } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
 
 import SessionPage from "./pages/SessionPage";
-import DashboardPage from "./pages/DashboardPage";
+import AdaptiveEngineDashboard from "./pages/AdaptiveEngineDashboard";
 import Navbar from "./components/Navbar";
 import ReportPage from "./pages/ReportPage";
 
@@ -14,7 +14,7 @@ function App() {
         <Route path='/' element={<SessionPage />} />
         <Route path='/session' element={<SessionPage />} />
         <Route path='/report' element={<ReportPage />} />
-        <Route path='/dashboard' element={<DashboardPage />} />
+        <Route path='/dashboard' element={<AdaptiveEngineDashboard />} />
       </Routes>
     </Box>
   );

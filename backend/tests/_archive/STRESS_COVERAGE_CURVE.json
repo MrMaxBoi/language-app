@@ -1,0 +1,2410 @@
+{
+  "USER_A_HIGH_PERFORMER": [
+    {
+      "sessionNumber": 1,
+      "coveragePercent": 5.81,
+      "uniqueQuestionsSeen": 5,
+      "uniqueSubtopicsSeen": 5
+    },
+    {
+      "sessionNumber": 2,
+      "coveragePercent": 11.63,
+      "uniqueQuestionsSeen": 10,
+      "uniqueSubtopicsSeen": 10
+    },
+    {
+      "sessionNumber": 3,
+      "coveragePercent": 17.44,
+      "uniqueQuestionsSeen": 15,
+      "uniqueSubtopicsSeen": 15
+    },
+    {
+      "sessionNumber": 4,
+      "coveragePercent": 23.26,
+      "uniqueQuestionsSeen": 20,
+      "uniqueSubtopicsSeen": 20
+    },
+    {
+      "sessionNumber": 5,
+      "coveragePercent": 27.91,
+      "uniqueQuestionsSeen": 24,
+      "uniqueSubtopicsSeen": 24
+    },
+    {
+      "sessionNumber": 6,
+      "coveragePercent": 33.72,
+      "uniqueQuestionsSeen": 29,
+      "uniqueSubtopicsSeen": 29
+    },
+    {
+      "sessionNumber": 7,
+      "coveragePercent": 39.53,
+      "uniqueQuestionsSeen": 34,
+      "uniqueSubtopicsSeen": 34
+    },
+    {
+      "sessionNumber": 8,
+      "coveragePercent": 41.86,
+      "uniqueQuestionsSeen": 36,
+      "uniqueSubtopicsSeen": 36
+    },
+    {
+      "sessionNumber": 9,
+      "coveragePercent": 45.35,
+      "uniqueQuestionsSeen": 39,
+      "uniqueSubtopicsSeen": 39
+    },
+    {
+      "sessionNumber": 10,
+      "coveragePercent": 48.84,
+      "uniqueQuestionsSeen": 43,
+      "uniqueSubtopicsSeen": 42
+    },
+    {
+      "sessionNumber": 11,
+      "coveragePercent": 52.33,
+      "uniqueQuestionsSeen": 46,
+      "uniqueSubtopicsSeen": 45
+    },
+    {
+      "sessionNumber": 12,
+      "coveragePercent": 55.81,
+      "uniqueQuestionsSeen": 50,
+      "uniqueSubtopicsSeen": 48
+    },
+    {
+      "sessionNumber": 13,
+      "coveragePercent": 59.3,
+      "uniqueQuestionsSeen": 53,
+      "uniqueSubtopicsSeen": 51
+    },
+    {
+      "sessionNumber": 14,
+      "coveragePercent": 65.12,
+      "uniqueQuestionsSeen": 58,
+      "uniqueSubtopicsSeen": 56
+    },
+    {
+      "sessionNumber": 15,
+      "coveragePercent": 67.44,
+      "uniqueQuestionsSeen": 61,
+      "uniqueSubtopicsSeen": 58
+    },
+    {
+      "sessionNumber": 16,
+      "coveragePercent": 69.77,
+      "uniqueQuestionsSeen": 63,
+      "uniqueSubtopicsSeen": 60
+    },
+    {
+      "sessionNumber": 17,
+      "coveragePercent": 73.26,
+      "uniqueQuestionsSeen": 66,
+      "uniqueSubtopicsSeen": 63
+    },
+    {
+      "sessionNumber": 18,
+      "coveragePercent": 76.74,
+      "uniqueQuestionsSeen": 71,
+      "uniqueSubtopicsSeen": 66
+    },
+    {
+      "sessionNumber": 19,
+      "coveragePercent": 79.07,
+      "uniqueQuestionsSeen": 73,
+      "uniqueSubtopicsSeen": 68
+    },
+    {
+      "sessionNumber": 20,
+      "coveragePercent": 82.56,
+      "uniqueQuestionsSeen": 77,
+      "uniqueSubtopicsSeen": 71
+    },
+    {
+      "sessionNumber": 21,
+      "coveragePercent": 84.88,
+      "uniqueQuestionsSeen": 79,
+      "uniqueSubtopicsSeen": 73
+    },
+    {
+      "sessionNumber": 22,
+      "coveragePercent": 87.21,
+      "uniqueQuestionsSeen": 81,
+      "uniqueSubtopicsSeen": 75
+    },
+    {
+      "sessionNumber": 23,
+      "coveragePercent": 88.37,
+      "uniqueQuestionsSeen": 82,
+      "uniqueSubtopicsSeen": 76
+    },
+    {
+      "sessionNumber": 24,
+      "coveragePercent": 89.53,
+      "uniqueQuestionsSeen": 83,
+      "uniqueSubtopicsSeen": 77
+    },
+    {
+      "sessionNumber": 25,
+      "coveragePercent": 91.86,
+      "uniqueQuestionsSeen": 85,
+      "uniqueSubtopicsSeen": 79
+    },
+    {
+      "sessionNumber": 26,
+      "coveragePercent": 95.35,
+      "uniqueQuestionsSeen": 88,
+      "uniqueSubtopicsSeen": 82
+    },
+    {
+      "sessionNumber": 27,
+      "coveragePercent": 97.67,
+      "uniqueQuestionsSeen": 90,
+      "uniqueSubtopicsSeen": 84
+    },
+    {
+      "sessionNumber": 28,
+      "coveragePercent": 98.84,
+      "uniqueQuestionsSeen": 91,
+      "uniqueSubtopicsSeen": 85
+    },
+    {
+      "sessionNumber": 29,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 30,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 31,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 32,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 33,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 34,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 35,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 36,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 37,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 38,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 39,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 40,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 41,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 42,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 43,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 44,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 93,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 45,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 94,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 46,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 94,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 47,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 95,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 48,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 49,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 50,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 98,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 51,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 52,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 53,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 54,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 55,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 56,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 57,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 58,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 59,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 60,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 61,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 62,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 63,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 64,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 65,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 66,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 67,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 68,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 69,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 70,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 71,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 72,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 73,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 74,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 75,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 76,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 77,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 78,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 79,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 80,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 81,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 82,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 83,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 84,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 85,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 86,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 87,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 88,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 89,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 90,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 91,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 92,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 93,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 94,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 95,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 96,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 97,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 98,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 99,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 100,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    }
+  ],
+  "USER_B_AVERAGE": [
+    {
+      "sessionNumber": 1,
+      "coveragePercent": 5.81,
+      "uniqueQuestionsSeen": 5,
+      "uniqueSubtopicsSeen": 5
+    },
+    {
+      "sessionNumber": 2,
+      "coveragePercent": 11.63,
+      "uniqueQuestionsSeen": 10,
+      "uniqueSubtopicsSeen": 10
+    },
+    {
+      "sessionNumber": 3,
+      "coveragePercent": 16.28,
+      "uniqueQuestionsSeen": 14,
+      "uniqueSubtopicsSeen": 14
+    },
+    {
+      "sessionNumber": 4,
+      "coveragePercent": 19.77,
+      "uniqueQuestionsSeen": 18,
+      "uniqueSubtopicsSeen": 17
+    },
+    {
+      "sessionNumber": 5,
+      "coveragePercent": 24.42,
+      "uniqueQuestionsSeen": 23,
+      "uniqueSubtopicsSeen": 21
+    },
+    {
+      "sessionNumber": 6,
+      "coveragePercent": 25.58,
+      "uniqueQuestionsSeen": 25,
+      "uniqueSubtopicsSeen": 22
+    },
+    {
+      "sessionNumber": 7,
+      "coveragePercent": 29.07,
+      "uniqueQuestionsSeen": 28,
+      "uniqueSubtopicsSeen": 25
+    },
+    {
+      "sessionNumber": 8,
+      "coveragePercent": 33.72,
+      "uniqueQuestionsSeen": 32,
+      "uniqueSubtopicsSeen": 29
+    },
+    {
+      "sessionNumber": 9,
+      "coveragePercent": 39.53,
+      "uniqueQuestionsSeen": 37,
+      "uniqueSubtopicsSeen": 34
+    },
+    {
+      "sessionNumber": 10,
+      "coveragePercent": 41.86,
+      "uniqueQuestionsSeen": 39,
+      "uniqueSubtopicsSeen": 36
+    },
+    {
+      "sessionNumber": 11,
+      "coveragePercent": 45.35,
+      "uniqueQuestionsSeen": 42,
+      "uniqueSubtopicsSeen": 39
+    },
+    {
+      "sessionNumber": 12,
+      "coveragePercent": 48.84,
+      "uniqueQuestionsSeen": 46,
+      "uniqueSubtopicsSeen": 42
+    },
+    {
+      "sessionNumber": 13,
+      "coveragePercent": 53.49,
+      "uniqueQuestionsSeen": 50,
+      "uniqueSubtopicsSeen": 46
+    },
+    {
+      "sessionNumber": 14,
+      "coveragePercent": 55.81,
+      "uniqueQuestionsSeen": 52,
+      "uniqueSubtopicsSeen": 48
+    },
+    {
+      "sessionNumber": 15,
+      "coveragePercent": 58.14,
+      "uniqueQuestionsSeen": 54,
+      "uniqueSubtopicsSeen": 50
+    },
+    {
+      "sessionNumber": 16,
+      "coveragePercent": 60.47,
+      "uniqueQuestionsSeen": 57,
+      "uniqueSubtopicsSeen": 52
+    },
+    {
+      "sessionNumber": 17,
+      "coveragePercent": 66.28,
+      "uniqueQuestionsSeen": 62,
+      "uniqueSubtopicsSeen": 57
+    },
+    {
+      "sessionNumber": 18,
+      "coveragePercent": 67.44,
+      "uniqueQuestionsSeen": 64,
+      "uniqueSubtopicsSeen": 58
+    },
+    {
+      "sessionNumber": 19,
+      "coveragePercent": 72.09,
+      "uniqueQuestionsSeen": 68,
+      "uniqueSubtopicsSeen": 62
+    },
+    {
+      "sessionNumber": 20,
+      "coveragePercent": 74.42,
+      "uniqueQuestionsSeen": 70,
+      "uniqueSubtopicsSeen": 64
+    },
+    {
+      "sessionNumber": 21,
+      "coveragePercent": 76.74,
+      "uniqueQuestionsSeen": 72,
+      "uniqueSubtopicsSeen": 66
+    },
+    {
+      "sessionNumber": 22,
+      "coveragePercent": 79.07,
+      "uniqueQuestionsSeen": 74,
+      "uniqueSubtopicsSeen": 68
+    },
+    {
+      "sessionNumber": 23,
+      "coveragePercent": 81.4,
+      "uniqueQuestionsSeen": 76,
+      "uniqueSubtopicsSeen": 70
+    },
+    {
+      "sessionNumber": 24,
+      "coveragePercent": 83.72,
+      "uniqueQuestionsSeen": 78,
+      "uniqueSubtopicsSeen": 72
+    },
+    {
+      "sessionNumber": 25,
+      "coveragePercent": 84.88,
+      "uniqueQuestionsSeen": 79,
+      "uniqueSubtopicsSeen": 73
+    },
+    {
+      "sessionNumber": 26,
+      "coveragePercent": 88.37,
+      "uniqueQuestionsSeen": 82,
+      "uniqueSubtopicsSeen": 76
+    },
+    {
+      "sessionNumber": 27,
+      "coveragePercent": 91.86,
+      "uniqueQuestionsSeen": 85,
+      "uniqueSubtopicsSeen": 79
+    },
+    {
+      "sessionNumber": 28,
+      "coveragePercent": 93.02,
+      "uniqueQuestionsSeen": 86,
+      "uniqueSubtopicsSeen": 80
+    },
+    {
+      "sessionNumber": 29,
+      "coveragePercent": 95.35,
+      "uniqueQuestionsSeen": 88,
+      "uniqueSubtopicsSeen": 82
+    },
+    {
+      "sessionNumber": 30,
+      "coveragePercent": 96.51,
+      "uniqueQuestionsSeen": 89,
+      "uniqueSubtopicsSeen": 83
+    },
+    {
+      "sessionNumber": 31,
+      "coveragePercent": 97.67,
+      "uniqueQuestionsSeen": 90,
+      "uniqueSubtopicsSeen": 84
+    },
+    {
+      "sessionNumber": 32,
+      "coveragePercent": 98.84,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 85
+    },
+    {
+      "sessionNumber": 33,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 93,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 34,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 93,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 35,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 94,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 36,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 94,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 37,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 94,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 38,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 94,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 39,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 94,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 40,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 94,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 41,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 95,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 42,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 95,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 43,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 44,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 45,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 46,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 47,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 48,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 49,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 50,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 51,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 52,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 53,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 54,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 55,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 56,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 57,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 58,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 59,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 60,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 61,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 62,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 63,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 64,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 65,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 66,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 67,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 68,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 69,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 70,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 71,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 72,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 73,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 74,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 75,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 76,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 77,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 78,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 79,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 80,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 81,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 82,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 83,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 84,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 85,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 86,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 87,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 88,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 89,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 90,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 91,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 92,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 93,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 94,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 95,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 96,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 97,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 98,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 99,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 100,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    }
+  ],
+  "USER_C_GRAMMAR_SPECIALIST": [
+    {
+      "sessionNumber": 1,
+      "coveragePercent": 5.81,
+      "uniqueQuestionsSeen": 5,
+      "uniqueSubtopicsSeen": 5
+    },
+    {
+      "sessionNumber": 2,
+      "coveragePercent": 11.63,
+      "uniqueQuestionsSeen": 10,
+      "uniqueSubtopicsSeen": 10
+    },
+    {
+      "sessionNumber": 3,
+      "coveragePercent": 16.28,
+      "uniqueQuestionsSeen": 14,
+      "uniqueSubtopicsSeen": 14
+    },
+    {
+      "sessionNumber": 4,
+      "coveragePercent": 20.93,
+      "uniqueQuestionsSeen": 18,
+      "uniqueSubtopicsSeen": 18
+    },
+    {
+      "sessionNumber": 5,
+      "coveragePercent": 24.42,
+      "uniqueQuestionsSeen": 21,
+      "uniqueSubtopicsSeen": 21
+    },
+    {
+      "sessionNumber": 6,
+      "coveragePercent": 30.23,
+      "uniqueQuestionsSeen": 26,
+      "uniqueSubtopicsSeen": 26
+    },
+    {
+      "sessionNumber": 7,
+      "coveragePercent": 34.88,
+      "uniqueQuestionsSeen": 30,
+      "uniqueSubtopicsSeen": 30
+    },
+    {
+      "sessionNumber": 8,
+      "coveragePercent": 39.53,
+      "uniqueQuestionsSeen": 34,
+      "uniqueSubtopicsSeen": 34
+    },
+    {
+      "sessionNumber": 9,
+      "coveragePercent": 44.19,
+      "uniqueQuestionsSeen": 38,
+      "uniqueSubtopicsSeen": 38
+    },
+    {
+      "sessionNumber": 10,
+      "coveragePercent": 47.67,
+      "uniqueQuestionsSeen": 42,
+      "uniqueSubtopicsSeen": 41
+    },
+    {
+      "sessionNumber": 11,
+      "coveragePercent": 50,
+      "uniqueQuestionsSeen": 44,
+      "uniqueSubtopicsSeen": 43
+    },
+    {
+      "sessionNumber": 12,
+      "coveragePercent": 54.65,
+      "uniqueQuestionsSeen": 48,
+      "uniqueSubtopicsSeen": 47
+    },
+    {
+      "sessionNumber": 13,
+      "coveragePercent": 55.81,
+      "uniqueQuestionsSeen": 51,
+      "uniqueSubtopicsSeen": 48
+    },
+    {
+      "sessionNumber": 14,
+      "coveragePercent": 60.47,
+      "uniqueQuestionsSeen": 56,
+      "uniqueSubtopicsSeen": 52
+    },
+    {
+      "sessionNumber": 15,
+      "coveragePercent": 63.95,
+      "uniqueQuestionsSeen": 60,
+      "uniqueSubtopicsSeen": 55
+    },
+    {
+      "sessionNumber": 16,
+      "coveragePercent": 66.28,
+      "uniqueQuestionsSeen": 62,
+      "uniqueSubtopicsSeen": 57
+    },
+    {
+      "sessionNumber": 17,
+      "coveragePercent": 70.93,
+      "uniqueQuestionsSeen": 66,
+      "uniqueSubtopicsSeen": 61
+    },
+    {
+      "sessionNumber": 18,
+      "coveragePercent": 75.58,
+      "uniqueQuestionsSeen": 70,
+      "uniqueSubtopicsSeen": 65
+    },
+    {
+      "sessionNumber": 19,
+      "coveragePercent": 79.07,
+      "uniqueQuestionsSeen": 73,
+      "uniqueSubtopicsSeen": 68
+    },
+    {
+      "sessionNumber": 20,
+      "coveragePercent": 82.56,
+      "uniqueQuestionsSeen": 76,
+      "uniqueSubtopicsSeen": 71
+    },
+    {
+      "sessionNumber": 21,
+      "coveragePercent": 86.05,
+      "uniqueQuestionsSeen": 79,
+      "uniqueSubtopicsSeen": 74
+    },
+    {
+      "sessionNumber": 22,
+      "coveragePercent": 88.37,
+      "uniqueQuestionsSeen": 81,
+      "uniqueSubtopicsSeen": 76
+    },
+    {
+      "sessionNumber": 23,
+      "coveragePercent": 91.86,
+      "uniqueQuestionsSeen": 84,
+      "uniqueSubtopicsSeen": 79
+    },
+    {
+      "sessionNumber": 24,
+      "coveragePercent": 94.19,
+      "uniqueQuestionsSeen": 86,
+      "uniqueSubtopicsSeen": 81
+    },
+    {
+      "sessionNumber": 25,
+      "coveragePercent": 95.35,
+      "uniqueQuestionsSeen": 88,
+      "uniqueSubtopicsSeen": 82
+    },
+    {
+      "sessionNumber": 26,
+      "coveragePercent": 96.51,
+      "uniqueQuestionsSeen": 89,
+      "uniqueSubtopicsSeen": 83
+    },
+    {
+      "sessionNumber": 27,
+      "coveragePercent": 97.67,
+      "uniqueQuestionsSeen": 91,
+      "uniqueSubtopicsSeen": 84
+    },
+    {
+      "sessionNumber": 28,
+      "coveragePercent": 98.84,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 85
+    },
+    {
+      "sessionNumber": 29,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 93,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 30,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 94,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 31,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 95,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 32,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 95,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 33,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 95,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 34,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 35,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 36,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 37,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 38,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 39,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 40,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 41,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 42,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 43,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 44,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 45,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 46,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 47,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 48,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 49,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 50,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 51,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 52,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 53,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 54,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 55,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 56,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 57,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 58,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 59,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 60,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 61,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 62,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 63,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 64,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 65,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 66,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 67,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 68,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 69,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 70,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 98,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 71,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 72,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 73,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 74,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 75,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 76,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 77,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 78,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 79,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 80,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 81,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 82,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 83,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 84,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 85,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 86,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 87,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 88,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 89,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 90,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 91,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 92,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 93,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 94,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 95,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 96,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 97,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 98,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 99,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 100,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    }
+  ],
+  "USER_D_VOCAB_SPECIALIST": [
+    {
+      "sessionNumber": 1,
+      "coveragePercent": 5.81,
+      "uniqueQuestionsSeen": 5,
+      "uniqueSubtopicsSeen": 5
+    },
+    {
+      "sessionNumber": 2,
+      "coveragePercent": 11.63,
+      "uniqueQuestionsSeen": 10,
+      "uniqueSubtopicsSeen": 10
+    },
+    {
+      "sessionNumber": 3,
+      "coveragePercent": 16.28,
+      "uniqueQuestionsSeen": 14,
+      "uniqueSubtopicsSeen": 14
+    },
+    {
+      "sessionNumber": 4,
+      "coveragePercent": 19.77,
+      "uniqueQuestionsSeen": 17,
+      "uniqueSubtopicsSeen": 17
+    },
+    {
+      "sessionNumber": 5,
+      "coveragePercent": 24.42,
+      "uniqueQuestionsSeen": 21,
+      "uniqueSubtopicsSeen": 21
+    },
+    {
+      "sessionNumber": 6,
+      "coveragePercent": 30.23,
+      "uniqueQuestionsSeen": 26,
+      "uniqueSubtopicsSeen": 26
+    },
+    {
+      "sessionNumber": 7,
+      "coveragePercent": 34.88,
+      "uniqueQuestionsSeen": 30,
+      "uniqueSubtopicsSeen": 30
+    },
+    {
+      "sessionNumber": 8,
+      "coveragePercent": 39.53,
+      "uniqueQuestionsSeen": 35,
+      "uniqueSubtopicsSeen": 34
+    },
+    {
+      "sessionNumber": 9,
+      "coveragePercent": 43.02,
+      "uniqueQuestionsSeen": 39,
+      "uniqueSubtopicsSeen": 37
+    },
+    {
+      "sessionNumber": 10,
+      "coveragePercent": 45.35,
+      "uniqueQuestionsSeen": 43,
+      "uniqueSubtopicsSeen": 39
+    },
+    {
+      "sessionNumber": 11,
+      "coveragePercent": 50,
+      "uniqueQuestionsSeen": 47,
+      "uniqueSubtopicsSeen": 43
+    },
+    {
+      "sessionNumber": 12,
+      "coveragePercent": 52.33,
+      "uniqueQuestionsSeen": 51,
+      "uniqueSubtopicsSeen": 45
+    },
+    {
+      "sessionNumber": 13,
+      "coveragePercent": 53.49,
+      "uniqueQuestionsSeen": 52,
+      "uniqueSubtopicsSeen": 46
+    },
+    {
+      "sessionNumber": 14,
+      "coveragePercent": 54.65,
+      "uniqueQuestionsSeen": 53,
+      "uniqueSubtopicsSeen": 47
+    },
+    {
+      "sessionNumber": 15,
+      "coveragePercent": 56.98,
+      "uniqueQuestionsSeen": 55,
+      "uniqueSubtopicsSeen": 49
+    },
+    {
+      "sessionNumber": 16,
+      "coveragePercent": 60.47,
+      "uniqueQuestionsSeen": 59,
+      "uniqueSubtopicsSeen": 52
+    },
+    {
+      "sessionNumber": 17,
+      "coveragePercent": 66.28,
+      "uniqueQuestionsSeen": 64,
+      "uniqueSubtopicsSeen": 57
+    },
+    {
+      "sessionNumber": 18,
+      "coveragePercent": 68.6,
+      "uniqueQuestionsSeen": 66,
+      "uniqueSubtopicsSeen": 59
+    },
+    {
+      "sessionNumber": 19,
+      "coveragePercent": 70.93,
+      "uniqueQuestionsSeen": 68,
+      "uniqueSubtopicsSeen": 61
+    },
+    {
+      "sessionNumber": 20,
+      "coveragePercent": 74.42,
+      "uniqueQuestionsSeen": 71,
+      "uniqueSubtopicsSeen": 64
+    },
+    {
+      "sessionNumber": 21,
+      "coveragePercent": 75.58,
+      "uniqueQuestionsSeen": 72,
+      "uniqueSubtopicsSeen": 65
+    },
+    {
+      "sessionNumber": 22,
+      "coveragePercent": 77.91,
+      "uniqueQuestionsSeen": 74,
+      "uniqueSubtopicsSeen": 67
+    },
+    {
+      "sessionNumber": 23,
+      "coveragePercent": 79.07,
+      "uniqueQuestionsSeen": 75,
+      "uniqueSubtopicsSeen": 68
+    },
+    {
+      "sessionNumber": 24,
+      "coveragePercent": 83.72,
+      "uniqueQuestionsSeen": 79,
+      "uniqueSubtopicsSeen": 72
+    },
+    {
+      "sessionNumber": 25,
+      "coveragePercent": 86.05,
+      "uniqueQuestionsSeen": 82,
+      "uniqueSubtopicsSeen": 74
+    },
+    {
+      "sessionNumber": 26,
+      "coveragePercent": 87.21,
+      "uniqueQuestionsSeen": 83,
+      "uniqueSubtopicsSeen": 75
+    },
+    {
+      "sessionNumber": 27,
+      "coveragePercent": 88.37,
+      "uniqueQuestionsSeen": 84,
+      "uniqueSubtopicsSeen": 76
+    },
+    {
+      "sessionNumber": 28,
+      "coveragePercent": 89.53,
+      "uniqueQuestionsSeen": 85,
+      "uniqueSubtopicsSeen": 77
+    },
+    {
+      "sessionNumber": 29,
+      "coveragePercent": 90.7,
+      "uniqueQuestionsSeen": 86,
+      "uniqueSubtopicsSeen": 78
+    },
+    {
+      "sessionNumber": 30,
+      "coveragePercent": 91.86,
+      "uniqueQuestionsSeen": 87,
+      "uniqueSubtopicsSeen": 79
+    },
+    {
+      "sessionNumber": 31,
+      "coveragePercent": 94.19,
+      "uniqueQuestionsSeen": 89,
+      "uniqueSubtopicsSeen": 81
+    },
+    {
+      "sessionNumber": 32,
+      "coveragePercent": 95.35,
+      "uniqueQuestionsSeen": 90,
+      "uniqueSubtopicsSeen": 82
+    },
+    {
+      "sessionNumber": 33,
+      "coveragePercent": 96.51,
+      "uniqueQuestionsSeen": 92,
+      "uniqueSubtopicsSeen": 83
+    },
+    {
+      "sessionNumber": 34,
+      "coveragePercent": 97.67,
+      "uniqueQuestionsSeen": 93,
+      "uniqueSubtopicsSeen": 84
+    },
+    {
+      "sessionNumber": 35,
+      "coveragePercent": 98.84,
+      "uniqueQuestionsSeen": 94,
+      "uniqueSubtopicsSeen": 85
+    },
+    {
+      "sessionNumber": 36,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 95,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 37,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 95,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 38,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 95,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 39,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 95,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 40,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 41,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 42,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 43,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 96,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 44,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 45,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 46,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 47,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 48,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 49,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 50,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 51,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 97,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 52,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 98,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 53,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 98,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 54,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 98,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 55,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 98,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 56,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 98,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 57,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 98,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 58,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 98,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 59,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 60,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 61,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 62,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 99,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 63,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 64,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 65,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 66,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 67,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 68,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 69,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 70,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 71,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 72,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 73,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 74,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 75,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 76,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 77,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 78,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 79,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 80,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 81,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 82,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 83,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 84,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 85,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 86,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 87,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 88,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 89,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 90,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 91,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 92,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 93,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 94,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 95,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 96,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 97,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 98,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 99,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    },
+    {
+      "sessionNumber": 100,
+      "coveragePercent": 100,
+      "uniqueQuestionsSeen": 100,
+      "uniqueSubtopicsSeen": 86
+    }
+  ]
+}

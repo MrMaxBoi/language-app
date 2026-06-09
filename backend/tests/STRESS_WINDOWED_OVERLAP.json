@@ -1,0 +1,20 @@
+{
+  "UserB_vs_UserC": {
+    "overall": 59.02,
+    "last10": 0.0,
+    "last20": 22.22,
+    "last30": 25.93
+  },
+  "UserA_vs_UserB": {
+    "overall": 60.32,
+    "last10": 10.0,
+    "last20": 21.05,
+    "last30": 26.92
+  },
+  "UserA_vs_UserC": {
+    "overall": 58.73,
+    "last10": 0.0,
+    "last20": 21.05,
+    "last30": 23.08
+  }
+}

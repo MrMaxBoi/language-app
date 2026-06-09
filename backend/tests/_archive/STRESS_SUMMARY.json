@@ -1,0 +1,11 @@
+{
+  "runs": 4,
+  "sessionsPerLearner": 100,
+  "questionsPerSession": 5,
+  "labels": [
+    "USER_A_HIGH_PERFORMER",
+    "USER_B_AVERAGE",
+    "USER_C_GRAMMAR_SPECIALIST",
+    "USER_D_VOCAB_SPECIALIST"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "UserB_vs_UserC": {
+    "Jensen_Shannon_distance": 0.1097,
+    "Cosine_distance": 0.9692,
+    "divergent": "No"
+  },
+  "UserA_vs_UserC": {
+    "Jensen_Shannon_distance": 0.0848,
+    "Cosine_distance": 0.9792,
+    "divergent": "No"
+  },
+  "UserA_vs_UserB": {
+    "Jensen_Shannon_distance": 0.1055,
+    "Cosine_distance": 0.9722,
+    "divergent": "No"
+  }
+}

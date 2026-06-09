@@ -1,0 +1,6702 @@
+[
+  {
+    "sessionNumber": 1,
+    "accuracy": 60,
+    "averageSkillMastery": 0.6,
+    "averageMemoryStrength": 0.5,
+    "recommendationEffectiveness": 0.5666666666666668,
+    "coveragePercent": 0,
+    "repeatRate": 0,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 5,
+    "uniqueSubtopicsSeen": 5,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "speculation",
+        "mastery": 1
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "te-form",
+        "mastery": 1
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "descriptions",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "speculation",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_003",
+      "mock_096",
+      "mock_059",
+      "mock_029",
+      "mock_063"
+    ],
+    "selectedTopics": [
+      "particles",
+      "grammar",
+      "adjectives",
+      "verbs",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "particles||topic particle",
+      "grammar||speculation",
+      "adjectives||descriptions",
+      "verbs||past tense verbs",
+      "verbs||te-form"
+    ]
+  },
+  {
+    "sessionNumber": 2,
+    "accuracy": 80,
+    "averageSkillMastery": 0.7,
+    "averageMemoryStrength": 0.55,
+    "recommendationEffectiveness": 0.6833333333333332,
+    "coveragePercent": 0,
+    "repeatRate": 0,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 10,
+    "uniqueSubtopicsSeen": 10,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "causative passive",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 1
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 1
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "descriptive adjectives",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_021",
+      "mock_032",
+      "mock_064",
+      "mock_077",
+      "mock_089"
+    ],
+    "selectedTopics": [
+      "vocabulary",
+      "adjectives",
+      "particles",
+      "verbs",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "vocabulary||animals",
+      "adjectives||descriptive adjectives",
+      "particles||means",
+      "verbs||future plan",
+      "verbs||causative passive"
+    ]
+  },
+  {
+    "sessionNumber": 3,
+    "accuracy": 20,
+    "averageSkillMastery": 0.5333333333333333,
+    "averageMemoryStrength": 0.4666666666666668,
+    "recommendationEffectiveness": 0.4000000000000001,
+    "coveragePercent": 0,
+    "repeatRate": 0,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 15,
+    "uniqueSubtopicsSeen": 15,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "causative passive",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 1
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_057",
+      "mock_022",
+      "mock_049",
+      "mock_005",
+      "mock_084"
+    ],
+    "selectedTopics": [
+      "greetings",
+      "greetings",
+      "verbs",
+      "verbs",
+      "particles"
+    ],
+    "selectedSubtopics": [
+      "greetings||basic responses",
+      "greetings||polite expressions",
+      "verbs||past tense conjugation",
+      "verbs||present tense verbs",
+      "particles||advanced particles"
+    ]
+  },
+  {
+    "sessionNumber": 4,
+    "accuracy": 60,
+    "averageSkillMastery": 0.5263157894736842,
+    "averageMemoryStrength": 0.4789473684210526,
+    "recommendationEffectiveness": 0.5350877192982456,
+    "coveragePercent": 0,
+    "repeatRate": 0,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 20,
+    "uniqueSubtopicsSeen": 19,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "descriptive adjectives",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "existence",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "desire form",
+        "mastery": 1
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_050",
+      "mock_069",
+      "mock_073",
+      "mock_018",
+      "mock_012"
+    ],
+    "selectedTopics": [
+      "greetings",
+      "grammar",
+      "grammar",
+      "travel",
+      "adjectives"
+    ],
+    "selectedSubtopics": [
+      "greetings||farewells",
+      "grammar||desire form",
+      "grammar||existence",
+      "travel||travel sentences",
+      "adjectives||descriptive adjectives"
+    ]
+  },
+  {
+    "sessionNumber": 5,
+    "accuracy": 40,
+    "averageSkillMastery": 0.5,
+    "averageMemoryStrength": 0.46249999999999986,
+    "recommendationEffectiveness": 0.4541666666666666,
+    "coveragePercent": 0,
+    "repeatRate": 0,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 25,
+    "uniqueSubtopicsSeen": 24,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "descriptive adjectives",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "uncertainty",
+        "mastery": 1
+      },
+      {
+        "topic": "food",
+        "subtopic": "food vocabulary",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "existence",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_035",
+      "mock_099",
+      "mock_040",
+      "mock_030",
+      "mock_067"
+    ],
+    "selectedTopics": [
+      "food",
+      "grammar",
+      "particles",
+      "greetings",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "food||food vocabulary",
+      "grammar||uncertainty",
+      "particles||destination",
+      "greetings||daily greetings",
+      "verbs||casual form"
+    ]
+  },
+  {
+    "sessionNumber": 6,
+    "accuracy": 60,
+    "averageSkillMastery": 0.5357142857142857,
+    "averageMemoryStrength": 0.4714285714285712,
+    "recommendationEffectiveness": 0.5357142857142856,
+    "coveragePercent": 0,
+    "repeatRate": 0.03333333333333333,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 29,
+    "uniqueSubtopicsSeen": 28,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "descriptive adjectives",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "conditional",
+        "mastery": 1
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "shopping adjectives",
+        "mastery": 1
+      },
+      {
+        "topic": "numbers",
+        "subtopic": "compound numbers",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_044",
+      "mock_026",
+      "mock_005",
+      "mock_083",
+      "mock_013"
+    ],
+    "selectedTopics": [
+      "numbers",
+      "adjectives",
+      "verbs",
+      "grammar",
+      "time/date"
+    ],
+    "selectedSubtopics": [
+      "numbers||compound numbers",
+      "adjectives||shopping adjectives",
+      "verbs||present tense verbs",
+      "grammar||conditional",
+      "time/date||asking time"
+    ]
+  },
+  {
+    "sessionNumber": 7,
+    "accuracy": 60,
+    "averageSkillMastery": 0.5483870967741935,
+    "averageMemoryStrength": 0.47419354838709654,
+    "recommendationEffectiveness": 0.5408602150537634,
+    "coveragePercent": 0,
+    "repeatRate": 0.02857142857142857,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 34,
+    "uniqueSubtopicsSeen": 31,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "descriptive adjectives",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "experience",
+        "mastery": 1
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "characteristics",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "conditional",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_053",
+      "mock_052",
+      "mock_066",
+      "mock_027",
+      "mock_093"
+    ],
+    "selectedTopics": [
+      "vocabulary",
+      "greetings",
+      "adjectives",
+      "particles",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "vocabulary||animals",
+      "greetings||daily greetings",
+      "adjectives||characteristics",
+      "particles||movement destination",
+      "grammar||experience"
+    ]
+  },
+  {
+    "sessionNumber": 8,
+    "accuracy": 60,
+    "averageSkillMastery": 0.5294117647058824,
+    "averageMemoryStrength": 0.47058823529411736,
+    "recommendationEffectiveness": 0.5333333333333332,
+    "coveragePercent": 0,
+    "repeatRate": 0.05,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 38,
+    "uniqueSubtopicsSeen": 34,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "descriptive adjectives",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "destination particle",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "experience",
+        "mastery": 1
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "characteristics",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_020",
+      "mock_044",
+      "mock_007",
+      "mock_031",
+      "mock_097"
+    ],
+    "selectedTopics": [
+      "particles",
+      "numbers",
+      "particles",
+      "time/date",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "particles||topic marking",
+      "numbers||compound numbers",
+      "particles||destination particle",
+      "time/date||days of the week",
+      "grammar||speculation"
+    ]
+  },
+  {
+    "sessionNumber": 9,
+    "accuracy": 40,
+    "averageSkillMastery": 0.5277777777777778,
+    "averageMemoryStrength": 0.46111111111111097,
+    "recommendationEffectiveness": 0.46296296296296297,
+    "coveragePercent": 0,
+    "repeatRate": 0.08888888888888889,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 41,
+    "uniqueSubtopicsSeen": 36,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "descriptive adjectives",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "vocabulary",
+        "subtopic": "school vocabulary",
+        "mastery": 1
+      },
+      {
+        "topic": "particles",
+        "subtopic": "destination particle",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "experience",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_039",
+      "mock_026",
+      "mock_011",
+      "mock_085",
+      "mock_067"
+    ],
+    "selectedTopics": [
+      "vocabulary",
+      "adjectives",
+      "time/date",
+      "grammar",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "vocabulary||school vocabulary",
+      "adjectives||shopping adjectives",
+      "time/date||days of the week",
+      "grammar||contrast expressions",
+      "verbs||casual form"
+    ]
+  },
+  {
+    "sessionNumber": 10,
+    "accuracy": 80,
+    "averageSkillMastery": 0.5789473684210527,
+    "averageMemoryStrength": 0.4684210526315788,
+    "recommendationEffectiveness": 0.6157894736842106,
+    "coveragePercent": 1,
+    "repeatRate": 0.12,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 44,
+    "uniqueSubtopicsSeen": 38,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "descriptive adjectives",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "adjectives",
+        "subtopic": "feelings",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "school vocabulary",
+        "mastery": 1
+      },
+      {
+        "topic": "particles",
+        "subtopic": "destination particle",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_055",
+      "mock_010",
+      "mock_072",
+      "mock_013",
+      "mock_099"
+    ],
+    "selectedTopics": [
+      "adjectives",
+      "greetings",
+      "particles",
+      "time/date",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "adjectives||feelings",
+      "greetings||daily greetings",
+      "particles||existence",
+      "time/date||asking time",
+      "grammar||uncertainty"
+    ]
+  },
+  {
+    "sessionNumber": 11,
+    "accuracy": 100,
+    "averageSkillMastery": 0.6428571428571429,
+    "averageMemoryStrength": 0.49285714285714266,
+    "recommendationEffectiveness": 0.7119047619047619,
+    "coveragePercent": 2,
+    "repeatRate": 0.12727272727272726,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 48,
+    "uniqueSubtopicsSeen": 42,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "causative passive",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "causative",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "location of action",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "comparison",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_051",
+      "mock_078",
+      "mock_062",
+      "mock_032",
+      "mock_088"
+    ],
+    "selectedTopics": [
+      "food",
+      "grammar",
+      "grammar",
+      "adjectives",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "food||basic food vocabulary",
+      "grammar||comparison",
+      "grammar||location of action",
+      "adjectives||descriptive adjectives",
+      "verbs||causative"
+    ]
+  },
+  {
+    "sessionNumber": 12,
+    "accuracy": 40,
+    "averageSkillMastery": 0.6170212765957447,
+    "averageMemoryStrength": 0.4829787234042551,
+    "recommendationEffectiveness": 0.49999999999999994,
+    "coveragePercent": 2,
+    "repeatRate": 0.11666666666666667,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 53,
+    "uniqueSubtopicsSeen": 47,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "causative passive",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "advice expressions",
+        "mastery": 1
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "weather adjectives",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "causative",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_060",
+      "mock_017",
+      "mock_090",
+      "mock_068",
+      "mock_080"
+    ],
+    "selectedTopics": [
+      "food",
+      "adjectives",
+      "grammar",
+      "particles",
+      "adjectives"
+    ],
+    "selectedSubtopics": [
+      "food||drinks",
+      "adjectives||weather adjectives",
+      "grammar||advice expressions",
+      "particles||object marking",
+      "adjectives||abstract"
+    ]
+  },
+  {
+    "sessionNumber": 13,
+    "accuracy": 20,
+    "averageSkillMastery": 0.56,
+    "averageMemoryStrength": 0.4639999999999997,
+    "recommendationEffectiveness": 0.4079999999999999,
+    "coveragePercent": 3,
+    "repeatRate": 0.12307692307692308,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 57,
+    "uniqueSubtopicsSeen": 50,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "te-form",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "advice expressions",
+        "mastery": 1
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "weather adjectives",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "causative",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_004",
+      "mock_074",
+      "mock_096",
+      "mock_023",
+      "mock_028"
+    ],
+    "selectedTopics": [
+      "numbers",
+      "verbs",
+      "grammar",
+      "particles",
+      "travel"
+    ],
+    "selectedSubtopics": [
+      "numbers||basic counting",
+      "verbs||te-form",
+      "grammar||speculation",
+      "particles||object particle",
+      "travel||travel locations"
+    ]
+  },
+  {
+    "sessionNumber": 14,
+    "accuracy": 60,
+    "averageSkillMastery": 0.5849056603773585,
+    "averageMemoryStrength": 0.4698113207547167,
+    "recommendationEffectiveness": 0.551572327044025,
+    "coveragePercent": 5,
+    "repeatRate": 0.14285714285714285,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 60,
+    "uniqueSubtopicsSeen": 53,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "te-form",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "existence verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "particles",
+        "subtopic": "location of action",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "people",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_019",
+      "mock_047",
+      "mock_063",
+      "mock_022",
+      "mock_092"
+    ],
+    "selectedTopics": [
+      "vocabulary",
+      "particles",
+      "verbs",
+      "greetings",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "vocabulary||people",
+      "particles||location of action",
+      "verbs||te-form",
+      "greetings||polite expressions",
+      "grammar||existence verbs"
+    ]
+  },
+  {
+    "sessionNumber": 15,
+    "accuracy": 60,
+    "averageSkillMastery": 0.6,
+    "averageMemoryStrength": 0.4690909090909088,
+    "recommendationEffectiveness": 0.5563636363636363,
+    "coveragePercent": 5,
+    "repeatRate": 0.17333333333333334,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 62,
+    "uniqueSubtopicsSeen": 55,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "te-form",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative polite form",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "existence verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "particles",
+        "subtopic": "location of action",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_061",
+      "mock_036",
+      "mock_089",
+      "mock_023",
+      "mock_050"
+    ],
+    "selectedTopics": [
+      "particles",
+      "verbs",
+      "verbs",
+      "particles",
+      "greetings"
+    ],
+    "selectedSubtopics": [
+      "particles||movement",
+      "verbs||negative polite form",
+      "verbs||causative passive",
+      "particles||object particle",
+      "greetings||farewells"
+    ]
+  },
+  {
+    "sessionNumber": 16,
+    "accuracy": 20,
+    "averageSkillMastery": 0.5689655172413793,
+    "averageMemoryStrength": 0.4534482758620686,
+    "recommendationEffectiveness": 0.40747126436781594,
+    "coveragePercent": 5,
+    "repeatRate": 0.1875,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 65,
+    "uniqueSubtopicsSeen": 58,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "te-form",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative polite form",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "existence verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "particles",
+        "subtopic": "location of action",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_057",
+      "mock_048",
+      "mock_043",
+      "mock_100",
+      "mock_077"
+    ],
+    "selectedTopics": [
+      "greetings",
+      "travel",
+      "particles",
+      "verbs",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "greetings||basic responses",
+      "travel||accommodation",
+      "particles||companion particle",
+      "verbs||aspect",
+      "verbs||future plan"
+    ]
+  },
+  {
+    "sessionNumber": 17,
+    "accuracy": 80,
+    "averageSkillMastery": 0.6166666666666667,
+    "averageMemoryStrength": 0.4616666666666663,
+    "recommendationEffectiveness": 0.626111111111111,
+    "coveragePercent": 6,
+    "repeatRate": 0.21176470588235294,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 67,
+    "uniqueSubtopicsSeen": 60,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "te-form",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "concessive",
+        "mastery": 1
+      },
+      {
+        "topic": "numbers",
+        "subtopic": "counting",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "negative polite form",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_024",
+      "mock_026",
+      "mock_068",
+      "mock_091",
+      "mock_074"
+    ],
+    "selectedTopics": [
+      "numbers",
+      "adjectives",
+      "particles",
+      "grammar",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "numbers||counting",
+      "adjectives||shopping adjectives",
+      "particles||object marking",
+      "grammar||concessive",
+      "verbs||te-form"
+    ]
+  },
+  {
+    "sessionNumber": 18,
+    "accuracy": 80,
+    "averageSkillMastery": 0.6349206349206349,
+    "averageMemoryStrength": 0.4682539682539679,
+    "recommendationEffectiveness": 0.6343915343915343,
+    "coveragePercent": 6,
+    "repeatRate": 0.2111111111111111,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 71,
+    "uniqueSubtopicsSeen": 63,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "te-form",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "intentions",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "daily routine",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "concessive",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_042",
+      "mock_020",
+      "mock_070",
+      "mock_025",
+      "mock_095"
+    ],
+    "selectedTopics": [
+      "greetings",
+      "particles",
+      "adjectives",
+      "verbs",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "greetings||night expressions",
+      "particles||topic marking",
+      "adjectives||descriptions",
+      "verbs||daily routine",
+      "grammar||intentions"
+    ]
+  },
+  {
+    "sessionNumber": 19,
+    "accuracy": 80,
+    "averageSkillMastery": 0.6615384615384615,
+    "averageMemoryStrength": 0.4753846153846151,
+    "recommendationEffectiveness": 0.6456410256410255,
+    "coveragePercent": 7,
+    "repeatRate": 0.23157894736842105,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 73,
+    "uniqueSubtopicsSeen": 65,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "te-form",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "relative clauses",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "basic nouns",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "intentions",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_001",
+      "mock_017",
+      "mock_028",
+      "mock_087",
+      "mock_031"
+    ],
+    "selectedTopics": [
+      "vocabulary",
+      "adjectives",
+      "travel",
+      "grammar",
+      "time/date"
+    ],
+    "selectedSubtopics": [
+      "vocabulary||basic nouns",
+      "adjectives||weather adjectives",
+      "travel||travel locations",
+      "grammar||relative clauses",
+      "time/date||days of the week"
+    ]
+  },
+  {
+    "sessionNumber": 20,
+    "accuracy": 80,
+    "averageSkillMastery": 0.6818181818181818,
+    "averageMemoryStrength": 0.48030303030303,
+    "recommendationEffectiveness": 0.654040404040404,
+    "coveragePercent": 9,
+    "repeatRate": 0.26,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 74,
+    "uniqueSubtopicsSeen": 66,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "te-form",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "adjectives",
+        "subtopic": "weather",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "relative clauses",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "basic nouns",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_037",
+      "mock_059",
+      "mock_100",
+      "mock_067",
+      "mock_043"
+    ],
+    "selectedTopics": [
+      "adjectives",
+      "adjectives",
+      "verbs",
+      "verbs",
+      "particles"
+    ],
+    "selectedSubtopics": [
+      "adjectives||weather",
+      "adjectives||descriptions",
+      "verbs||aspect",
+      "verbs||casual form",
+      "particles||companion particle"
+    ]
+  },
+  {
+    "sessionNumber": 21,
+    "accuracy": 40,
+    "averageSkillMastery": 0.6716417910447762,
+    "averageMemoryStrength": 0.4761194029850743,
+    "recommendationEffectiveness": 0.5159203980099502,
+    "coveragePercent": 10,
+    "repeatRate": 0.2857142857142857,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 75,
+    "uniqueSubtopicsSeen": 67,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "te-form",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "adjectives",
+        "subtopic": "opinions",
+        "mastery": 1
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "weather",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "relative clauses",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_044",
+      "mock_048",
+      "mock_046",
+      "mock_018",
+      "mock_062"
+    ],
+    "selectedTopics": [
+      "numbers",
+      "travel",
+      "adjectives",
+      "travel",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "numbers||compound numbers",
+      "travel||accommodation",
+      "adjectives||opinions",
+      "travel||travel sentences",
+      "grammar||location of action"
+    ]
+  },
+  {
+    "sessionNumber": 22,
+    "accuracy": 40,
+    "averageSkillMastery": 0.6571428571428571,
+    "averageMemoryStrength": 0.4671428571428571,
+    "recommendationEffectiveness": 0.508095238095238,
+    "coveragePercent": 10,
+    "repeatRate": 0.2818181818181818,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 79,
+    "uniqueSubtopicsSeen": 70,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "te-form",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "adjectives",
+        "subtopic": "opinions",
+        "mastery": 1
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "weather",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "relative clauses",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_054",
+      "mock_058",
+      "mock_081",
+      "mock_076",
+      "mock_096"
+    ],
+    "selectedTopics": [
+      "numbers",
+      "travel",
+      "verbs",
+      "adjectives",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "numbers||basic counting",
+      "travel||transport",
+      "verbs||ability",
+      "adjectives||abstract adjectives",
+      "grammar||speculation"
+    ]
+  },
+  {
+    "sessionNumber": 23,
+    "accuracy": 40,
+    "averageSkillMastery": 0.647887323943662,
+    "averageMemoryStrength": 0.4661971830985915,
+    "recommendationEffectiveness": 0.5046948356807511,
+    "coveragePercent": 14,
+    "repeatRate": 0.30434782608695654,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 80,
+    "uniqueSubtopicsSeen": 71,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "te-form",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "time/date",
+        "subtopic": "daily time expressions",
+        "mastery": 1
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "opinions",
+        "mastery": 1
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "weather",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_033",
+      "mock_017",
+      "mock_043",
+      "mock_018",
+      "mock_036"
+    ],
+    "selectedTopics": [
+      "time/date",
+      "adjectives",
+      "particles",
+      "travel",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "time/date||daily time expressions",
+      "adjectives||weather adjectives",
+      "particles||companion particle",
+      "travel||travel sentences",
+      "verbs||negative polite form"
+    ]
+  },
+  {
+    "sessionNumber": 24,
+    "accuracy": 80,
+    "averageSkillMastery": 0.6575342465753424,
+    "averageMemoryStrength": 0.4698630136986302,
+    "recommendationEffectiveness": 0.6424657534246575,
+    "coveragePercent": 14,
+    "repeatRate": 0.31666666666666665,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 82,
+    "uniqueSubtopicsSeen": 73,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "noun connection",
+        "mastery": 1
+      },
+      {
+        "topic": "time/date",
+        "subtopic": "daily time expressions",
+        "mastery": 1
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "opinions",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_034",
+      "mock_008",
+      "mock_066",
+      "mock_087",
+      "mock_074"
+    ],
+    "selectedTopics": [
+      "grammar",
+      "travel",
+      "adjectives",
+      "grammar",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "grammar||noun connection",
+      "travel||transportation",
+      "adjectives||characteristics",
+      "grammar||relative clauses",
+      "verbs||te-form"
+    ]
+  },
+  {
+    "sessionNumber": 25,
+    "accuracy": 60,
+    "averageSkillMastery": 0.6351351351351351,
+    "averageMemoryStrength": 0.4702702702702704,
+    "recommendationEffectiveness": 0.5684684684684685,
+    "coveragePercent": 16,
+    "repeatRate": 0.328,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 84,
+    "uniqueSubtopicsSeen": 74,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "vocabulary",
+        "subtopic": "daily objects",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "noun connection",
+        "mastery": 1
+      },
+      {
+        "topic": "time/date",
+        "subtopic": "daily time expressions",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_056",
+      "mock_037",
+      "mock_078",
+      "mock_028",
+      "mock_098"
+    ],
+    "selectedTopics": [
+      "vocabulary",
+      "adjectives",
+      "grammar",
+      "travel",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "vocabulary||daily objects",
+      "adjectives||weather",
+      "grammar||comparison",
+      "travel||travel locations",
+      "grammar||uncertainty"
+    ]
+  },
+  {
+    "sessionNumber": 26,
+    "accuracy": 100,
+    "averageSkillMastery": 0.6578947368421053,
+    "averageMemoryStrength": 0.480263157894737,
+    "recommendationEffectiveness": 0.7127192982456142,
+    "coveragePercent": 16,
+    "repeatRate": 0.3384615384615385,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 86,
+    "uniqueSubtopicsSeen": 76,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "daily habits",
+        "mastery": 1
+      },
+      {
+        "topic": "particles",
+        "subtopic": "possession",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "daily objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_014",
+      "mock_008",
+      "mock_045",
+      "mock_046",
+      "mock_090"
+    ],
+    "selectedTopics": [
+      "particles",
+      "travel",
+      "verbs",
+      "adjectives",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "particles||possession",
+      "travel||transportation",
+      "verbs||daily habits",
+      "adjectives||opinions",
+      "grammar||advice expressions"
+    ]
+  },
+  {
+    "sessionNumber": 27,
+    "accuracy": 80,
+    "averageSkillMastery": 0.6883116883116883,
+    "averageMemoryStrength": 0.4870129870129871,
+    "recommendationEffectiveness": 0.6584415584415585,
+    "coveragePercent": 19,
+    "repeatRate": 0.35555555555555557,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 87,
+    "uniqueSubtopicsSeen": 77,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "requests",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "daily habits",
+        "mastery": 1
+      },
+      {
+        "topic": "particles",
+        "subtopic": "possession",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_075",
+      "mock_091",
+      "mock_005",
+      "mock_058",
+      "mock_048"
+    ],
+    "selectedTopics": [
+      "grammar",
+      "grammar",
+      "verbs",
+      "travel",
+      "travel"
+    ],
+    "selectedSubtopics": [
+      "grammar||requests",
+      "grammar||concessive",
+      "verbs||present tense verbs",
+      "travel||transport",
+      "travel||accommodation"
+    ]
+  },
+  {
+    "sessionNumber": 28,
+    "accuracy": 80,
+    "averageSkillMastery": 0.6835443037974683,
+    "averageMemoryStrength": 0.4924050632911394,
+    "recommendationEffectiveness": 0.658649789029536,
+    "coveragePercent": 20,
+    "repeatRate": 0.36428571428571427,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 89,
+    "uniqueSubtopicsSeen": 79,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "future intention",
+        "mastery": 1
+      },
+      {
+        "topic": "adjectives",
+        "subtopic": "i-adjectives",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "requests",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_006",
+      "mock_019",
+      "mock_038",
+      "mock_045",
+      "mock_068"
+    ],
+    "selectedTopics": [
+      "adjectives",
+      "vocabulary",
+      "grammar",
+      "verbs",
+      "particles"
+    ],
+    "selectedSubtopics": [
+      "adjectives||i-adjectives",
+      "vocabulary||people",
+      "grammar||future intention",
+      "verbs||daily habits",
+      "particles||object marking"
+    ]
+  },
+  {
+    "sessionNumber": 29,
+    "accuracy": 80,
+    "averageSkillMastery": 0.6790123456790124,
+    "averageMemoryStrength": 0.497530864197531,
+    "recommendationEffectiveness": 0.6588477366255144,
+    "coveragePercent": 21,
+    "repeatRate": 0.3724137931034483,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 91,
+    "uniqueSubtopicsSeen": 81,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "keigo",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past interaction",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "future intention",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_050",
+      "mock_056",
+      "mock_071",
+      "mock_086",
+      "mock_011"
+    ],
+    "selectedTopics": [
+      "greetings",
+      "vocabulary",
+      "verbs",
+      "grammar",
+      "time/date"
+    ],
+    "selectedSubtopics": [
+      "greetings||farewells",
+      "vocabulary||daily objects",
+      "verbs||past interaction",
+      "grammar||keigo",
+      "time/date||days of the week"
+    ]
+  },
+  {
+    "sessionNumber": 30,
+    "accuracy": 40,
+    "averageSkillMastery": 0.6585365853658537,
+    "averageMemoryStrength": 0.4939024390243904,
+    "recommendationEffectiveness": 0.5174796747967481,
+    "coveragePercent": 23,
+    "repeatRate": 0.38666666666666666,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 92,
+    "uniqueSubtopicsSeen": 82,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "keigo",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past interaction",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_014",
+      "mock_009",
+      "mock_013",
+      "mock_085",
+      "mock_020"
+    ],
+    "selectedTopics": [
+      "particles",
+      "verbs",
+      "time/date",
+      "grammar",
+      "particles"
+    ],
+    "selectedSubtopics": [
+      "particles||possession",
+      "verbs||past tense",
+      "time/date||asking time",
+      "grammar||contrast expressions",
+      "particles||topic marking"
+    ]
+  },
+  {
+    "sessionNumber": 31,
+    "accuracy": 80,
+    "averageSkillMastery": 0.6746987951807228,
+    "averageMemoryStrength": 0.49759036144578334,
+    "recommendationEffectiveness": 0.6574297188755021,
+    "coveragePercent": 24,
+    "repeatRate": 0.4,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 93,
+    "uniqueSubtopicsSeen": 83,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense",
+        "mastery": 1
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "keigo",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_041",
+      "mock_007",
+      "mock_040",
+      "mock_090",
+      "mock_060"
+    ],
+    "selectedTopics": [
+      "vocabulary",
+      "particles",
+      "particles",
+      "grammar",
+      "food"
+    ],
+    "selectedSubtopics": [
+      "vocabulary||objects",
+      "particles||destination particle",
+      "particles||destination",
+      "grammar||advice expressions",
+      "food||drinks"
+    ]
+  },
+  {
+    "sessionNumber": 32,
+    "accuracy": 80,
+    "averageSkillMastery": 0.6904761904761905,
+    "averageMemoryStrength": 0.5011904761904764,
+    "recommendationEffectiveness": 0.663888888888889,
+    "coveragePercent": 26,
+    "repeatRate": 0.4125,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 94,
+    "uniqueSubtopicsSeen": 84,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_003",
+      "mock_082",
+      "mock_061",
+      "mock_100",
+      "mock_006"
+    ],
+    "selectedTopics": [
+      "particles",
+      "vocabulary",
+      "particles",
+      "verbs",
+      "adjectives"
+    ],
+    "selectedSubtopics": [
+      "particles||topic particle",
+      "vocabulary||quantity",
+      "particles||movement",
+      "verbs||aspect",
+      "adjectives||i-adjectives"
+    ]
+  },
+  {
+    "sessionNumber": 33,
+    "accuracy": 80,
+    "averageSkillMastery": 0.7058823529411765,
+    "averageMemoryStrength": 0.5047058823529414,
+    "recommendationEffectiveness": 0.6701960784313727,
+    "coveragePercent": 27,
+    "repeatRate": 0.42424242424242425,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 95,
+    "uniqueSubtopicsSeen": 85,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_065",
+      "mock_080",
+      "mock_085",
+      "mock_050",
+      "mock_001"
+    ],
+    "selectedTopics": [
+      "verbs",
+      "adjectives",
+      "grammar",
+      "greetings",
+      "vocabulary"
+    ],
+    "selectedSubtopics": [
+      "verbs||past negative",
+      "adjectives||abstract",
+      "grammar||contrast expressions",
+      "greetings||farewells",
+      "vocabulary||basic nouns"
+    ]
+  },
+  {
+    "sessionNumber": 34,
+    "accuracy": 40,
+    "averageSkillMastery": 0.6976744186046512,
+    "averageMemoryStrength": 0.4988372093023259,
+    "recommendationEffectiveness": 0.532170542635659,
+    "coveragePercent": 27,
+    "repeatRate": 0.4294117647058823,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 97,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_015",
+      "mock_042",
+      "mock_016",
+      "mock_072",
+      "mock_090"
+    ],
+    "selectedTopics": [
+      "food",
+      "greetings",
+      "verbs",
+      "particles",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "food||basic food vocabulary",
+      "greetings||night expressions",
+      "verbs||negative verbs",
+      "particles||existence",
+      "grammar||advice expressions"
+    ]
+  },
+  {
+    "sessionNumber": 35,
+    "accuracy": 40,
+    "averageSkillMastery": 0.686046511627907,
+    "averageMemoryStrength": 0.496511627906977,
+    "recommendationEffectiveness": 0.5275193798449613,
+    "coveragePercent": 29,
+    "repeatRate": 0.44,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 98,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_023",
+      "mock_029",
+      "mock_079",
+      "mock_098",
+      "mock_050"
+    ],
+    "selectedTopics": [
+      "particles",
+      "verbs",
+      "grammar",
+      "grammar",
+      "greetings"
+    ],
+    "selectedSubtopics": [
+      "particles||object particle",
+      "verbs||past tense verbs",
+      "grammar||comparison",
+      "grammar||uncertainty",
+      "greetings||farewells"
+    ]
+  },
+  {
+    "sessionNumber": 36,
+    "accuracy": 60,
+    "averageSkillMastery": 0.6744186046511628,
+    "averageMemoryStrength": 0.4953488372093025,
+    "recommendationEffectiveness": 0.5899224806201552,
+    "coveragePercent": 33,
+    "repeatRate": 0.45555555555555555,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 98,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_021",
+      "mock_036",
+      "mock_027",
+      "mock_087",
+      "mock_052"
+    ],
+    "selectedTopics": [
+      "vocabulary",
+      "verbs",
+      "particles",
+      "grammar",
+      "greetings"
+    ],
+    "selectedSubtopics": [
+      "vocabulary||animals",
+      "verbs||negative polite form",
+      "particles||movement destination",
+      "grammar||relative clauses",
+      "greetings||daily greetings"
+    ]
+  },
+  {
+    "sessionNumber": 37,
+    "accuracy": 60,
+    "averageSkillMastery": 0.6627906976744186,
+    "averageMemoryStrength": 0.49651162790697684,
+    "recommendationEffectiveness": 0.5864341085271318,
+    "coveragePercent": 37,
+    "repeatRate": 0.4702702702702703,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 98,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_051",
+      "mock_033",
+      "mock_040",
+      "mock_061",
+      "mock_091"
+    ],
+    "selectedTopics": [
+      "food",
+      "time/date",
+      "particles",
+      "particles",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "food||basic food vocabulary",
+      "time/date||daily time expressions",
+      "particles||destination",
+      "particles||movement",
+      "grammar||concessive"
+    ]
+  },
+  {
+    "sessionNumber": 38,
+    "accuracy": 80,
+    "averageSkillMastery": 0.6744186046511628,
+    "averageMemoryStrength": 0.4988372093023257,
+    "recommendationEffectiveness": 0.6577519379844962,
+    "coveragePercent": 41,
+    "repeatRate": 0.4842105263157895,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 98,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_006",
+      "mock_003",
+      "mock_081",
+      "mock_072",
+      "mock_093"
+    ],
+    "selectedTopics": [
+      "adjectives",
+      "particles",
+      "verbs",
+      "particles",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "adjectives||i-adjectives",
+      "particles||topic particle",
+      "verbs||ability",
+      "particles||existence",
+      "grammar||experience"
+    ]
+  },
+  {
+    "sessionNumber": 39,
+    "accuracy": 60,
+    "averageSkillMastery": 0.6627906976744186,
+    "averageMemoryStrength": 0.4976744186046512,
+    "recommendationEffectiveness": 0.5868217054263566,
+    "coveragePercent": 43,
+    "repeatRate": 0.49743589743589745,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 98,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_073",
+      "mock_071",
+      "mock_032",
+      "mock_014",
+      "mock_089"
+    ],
+    "selectedTopics": [
+      "grammar",
+      "verbs",
+      "adjectives",
+      "particles",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "grammar||existence",
+      "verbs||past interaction",
+      "adjectives||descriptive adjectives",
+      "particles||possession",
+      "verbs||causative passive"
+    ]
+  },
+  {
+    "sessionNumber": 40,
+    "accuracy": 40,
+    "averageSkillMastery": 0.6511627906976745,
+    "averageMemoryStrength": 0.49534883720930245,
+    "recommendationEffectiveness": 0.5155038759689923,
+    "coveragePercent": 45,
+    "repeatRate": 0.51,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 98,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_008",
+      "mock_047",
+      "mock_049",
+      "mock_048",
+      "mock_093"
+    ],
+    "selectedTopics": [
+      "travel",
+      "particles",
+      "verbs",
+      "travel",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "travel||transportation",
+      "particles||location of action",
+      "verbs||past tense conjugation",
+      "travel||accommodation",
+      "grammar||experience"
+    ]
+  },
+  {
+    "sessionNumber": 41,
+    "accuracy": 80,
+    "averageSkillMastery": 0.6627906976744186,
+    "averageMemoryStrength": 0.4976744186046512,
+    "recommendationEffectiveness": 0.6534883720930232,
+    "coveragePercent": 48,
+    "repeatRate": 0.5219512195121951,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 98,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_041",
+      "mock_075",
+      "mock_027",
+      "mock_058",
+      "mock_018"
+    ],
+    "selectedTopics": [
+      "vocabulary",
+      "grammar",
+      "particles",
+      "travel",
+      "travel"
+    ],
+    "selectedSubtopics": [
+      "vocabulary||objects",
+      "grammar||requests",
+      "particles||movement destination",
+      "travel||transport",
+      "travel||travel sentences"
+    ]
+  },
+  {
+    "sessionNumber": 42,
+    "accuracy": 80,
+    "averageSkillMastery": 0.686046511627907,
+    "averageMemoryStrength": 0.5023255813953489,
+    "recommendationEffectiveness": 0.6627906976744186,
+    "coveragePercent": 49,
+    "repeatRate": 0.5285714285714286,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 99,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_039",
+      "mock_008",
+      "mock_081",
+      "mock_028",
+      "mock_094"
+    ],
+    "selectedTopics": [
+      "vocabulary",
+      "travel",
+      "verbs",
+      "travel",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "vocabulary||school vocabulary",
+      "travel||transportation",
+      "verbs||ability",
+      "travel||travel locations",
+      "grammar||intentions"
+    ]
+  },
+  {
+    "sessionNumber": 43,
+    "accuracy": 60,
+    "averageSkillMastery": 0.686046511627907,
+    "averageMemoryStrength": 0.5034883720930231,
+    "recommendationEffectiveness": 0.5965116279069766,
+    "coveragePercent": 51,
+    "repeatRate": 0.5395348837209303,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 99,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "future plan",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_054",
+      "mock_029",
+      "mock_076",
+      "mock_038",
+      "mock_026"
+    ],
+    "selectedTopics": [
+      "numbers",
+      "verbs",
+      "adjectives",
+      "grammar",
+      "adjectives"
+    ],
+    "selectedSubtopics": [
+      "numbers||basic counting",
+      "verbs||past tense verbs",
+      "adjectives||abstract adjectives",
+      "grammar||future intention",
+      "adjectives||shopping adjectives"
+    ]
+  },
+  {
+    "sessionNumber": 44,
+    "accuracy": 80,
+    "averageSkillMastery": 0.6976744186046512,
+    "averageMemoryStrength": 0.5058139534883719,
+    "recommendationEffectiveness": 0.667829457364341,
+    "coveragePercent": 52,
+    "repeatRate": 0.55,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 99,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_004",
+      "mock_024",
+      "mock_082",
+      "mock_077",
+      "mock_091"
+    ],
+    "selectedTopics": [
+      "numbers",
+      "numbers",
+      "vocabulary",
+      "verbs",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "numbers||basic counting",
+      "numbers||counting",
+      "vocabulary||quantity",
+      "verbs||future plan",
+      "grammar||concessive"
+    ]
+  },
+  {
+    "sessionNumber": 45,
+    "accuracy": 60,
+    "averageSkillMastery": 0.686046511627907,
+    "averageMemoryStrength": 0.5046511627906974,
+    "recommendationEffectiveness": 0.5968992248062014,
+    "coveragePercent": 53,
+    "repeatRate": 0.56,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 99,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_055",
+      "mock_054",
+      "mock_065",
+      "mock_016",
+      "mock_094"
+    ],
+    "selectedTopics": [
+      "adjectives",
+      "numbers",
+      "verbs",
+      "verbs",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "adjectives||feelings",
+      "numbers||basic counting",
+      "verbs||past negative",
+      "verbs||negative verbs",
+      "grammar||intentions"
+    ]
+  },
+  {
+    "sessionNumber": 46,
+    "accuracy": 80,
+    "averageSkillMastery": 0.7093023255813954,
+    "averageMemoryStrength": 0.5081395348837208,
+    "recommendationEffectiveness": 0.6724806201550387,
+    "coveragePercent": 56,
+    "repeatRate": 0.5695652173913044,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 99,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_056",
+      "mock_004",
+      "mock_071",
+      "mock_092",
+      "mock_067"
+    ],
+    "selectedTopics": [
+      "vocabulary",
+      "numbers",
+      "verbs",
+      "grammar",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "vocabulary||daily objects",
+      "numbers||basic counting",
+      "verbs||past interaction",
+      "grammar||existence verbs",
+      "verbs||casual form"
+    ]
+  },
+  {
+    "sessionNumber": 47,
+    "accuracy": 80,
+    "averageSkillMastery": 0.7093023255813954,
+    "averageMemoryStrength": 0.5104651162790695,
+    "recommendationEffectiveness": 0.6732558139534883,
+    "coveragePercent": 59,
+    "repeatRate": 0.5787234042553191,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 99,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_054",
+      "mock_024",
+      "mock_076",
+      "mock_082",
+      "mock_090"
+    ],
+    "selectedTopics": [
+      "numbers",
+      "numbers",
+      "adjectives",
+      "vocabulary",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "numbers||basic counting",
+      "numbers||counting",
+      "adjectives||abstract adjectives",
+      "vocabulary||quantity",
+      "grammar||advice expressions"
+    ]
+  },
+  {
+    "sessionNumber": 48,
+    "accuracy": 60,
+    "averageSkillMastery": 0.6976744186046512,
+    "averageMemoryStrength": 0.5104651162790695,
+    "recommendationEffectiveness": 0.6027131782945735,
+    "coveragePercent": 59,
+    "repeatRate": 0.5833333333333334,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_004",
+      "mock_002",
+      "mock_064",
+      "mock_009",
+      "mock_097"
+    ],
+    "selectedTopics": [
+      "numbers",
+      "greetings",
+      "particles",
+      "verbs",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "numbers||basic counting",
+      "greetings||daily greetings",
+      "particles||means",
+      "verbs||past tense",
+      "grammar||speculation"
+    ]
+  },
+  {
+    "sessionNumber": 49,
+    "accuracy": 60,
+    "averageSkillMastery": 0.686046511627907,
+    "averageMemoryStrength": 0.5093023255813951,
+    "recommendationEffectiveness": 0.5984496124031007,
+    "coveragePercent": 62,
+    "repeatRate": 0.5918367346938775,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_001",
+      "mock_014",
+      "mock_046",
+      "mock_072",
+      "mock_096"
+    ],
+    "selectedTopics": [
+      "vocabulary",
+      "particles",
+      "adjectives",
+      "particles",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "vocabulary||basic nouns",
+      "particles||possession",
+      "adjectives||opinions",
+      "particles||existence",
+      "grammar||speculation"
+    ]
+  },
+  {
+    "sessionNumber": 50,
+    "accuracy": 60,
+    "averageSkillMastery": 0.6976744186046512,
+    "averageMemoryStrength": 0.5104651162790695,
+    "recommendationEffectiveness": 0.6027131782945735,
+    "coveragePercent": 63,
+    "repeatRate": 0.6,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_083",
+      "mock_019",
+      "mock_061",
+      "mock_020",
+      "mock_068"
+    ],
+    "selectedTopics": [
+      "grammar",
+      "vocabulary",
+      "particles",
+      "particles",
+      "particles"
+    ],
+    "selectedSubtopics": [
+      "grammar||conditional",
+      "vocabulary||people",
+      "particles||movement",
+      "particles||topic marking",
+      "particles||object marking"
+    ]
+  },
+  {
+    "sessionNumber": 51,
+    "accuracy": 60,
+    "averageSkillMastery": 0.686046511627907,
+    "averageMemoryStrength": 0.5104651162790695,
+    "recommendationEffectiveness": 0.5988372093023254,
+    "coveragePercent": 65,
+    "repeatRate": 0.6078431372549019,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_023",
+      "mock_065",
+      "mock_049",
+      "mock_006",
+      "mock_090"
+    ],
+    "selectedTopics": [
+      "particles",
+      "verbs",
+      "verbs",
+      "adjectives",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "particles||object particle",
+      "verbs||past negative",
+      "verbs||past tense conjugation",
+      "adjectives||i-adjectives",
+      "grammar||advice expressions"
+    ]
+  },
+  {
+    "sessionNumber": 52,
+    "accuracy": 100,
+    "averageSkillMastery": 0.7209302325581395,
+    "averageMemoryStrength": 0.5151162790697672,
+    "recommendationEffectiveness": 0.7453488372093022,
+    "coveragePercent": 66,
+    "repeatRate": 0.6153846153846154,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_042",
+      "mock_034",
+      "mock_043",
+      "mock_072",
+      "mock_098"
+    ],
+    "selectedTopics": [
+      "greetings",
+      "grammar",
+      "particles",
+      "particles",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "greetings||night expressions",
+      "grammar||noun connection",
+      "particles||companion particle",
+      "particles||existence",
+      "grammar||uncertainty"
+    ]
+  },
+  {
+    "sessionNumber": 53,
+    "accuracy": 80,
+    "averageSkillMastery": 0.7383720930232558,
+    "averageMemoryStrength": 0.5197674418604649,
+    "recommendationEffectiveness": 0.6860465116279069,
+    "coveragePercent": 69,
+    "repeatRate": 0.6226415094339622,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "polite expressions",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_004",
+      "mock_054",
+      "mock_009",
+      "mock_047",
+      "mock_093"
+    ],
+    "selectedTopics": [
+      "numbers",
+      "numbers",
+      "verbs",
+      "particles",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "numbers||basic counting",
+      "numbers||basic counting",
+      "verbs||past tense",
+      "particles||location of action",
+      "grammar||experience"
+    ]
+  },
+  {
+    "sessionNumber": 54,
+    "accuracy": 60,
+    "averageSkillMastery": 0.75,
+    "averageMemoryStrength": 0.5209302325581393,
+    "recommendationEffectiveness": 0.6236434108527131,
+    "coveragePercent": 72,
+    "repeatRate": 0.6296296296296297,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_022",
+      "mock_060",
+      "mock_080",
+      "mock_084",
+      "mock_067"
+    ],
+    "selectedTopics": [
+      "greetings",
+      "food",
+      "adjectives",
+      "particles",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "greetings||polite expressions",
+      "food||drinks",
+      "adjectives||abstract",
+      "particles||advanced particles",
+      "verbs||casual form"
+    ]
+  },
+  {
+    "sessionNumber": 55,
+    "accuracy": 80,
+    "averageSkillMastery": 0.75,
+    "averageMemoryStrength": 0.5232558139534882,
+    "recommendationEffectiveness": 0.6910852713178294,
+    "coveragePercent": 73,
+    "repeatRate": 0.6363636363636364,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_035",
+      "mock_015",
+      "mock_069",
+      "mock_038",
+      "mock_046"
+    ],
+    "selectedTopics": [
+      "food",
+      "food",
+      "grammar",
+      "grammar",
+      "adjectives"
+    ],
+    "selectedSubtopics": [
+      "food||food vocabulary",
+      "food||basic food vocabulary",
+      "grammar||desire form",
+      "grammar||future intention",
+      "adjectives||opinions"
+    ]
+  },
+  {
+    "sessionNumber": 56,
+    "accuracy": 60,
+    "averageSkillMastery": 0.75,
+    "averageMemoryStrength": 0.5220930232558139,
+    "recommendationEffectiveness": 0.6240310077519379,
+    "coveragePercent": 78,
+    "repeatRate": 0.6428571428571429,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_037",
+      "mock_039",
+      "mock_016",
+      "mock_007",
+      "mock_094"
+    ],
+    "selectedTopics": [
+      "adjectives",
+      "vocabulary",
+      "verbs",
+      "particles",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "adjectives||weather",
+      "vocabulary||school vocabulary",
+      "verbs||negative verbs",
+      "particles||destination particle",
+      "grammar||intentions"
+    ]
+  },
+  {
+    "sessionNumber": 57,
+    "accuracy": 100,
+    "averageSkillMastery": 0.7732558139534884,
+    "averageMemoryStrength": 0.527906976744186,
+    "recommendationEffectiveness": 0.7670542635658913,
+    "coveragePercent": 83,
+    "repeatRate": 0.6491228070175439,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_060",
+      "mock_035",
+      "mock_066",
+      "mock_045",
+      "mock_083"
+    ],
+    "selectedTopics": [
+      "food",
+      "food",
+      "adjectives",
+      "verbs",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "food||drinks",
+      "food||food vocabulary",
+      "adjectives||characteristics",
+      "verbs||daily habits",
+      "grammar||conditional"
+    ]
+  },
+  {
+    "sessionNumber": 58,
+    "accuracy": 60,
+    "averageSkillMastery": 0.75,
+    "averageMemoryStrength": 0.5267441860465115,
+    "recommendationEffectiveness": 0.6255813953488372,
+    "coveragePercent": 84,
+    "repeatRate": 0.6551724137931034,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "objects",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_057",
+      "mock_002",
+      "mock_025",
+      "mock_088",
+      "mock_066"
+    ],
+    "selectedTopics": [
+      "greetings",
+      "greetings",
+      "verbs",
+      "verbs",
+      "adjectives"
+    ],
+    "selectedSubtopics": [
+      "greetings||basic responses",
+      "greetings||daily greetings",
+      "verbs||daily routine",
+      "verbs||causative",
+      "adjectives||characteristics"
+    ]
+  },
+  {
+    "sessionNumber": 59,
+    "accuracy": 80,
+    "averageSkillMastery": 0.75,
+    "averageMemoryStrength": 0.5290697674418604,
+    "recommendationEffectiveness": 0.6930232558139534,
+    "coveragePercent": 87,
+    "repeatRate": 0.6610169491525424,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_041",
+      "mock_030",
+      "mock_073",
+      "mock_005",
+      "mock_088"
+    ],
+    "selectedTopics": [
+      "vocabulary",
+      "greetings",
+      "grammar",
+      "verbs",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "vocabulary||objects",
+      "greetings||daily greetings",
+      "grammar||existence",
+      "verbs||present tense verbs",
+      "verbs||causative"
+    ]
+  },
+  {
+    "sessionNumber": 60,
+    "accuracy": 100,
+    "averageSkillMastery": 0.7616279069767442,
+    "averageMemoryStrength": 0.5348837209302325,
+    "recommendationEffectiveness": 0.7655038759689923,
+    "coveragePercent": 90,
+    "repeatRate": 0.6666666666666666,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_002",
+      "mock_062",
+      "mock_063",
+      "mock_084",
+      "mock_044"
+    ],
+    "selectedTopics": [
+      "greetings",
+      "grammar",
+      "verbs",
+      "particles",
+      "numbers"
+    ],
+    "selectedSubtopics": [
+      "greetings||daily greetings",
+      "grammar||location of action",
+      "verbs||te-form",
+      "particles||advanced particles",
+      "numbers||compound numbers"
+    ]
+  },
+  {
+    "sessionNumber": 61,
+    "accuracy": 100,
+    "averageSkillMastery": 0.7616279069767442,
+    "averageMemoryStrength": 0.5406976744186046,
+    "recommendationEffectiveness": 0.7674418604651163,
+    "coveragePercent": 92,
+    "repeatRate": 0.6721311475409836,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_034",
+      "mock_069",
+      "mock_086",
+      "mock_031",
+      "mock_010"
+    ],
+    "selectedTopics": [
+      "grammar",
+      "grammar",
+      "grammar",
+      "time/date",
+      "greetings"
+    ],
+    "selectedSubtopics": [
+      "grammar||noun connection",
+      "grammar||desire form",
+      "grammar||keigo",
+      "time/date||days of the week",
+      "greetings||daily greetings"
+    ]
+  },
+  {
+    "sessionNumber": 62,
+    "accuracy": 80,
+    "averageSkillMastery": 0.7732558139534884,
+    "averageMemoryStrength": 0.5441860465116277,
+    "recommendationEffectiveness": 0.7058139534883722,
+    "coveragePercent": 94,
+    "repeatRate": 0.6774193548387096,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "means",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_025",
+      "mock_092",
+      "mock_057",
+      "mock_027",
+      "mock_017"
+    ],
+    "selectedTopics": [
+      "verbs",
+      "grammar",
+      "greetings",
+      "particles",
+      "adjectives"
+    ],
+    "selectedSubtopics": [
+      "verbs||daily routine",
+      "grammar||existence verbs",
+      "greetings||basic responses",
+      "particles||movement destination",
+      "adjectives||weather adjectives"
+    ]
+  },
+  {
+    "sessionNumber": 63,
+    "accuracy": 100,
+    "averageSkillMastery": 0.7965116279069767,
+    "averageMemoryStrength": 0.5499999999999997,
+    "recommendationEffectiveness": 0.7821705426356589,
+    "coveragePercent": 97,
+    "repeatRate": 0.6825396825396826,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past tense verbs",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "time/date",
+        "subtopic": "asking time",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past tense",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_064",
+      "mock_075",
+      "mock_003",
+      "mock_083",
+      "mock_006"
+    ],
+    "selectedTopics": [
+      "particles",
+      "grammar",
+      "particles",
+      "grammar",
+      "adjectives"
+    ],
+    "selectedSubtopics": [
+      "particles||means",
+      "grammar||requests",
+      "particles||topic particle",
+      "grammar||conditional",
+      "adjectives||i-adjectives"
+    ]
+  },
+  {
+    "sessionNumber": 64,
+    "accuracy": 80,
+    "averageSkillMastery": 0.8081395348837209,
+    "averageMemoryStrength": 0.5523255813953486,
+    "recommendationEffectiveness": 0.7201550387596899,
+    "coveragePercent": 99,
+    "repeatRate": 0.6875,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "time/date",
+        "subtopic": "asking time",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_033",
+      "mock_029",
+      "mock_016",
+      "mock_086",
+      "mock_057"
+    ],
+    "selectedTopics": [
+      "time/date",
+      "verbs",
+      "verbs",
+      "grammar",
+      "greetings"
+    ],
+    "selectedSubtopics": [
+      "time/date||daily time expressions",
+      "verbs||past tense verbs",
+      "verbs||negative verbs",
+      "grammar||keigo",
+      "greetings||basic responses"
+    ]
+  },
+  {
+    "sessionNumber": 65,
+    "accuracy": 60,
+    "averageSkillMastery": 0.8081395348837209,
+    "averageMemoryStrength": 0.5523255813953486,
+    "recommendationEffectiveness": 0.6534883720930232,
+    "coveragePercent": 100,
+    "repeatRate": 0.6923076923076923,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "travel",
+        "subtopic": "travel sentences",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_055",
+      "mock_042",
+      "mock_011",
+      "mock_007",
+      "mock_018"
+    ],
+    "selectedTopics": [
+      "adjectives",
+      "greetings",
+      "time/date",
+      "particles",
+      "travel"
+    ],
+    "selectedSubtopics": [
+      "adjectives||feelings",
+      "greetings||night expressions",
+      "time/date||days of the week",
+      "particles||destination particle",
+      "travel||travel sentences"
+    ]
+  },
+  {
+    "sessionNumber": 66,
+    "accuracy": 80,
+    "averageSkillMastery": 0.8313953488372093,
+    "averageMemoryStrength": 0.5569767441860464,
+    "recommendationEffectiveness": 0.7294573643410853,
+    "coveragePercent": 100,
+    "repeatRate": 0.696969696969697,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "travel",
+        "subtopic": "travel sentences",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_058",
+      "mock_022",
+      "mock_081",
+      "mock_013",
+      "mock_100"
+    ],
+    "selectedTopics": [
+      "travel",
+      "greetings",
+      "verbs",
+      "time/date",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "travel||transport",
+      "greetings||polite expressions",
+      "verbs||ability",
+      "time/date||asking time",
+      "verbs||aspect"
+    ]
+  },
+  {
+    "sessionNumber": 67,
+    "accuracy": 100,
+    "averageSkillMastery": 0.8546511627906976,
+    "averageMemoryStrength": 0.561627906976744,
+    "recommendationEffectiveness": 0.8054263565891473,
+    "coveragePercent": 100,
+    "repeatRate": 0.7014925373134329,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "travel",
+        "subtopic": "travel sentences",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_048",
+      "mock_060",
+      "mock_080",
+      "mock_079",
+      "mock_093"
+    ],
+    "selectedTopics": [
+      "travel",
+      "food",
+      "adjectives",
+      "grammar",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "travel||accommodation",
+      "food||drinks",
+      "adjectives||abstract",
+      "grammar||comparison",
+      "grammar||experience"
+    ]
+  },
+  {
+    "sessionNumber": 68,
+    "accuracy": 60,
+    "averageSkillMastery": 0.8488372093023255,
+    "averageMemoryStrength": 0.5593023255813953,
+    "recommendationEffectiveness": 0.6693798449612403,
+    "coveragePercent": 100,
+    "repeatRate": 0.7058823529411765,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "travel",
+        "subtopic": "travel sentences",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "movement destination",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_058",
+      "mock_063",
+      "mock_074",
+      "mock_099",
+      "mock_057"
+    ],
+    "selectedTopics": [
+      "travel",
+      "verbs",
+      "verbs",
+      "grammar",
+      "greetings"
+    ],
+    "selectedSubtopics": [
+      "travel||transport",
+      "verbs||te-form",
+      "verbs||te-form",
+      "grammar||uncertainty",
+      "greetings||basic responses"
+    ]
+  },
+  {
+    "sessionNumber": 69,
+    "accuracy": 40,
+    "averageSkillMastery": 0.8255813953488372,
+    "averageMemoryStrength": 0.5569767441860464,
+    "recommendationEffectiveness": 0.5941860465116279,
+    "coveragePercent": 100,
+    "repeatRate": 0.7101449275362319,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "travel",
+        "subtopic": "travel sentences",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "movement destination",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_061",
+      "mock_027",
+      "mock_015",
+      "mock_091",
+      "mock_055"
+    ],
+    "selectedTopics": [
+      "particles",
+      "particles",
+      "food",
+      "grammar",
+      "adjectives"
+    ],
+    "selectedSubtopics": [
+      "particles||movement",
+      "particles||movement destination",
+      "food||basic food vocabulary",
+      "grammar||concessive",
+      "adjectives||feelings"
+    ]
+  },
+  {
+    "sessionNumber": 70,
+    "accuracy": 60,
+    "averageSkillMastery": 0.8255813953488372,
+    "averageMemoryStrength": 0.5569767441860464,
+    "recommendationEffectiveness": 0.6608527131782945,
+    "coveragePercent": 100,
+    "repeatRate": 0.7142857142857143,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "travel",
+        "subtopic": "travel sentences",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "movement destination",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_042",
+      "mock_023",
+      "mock_029",
+      "mock_081",
+      "mock_096"
+    ],
+    "selectedTopics": [
+      "greetings",
+      "particles",
+      "verbs",
+      "verbs",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "greetings||night expressions",
+      "particles||object particle",
+      "verbs||past tense verbs",
+      "verbs||ability",
+      "grammar||speculation"
+    ]
+  },
+  {
+    "sessionNumber": 71,
+    "accuracy": 80,
+    "averageSkillMastery": 0.8372093023255814,
+    "averageMemoryStrength": 0.5593023255813951,
+    "recommendationEffectiveness": 0.732170542635659,
+    "coveragePercent": 100,
+    "repeatRate": 0.7183098591549296,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "travel",
+        "subtopic": "travel sentences",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "movement destination",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_095",
+      "mock_016",
+      "mock_020",
+      "mock_022",
+      "mock_007"
+    ],
+    "selectedTopics": [
+      "grammar",
+      "verbs",
+      "particles",
+      "greetings",
+      "particles"
+    ],
+    "selectedSubtopics": [
+      "grammar||intentions",
+      "verbs||negative verbs",
+      "particles||topic marking",
+      "greetings||polite expressions",
+      "particles||destination particle"
+    ]
+  },
+  {
+    "sessionNumber": 72,
+    "accuracy": 60,
+    "averageSkillMastery": 0.8255813953488372,
+    "averageMemoryStrength": 0.5593023255813951,
+    "recommendationEffectiveness": 0.6616279069767441,
+    "coveragePercent": 100,
+    "repeatRate": 0.7222222222222222,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "travel",
+        "subtopic": "travel sentences",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "movement destination",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_008",
+      "mock_014",
+      "mock_043",
+      "mock_080",
+      "mock_086"
+    ],
+    "selectedTopics": [
+      "travel",
+      "particles",
+      "particles",
+      "adjectives",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "travel||transportation",
+      "particles||possession",
+      "particles||companion particle",
+      "adjectives||abstract",
+      "grammar||keigo"
+    ]
+  },
+  {
+    "sessionNumber": 73,
+    "accuracy": 100,
+    "averageSkillMastery": 0.8488372093023255,
+    "averageMemoryStrength": 0.5639534883720928,
+    "recommendationEffectiveness": 0.8042635658914726,
+    "coveragePercent": 100,
+    "repeatRate": 0.726027397260274,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "travel",
+        "subtopic": "travel sentences",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "movement destination",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_017",
+      "mock_068",
+      "mock_005",
+      "mock_051",
+      "mock_098"
+    ],
+    "selectedTopics": [
+      "adjectives",
+      "particles",
+      "verbs",
+      "food",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "adjectives||weather adjectives",
+      "particles||object marking",
+      "verbs||present tense verbs",
+      "food||basic food vocabulary",
+      "grammar||uncertainty"
+    ]
+  },
+  {
+    "sessionNumber": 74,
+    "accuracy": 100,
+    "averageSkillMastery": 0.8488372093023255,
+    "averageMemoryStrength": 0.5686046511627906,
+    "recommendationEffectiveness": 0.805813953488372,
+    "coveragePercent": 100,
+    "repeatRate": 0.7297297297297297,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "travel",
+        "subtopic": "travel sentences",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "movement destination",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_013",
+      "mock_079",
+      "mock_038",
+      "mock_059",
+      "mock_057"
+    ],
+    "selectedTopics": [
+      "time/date",
+      "grammar",
+      "grammar",
+      "adjectives",
+      "greetings"
+    ],
+    "selectedSubtopics": [
+      "time/date||asking time",
+      "grammar||comparison",
+      "grammar||future intention",
+      "adjectives||descriptions",
+      "greetings||basic responses"
+    ]
+  },
+  {
+    "sessionNumber": 75,
+    "accuracy": 80,
+    "averageSkillMastery": 0.8430232558139535,
+    "averageMemoryStrength": 0.5697674418604649,
+    "recommendationEffectiveness": 0.7375968992248062,
+    "coveragePercent": 100,
+    "repeatRate": 0.7333333333333333,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "travel",
+        "subtopic": "travel sentences",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "movement destination",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_028",
+      "mock_074",
+      "mock_095",
+      "mock_033",
+      "mock_015"
+    ],
+    "selectedTopics": [
+      "travel",
+      "verbs",
+      "grammar",
+      "time/date",
+      "food"
+    ],
+    "selectedSubtopics": [
+      "travel||travel locations",
+      "verbs||te-form",
+      "grammar||intentions",
+      "time/date||daily time expressions",
+      "food||basic food vocabulary"
+    ]
+  },
+  {
+    "sessionNumber": 76,
+    "accuracy": 60,
+    "averageSkillMastery": 0.8313953488372093,
+    "averageMemoryStrength": 0.5697674418604649,
+    "recommendationEffectiveness": 0.6670542635658915,
+    "coveragePercent": 100,
+    "repeatRate": 0.7368421052631579,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "travel",
+        "subtopic": "travel sentences",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_008",
+      "mock_048",
+      "mock_049",
+      "mock_067",
+      "mock_084"
+    ],
+    "selectedTopics": [
+      "travel",
+      "travel",
+      "verbs",
+      "verbs",
+      "particles"
+    ],
+    "selectedSubtopics": [
+      "travel||transportation",
+      "travel||accommodation",
+      "verbs||past tense conjugation",
+      "verbs||casual form",
+      "particles||advanced particles"
+    ]
+  },
+  {
+    "sessionNumber": 77,
+    "accuracy": 60,
+    "averageSkillMastery": 0.8546511627906976,
+    "averageMemoryStrength": 0.5732558139534882,
+    "recommendationEffectiveness": 0.675968992248062,
+    "coveragePercent": 100,
+    "repeatRate": 0.7402597402597403,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "movement destination",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_058",
+      "mock_018",
+      "mock_028",
+      "mock_023",
+      "mock_062"
+    ],
+    "selectedTopics": [
+      "travel",
+      "travel",
+      "travel",
+      "particles",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "travel||transport",
+      "travel||travel sentences",
+      "travel||travel locations",
+      "particles||object particle",
+      "grammar||location of action"
+    ]
+  },
+  {
+    "sessionNumber": 78,
+    "accuracy": 100,
+    "averageSkillMastery": 0.8546511627906976,
+    "averageMemoryStrength": 0.5779069767441859,
+    "recommendationEffectiveness": 0.8108527131782944,
+    "coveragePercent": 100,
+    "repeatRate": 0.7435897435897436,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "movement destination",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_022",
+      "mock_078",
+      "mock_043",
+      "mock_085",
+      "mock_044"
+    ],
+    "selectedTopics": [
+      "greetings",
+      "grammar",
+      "particles",
+      "grammar",
+      "numbers"
+    ],
+    "selectedSubtopics": [
+      "greetings||polite expressions",
+      "grammar||comparison",
+      "particles||companion particle",
+      "grammar||contrast expressions",
+      "numbers||compound numbers"
+    ]
+  },
+  {
+    "sessionNumber": 79,
+    "accuracy": 100,
+    "averageSkillMastery": 0.8662790697674418,
+    "averageMemoryStrength": 0.5825581395348836,
+    "recommendationEffectiveness": 0.8162790697674418,
+    "coveragePercent": 100,
+    "repeatRate": 0.7468354430379747,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "movement destination",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_060",
+      "mock_005",
+      "mock_081",
+      "mock_041",
+      "mock_091"
+    ],
+    "selectedTopics": [
+      "food",
+      "verbs",
+      "verbs",
+      "vocabulary",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "food||drinks",
+      "verbs||present tense verbs",
+      "verbs||ability",
+      "vocabulary||objects",
+      "grammar||concessive"
+    ]
+  },
+  {
+    "sessionNumber": 80,
+    "accuracy": 40,
+    "averageSkillMastery": 0.8488372093023255,
+    "averageMemoryStrength": 0.5813953488372091,
+    "recommendationEffectiveness": 0.6100775193798449,
+    "coveragePercent": 100,
+    "repeatRate": 0.75,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "movement destination",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_014",
+      "mock_054",
+      "mock_027",
+      "mock_016",
+      "mock_085"
+    ],
+    "selectedTopics": [
+      "particles",
+      "numbers",
+      "particles",
+      "verbs",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "particles||possession",
+      "numbers||basic counting",
+      "particles||movement destination",
+      "verbs||negative verbs",
+      "grammar||contrast expressions"
+    ]
+  },
+  {
+    "sessionNumber": 81,
+    "accuracy": 100,
+    "averageSkillMastery": 0.872093023255814,
+    "averageMemoryStrength": 0.5860465116279069,
+    "recommendationEffectiveness": 0.8193798449612402,
+    "coveragePercent": 100,
+    "repeatRate": 0.7530864197530864,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "movement destination",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_042",
+      "mock_061",
+      "mock_063",
+      "mock_035",
+      "mock_038"
+    ],
+    "selectedTopics": [
+      "greetings",
+      "particles",
+      "verbs",
+      "food",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "greetings||night expressions",
+      "particles||movement",
+      "verbs||te-form",
+      "food||food vocabulary",
+      "grammar||future intention"
+    ]
+  },
+  {
+    "sessionNumber": 82,
+    "accuracy": 80,
+    "averageSkillMastery": 0.8604651162790697,
+    "averageMemoryStrength": 0.5883720930232558,
+    "recommendationEffectiveness": 0.7496124031007753,
+    "coveragePercent": 100,
+    "repeatRate": 0.7560975609756098,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_034",
+      "mock_075",
+      "mock_029",
+      "mock_003",
+      "mock_089"
+    ],
+    "selectedTopics": [
+      "grammar",
+      "grammar",
+      "verbs",
+      "particles",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "grammar||noun connection",
+      "grammar||requests",
+      "verbs||past tense verbs",
+      "particles||topic particle",
+      "verbs||causative passive"
+    ]
+  },
+  {
+    "sessionNumber": 83,
+    "accuracy": 80,
+    "averageSkillMastery": 0.8604651162790697,
+    "averageMemoryStrength": 0.5906976744186045,
+    "recommendationEffectiveness": 0.7503875968992247,
+    "coveragePercent": 100,
+    "repeatRate": 0.7590361445783133,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_072",
+      "mock_068",
+      "mock_087",
+      "mock_032",
+      "mock_033"
+    ],
+    "selectedTopics": [
+      "particles",
+      "particles",
+      "grammar",
+      "adjectives",
+      "time/date"
+    ],
+    "selectedSubtopics": [
+      "particles||existence",
+      "particles||object marking",
+      "grammar||relative clauses",
+      "adjectives||descriptive adjectives",
+      "time/date||daily time expressions"
+    ]
+  },
+  {
+    "sessionNumber": 84,
+    "accuracy": 80,
+    "averageSkillMastery": 0.872093023255814,
+    "averageMemoryStrength": 0.5930232558139533,
+    "recommendationEffectiveness": 0.7550387596899224,
+    "coveragePercent": 100,
+    "repeatRate": 0.7619047619047619,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_012",
+      "mock_013",
+      "mock_080",
+      "mock_092",
+      "mock_003"
+    ],
+    "selectedTopics": [
+      "adjectives",
+      "time/date",
+      "adjectives",
+      "grammar",
+      "particles"
+    ],
+    "selectedSubtopics": [
+      "adjectives||descriptive adjectives",
+      "time/date||asking time",
+      "adjectives||abstract",
+      "grammar||existence verbs",
+      "particles||topic particle"
+    ]
+  },
+  {
+    "sessionNumber": 85,
+    "accuracy": 100,
+    "averageSkillMastery": 0.872093023255814,
+    "averageMemoryStrength": 0.5988372093023254,
+    "recommendationEffectiveness": 0.823643410852713,
+    "coveragePercent": 100,
+    "repeatRate": 0.7647058823529411,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_020",
+      "mock_069",
+      "mock_073",
+      "mock_039",
+      "mock_100"
+    ],
+    "selectedTopics": [
+      "particles",
+      "grammar",
+      "grammar",
+      "vocabulary",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "particles||topic marking",
+      "grammar||desire form",
+      "grammar||existence",
+      "vocabulary||school vocabulary",
+      "verbs||aspect"
+    ]
+  },
+  {
+    "sessionNumber": 86,
+    "accuracy": 100,
+    "averageSkillMastery": 0.8837209302325582,
+    "averageMemoryStrength": 0.6034883720930232,
+    "recommendationEffectiveness": 0.8290697674418605,
+    "coveragePercent": 100,
+    "repeatRate": 0.7674418604651163,
+    "diversityScore": 100,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_053",
+      "mock_007",
+      "mock_074",
+      "mock_097",
+      "mock_012"
+    ],
+    "selectedTopics": [
+      "vocabulary",
+      "particles",
+      "verbs",
+      "grammar",
+      "adjectives"
+    ],
+    "selectedSubtopics": [
+      "vocabulary||animals",
+      "particles||destination particle",
+      "verbs||te-form",
+      "grammar||speculation",
+      "adjectives||descriptive adjectives"
+    ]
+  },
+  {
+    "sessionNumber": 87,
+    "accuracy": 100,
+    "averageSkillMastery": 0.9069767441860465,
+    "averageMemoryStrength": 0.6058139534883721,
+    "recommendationEffectiveness": 0.8375968992248062,
+    "coveragePercent": 100,
+    "repeatRate": 0.7701149425287356,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "farewells",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_004",
+      "mock_099",
+      "mock_023",
+      "mock_078",
+      "mock_073"
+    ],
+    "selectedTopics": [
+      "numbers",
+      "grammar",
+      "particles",
+      "grammar",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "numbers||basic counting",
+      "grammar||uncertainty",
+      "particles||object particle",
+      "grammar||comparison",
+      "grammar||existence"
+    ]
+  },
+  {
+    "sessionNumber": 88,
+    "accuracy": 40,
+    "averageSkillMastery": 0.8837209302325582,
+    "averageMemoryStrength": 0.6023255813953488,
+    "recommendationEffectiveness": 0.6286821705426356,
+    "coveragePercent": 100,
+    "repeatRate": 0.7727272727272727,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "particles",
+        "subtopic": "topic particle",
+        "mastery": 0
+      },
+      {
+        "topic": "grammar",
+        "subtopic": "speculation",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_048",
+      "mock_067",
+      "mock_079",
+      "mock_097",
+      "mock_057"
+    ],
+    "selectedTopics": [
+      "travel",
+      "verbs",
+      "grammar",
+      "grammar",
+      "greetings"
+    ],
+    "selectedSubtopics": [
+      "travel||accommodation",
+      "verbs||casual form",
+      "grammar||comparison",
+      "grammar||speculation",
+      "greetings||basic responses"
+    ]
+  },
+  {
+    "sessionNumber": 89,
+    "accuracy": 100,
+    "averageSkillMastery": 0.8953488372093024,
+    "averageMemoryStrength": 0.6058139534883721,
+    "recommendationEffectiveness": 0.8337209302325581,
+    "coveragePercent": 100,
+    "repeatRate": 0.7752808988764045,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "speculation",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_058",
+      "mock_070",
+      "mock_072",
+      "mock_003",
+      "mock_038"
+    ],
+    "selectedTopics": [
+      "travel",
+      "adjectives",
+      "particles",
+      "particles",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "travel||transport",
+      "adjectives||descriptions",
+      "particles||existence",
+      "particles||topic particle",
+      "grammar||future intention"
+    ]
+  },
+  {
+    "sessionNumber": 90,
+    "accuracy": 100,
+    "averageSkillMastery": 0.8953488372093024,
+    "averageMemoryStrength": 0.6081395348837209,
+    "recommendationEffectiveness": 0.8344961240310077,
+    "coveragePercent": 100,
+    "repeatRate": 0.7777777777777778,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "speculation",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_042",
+      "mock_053",
+      "mock_062",
+      "mock_080",
+      "mock_090"
+    ],
+    "selectedTopics": [
+      "greetings",
+      "vocabulary",
+      "grammar",
+      "adjectives",
+      "grammar"
+    ],
+    "selectedSubtopics": [
+      "greetings||night expressions",
+      "vocabulary||animals",
+      "grammar||location of action",
+      "adjectives||abstract",
+      "grammar||advice expressions"
+    ]
+  },
+  {
+    "sessionNumber": 91,
+    "accuracy": 80,
+    "averageSkillMastery": 0.8837209302325582,
+    "averageMemoryStrength": 0.6093023255813953,
+    "recommendationEffectiveness": 0.7643410852713179,
+    "coveragePercent": 100,
+    "repeatRate": 0.7802197802197802,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "speculation",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_054",
+      "mock_069",
+      "mock_061",
+      "mock_094",
+      "mock_060"
+    ],
+    "selectedTopics": [
+      "numbers",
+      "grammar",
+      "particles",
+      "grammar",
+      "food"
+    ],
+    "selectedSubtopics": [
+      "numbers||basic counting",
+      "grammar||desire form",
+      "particles||movement",
+      "grammar||intentions",
+      "food||drinks"
+    ]
+  },
+  {
+    "sessionNumber": 92,
+    "accuracy": 100,
+    "averageSkillMastery": 0.8953488372093024,
+    "averageMemoryStrength": 0.613953488372093,
+    "recommendationEffectiveness": 0.8364341085271318,
+    "coveragePercent": 100,
+    "repeatRate": 0.782608695652174,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "speculation",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_008",
+      "mock_081",
+      "mock_068",
+      "mock_095",
+      "mock_014"
+    ],
+    "selectedTopics": [
+      "travel",
+      "verbs",
+      "particles",
+      "grammar",
+      "particles"
+    ],
+    "selectedSubtopics": [
+      "travel||transportation",
+      "verbs||ability",
+      "particles||object marking",
+      "grammar||intentions",
+      "particles||possession"
+    ]
+  },
+  {
+    "sessionNumber": 93,
+    "accuracy": 80,
+    "averageSkillMastery": 0.8953488372093024,
+    "averageMemoryStrength": 0.6151162790697674,
+    "recommendationEffectiveness": 0.7701550387596899,
+    "coveragePercent": 100,
+    "repeatRate": 0.7849462365591398,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "speculation",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_020",
+      "mock_027",
+      "mock_003",
+      "mock_086",
+      "mock_029"
+    ],
+    "selectedTopics": [
+      "particles",
+      "particles",
+      "particles",
+      "grammar",
+      "verbs"
+    ],
+    "selectedSubtopics": [
+      "particles||topic marking",
+      "particles||movement destination",
+      "particles||topic particle",
+      "grammar||keigo",
+      "verbs||past tense verbs"
+    ]
+  },
+  {
+    "sessionNumber": 94,
+    "accuracy": 40,
+    "averageSkillMastery": 0.8604651162790697,
+    "averageMemoryStrength": 0.6116279069767441,
+    "recommendationEffectiveness": 0.624031007751938,
+    "coveragePercent": 100,
+    "repeatRate": 0.7872340425531915,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "speculation",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_004",
+      "mock_007",
+      "mock_018",
+      "mock_012",
+      "mock_064"
+    ],
+    "selectedTopics": [
+      "numbers",
+      "particles",
+      "travel",
+      "adjectives",
+      "particles"
+    ],
+    "selectedSubtopics": [
+      "numbers||basic counting",
+      "particles||destination particle",
+      "travel||travel sentences",
+      "adjectives||descriptive adjectives",
+      "particles||means"
+    ]
+  },
+  {
+    "sessionNumber": 95,
+    "accuracy": 100,
+    "averageSkillMastery": 0.8604651162790697,
+    "averageMemoryStrength": 0.613953488372093,
+    "recommendationEffectiveness": 0.8248062015503876,
+    "coveragePercent": 100,
+    "repeatRate": 0.7894736842105263,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "speculation",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_034",
+      "mock_092",
+      "mock_010",
+      "mock_046",
+      "mock_011"
+    ],
+    "selectedTopics": [
+      "grammar",
+      "grammar",
+      "greetings",
+      "adjectives",
+      "time/date"
+    ],
+    "selectedSubtopics": [
+      "grammar||noun connection",
+      "grammar||existence verbs",
+      "greetings||daily greetings",
+      "adjectives||opinions",
+      "time/date||days of the week"
+    ]
+  },
+  {
+    "sessionNumber": 96,
+    "accuracy": 100,
+    "averageSkillMastery": 0.872093023255814,
+    "averageMemoryStrength": 0.6186046511627906,
+    "recommendationEffectiveness": 0.8302325581395348,
+    "coveragePercent": 100,
+    "repeatRate": 0.7916666666666666,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "speculation",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_028",
+      "mock_075",
+      "mock_087",
+      "mock_022",
+      "mock_056"
+    ],
+    "selectedTopics": [
+      "travel",
+      "grammar",
+      "grammar",
+      "greetings",
+      "vocabulary"
+    ],
+    "selectedSubtopics": [
+      "travel||travel locations",
+      "grammar||requests",
+      "grammar||relative clauses",
+      "greetings||polite expressions",
+      "vocabulary||daily objects"
+    ]
+  },
+  {
+    "sessionNumber": 97,
+    "accuracy": 80,
+    "averageSkillMastery": 0.8604651162790697,
+    "averageMemoryStrength": 0.6197674418604651,
+    "recommendationEffectiveness": 0.7600775193798449,
+    "coveragePercent": 100,
+    "repeatRate": 0.7938144329896907,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "speculation",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_021",
+      "mock_037",
+      "mock_027",
+      "mock_099",
+      "mock_043"
+    ],
+    "selectedTopics": [
+      "vocabulary",
+      "adjectives",
+      "particles",
+      "grammar",
+      "particles"
+    ],
+    "selectedSubtopics": [
+      "vocabulary||animals",
+      "adjectives||weather",
+      "particles||movement destination",
+      "grammar||uncertainty",
+      "particles||companion particle"
+    ]
+  },
+  {
+    "sessionNumber": 98,
+    "accuracy": 80,
+    "averageSkillMastery": 0.8604651162790697,
+    "averageMemoryStrength": 0.6232558139534884,
+    "recommendationEffectiveness": 0.7612403100775195,
+    "coveragePercent": 100,
+    "repeatRate": 0.7959183673469388,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "speculation",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_045",
+      "mock_018",
+      "mock_063",
+      "mock_060",
+      "mock_053"
+    ],
+    "selectedTopics": [
+      "verbs",
+      "travel",
+      "verbs",
+      "food",
+      "vocabulary"
+    ],
+    "selectedSubtopics": [
+      "verbs||daily habits",
+      "travel||travel sentences",
+      "verbs||te-form",
+      "food||drinks",
+      "vocabulary||animals"
+    ]
+  },
+  {
+    "sessionNumber": 99,
+    "accuracy": 80,
+    "averageSkillMastery": 0.8604651162790697,
+    "averageMemoryStrength": 0.6255813953488372,
+    "recommendationEffectiveness": 0.762015503875969,
+    "coveragePercent": 100,
+    "repeatRate": 0.797979797979798,
+    "diversityScore": 80,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "speculation",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_048",
+      "mock_047",
+      "mock_040",
+      "mock_083",
+      "mock_039"
+    ],
+    "selectedTopics": [
+      "travel",
+      "particles",
+      "particles",
+      "grammar",
+      "vocabulary"
+    ],
+    "selectedSubtopics": [
+      "travel||accommodation",
+      "particles||location of action",
+      "particles||destination",
+      "grammar||conditional",
+      "vocabulary||school vocabulary"
+    ]
+  },
+  {
+    "sessionNumber": 100,
+    "accuracy": 100,
+    "averageSkillMastery": 0.872093023255814,
+    "averageMemoryStrength": 0.6279069767441859,
+    "recommendationEffectiveness": 0.8333333333333334,
+    "coveragePercent": 100,
+    "repeatRate": 0.8,
+    "diversityScore": 60,
+    "uniqueQuestionsSeen": 100,
+    "uniqueSubtopicsSeen": 86,
+    "weakestTopics": [
+      {
+        "topic": "grammar",
+        "subtopic": "speculation",
+        "mastery": 0
+      },
+      {
+        "topic": "greetings",
+        "subtopic": "basic responses",
+        "mastery": 0
+      },
+      {
+        "topic": "particles",
+        "subtopic": "advanced particles",
+        "mastery": 0
+      }
+    ],
+    "strongestTopics": [
+      {
+        "topic": "verbs",
+        "subtopic": "negative verbs",
+        "mastery": 1
+      },
+      {
+        "topic": "verbs",
+        "subtopic": "past negative",
+        "mastery": 1
+      },
+      {
+        "topic": "vocabulary",
+        "subtopic": "quantity",
+        "mastery": 1
+      }
+    ],
+    "selectedQuestionIds": [
+      "mock_072",
+      "mock_079",
+      "mock_094",
+      "mock_020",
+      "mock_056"
+    ],
+    "selectedTopics": [
+      "particles",
+      "grammar",
+      "grammar",
+      "particles",
+      "vocabulary"
+    ],
+    "selectedSubtopics": [
+      "particles||existence",
+      "grammar||comparison",
+      "grammar||intentions",
+      "particles||topic marking",
+      "vocabulary||daily objects"
+    ]
+  }
+]

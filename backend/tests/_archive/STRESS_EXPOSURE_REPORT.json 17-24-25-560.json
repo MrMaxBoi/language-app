@@ -1,0 +1,358 @@
+{
+  "totalQuestionsInBank": 100,
+  "mostSelected": [
+    {
+      "questionId": "mock_058",
+      "totalExposure": 30,
+      "perPersona": {
+        "USER_A_HIGH_PERFORMER": 9,
+        "USER_B_AVERAGE": 7,
+        "USER_C_GRAMMAR_SPECIALIST": 8,
+        "USER_D_VOCAB_SPECIALIST": 6
+      }
+    },
+    {
+      "questionId": "mock_072",
+      "totalExposure": 27,
+      "perPersona": {
+        "USER_A_HIGH_PERFORMER": 5,
+        "USER_B_AVERAGE": 8,
+        "USER_C_GRAMMAR_SPECIALIST": 7,
+        "USER_D_VOCAB_SPECIALIST": 7
+      }
+    },
+    {
+      "questionId": "mock_045",
+      "totalExposure": 26,
+      "perPersona": {
+        "USER_A_HIGH_PERFORMER": 5,
+        "USER_B_AVERAGE": 7,
+        "USER_C_GRAMMAR_SPECIALIST": 8,
+        "USER_D_VOCAB_SPECIALIST": 6
+      }
+    },
+    {
+      "questionId": "mock_053",
+      "totalExposure": 26,
+      "perPersona": {
+        "USER_A_HIGH_PERFORMER": 5,
+        "USER_B_AVERAGE": 8,
+        "USER_C_GRAMMAR_SPECIALIST": 8,
+        "USER_D_VOCAB_SPECIALIST": 5
+      }
+    },
+    {
+      "questionId": "mock_015",
+      "totalExposure": 26,
+      "perPersona": {
+        "USER_A_HIGH_PERFORMER": 4,
+        "USER_B_AVERAGE": 7,
+        "USER_C_GRAMMAR_SPECIALIST": 8,
+        "USER_D_VOCAB_SPECIALIST": 7
+      }
+    },
+    {
+      "questionId": "mock_081",
+      "totalExposure": 25,
+      "perPersona": {
+        "USER_A_HIGH_PERFORMER": 6,
+        "USER_B_AVERAGE": 8,
+        "USER_C_GRAMMAR_SPECIALIST": 4,
+        "USER_D_VOCAB_SPECIALIST": 7
+      }
+    },
+    {
+      "questionId": "mock_047",
+      "totalExposure": 25,
+      "perPersona": {
+        "USER_A_HIGH_PERFORMER": 6,
+        "USER_B_AVERAGE": 7,
+        "USER_C_GRAMMAR_SPECIALIST": 6,
+        "USER_D_VOCAB_SPECIALIST": 6
+      }
+    },
+    {
+      "questionId": "mock_085",
+      "totalExposure": 25,
+      "perPersona": {
+        "USER_A_HIGH_PERFORMER": 6,
+        "USER_B_AVERAGE": 7,
+        "USER_C_GRAMMAR_SPECIALIST": 6,
+        "USER_D_VOCAB_SPECIALIST": 6
+      }
+    },
+    {
+      "questionId": "mock_014",
+      "totalExposure": 25,
+      "perPersona": {
+        "USER_A_HIGH_PERFORMER": 5,
+        "USER_B_AVERAGE": 8,
+        "USER_C_GRAMMAR_SPECIALIST": 4,
+        "USER_D_VOCAB_SPECIALIST": 8
+      }
+    },
+    {
+      "questionId": "mock_046",
+      "totalExposure": 25,
+      "perPersona": {
+        "USER_A_HIGH_PERFORMER": 5,
+        "USER_B_AVERAGE": 6,
+        "USER_C_GRAMMAR_SPECIALIST": 8,
+        "USER_D_VOCAB_SPECIALIST": 6
+      }
+    }
+  ],
+  "leastSelected": [
+    {
+      "questionId": "mock_030",
+      "totalExposure": 11
+    },
+    {
+      "questionId": "mock_096",
+      "totalExposure": 11
+    },
+    {
+      "questionId": "mock_002",
+      "totalExposure": 12
+    },
+    {
+      "questionId": "mock_010",
+      "totalExposure": 13
+    },
+    {
+      "questionId": "mock_074",
+      "totalExposure": 13
+    },
+    {
+      "questionId": "mock_070",
+      "totalExposure": 14
+    },
+    {
+      "questionId": "mock_097",
+      "totalExposure": 14
+    },
+    {
+      "questionId": "mock_009",
+      "totalExposure": 15
+    },
+    {
+      "questionId": "mock_012",
+      "totalExposure": 15
+    },
+    {
+      "questionId": "mock_052",
+      "totalExposure": 15
+    }
+  ],
+  "exposureDistribution": [
+    {
+      "questionId": "mock_030",
+      "totalExposure": 11
+    },
+    {
+      "questionId": "mock_096",
+      "totalExposure": 11
+    },
+    {
+      "questionId": "mock_002",
+      "totalExposure": 12
+    },
+    {
+      "questionId": "mock_010",
+      "totalExposure": 13
+    },
+    {
+      "questionId": "mock_074",
+      "totalExposure": 13
+    },
+    {
+      "questionId": "mock_070",
+      "totalExposure": 14
+    },
+    {
+      "questionId": "mock_097",
+      "totalExposure": 14
+    },
+    {
+      "questionId": "mock_009",
+      "totalExposure": 15
+    },
+    {
+      "questionId": "mock_012",
+      "totalExposure": 15
+    },
+    {
+      "questionId": "mock_052",
+      "totalExposure": 15
+    },
+    {
+      "questionId": "mock_054",
+      "totalExposure": 15
+    },
+    {
+      "questionId": "mock_077",
+      "totalExposure": 15
+    },
+    {
+      "questionId": "mock_080",
+      "totalExposure": 15
+    },
+    {
+      "questionId": "mock_094",
+      "totalExposure": 15
+    },
+    {
+      "questionId": "mock_016",
+      "totalExposure": 16
+    },
+    {
+      "questionId": "mock_020",
+      "totalExposure": 16
+    },
+    {
+      "questionId": "mock_050",
+      "totalExposure": 16
+    },
+    {
+      "questionId": "mock_059",
+      "totalExposure": 16
+    },
+    {
+      "questionId": "mock_063",
+      "totalExposure": 16
+    },
+    {
+      "questionId": "mock_069",
+      "totalExposure": 16
+    },
+    {
+      "questionId": "mock_075",
+      "totalExposure": 16
+    },
+    {
+      "questionId": "mock_089",
+      "totalExposure": 16
+    },
+    {
+      "questionId": "mock_004",
+      "totalExposure": 17
+    },
+    {
+      "questionId": "mock_017",
+      "totalExposure": 17
+    },
+    {
+      "questionId": "mock_026",
+      "totalExposure": 17
+    },
+    {
+      "questionId": "mock_028",
+      "totalExposure": 17
+    },
+    {
+      "questionId": "mock_049",
+      "totalExposure": 17
+    },
+    {
+      "questionId": "mock_078",
+      "totalExposure": 17
+    },
+    {
+      "questionId": "mock_079",
+      "totalExposure": 17
+    },
+    {
+      "questionId": "mock_082",
+      "totalExposure": 17
+    },
+    {
+      "questionId": "mock_095",
+      "totalExposure": 17
+    },
+    {
+      "questionId": "mock_098",
+      "totalExposure": 17
+    },
+    {
+      "questionId": "mock_005",
+      "totalExposure": 18
+    },
+    {
+      "questionId": "mock_008",
+      "totalExposure": 18
+    },
+    {
+      "questionId": "mock_042",
+      "totalExposure": 18
+    },
+    {
+      "questionId": "mock_048",
+      "totalExposure": 18
+    },
+    {
+      "questionId": "mock_067",
+      "totalExposure": 18
+    },
+    {
+      "questionId": "mock_076",
+      "totalExposure": 18
+    },
+    {
+      "questionId": "mock_099",
+      "totalExposure": 18
+    },
+    {
+      "questionId": "mock_019",
+      "totalExposure": 19
+    },
+    {
+      "questionId": "mock_027",
+      "totalExposure": 19
+    },
+    {
+      "questionId": "mock_044",
+      "totalExposure": 19
+    },
+    {
+      "questionId": "mock_061",
+      "totalExposure": 19
+    },
+    {
+      "questionId": "mock_071",
+      "totalExposure": 19
+    },
+    {
+      "questionId": "mock_100",
+      "totalExposure": 19
+    },
+    {
+      "questionId": "mock_001",
+      "totalExposure": 20
+    },
+    {
+      "questionId": "mock_037",
+      "totalExposure": 20
+    },
+    {
+      "questionId": "mock_038",
+      "totalExposure": 20
+    },
+    {
+      "questionId": "mock_039",
+      "totalExposure": 20
+    },
+    {
+      "questionId": "mock_043",
+      "totalExposure": 20
+    }
+  ],
+  "giniCoefficient": 0.1133,
+  "interpretation": {
+    "gini": {
+      "low": "< 0.3: Very uniform exposure (excellent balance)",
+      "moderate": "0.3-0.5: Moderate concentration (acceptable)",
+      "high": "> 0.5: High concentration (some questions over-exposed)",
+      "extreme": "> 0.7: Extreme concentration (engine needs better spread)"
+    }
+  }
+}

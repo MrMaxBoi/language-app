@@ -39,39 +39,7 @@ Please provide:
 4. Strengths to reinforce.
 5. A recommended next focus area.`;
 
-  const apiKey = process.env.OPENROUTER_API_KEY;
-
-  if (!apiKey) {
-    console.log("OPENROUTER_API_KEY missing");
-    return prompt;
-  }
-
-  try {
-    const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "openai/gpt-3.5-turbo",
-        messages: [
-          {
-            role: "user",
-            content: prompt,
-          },
-        ],
-      }),
-    });
-
-    const data = await response.json();
-
-    console.log("=== OPENROUTER RESPONSE ===");
-    console.log(JSON.stringify(data, null, 2));
-
-    return data?.choices?.[0]?.message?.content || prompt;
-  } catch (error) {
-    console.log("OpenRouter error:", error);
-    return prompt;
-  }
+  // ⚠️ OPENROUTER DISABLED - Using local prompt only
+  console.log("📝 Using local feedback prompt (OpenRouter disabled)");
+  return prompt;
 };

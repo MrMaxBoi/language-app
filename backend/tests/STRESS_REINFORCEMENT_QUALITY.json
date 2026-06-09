@@ -1,0 +1,17 @@
+{
+  "UserA": {
+    "repeatRate": 31.0,
+    "usefulRepeatRate": 93.55,
+    "wastefulRepeatRate": 6.45
+  },
+  "UserB": {
+    "repeatRate": 36.0,
+    "usefulRepeatRate": 80.56,
+    "wastefulRepeatRate": 19.44
+  },
+  "UserC": {
+    "repeatRate": 23.0,
+    "usefulRepeatRate": 73.91,
+    "wastefulRepeatRate": 26.09
+  }
+}

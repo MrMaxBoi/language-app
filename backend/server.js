@@ -11,6 +11,7 @@ import sessionRoutes from "./routes/session.route.js";
 import analyticsRoutes from "./routes/analytics.route.js";
 import memoryRoutes from "./routes/memory.route.js";
 import recommendationsRoutes from "./routes/recommendations.route.js";
+import debugRoutes from "./routes/debug.route.js";
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ app.use('/api/sessions', sessionRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/memory', memoryRoutes);
 app.use('/api/recommendations', recommendationsRoutes);
+app.use('/api/debug', debugRoutes);
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "/frontend/dist")));

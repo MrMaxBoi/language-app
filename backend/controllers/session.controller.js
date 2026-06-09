@@ -10,7 +10,55 @@ import { generateSessionAnalytics } from "../services/analytics.service.js";
 import Attempt from "../models/attempt.model.js";
 import Skill from "../models/skill.model.js";
 import Memory from "../models/memory.model.js";
+import KnowledgeCoverage from "../models/knowledgeCoverage.model.js";
 import mockQuestions from "../data/questions.js";
+
+const updateKnowledgeCoverage = async ({ userId, topic, subtopic }) => {
+  if (!userId || !topic || !subtopic) return;
+
+  const now = new Date();
+  const skill = await Skill.findOne({ userId, topic, subtopic }).lean();
+  const update = {
+    $inc: { exposureCount: 1 },
+    $set: { lastSeenAt: now },
+  };
+  if (typeof skill?.mastery === "number") {
+    update.$set.mastery = skill.mastery;
+  }
+
+  await KnowledgeCoverage.findOneAndUpdate(
+    { userId, topic, subtopic },
+    update,
+    { upsert: true, setDefaultsOnInsert: true }
+  );
+};
+
+const syncKnowledgeCoverageMastery = async (userId) => {
+  const coverages = await KnowledgeCoverage.find({ userId }).lean();
+  if (!coverages.length) return;
+
+  const skills = await Skill.find({ userId }).lean();
+  const skillLookup = skills.reduce((lookup, skill) => {
+    const key = `${String(skill.topic || "unknown").trim()}||${String(skill.subtopic || "unknown").trim()}`;
+    lookup[key] = skill.mastery;
+    return lookup;
+  }, {});
+
+  const bulkOps = coverages.map((coverage) => {
+    const key = `${String(coverage.topic || "unknown").trim()}||${String(coverage.subtopic || "unknown").trim()}`;
+    const mastery = typeof skillLookup[key] === "number" ? skillLookup[key] : coverage.mastery;
+    return {
+      updateOne: {
+        filter: { userId, topic: coverage.topic, subtopic: coverage.subtopic },
+        update: { $set: { mastery } },
+      },
+    };
+  });
+
+  if (bulkOps.length) {
+    await KnowledgeCoverage.bulkWrite(bulkOps);
+  }
+};
 
 export const startSession = async (req, res) => {
   try {
@@ -23,7 +71,7 @@ export const startSession = async (req, res) => {
     console.log(`👤 Active userId: ${newSession.userId}`);
 
     // ✅ SESSION QUESTION ENGINE v2
-    const questions = await getSessionQuestions(newSession.userId, 5);
+    const questions = await getSessionQuestions(newSession.userId, 5, { persistExposure: true });
 
     res.status(201).json({
       success: true,
@@ -93,6 +141,12 @@ export const submitAnswer = async (req, res) => {
       tags: question.tags,
       learningObjective: question.learningObjective,
       commonMistakes: question.commonMistakes,
+    });
+
+    await updateKnowledgeCoverage({
+      userId: session.userId,
+      topic: question.topic,
+      subtopic: question.subtopic || "unknown",
     });
 
     console.log("ATTEMPT SAVED:", {
@@ -227,6 +281,8 @@ export const completeSession = async (req, res) => {
       console.log("SKILL GROUPS: none");
     }
 
+    await syncKnowledgeCoverageMastery(session.userId);
+
 		// ==========================================
 		// 📊 GENERATE SESSION ANALYTICS
 		// ==========================================
@@ -271,6 +327,7 @@ export const completeSession = async (req, res) => {
 		session.status = "completed";
 		session.completedAt = new Date();
 		session.score = score; // ✅ SAVE SCORE FOR ANALYTICS
+		session.analysis = analysis; // ✅ Persist analysis summary to session document
 		session.analytics = analytics;
 
 		const savedSession = await session.save();
