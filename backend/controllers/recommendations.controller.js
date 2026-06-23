@@ -7,6 +7,7 @@ import Attempt from "../models/attempt.model.js";
 import Question from "../models/question.model.js";
 import Skill from "../models/skill.model.js";
 import Memory from "../models/memory.model.js";
+import { getLearningKey, getQuestionSkill } from "../data/skillGraph.js";
 
 /**
  * GET /api/recommendations/explain/:userId
@@ -80,71 +81,61 @@ export const explainRecommendations = async (req, res) => {
 		// BUILD RECOMMENDATION PRIORITIES
 		// ==========================================
 
-		// Get topics in priority order
-		const priorityTopics = [];
+		// Get skills in priority order
+		const prioritySkills = [];
+		const hasPrioritySkill = (record) =>
+			prioritySkills.some((item) => item.learningKey === getLearningKey(record));
+		const pushPrioritySkill = ({ record, reason, urgency }) => {
+			const skill = getQuestionSkill(record);
+			if (hasPrioritySkill({ ...record, skillId: skill.skillId })) return;
+			prioritySkills.push({
+				topic: record.topic,
+				subtopic: record.subtopic,
+				skillId: skill.skillId,
+				skillName: skill.skillName,
+				skillPath: skill.skillPath,
+				prerequisiteSkillIds: skill.prerequisiteSkillIds,
+				jlptLevel: skill.jlptLevel,
+				learningKey: skill.skillId,
+				reason,
+				urgency,
+			});
+		};
 
 		// Priority 1: Overdue review
 		for (const mem of overdueMemories) {
-			if (
-				!priorityTopics.find(
-					(t) => t.topic === mem.topic && t.subtopic === mem.subtopic
-				)
-			) {
-				priorityTopics.push({
-					topic: mem.topic,
-					subtopic: mem.subtopic,
-					reason: "overdue_memory",
-					urgency: 40,
-				});
-			}
+			pushPrioritySkill({
+				record: mem,
+				reason: "overdue_memory",
+				urgency: 40,
+			});
 		}
 
 		// Priority 2: Weak memory
 		for (const mem of weakMemories) {
-			if (
-				!priorityTopics.find(
-					(t) => t.topic === mem.topic && t.subtopic === mem.subtopic
-				)
-			) {
-				priorityTopics.push({
-					topic: mem.topic,
-					subtopic: mem.subtopic,
-					reason: "weak_memory",
-					urgency: 25,
-				});
-			}
+			pushPrioritySkill({
+				record: mem,
+				reason: "weak_memory",
+				urgency: 25,
+			});
 		}
 
 		// Priority 3: Weak skill
 		for (const skill of weakSkills) {
-			if (
-				!priorityTopics.find(
-					(t) => t.topic === skill.topic && t.subtopic === skill.subtopic
-				)
-			) {
-				priorityTopics.push({
-					topic: skill.topic,
-					subtopic: skill.subtopic,
-					reason: "weak_skill",
-					urgency: 20,
-				});
-			}
+			pushPrioritySkill({
+				record: skill,
+				reason: "weak_skill",
+				urgency: 20,
+			});
 		}
 
 		// Priority 4: Medium skill
 		for (const skill of mediumSkills) {
-			if (
-				!priorityTopics.find(
-					(t) => t.topic === skill.topic && t.subtopic === skill.subtopic
-				)
-			) {
-				priorityTopics.push({
-					topic: skill.topic,
-					subtopic: skill.subtopic,
-					reason: "medium_skill",
-					urgency: 10,
-				});
-			}
+			pushPrioritySkill({
+				record: skill,
+				reason: "medium_skill",
+				urgency: 10,
+			});
 		}
 
 		// ==========================================
@@ -157,15 +148,19 @@ export const explainRecommendations = async (req, res) => {
 
 		const recommendations = [];
 
-		for (const topicInfo of priorityTopics.slice(0, 5)) {
-			// Query questions for this topic
+		for (const skillInfo of prioritySkills.slice(0, 5)) {
+			// Query questions for this skill, with topic/subtopic fallback for pre-backfill data.
 			const candidates = await Question.find({
-				topic: topicInfo.topic,
-				subtopic: topicInfo.subtopic,
+				$or: [
+					{ skillId: skillInfo.skillId },
+					{ topic: skillInfo.topic, subtopic: skillInfo.subtopic },
+				],
 			}).limit(20);
 
 			for (const question of candidates) {
-				if (recentQuestionIds.has(question._id.toString())) {
+				const stableQuestionId = String(question.questionId || question._id);
+
+				if (recentQuestionIds.has(stableQuestionId)) {
 					continue; // Skip recently attempted
 				}
 
@@ -173,7 +168,8 @@ export const explainRecommendations = async (req, res) => {
 				// SCORE EACH QUESTION
 				// ==========================================
 
-				let score = topicInfo.urgency;
+				const questionSkill = getQuestionSkill(question);
+				let score = skillInfo.urgency;
 
 				// Difficulty match bonus
 				const difficultiesOrder = targetDifficulty.indexOf(
@@ -183,9 +179,7 @@ export const explainRecommendations = async (req, res) => {
 				score += difficultyBonus;
 
 				// Novelty penalty
-				const noveltyPenalty = recentQuestionIds.has(
-					question._id.toString()
-				)
+				const noveltyPenalty = recentQuestionIds.has(stableQuestionId)
 					? -15
 					: 0;
 				score += noveltyPenalty;
@@ -196,16 +190,16 @@ export const explainRecommendations = async (req, res) => {
 				// Find contributing factors
 				const skillMatch = skills.find(
 					(s) =>
-						s.topic === question.topic &&
-						s.subtopic === question.subtopic
+						getLearningKey(s) === questionSkill.skillId ||
+						getQuestionSkill(s).skillId === questionSkill.skillId
 				);
 				const memoryMatch = memories.find(
 					(m) =>
-						m.topic === question.topic &&
-						m.subtopic === question.subtopic
+						getLearningKey(m) === questionSkill.skillId ||
+						getQuestionSkill(m).skillId === questionSkill.skillId
 				);
 
-				const reasons = [topicInfo.reason];
+				const reasons = [skillInfo.reason];
 				if (difficultyBonus > 0) {
 					reasons.push("difficulty_balancing");
 				}
@@ -221,9 +215,14 @@ export const explainRecommendations = async (req, res) => {
 				}
 
 				recommendations.push({
-					questionId: question._id,
+					questionId: stableQuestionId,
 					topic: question.topic,
 					subtopic: question.subtopic,
+					skillId: questionSkill.skillId,
+					skillName: questionSkill.skillName,
+					skillPath: questionSkill.skillPath,
+					prerequisiteSkillIds: questionSkill.prerequisiteSkillIds,
+					jlptLevel: questionSkill.jlptLevel,
 					difficulty: question.difficulty,
 					recommendationScore: Math.round(score * 100) / 100,
 					reasons: [...new Set(reasons)],
@@ -234,7 +233,7 @@ export const explainRecommendations = async (req, res) => {
 						skillMastery: skillMatch
 							? Math.round(skillMatch.mastery * 100)
 							: null,
-						urgencyScore: topicInfo.urgency,
+						urgencyScore: skillInfo.urgency,
 						difficultyMatch: difficultyBonus,
 						noveltyPenalty,
 					},
@@ -281,6 +280,12 @@ export const explainRecommendations = async (req, res) => {
 					weakSkillsCount: weakSkills.length,
 					overdueMemoriesCount: overdueMemories.length,
 					weakMemoriesCount: weakMemories.length,
+					prioritySkills: prioritySkills.slice(0, 5).map((skill) => ({
+						skillId: skill.skillId,
+						skillName: skill.skillName,
+						reason: skill.reason,
+						urgency: skill.urgency,
+					})),
 				},
 				recommendations: recommendations.slice(0, 10),
 			},

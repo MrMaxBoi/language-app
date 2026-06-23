@@ -4,15 +4,20 @@ export const updateMemoryAfterAttempt = async ({
   userId,
   topic,
   subtopic,
+  skillId,
+  skillName,
+  skillPath,
+  prerequisiteSkillIds,
+  jlptLevel,
   isCorrect,
 }) => {
   try {
     // STEP 1: Find existing memory document
-    let memory = await Memory.findOne({
-      userId,
-      topic,
-      subtopic,
-    });
+    const memoryFilter = skillId
+      ? { userId, $or: [{ skillId }, { topic, subtopic }] }
+      : { userId, topic, subtopic };
+
+    let memory = await Memory.findOne(memoryFilter);
 
     // STEP 2: If not found, create new memory
     if (!memory) {
@@ -20,6 +25,11 @@ export const updateMemoryAfterAttempt = async ({
         userId,
         topic,
         subtopic,
+        skillId,
+        skillName,
+        skillPath,
+        prerequisiteSkillIds,
+        jlptLevel,
         strength: isCorrect ? 0.7 : 0.2,
         reviewInterval: isCorrect ? 3 : 1,
         lastReviewed: new Date(),
@@ -27,6 +37,14 @@ export const updateMemoryAfterAttempt = async ({
         successfulReviews: isCorrect ? 1 : 0,
       });
     } else {
+      memory.topic = topic;
+      memory.subtopic = subtopic;
+      memory.skillId = skillId;
+      memory.skillName = skillName;
+      memory.skillPath = skillPath;
+      memory.prerequisiteSkillIds = prerequisiteSkillIds;
+      memory.jlptLevel = jlptLevel;
+
       // STEP 3: If found, update based on correctness
 
       if (isCorrect) {

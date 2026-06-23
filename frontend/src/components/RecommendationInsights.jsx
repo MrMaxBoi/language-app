@@ -48,6 +48,12 @@ const RecommendationInsights = ({ recommendations, loading = false }) => {
 		return labels[reason] || { label: reason, color: "gray" };
 	};
 
+	const getRecommendationLabel = (recommendation) =>
+		recommendation.skillName ||
+		recommendation.subtopic ||
+		recommendation.topic ||
+		"Recommended skill";
+
 	return (
 		<Box p={6} bg={isDark ? "gray.800" : "white"} borderRadius="lg" boxShadow="md">
 			<VStack align="start" spacing={4}>
@@ -117,10 +123,10 @@ const RecommendationInsights = ({ recommendations, loading = false }) => {
 							<HStack justify="space-between" mb={3}>
 								<VStack align="start" spacing={0}>
 									<Text fontSize="sm" fontWeight="bold">
-										{rec.topic} • {rec.subtopic}
+										{getRecommendationLabel(rec)}
 									</Text>
 									<Text fontSize="xs" color="gray.500">
-										Difficulty: {rec.difficulty.toUpperCase()}
+										{rec.topic} / {rec.subtopic} • Difficulty: {rec.difficulty.toUpperCase()}
 									</Text>
 								</VStack>
 								<Badge colorScheme="green" fontSize="lg" p={2}>

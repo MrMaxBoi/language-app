@@ -1,6 +1,13 @@
 import mongoose from "mongoose";
 
 const QuestionSchema = new mongoose.Schema({
+  questionId: {
+    type: String,
+    required: true,
+    unique: true,
+    index: true,
+  },
+
   questionText: {
     type: String,
     required: true,
@@ -38,6 +45,27 @@ const QuestionSchema = new mongoose.Schema({
     required: true,
   },
 
+  skillId: {
+    type: String,
+    index: true,
+  },
+
+  skillName: {
+    type: String,
+  },
+
+  skillPath: [
+    {
+      type: String,
+    },
+  ],
+
+  prerequisiteSkillIds: [
+    {
+      type: String,
+    },
+  ],
+
   difficulty: {
     type: String,
     enum: ["easy", "medium", "hard"],
@@ -55,6 +83,12 @@ const QuestionSchema = new mongoose.Schema({
   },
 
   misconceptionCategory: [
+    {
+      type: String,
+    },
+  ],
+
+  commonMistakes: [
     {
       type: String,
     },
@@ -81,6 +115,9 @@ const QuestionSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
+
+QuestionSchema.index({ topic: 1, subtopic: 1 });
+QuestionSchema.index({ difficulty: 1 });
 
 const Question = mongoose.model("Question", QuestionSchema);
 

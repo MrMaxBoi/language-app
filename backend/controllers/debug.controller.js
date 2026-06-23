@@ -6,7 +6,9 @@ import QuestionExposure from "../models/questionExposure.model.js";
 import Session from "../models/session.model.js";
 import KnowledgeCoverage from "../models/knowledgeCoverage.model.js";
 import mockQuestions from "../data/questions.js";
+import { isLocalQuestionFallbackEnabled } from "../config/questionBank.js";
 import { getSessionQuestions, getLastSelectionReport } from "../services/questionSelection.service.js";
+import { buildSkillQuestionCoverage, getQuestionSkill } from "../data/skillGraph.js";
 
 const toMapCounts = (arr, key) => {
   const map = {};
@@ -20,27 +22,51 @@ const toMapCounts = (arr, key) => {
 const normalizeSubtopicKey = (topic, subtopic) =>
   `${String(topic || "unknown").trim()}||${String(subtopic || "unknown").trim()}`;
 
+const normalizeLearningKey = (record) => record.skillId || normalizeSubtopicKey(record.topic, record.subtopic);
+
+const getQuestionBankRecords = (dbQuestions = []) => {
+  const sourceQuestions = dbQuestions.length > 0 ? dbQuestions : isLocalQuestionFallbackEnabled() ? mockQuestions : [];
+
+  return sourceQuestions.map((question) => ({
+    _id: question._id,
+    questionId: question.questionId || String(question._id),
+    topic: question.topic || "unknown",
+    subtopic: question.subtopic || "unknown",
+    skillId: question.skillId,
+    skillName: question.skillName,
+  }));
+};
+
 const buildCoverageDashboard = (coverages, skills, questions) => {
   const subtopicRecords = {};
 
   for (const question of questions) {
     const topic = question.topic || "unknown";
     const subtopic = question.subtopic || "unknown";
-    const key = normalizeSubtopicKey(topic, subtopic);
+    const skill = getQuestionSkill(question);
+    const key = skill.skillId || normalizeSubtopicKey(topic, subtopic);
     if (!subtopicRecords[key]) {
-      subtopicRecords[key] = { topic, subtopic };
+      subtopicRecords[key] = { topic, subtopic, skillId: skill.skillId, skillName: skill.skillName };
     }
   }
 
   const coverageLookup = (coverages || []).reduce((lookup, coverage) => {
-    const key = normalizeSubtopicKey(coverage.topic, coverage.subtopic);
+    const canonicalSkill = getQuestionSkill(coverage);
+    const key = normalizeLearningKey(coverage);
+    const legacyKey = normalizeSubtopicKey(coverage.topic, coverage.subtopic);
     lookup[key] = coverage;
+    lookup[canonicalSkill.skillId] = coverage;
+    lookup[legacyKey] = coverage;
     return lookup;
   }, {});
 
   const skillLookup = (skills || []).reduce((lookup, skill) => {
-    const key = normalizeSubtopicKey(skill.topic, skill.subtopic);
+    const canonicalSkill = getQuestionSkill(skill);
+    const key = normalizeLearningKey(skill);
+    const legacyKey = normalizeSubtopicKey(skill.topic, skill.subtopic);
     lookup[key] = skill.mastery;
+    lookup[canonicalSkill.skillId] = skill.mastery;
+    lookup[legacyKey] = skill.mastery;
     return lookup;
   }, {});
 
@@ -51,7 +77,7 @@ const buildCoverageDashboard = (coverages, skills, questions) => {
   const topicStats = {};
 
   for (const key of Object.keys(subtopicRecords)) {
-    const { topic, subtopic } = subtopicRecords[key];
+    const { topic, subtopic, skillId, skillName } = subtopicRecords[key];
     const coverage = coverageLookup[key] || { exposureCount: 0, mastery: 0 };
     const mastery =
       typeof coverage.mastery === "number"
@@ -67,9 +93,9 @@ const buildCoverageDashboard = (coverages, skills, questions) => {
     masteryBySubtopic[key] = mastery;
 
     if (isCovered) {
-      coveredSubtopics.push({ topic, subtopic, exposureCount, mastery, lastSeenAt: coverage.lastSeenAt || null });
+      coveredSubtopics.push({ topic, subtopic, skillId, skillName, exposureCount, mastery, lastSeenAt: coverage.lastSeenAt || null });
     } else {
-      uncoveredSubtopics.push({ topic, subtopic, exposureCount, mastery, lastSeenAt: coverage.lastSeenAt || null });
+      uncoveredSubtopics.push({ topic, subtopic, skillId, skillName, exposureCount, mastery, lastSeenAt: coverage.lastSeenAt || null });
     }
 
     topicStats[topic] = topicStats[topic] || { total: 0, covered: 0 };
@@ -135,6 +161,20 @@ export const getLearningState = async (req, res) => {
     const sortedSkills = [...skills].sort((a, b) => a.mastery - b.mastery);
     const weakestTopics = sortedSkills.slice(0, 5).map((s) => ({ topic: s.topic, subtopic: s.subtopic, mastery: s.mastery }));
     const strongestTopics = sortedSkills.slice(-5).reverse().map((s) => ({ topic: s.topic, subtopic: s.subtopic, mastery: s.mastery }));
+    const weakestSkills = sortedSkills.slice(0, 5).map((s) => ({
+      topic: s.topic,
+      subtopic: s.subtopic,
+      skillId: s.skillId,
+      skillName: s.skillName,
+      mastery: s.mastery,
+    }));
+    const strongestSkills = sortedSkills.slice(-5).reverse().map((s) => ({
+      topic: s.topic,
+      subtopic: s.subtopic,
+      skillId: s.skillId,
+      skillName: s.skillName,
+      mastery: s.mastery,
+    }));
 
     res.json({
       userId,
@@ -145,6 +185,8 @@ export const getLearningState = async (req, res) => {
       topicFrequency,
       weakestTopics,
       strongestTopics,
+      weakestSkills,
+      strongestSkills,
     });
   } catch (error) {
     console.error("getLearningState error:", error.message);
@@ -168,6 +210,9 @@ export const getSelectionReport = async (req, res) => {
       questionText: q.questionText,
       topic: q.topic,
       subtopic: q.subtopic,
+      skillId: q.skillId,
+      skillName: q.skillName,
+      skillPath: q.skillPath,
       difficulty: q.difficulty,
       exposureCount: q.exposureCount || 0,
       exposurePenalty: q.exposurePenalty || 0,
@@ -283,20 +328,9 @@ export const getEngineIntelligence = async (req, res) => {
       difficultyCounts: session.analytics?.difficultyCounts || {},
     }));
 
-    const coverageReport = buildCoverageDashboard(
-      coverages,
-      skills,
-      [
-        ...dbQuestions.map((question) => ({
-          topic: question.topic || "unknown",
-          subtopic: question.subtopic || "unknown",
-        })),
-        ...mockQuestions.map((question) => ({
-          topic: question.topic || "unknown",
-          subtopic: question.subtopic || "unknown",
-        })),
-      ]
-    );
+    const allQuestionRecords = getQuestionBankRecords(dbQuestions);
+    const coverageReport = buildCoverageDashboard(coverages, skills, allQuestionRecords);
+    const skillGraphCoverage = buildSkillQuestionCoverage(allQuestionRecords);
 
     const distinctTopics = new Set(attempts.map((attempt) => attempt.topic || "unknown")).size;
     const totalAttemptsCount = attempts.length;
@@ -323,12 +357,24 @@ export const getEngineIntelligence = async (req, res) => {
     const weakestTopics = [...skills]
       .sort((a, b) => a.mastery - b.mastery)
       .slice(0, 5)
-      .map((skill) => ({ topic: skill.topic, subtopic: skill.subtopic, mastery: skill.mastery }));
+      .map((skill) => ({
+        topic: skill.topic,
+        subtopic: skill.subtopic,
+        skillId: skill.skillId,
+        skillName: skill.skillName,
+        mastery: skill.mastery,
+      }));
 
     const strongestTopics = [...skills]
       .sort((a, b) => b.mastery - a.mastery)
       .slice(0, 5)
-      .map((skill) => ({ topic: skill.topic, subtopic: skill.subtopic, mastery: skill.mastery }));
+      .map((skill) => ({
+        topic: skill.topic,
+        subtopic: skill.subtopic,
+        skillId: skill.skillId,
+        skillName: skill.skillName,
+        mastery: skill.mastery,
+      }));
 
     const mostExposedQuestions = [...exposures]
       .sort((a, b) => (b.exposureCount || 0) - (a.exposureCount || 0))
@@ -370,6 +416,31 @@ export const getEngineIntelligence = async (req, res) => {
         skills,
         memories,
         coverage: coverageReport,
+        skillGraph: {
+          totalSkills: skillGraphCoverage.totalSkills,
+          mappedSkills: skillGraphCoverage.mappedSkills,
+          unmappedSkills: skillGraphCoverage.unmappedSkills,
+          mappedQuestions: skillGraphCoverage.mappedQuestions,
+          generatedFallbackCount: skillGraphCoverage.generatedFallbackCount,
+          skillsNeedingQuestions: skillGraphCoverage.bySkill
+            .filter((skill) => skill.questionCount === 0)
+            .map((skill) => ({
+              skillId: skill.id,
+              skillName: skill.name,
+              strand: skill.strand,
+              domain: skill.domain,
+              prerequisites: skill.prerequisites,
+            })),
+          questionDistribution: skillGraphCoverage.bySkill
+            .filter((skill) => skill.questionCount > 0)
+            .map((skill) => ({
+              skillId: skill.id,
+              skillName: skill.name,
+              strand: skill.strand,
+              domain: skill.domain,
+              questionCount: skill.questionCount,
+            })),
+        },
         exposure: exposures,
         analytics,
         engineHealth: {
@@ -397,17 +468,7 @@ export const getCoverageReport = async (req, res) => {
       Question.find({}).lean(),
     ]);
 
-    // Include mock questions in the concept universe
-    const allQuestions = [
-      ...dbQuestions.map((question) => ({
-        topic: question.topic || "unknown",
-        subtopic: question.subtopic || "unknown",
-      })),
-      ...mockQuestions.map((question) => ({
-        topic: question.topic || "unknown",
-        subtopic: question.subtopic || "unknown",
-      })),
-    ];
+    const allQuestions = getQuestionBankRecords(dbQuestions);
 
     const coverageReport = buildCoverageDashboard(coverages, skills, allQuestions);
 

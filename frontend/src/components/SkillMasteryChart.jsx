@@ -43,24 +43,43 @@ const SkillMasteryChart = ({ analytics, loading = false }) => {
 		);
 	}
 
-	// Aggregate skill mastery from analytics
+	// Prefer canonical skill summaries; fall back to legacy topic summaries.
 	const skillData = {};
 
-	for (const session of analytics.recentSessions) {
+	if (analytics.weakestSkills?.length || analytics.strongestSkills?.length) {
+		for (const skill of analytics.weakestSkills || []) {
+			const label = skill.skillName || skill.subtopic || skill.topic || "Unknown skill";
+			skillData[label] = {
+				mastery: Math.round((skill.mastery || 0) * 100),
+				status: "weak",
+			};
+		}
+		for (const skill of analytics.strongestSkills || []) {
+			const label = skill.skillName || skill.subtopic || skill.topic || "Unknown skill";
+			skillData[label] = {
+				mastery: Math.round((skill.mastery || 0) * 100),
+				status: "strong",
+			};
+		}
+	}
+
+	for (const session of analytics.recentSessions || []) {
 		if (session.analytics?.weakTopics) {
 			for (const topic of session.analytics.weakTopics) {
+				if (skillData[topic]) continue;
 				skillData[topic] = { mastery: 45, status: "weak" };
 			}
 		}
 		if (session.analytics?.strongTopics) {
 			for (const topic of session.analytics.strongTopics) {
+				if (skillData[topic]) continue;
 				skillData[topic] = { mastery: 85, status: "strong" };
 			}
 		}
 	}
 
-	const chartData = Object.entries(skillData).map(([topic, data]) => ({
-		topic: topic.charAt(0).toUpperCase() + topic.slice(1),
+	const chartData = Object.entries(skillData).map(([skill, data]) => ({
+		topic: skill.charAt(0).toUpperCase() + skill.slice(1),
 		mastery: data.mastery,
 		status: data.status,
 	}));
@@ -73,7 +92,7 @@ const SkillMasteryChart = ({ analytics, loading = false }) => {
 						📚 Skill Mastery
 					</Text>
 					<Badge colorScheme="blue">
-						{chartData.length} Topics
+						{chartData.length} Skills
 					</Badge>
 				</HStack>
 

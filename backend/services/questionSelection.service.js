@@ -6,9 +6,51 @@ import Session from "../models/session.model.js";
 import QuestionExposure from "../models/questionExposure.model.js";
 import KnowledgeCoverage from "../models/knowledgeCoverage.model.js";
 import mockQuestions from "../data/questions.js";
+import { isLocalQuestionFallbackEnabled } from "../config/questionBank.js";
+import { getLearningKey, getQuestionSkill, getSkillById } from "../data/skillGraph.js";
 
 // DEBUG flag: enable verbose selection explanations and reports
 const DEBUG_SELECTION = true;
+const PREREQUISITE_MASTERY_THRESHOLD = 0.5;
+const PREREQUISITE_EXPOSURE_THRESHOLD = 2;
+const PREREQUISITE_SOFT_PENALTY = 20;
+const PREREQUISITE_HARD_GATE_PENALTY = 80;
+const BEGINNER_SAFE_SKILL_IDS = new Set([
+  "kana.hiragana",
+  "kana.katakana",
+  "pronunciation.basic",
+  "grammar.basic_sentence_structure",
+  "grammar.questions",
+  "vocab.basic_nouns",
+  "vocab.people_school",
+  "vocab.animals",
+  "vocab.family",
+  "vocab.food_drinks",
+  "vocab.transportation",
+  "vocab.places",
+  "vocab.daily_activities",
+  "greetings.daily",
+  "numbers.basic_counting",
+  "time.weekdays",
+  "time.asking_time",
+  "particles.topic_wa",
+  "particles.subject_ga",
+  "particles.object_wo",
+  "particles.destination_ni",
+  "particles.location_de",
+  "particles.noun_links",
+  "verbs.present_polite",
+  "verbs.past_polite",
+  "verbs.negative_polite",
+  "verbs.te_form",
+  "adjectives.core",
+  "adjectives.weather",
+  "adjectives.na",
+  "grammar.likes_dislikes",
+  "grammar.wants_desires",
+  "reading.word_recognition",
+  "reading.sentence_reading",
+]);
 
 // Last selection report (populated when getSessionQuestions runs)
 let lastSelectionReport = null;
@@ -30,14 +72,23 @@ const normalizeDifficulty = (difficulty) => {
   return "easy";
 };
 
-const buildQuestionFromSource = (sourceQuestion) => ({
-  _id: sourceQuestion._id,
-  questionId: String(sourceQuestion._id),
-  questionText: sourceQuestion.questionText,
-  topic: sourceQuestion.topic,
-  subtopic: sourceQuestion.subtopic,
-  difficulty: normalizeDifficulty(sourceQuestion.difficulty),
-});
+const buildQuestionFromSource = (sourceQuestion) => {
+  const skill = getQuestionSkill(sourceQuestion);
+
+  return {
+    _id: sourceQuestion._id,
+    questionId: String(sourceQuestion.questionId || sourceQuestion._id),
+    questionText: sourceQuestion.questionText,
+    topic: sourceQuestion.topic,
+    subtopic: sourceQuestion.subtopic,
+    skillId: skill.skillId,
+    skillName: skill.skillName,
+    skillPath: skill.skillPath,
+    prerequisiteSkillIds: skill.prerequisiteSkillIds,
+    jlptLevel: skill.jlptLevel,
+    difficulty: normalizeDifficulty(sourceQuestion.difficulty),
+  };
+};
 
 const shuffleArray = (array) => {
   const shuffled = [...array];
@@ -52,6 +103,8 @@ const sortByScore = (items) => {
   return items.slice().sort((a, b) => (b.score || 0) - (a.score || 0));
 };
 
+const getCanonicalLearningKey = (record = {}) => getQuestionSkill(record).skillId;
+
 const softmaxProbabilities = (items, temperature = 1.2) => {
   if (!items || items.length === 0) return [];
   const scores = items.map((it) => it.score || 0);
@@ -61,11 +114,19 @@ const softmaxProbabilities = (items, temperature = 1.2) => {
   return exps.map((e) => e / sum);
 };
 
-const weightedSampleWithoutReplacement = (items, probabilities, k, topicCounts, subtopicCounts, maxPerSubtopic = 2, allowLastSession = false) => {
+const weightedSampleWithoutReplacement = (
+  items,
+  probabilities,
+  k,
+  topicCounts,
+  subtopicCounts,
+  maxPerSubtopic = 2,
+  allowLastSession = false,
+  existingSelectedIds = new Set()
+) => {
   const pool = items.slice();
   const probs = probabilities.slice();
   const selected = [];
-  const selectedIds = new Set();
 
   const normalizePool = () => {
     const total = probs.reduce((a, b) => a + b, 0);
@@ -92,14 +153,18 @@ const weightedSampleWithoutReplacement = (items, probabilities, k, topicCounts, 
     const topicCount = topicCounts[candidate.topic] || 0;
     const subtopicCount = subtopicCounts[candidate.subtopic] || 0;
 
-    if ((!allowLastSession && candidate.lastSessionUsed) || selectedIds.has(candidateId) || subtopicCount >= maxPerSubtopic) {
+    if (
+      (!allowLastSession && candidate.lastSessionUsed) ||
+      existingSelectedIds.has(candidateId) ||
+      subtopicCount >= maxPerSubtopic
+    ) {
       pool.splice(idx, 1);
       probs.splice(idx, 1);
       continue;
     }
 
     selected.push(candidate);
-    selectedIds.add(candidateId);
+    existingSelectedIds.add(candidateId);
     topicCounts[candidate.topic] = topicCount + 1;
     subtopicCounts[candidate.subtopic] = subtopicCount + 1;
 
@@ -110,28 +175,51 @@ const weightedSampleWithoutReplacement = (items, probabilities, k, topicCounts, 
   return selected;
 };
 
-const buildSkillLookup = (skills) => {
-  const topicMastery = {};
-  const counts = {};
+const buildMasteryLookup = (skills) => {
+  const skillTotals = {};
+  const skillCounts = {};
+  const byTopic = {};
+  const topicCounts = {};
 
   for (const skill of skills) {
+    const canonicalSkill = getQuestionSkill(skill);
     const topic = String(skill.topic || "unknown").trim();
     const mastery = typeof skill.mastery === "number" ? skill.mastery : 0;
-    topicMastery[topic] = (topicMastery[topic] || 0) + mastery;
-    counts[topic] = (counts[topic] || 0) + 1;
+    skillTotals[canonicalSkill.skillId] = (skillTotals[canonicalSkill.skillId] || 0) + mastery;
+    skillCounts[canonicalSkill.skillId] = (skillCounts[canonicalSkill.skillId] || 0) + 1;
+    byTopic[topic] = (byTopic[topic] || 0) + mastery;
+    topicCounts[topic] = (topicCounts[topic] || 0) + 1;
   }
 
-  for (const topic of Object.keys(topicMastery)) {
-    topicMastery[topic] = counts[topic] > 0 ? topicMastery[topic] / counts[topic] : 0;
+  const bySkill = {};
+  for (const skillId of Object.keys(skillTotals)) {
+    bySkill[skillId] = skillCounts[skillId] > 0 ? skillTotals[skillId] / skillCounts[skillId] : 0;
   }
 
-  return topicMastery;
+  for (const topic of Object.keys(byTopic)) {
+    byTopic[topic] = topicCounts[topic] > 0 ? byTopic[topic] / topicCounts[topic] : 0;
+  }
+
+  return { bySkill, byTopic };
 };
 
 const buildMemoryLookup = (memories) =>
   memories.reduce((lookup, memory) => {
-    const key = `${String(memory.topic || "unknown").trim()}||${String(memory.subtopic || "unknown").trim()}`;
-    lookup[key] = memory;
+    const canonicalSkill = getQuestionSkill(memory);
+    const key = getLearningKey(memory);
+    const legacyKey = normalizeQuestionKey(memory.topic, memory.subtopic);
+    const existing = lookup[canonicalSkill.skillId];
+    const memoryStrength = typeof memory.strength === "number" ? memory.strength : 1;
+    const existingStrength = typeof existing?.strength === "number" ? existing.strength : 1;
+    const memoryDue = memory.nextReviewDate && new Date(memory.nextReviewDate) <= new Date();
+    const existingDue = existing?.nextReviewDate && new Date(existing.nextReviewDate) <= new Date();
+
+    if (!existing || memoryDue || (!existingDue && memoryStrength < existingStrength)) {
+      lookup[canonicalSkill.skillId] = memory;
+    }
+
+    lookup[key] = lookup[canonicalSkill.skillId];
+    lookup[legacyKey] = lookup[canonicalSkill.skillId];
     return lookup;
   }, {});
 
@@ -143,20 +231,41 @@ const buildExposureLookup = (exposures) =>
 
 const buildCoverageLookup = (coverages) =>
   coverages.reduce((lookup, coverage) => {
-    const key = `${String(coverage.topic || "unknown").trim()}||${String(coverage.subtopic || "unknown").trim()}`;
-    lookup[key] = coverage;
+    const canonicalSkill = getQuestionSkill(coverage);
+    const key = getLearningKey(coverage);
+    const legacyKey = normalizeQuestionKey(coverage.topic, coverage.subtopic);
+    const existing = lookup[canonicalSkill.skillId] || {};
+    const merged = {
+      ...existing,
+      ...coverage,
+      skillId: canonicalSkill.skillId,
+      skillName: coverage.skillName || canonicalSkill.skillName,
+      exposureCount: Math.max(existing.exposureCount || 0, coverage.exposureCount || 0),
+      mastery: Math.max(existing.mastery || 0, coverage.mastery || 0),
+      lastSeenAt:
+        existing.lastSeenAt && coverage.lastSeenAt
+          ? new Date(existing.lastSeenAt) > new Date(coverage.lastSeenAt)
+            ? existing.lastSeenAt
+            : coverage.lastSeenAt
+          : existing.lastSeenAt || coverage.lastSeenAt,
+    };
+    lookup[canonicalSkill.skillId] = merged;
+    lookup[key] = merged;
+    lookup[legacyKey] = merged;
     return lookup;
   }, {});
 
 const normalizeQuestionKey = (topic, subtopic) =>
   `${String(topic || "unknown").trim()}||${String(subtopic || "unknown").trim()}`;
 
+const getQuestionLearningKey = (question) => getCanonicalLearningKey(question);
+
 const buildCoverageInjectionPools = (questions, coverageLookup) => {
   const unseen = [];
   const lowCoverage = [];
 
   for (const question of questions) {
-    const questionKey = normalizeQuestionKey(question.topic, question.subtopic);
+    const questionKey = getQuestionLearningKey(question);
     const coverage = coverageLookup[questionKey] || { exposureCount: 0 };
     const exposureCount = coverage.exposureCount || 0;
 
@@ -169,6 +278,193 @@ const buildCoverageInjectionPools = (questions, coverageLookup) => {
   }
 
   return { unseen, lowCoverage };
+};
+
+const getPrerequisiteReadiness = (question, masteryLookup, coverageLookup) => {
+  const skillId = getQuestionLearningKey(question);
+  const skill = getSkillById(skillId);
+  const prerequisites = skill?.prerequisites || question.prerequisiteSkillIds || [];
+
+  if (!prerequisites.length) {
+    return {
+      skill,
+      prerequisites,
+      unmetPrerequisites: [],
+      ready: true,
+      hardGate: false,
+    };
+  }
+
+  const unmetPrerequisites = prerequisites.filter((prerequisiteSkillId) => {
+    const mastery = masteryLookup.bySkill[prerequisiteSkillId];
+    const coverage = coverageLookup[prerequisiteSkillId];
+    const exposureCount = coverage?.exposureCount || 0;
+    return !(
+      (typeof mastery === "number" && mastery >= PREREQUISITE_MASTERY_THRESHOLD) ||
+      exposureCount >= PREREQUISITE_EXPOSURE_THRESHOLD
+    );
+  });
+
+  const difficulty = normalizeDifficulty(question.difficulty);
+  const hardGate =
+    unmetPrerequisites.length > 0 &&
+    (skill?.level === "early-intermediate" || difficulty === "hard");
+
+  return {
+    skill,
+    prerequisites,
+    unmetPrerequisites,
+    ready: unmetPrerequisites.length === 0,
+    hardGate,
+  };
+};
+
+const isQuestionAllowedByPrerequisites = (question, masteryLookup, coverageLookup, learnerStage = "core_practice") => {
+  const readiness = getPrerequisiteReadiness(question, masteryLookup, coverageLookup);
+  if (
+    (learnerStage === "cold_start" || learnerStage === "foundation_building" || learnerStage === "core_practice") &&
+    !readiness.ready
+  ) {
+    return false;
+  }
+  return !readiness.hardGate;
+};
+
+export const calculateAverageMastery = (masteryLookup) => {
+  const values = Object.values(masteryLookup.bySkill).filter((value) => typeof value === "number");
+  if (!values.length) return 0;
+  return values.reduce((sum, value) => sum + value, 0) / values.length;
+};
+
+export const calculateRecentAccuracy = (attempts) => {
+  if (!attempts.length) return null;
+  const correct = attempts.filter((attempt) => attempt.isCorrect).length;
+  return correct / attempts.length;
+};
+
+export const countCoveredSkills = (coverages = []) => {
+  const covered = new Set();
+  for (const coverage of coverages) {
+    const skillId = getQuestionSkill(coverage).skillId;
+    if ((coverage.exposureCount || 0) > 0) {
+      covered.add(skillId);
+    }
+  }
+  return covered.size;
+};
+
+export const detectLearnerStage = ({ totalAttemptCount, coveredSkillCount, averageMastery, recentAccuracy, weakSkillCount }) => {
+  if (totalAttemptCount < 15 || coveredSkillCount < 8) {
+    return "cold_start";
+  }
+
+  if (
+    totalAttemptCount >= 25 &&
+    coveredSkillCount >= 12 &&
+    averageMastery >= 0.8 &&
+    recentAccuracy >= 0.85 &&
+    weakSkillCount === 0
+  ) {
+    return "core_practice";
+  }
+
+  if (totalAttemptCount < 50 || coveredSkillCount < 18 || averageMastery < 0.45) {
+    return "foundation_building";
+  }
+
+  if (weakSkillCount >= 4 || (typeof recentAccuracy === "number" && recentAccuracy < 0.65)) {
+    return "adaptive_review";
+  }
+
+  if (coveredSkillCount >= 26 && averageMastery >= 0.65 && recentAccuracy >= 0.75) {
+    return "advanced_expansion";
+  }
+
+  return "core_practice";
+};
+
+const getCurriculumBias = (question, learnerStage) => {
+  const skillId = getQuestionLearningKey(question);
+  const skill = getSkillById(skillId);
+  const difficulty = normalizeDifficulty(question.difficulty);
+  const isBeginnerSafe = BEGINNER_SAFE_SKILL_IDS.has(skillId);
+  const isEarlyIntermediate = skill?.level === "early-intermediate";
+  const isHard = difficulty === "hard";
+  let stageBias = 0;
+  const reasons = [];
+
+  if (learnerStage === "cold_start") {
+    if (isBeginnerSafe) {
+      stageBias += 35;
+      reasons.push("stage: beginner-safe");
+    }
+    if (skill?.strand === "Foundation") {
+      stageBias += 15;
+      reasons.push("stage: foundation boost");
+    }
+    if (difficulty === "medium") {
+      stageBias -= 10;
+      reasons.push("stage: medium delay");
+    }
+    if (isHard) {
+      stageBias -= 120;
+      reasons.push("stage: hard delay");
+    }
+    if (isEarlyIntermediate) {
+      stageBias -= 120;
+      reasons.push("stage: advanced delay");
+    }
+  } else if (learnerStage === "foundation_building") {
+    if (isBeginnerSafe) {
+      stageBias += 25;
+      reasons.push("stage: foundation path");
+    }
+    if (skill?.strand === "Foundation") {
+      stageBias += 10;
+      reasons.push("stage: foundation boost");
+    }
+    if (isHard) {
+      stageBias -= 70;
+      reasons.push("stage: hard delay");
+    }
+    if (isEarlyIntermediate) {
+      stageBias -= 60;
+      reasons.push("stage: advanced delay");
+    }
+  } else if (learnerStage === "core_practice") {
+    if (isBeginnerSafe) {
+      stageBias += 8;
+      reasons.push("stage: core path");
+    }
+    if (isHard) {
+      stageBias -= 20;
+      reasons.push("stage: hard moderation");
+    }
+    if (isEarlyIntermediate) {
+      stageBias -= 20;
+      reasons.push("stage: advanced moderation");
+    }
+  } else if (learnerStage === "adaptive_review") {
+    if (isBeginnerSafe) {
+      stageBias += 5;
+      reasons.push("stage: review-safe");
+    }
+    if (isHard) {
+      stageBias -= 15;
+      reasons.push("stage: hard moderation");
+    }
+  } else if (learnerStage === "advanced_expansion") {
+    if (isEarlyIntermediate) {
+      stageBias += 15;
+      reasons.push("stage: advanced expansion");
+    }
+    if (isHard) {
+      stageBias += 8;
+      reasons.push("stage: hard challenge");
+    }
+  }
+
+  return { stageBias, reasons };
 };
 
 const persistQuestionExposure = async (userId, questions, now = new Date()) => {
@@ -193,7 +489,7 @@ const dedupeQuestions = (questions) => {
   const seenIds = new Set();
   const unique = [];
   for (const question of questions) {
-    const id = String(question._id);
+    const id = String(question.questionId || question._id);
     if (!seenIds.has(id)) {
       seenIds.add(id);
       unique.push(question);
@@ -223,7 +519,7 @@ const buildRecentAttemptMaps = (attempts) => {
 
 const scoreQuestion = (
   question,
-  topicMastery,
+  masteryLookup,
   memoryLookup,
   recentIncorrectSet,
   recentCorrectSet,
@@ -232,19 +528,22 @@ const scoreQuestion = (
   coverageLookup,
   now,
   exposureAware = true,
-  personaType = 'balanced'
+  personaType = 'balanced',
+  learnerStage = "core_practice"
 ) => {
   let score = 0;
   const reasons = [];
   const topic = String(question.topic || "unknown").trim();
-  const subtopic = String(question.subtopic || "unknown").trim();
-  const questionKey = `${topic}||${subtopic}`;
+  const questionKey = getQuestionLearningKey(question);
   const questionId = String(question.questionId);
 
-  const mastery = topicMastery[topic] || 0;
-  if (mastery < 0.4) {
+  const mastery = masteryLookup.bySkill[questionKey];
+  const hasMastery = typeof mastery === "number";
+  if (hasMastery && mastery < 0.4) {
     score += 30;
     reasons.push("weak skill");
+  } else if (!hasMastery) {
+    reasons.push("new skill");
   }
 
   const memory = memoryLookup[questionKey];
@@ -281,6 +580,7 @@ const scoreQuestion = (
   const coverageCount = coverage.exposureCount || 0;
   const coverageWeight = 1 / (1 + coverageCount);
   const coverageScore = coverageWeight * 40;
+  const prerequisiteReadiness = getPrerequisiteReadiness(question, masteryLookup, coverageLookup);
 
   if (coverageCount === 0) {
     reasons.push("unseen coverage");
@@ -291,6 +591,19 @@ const scoreQuestion = (
   }
 
   score += coverageScore;
+
+  const curriculumBias = getCurriculumBias(question, learnerStage);
+  score += curriculumBias.stageBias;
+  reasons.push(...curriculumBias.reasons);
+
+  let prerequisitePenalty = 0;
+  if (!prerequisiteReadiness.ready) {
+    prerequisitePenalty = prerequisiteReadiness.hardGate
+      ? PREREQUISITE_HARD_GATE_PENALTY
+      : PREREQUISITE_SOFT_PENALTY;
+    score -= prerequisitePenalty;
+    reasons.push(prerequisiteReadiness.hardGate ? "prerequisite gate" : "prerequisite gap");
+  }
 
   let exposurePenalty = 0;
   if (exposureAware && exposureCount > 0) {
@@ -336,9 +649,14 @@ const scoreQuestion = (
     coverageCount,
     coverageScore,
     coverageWeight,
+    prerequisitePenalty,
+    stageBias: curriculumBias.stageBias,
+    learnerStage,
+    unmetPrerequisites: prerequisiteReadiness.unmetPrerequisites,
     lastSessionUsed: lastSessionSet.has(questionId),
     _debug: {
-      weakSkill: mastery < 0.4,
+      weakSkill: hasMastery && mastery < 0.4,
+      newSkill: !hasMastery,
       lowMemory: Boolean(memory && typeof memory.strength === "number" && memory.strength < 0.4),
       dueReview: Boolean(memory && memory.nextReviewDate && new Date(memory.nextReviewDate) <= now),
       recentIncorrect: recentIncorrectSet.has(questionId),
@@ -349,6 +667,12 @@ const scoreQuestion = (
       coverageCount,
       coverageScore,
       coverageWeight,
+      prerequisiteReady: prerequisiteReadiness.ready,
+      prerequisiteHardGate: prerequisiteReadiness.hardGate,
+      unmetPrerequisites: prerequisiteReadiness.unmetPrerequisites,
+      prerequisitePenalty,
+      stageBias: curriculumBias.stageBias,
+      learnerStage,
     },
   };
 };
@@ -390,6 +714,122 @@ const countByDifficulty = (items) =>
     { easy: 0, medium: 0, hard: 0 }
   );
 
+const isRemediationCandidate = (question) => {
+  const debug = question?._debug || {};
+  return Boolean(debug.weakSkill || debug.lowMemory || debug.recentIncorrect || debug.dueReview);
+};
+
+const isPriorityReviewCandidate = (question) => {
+  const debug = question?._debug || {};
+  return Boolean(debug.weakSkill || debug.recentIncorrect || debug.dueReview);
+};
+
+const isWeakSkillCandidate = (question, weakSkills = []) => {
+  if (!weakSkills.length) return false;
+  return weakSkills.includes(getQuestionLearningKey(question));
+};
+
+const markWeakSkillSelection = (question, weakSkills = []) => {
+  if (!isWeakSkillCandidate(question, weakSkills)) return question;
+
+  question._debug = { ...(question._debug || {}), weakSkill: true };
+  if (!question.scoreReasons?.includes("weak skill")) {
+    question.scoreReasons = [...(question.scoreReasons || []), "weak skill"];
+  }
+  return question;
+};
+
+const isReviewCandidateForWeakSkills = (question, weakSkills = []) =>
+  isPriorityReviewCandidate(question) || isWeakSkillCandidate(question, weakSkills);
+
+const getRemediationTarget = (learnerStage, learnerStageMetrics) => {
+  const weakSkillCount = learnerStageMetrics?.weakSkillCount || 0;
+  const recentAccuracy = learnerStageMetrics?.recentAccuracy;
+
+  if (
+    learnerStage === "cold_start" &&
+    typeof recentAccuracy === "number" &&
+    recentAccuracy < 0.5 &&
+    weakSkillCount >= 2
+  ) {
+    return 2;
+  }
+
+  if (learnerStage === "foundation_building" && weakSkillCount > 0) {
+    return 1;
+  }
+
+  return 0;
+};
+
+const enforceRemediationTarget = (items, remediationTarget, weakSkills, scoredCandidates) => {
+  if (remediationTarget <= 0) return items;
+
+  const completed = [...items];
+  const selectedIds = new Set(completed.map((question) => String(question.questionId)));
+  let currentCount = completed.filter((question) => isReviewCandidateForWeakSkills(question, weakSkills)).length;
+
+  if (currentCount >= remediationTarget) return completed;
+
+  const candidatePool = scoredCandidates
+    .filter((question) => isReviewCandidateForWeakSkills(question, weakSkills))
+    .filter((question) => !selectedIds.has(String(question.questionId)))
+    .sort((a, b) => (b.score || 0) - (a.score || 0));
+
+  for (const candidate of candidatePool) {
+    if (currentCount >= remediationTarget) break;
+
+    const candidateDifficulty = normalizeDifficulty(candidate.difficulty);
+    let replacementIndex = completed.findIndex(
+      (question) =>
+        !isReviewCandidateForWeakSkills(question, weakSkills) &&
+        normalizeDifficulty(question.difficulty) === candidateDifficulty
+    );
+
+    if (replacementIndex === -1) {
+      replacementIndex = completed.findIndex((question) => !isReviewCandidateForWeakSkills(question, weakSkills));
+    }
+
+    if (replacementIndex === -1) break;
+
+    selectedIds.delete(String(completed[replacementIndex].questionId));
+    candidate.selectionSource = "remediation";
+    completed[replacementIndex] = markWeakSkillSelection(candidate, weakSkills);
+    selectedIds.add(String(candidate.questionId));
+    currentCount += 1;
+  }
+
+  return completed;
+};
+
+const getDifficultyTargetsForStage = (learnerStage, count) => {
+  const profiles = {
+    cold_start: { easy: 0.65, medium: 0.35, hard: 0 },
+    foundation_building: { easy: 0.5, medium: 0.5, hard: 0 },
+    core_practice: { easy: 0.4, medium: 0.4, hard: 0.2 },
+    adaptive_review: { easy: 0.4, medium: 0.4, hard: 0.2 },
+    advanced_expansion: { easy: 0.2, medium: 0.4, hard: 0.4 },
+  };
+  const profile = profiles[learnerStage] || profiles.core_practice;
+  const targets = { easy: 0, medium: 0, hard: 0 };
+  const fractions = [];
+
+  for (const difficulty of ["easy", "medium", "hard"]) {
+    const exact = count * profile[difficulty];
+    targets[difficulty] = Math.floor(exact);
+    fractions.push({ difficulty, fraction: exact - targets[difficulty] });
+  }
+
+  let assigned = targets.easy + targets.medium + targets.hard;
+  for (const { difficulty } of fractions.sort((a, b) => b.fraction - a.fraction)) {
+    if (assigned >= count) break;
+    targets[difficulty] += 1;
+    assigned += 1;
+  }
+
+  return targets;
+};
+
 const detectPersonaType = (userId) => {
   if (!userId || typeof userId !== 'string') return 'balanced';
   const lower = userId.toLowerCase();
@@ -400,23 +840,22 @@ const detectPersonaType = (userId) => {
 };
 
 const calculateCoveragePercent = (coverageLookup, allQuestions) => {
-  const coveredSubtopics = new Set();
-  for (const key of Object.keys(coverageLookup)) {
-    const coverage = coverageLookup[key];
+  const skillIdsInBank = new Set(allQuestions.map((question) => getQuestionLearningKey(question)));
+  if (skillIdsInBank.size === 0) return 0;
+
+  let coveredSkills = 0;
+  for (const skillId of skillIdsInBank) {
+    const coverage = coverageLookup[skillId];
     if (coverage && (coverage.exposureCount || 0) > 0) {
-      coveredSubtopics.add(key);
+      coveredSkills += 1;
     }
   }
-  const totalSubtopicsInBank = new Set(
-    allQuestions.map((q) => `${String(q.topic || 'unknown').trim()}||${String(q.subtopic || 'unknown').trim()}`)
-  ).size;
-  if (totalSubtopicsInBank === 0) return 0;
-  return (coveredSubtopics.size / totalSubtopicsInBank) * 100;
+
+  return Math.min(100, (coveredSkills / skillIdsInBank.size) * 100);
 };
 
 export const getSessionQuestions = async (userId, count = 5, options = {}) => {
   const exploitCount = Math.max(Math.floor(count * 0.8), count - 1);
-  const difficultyTargets = { easy: 2, medium: 2, hard: 1 };
   const exposureAware = options.exposureAware !== false;
   const persistExposure = options.persistExposure === true;
   const personaType = detectPersonaType(userId);
@@ -424,10 +863,11 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
   try {
     const now = new Date();
 
-    const [skills, memories, recentAttempts, lastSession, exposures, coverages] = await Promise.all([
+    const [skills, memories, recentAttempts, totalAttemptCount, lastSession, exposures, coverages] = await Promise.all([
       Skill.find({ userId }).lean(),
       Memory.find({ userId }).lean(),
       Attempt.find({ userId }).sort({ createdAt: -1 }).limit(10).lean(),
+      Attempt.countDocuments({ userId }),
       Session.findOne({ userId, status: "completed" }).sort({ completedAt: -1 }).lean(),
       QuestionExposure.find({ userId }).lean(),
       KnowledgeCoverage.find({ userId }).lean(),
@@ -440,25 +880,37 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
     }
 
     const { incorrect: recentIncorrectSet, correct: recentCorrectSet } = buildRecentAttemptMaps(recentAttempts);
-    const topicMastery = buildSkillLookup(skills);
-    const weakTopics = Object.entries(topicMastery)
+    const masteryLookup = buildMasteryLookup(skills);
+    const weakSkills = Object.entries(masteryLookup.bySkill)
       .filter(([, mastery]) => mastery < 0.4)
-      .map(([topic]) => topic);
+      .map(([skillId]) => skillId);
     const memoryLookup = buildMemoryLookup(memories);
+    const learnerStageMetrics = {
+      totalAttemptCount,
+      coveredSkillCount: countCoveredSkills(coverages || []),
+      averageMastery: calculateAverageMastery(masteryLookup),
+      recentAccuracy: calculateRecentAccuracy(recentAttempts),
+      weakSkillCount: weakSkills.length,
+    };
+    const learnerStage = detectLearnerStage(learnerStageMetrics);
+    const difficultyTargets = getDifficultyTargetsForStage(learnerStage, count);
 
     const dbQuestions = await Question.find({}).lean();
-    const allQuestions = dedupeQuestions([
-      ...dbQuestions.map(buildQuestionFromSource),
-      ...mockQuestions.map(buildQuestionFromSource),
-    ]);
+    const allowLocalFallback = isLocalQuestionFallbackEnabled();
+    const sourceQuestions = dbQuestions.length > 0 ? dbQuestions : allowLocalFallback ? mockQuestions : [];
+    const allQuestions = dedupeQuestions(sourceQuestions.map(buildQuestionFromSource));
 
     if (allQuestions.length === 0) {
       console.log("⚠️ v5 Engine Active but no questions available");
       return [];
     }
+    if (dbQuestions.length === 0) {
+      console.log("⚠️ No DB questions found. Using local questions.js seed data as fallback.");
+    }
 
     console.log("🧠 v5 Engine Active");
-    console.log("🧠 Weak topics detected:", weakTopics.length > 0 ? weakTopics.join(", ") : "None");
+    console.log("🧭 Learner stage:", learnerStage);
+    console.log("🧠 Weak skills detected:", weakSkills.length > 0 ? weakSkills.join(", ") : "None");
 
     let candidateQuestions = allQuestions.filter((question) => !lastSessionSet.has(question.questionId));
     if (candidateQuestions.length === 0) {
@@ -479,9 +931,15 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       candidateQuestions,
       coverageLookup
     );
+    const allowedUnseenCandidates = unseenCandidates.filter((question) =>
+      isQuestionAllowedByPrerequisites(question, masteryLookup, coverageLookup, learnerStage)
+    );
+    const allowedLowCoverageCandidates = lowCoverageCandidates.filter((question) =>
+      isQuestionAllowedByPrerequisites(question, masteryLookup, coverageLookup, learnerStage)
+    );
 
     const injectedUnseen = selectWithLimits(
-      shuffleArray(unseenCandidates),
+      shuffleArray(allowedUnseenCandidates),
       1,
       selectedIds,
       topicCounts,
@@ -494,7 +952,7 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
     });
 
     const injectedLowCoverage = selectWithLimits(
-      shuffleArray(lowCoverageCandidates).filter((question) => !selectedIds.has(question.questionId)),
+      shuffleArray(allowedLowCoverageCandidates).filter((question) => !selectedIds.has(question.questionId)),
       2,
       selectedIds,
       topicCounts,
@@ -509,7 +967,7 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
     const scoredCoverageInjection = coverageInjection.map((question) =>
       scoreQuestion(
         question,
-        topicMastery,
+        masteryLookup,
         memoryLookup,
         recentIncorrectSet,
         recentCorrectSet,
@@ -518,17 +976,22 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
         coverageLookup,
         now,
         exposureAware,
-        personaType
+        personaType,
+        learnerStage
       )
     );
 
     candidateQuestions = candidateQuestions.filter((question) => !selectedIds.has(question.questionId));
+    const allowedCandidateQuestions = candidateQuestions.filter((question) =>
+      isQuestionAllowedByPrerequisites(question, masteryLookup, coverageLookup, learnerStage)
+    );
+    const prerequisiteBlockedCount = candidateQuestions.length - allowedCandidateQuestions.length;
 
     const scoredCandidates = sortByScore(
-      shuffleArray(candidateQuestions).map((question) =>
+      shuffleArray(allowedCandidateQuestions).map((question) =>
         scoreQuestion(
           question,
-          topicMastery,
+          masteryLookup,
           memoryLookup,
           recentIncorrectSet,
           recentCorrectSet,
@@ -537,7 +1000,8 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
           coverageLookup,
           now,
           exposureAware,
-          personaType
+          personaType,
+          learnerStage
         )
       )
     );
@@ -559,6 +1023,30 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       });
     }
 
+    const remediationTarget = Math.min(count, getRemediationTarget(learnerStage, learnerStageMetrics));
+    const currentRemediationCount = finalSet.filter((question) =>
+      isReviewCandidateForWeakSkills(question, weakSkills)
+    ).length;
+    const remediationNeeded = Math.max(0, remediationTarget - currentRemediationCount);
+
+    if (remediationNeeded > 0) {
+      const remediationPool = scoredCandidates.filter((question) =>
+        isReviewCandidateForWeakSkills(question, weakSkills)
+      );
+      const remediationSelection = selectWithLimits(
+        remediationPool,
+        remediationNeeded,
+        selectedIds,
+        topicCounts,
+        subtopicCounts,
+        false
+      );
+      remediationSelection.forEach((question) => {
+        question.selectionSource = "remediation";
+        finalSet.push(markWeakSkillSelection(question, weakSkills));
+      });
+    }
+
     // UPGRADE 3: Fix coverage metric - calculate as (uniqueCoveredSubtopics / totalSubtopicsInBank) * 100
     const coveragePercent = calculateCoveragePercent(coverageLookup, allQuestions);
 
@@ -567,10 +1055,11 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
     // Selection stats & counters
     const stats = {
       totalQuestions: allQuestions.length,
-      candidatePool: candidateQuestions.length,
+      candidatePool: allowedCandidateQuestions.length,
       exploitationPool: exploitationPool.length,
       explorationPool: explorationPool.length,
       selectedQuestions: 0,
+      prerequisiteBlocked: prerequisiteBlockedCount,
     };
 
     const adaptiveInfluence = {
@@ -579,6 +1068,8 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       selectedBecauseRecentMistakes: 0,
       selectedBecauseExploration: 0,
       selectedBecauseDueReview: 0,
+      selectedWithPrerequisiteGap: 0,
+      selectedWithStageBias: 0,
     };
 
     const repeatDetection = {
@@ -607,7 +1098,8 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
         topicCounts,
         subtopicCounts,
         2,
-        false
+        false,
+        selectedIds
       );
     }
 
@@ -627,7 +1119,7 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
     finalSet.push(...sampled);
 
     if (finalSet.length < count) {
-      const fallbackPool = shuffleArray(allQuestions).filter((question) => !selectedIds.has(question.questionId));
+      const fallbackPool = shuffleArray(allowedCandidateQuestions).filter((question) => !selectedIds.has(question.questionId));
       for (const question of fallbackPool) {
         if (finalSet.length >= count) break;
         const topicCount = topicCounts[question.topic] || 0;
@@ -669,7 +1161,7 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
         }
       }
 
-      const candidatePool = shuffleArray([...exploitationPool, ...explorationPool, ...allQuestions]);
+      const candidatePool = shuffleArray([...exploitationPool, ...explorationPool]);
       for (const question of candidatePool) {
         if (rebalanced.length >= count) break;
         if (rebalancedIds.has(question.questionId)) continue;
@@ -687,19 +1179,15 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       return rebalanced.length === count ? rebalanced : finalSet;
     };
 
-    const completedSet = rebalanceIfNeeded();
+    let completedSet = rebalanceIfNeeded();
     if (completedSet.length < count) {
-      const fallback = shuffleArray(allQuestions).slice(0, count);
-      console.log("⚠️ v5 fallback triggered for incomplete final set");
-      return fallback.map((question) => ({
-        questionId: question.questionId,
-        _id: question._id,
-        questionText: question.questionText,
-        topic: question.topic,
-        subtopic: question.subtopic,
-        difficulty: question.difficulty,
-      }));
+      const fallback = shuffleArray([...completedSet, ...exploitationPool, ...explorationPool])
+        .filter((question, index, pool) => pool.findIndex((candidate) => candidate.questionId === question.questionId) === index)
+        .slice(0, count);
+      console.log("⚠️ v5 gated fallback triggered for incomplete final set");
+      completedSet = fallback;
     }
+    completedSet = enforceRemediationTarget(completedSet, remediationTarget, weakSkills, scoredCandidates);
 
     if (persistExposure) {
       await persistQuestionExposure(userId, completedSet, now);
@@ -733,6 +1221,8 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       if (dbg.lowMemory) adaptiveInfluence.selectedBecauseMemory += 1;
       if (dbg.recentIncorrect) adaptiveInfluence.selectedBecauseRecentMistakes += 1;
       if (dbg.dueReview) adaptiveInfluence.selectedBecauseDueReview += 1;
+      if (dbg.unmetPrerequisites?.length) adaptiveInfluence.selectedWithPrerequisiteGap += 1;
+      if (dbg.stageBias) adaptiveInfluence.selectedWithStageBias += 1;
       if (q.selectionSource === "exploration") adaptiveInfluence.selectedBecauseExploration += 1;
 
       if (lastSessionSet.has(q.questionId)) repeatDetection.repeatedFromLastSession += 1;
@@ -799,6 +1289,8 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
     // Build the selection report
     lastSelectionReport = {
       stats,
+      learnerStage,
+      learnerStageMetrics,
       adaptiveInfluence,
       repeatDetection,
       difficultyCounts,
@@ -838,6 +1330,10 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
               subtopic: q.subtopic,
               exposureCount: q.exposureCount,
               exposurePenalty: q.exposurePenalty,
+              unmetPrerequisites: q.unmetPrerequisites || [],
+              prerequisitePenalty: q.prerequisitePenalty || 0,
+              learnerStage: q.learnerStage,
+              stageBias: q.stageBias || 0,
               selectionSource: q.selectionSource || "exploitation",
             },
             null,
@@ -862,6 +1358,11 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       questionText: question.questionText,
       topic: question.topic,
       subtopic: question.subtopic,
+      skillId: question.skillId,
+      skillName: question.skillName,
+      skillPath: question.skillPath,
+      prerequisiteSkillIds: question.prerequisiteSkillIds,
+      jlptLevel: question.jlptLevel,
       difficulty: question.difficulty,
       exposureCount: question.exposureCount,
       exposurePenalty: question.exposurePenalty,
@@ -870,12 +1371,19 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
         ? {
             score: question.score,
             reasons: question.scoreReasons,
+            unmetPrerequisites: question.unmetPrerequisites || [],
+            learnerStage: question.learnerStage,
+            stageBias: question.stageBias || 0,
             selectionSource: question.selectionSource || "exploitation",
           }
         : {}),
     }));
   } catch (error) {
     console.error("❌ Error in getSessionQuestions v5:", error.message);
+    if (!isLocalQuestionFallbackEnabled()) {
+      console.log("⚠️ Local question fallback disabled. Returning no questions.");
+      return [];
+    }
     const fallback = shuffleArray(mockQuestions.map(buildQuestionFromSource)).slice(0, count);
     return fallback.map((question) => ({
       questionId: question.questionId,
@@ -883,6 +1391,11 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       questionText: question.questionText,
       topic: question.topic,
       subtopic: question.subtopic,
+      skillId: question.skillId,
+      skillName: question.skillName,
+      skillPath: question.skillPath,
+      prerequisiteSkillIds: question.prerequisiteSkillIds,
+      jlptLevel: question.jlptLevel,
       difficulty: question.difficulty,
     }));
   }

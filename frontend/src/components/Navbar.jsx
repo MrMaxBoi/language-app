@@ -1,4 +1,4 @@
-import { Container, HStack, Button, Flex, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Container, HStack, Button, Flex, Text, useColorMode } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";

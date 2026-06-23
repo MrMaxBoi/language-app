@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import SessionPage from "./pages/SessionPage";
 import AdaptiveEngineDashboard from "./pages/AdaptiveEngineDashboard";
+import DashboardPage from "./pages/DashboardPage";
 import Navbar from "./components/Navbar";
 import ReportPage from "./pages/ReportPage";
 
@@ -14,7 +15,8 @@ function App() {
         <Route path='/' element={<SessionPage />} />
         <Route path='/session' element={<SessionPage />} />
         <Route path='/report' element={<ReportPage />} />
-        <Route path='/dashboard' element={<AdaptiveEngineDashboard />} />
+        <Route path='/dashboard' element={<DashboardPage />} />
+        <Route path='/engine' element={<AdaptiveEngineDashboard />} />
       </Routes>
     </Box>
   );

@@ -20,6 +20,32 @@ const MemorySchema = new mongoose.Schema(
       index: true,
     },
 
+    skillId: {
+      type: String,
+      index: true,
+    },
+
+    skillName: {
+      type: String,
+    },
+
+    skillPath: [
+      {
+        type: String,
+      },
+    ],
+
+    prerequisiteSkillIds: [
+      {
+        type: String,
+      },
+    ],
+
+    jlptLevel: {
+      type: String,
+      default: "N5",
+    },
+
     strength: {
       type: Number,
       default: 0.3,
@@ -59,5 +85,6 @@ const MemorySchema = new mongoose.Schema(
 
 // Compound index for efficient queries
 MemorySchema.index({ userId: 1, topic: 1, subtopic: 1 });
+MemorySchema.index({ userId: 1, skillId: 1 });
 
 export default mongoose.model("Memory", MemorySchema);

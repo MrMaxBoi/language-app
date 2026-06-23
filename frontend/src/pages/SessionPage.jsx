@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
-import { Box, Button, Input, Text, VStack } from '@chakra-ui/react';
+import { Button, HStack, Input, Text, VStack, useToast } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import { useSessionStore } from '../store/sessionStore';
 
 const SessionPage = () => {
   const navigate = useNavigate();
-  const { sessionId, questions, currentIndex, getCurrentQuestion, startSession, submitAnswer, nextQuestion, completeSession } = useSessionStore();
+  const toast = useToast();
+  const { sessionId, questions, currentIndex, getCurrentQuestion, startSession, submitAnswer, fetchCorrectAnswer, nextQuestion, completeSession } = useSessionStore();
   const [userAnswer, setUserAnswer] = useState('');
+  const [isFillingAnswer, setIsFillingAnswer] = useState(false);
 
   const handleStart = async () => {
+    setUserAnswer('');
     await startSession();
   };
 
@@ -39,18 +42,39 @@ const SessionPage = () => {
     }
   };
 
-  if (!sessionId) {
+  const handleFillCorrectAnswer = async () => {
+    const question = getCurrentQuestion();
+    if (!question) return;
+
+    try {
+      setIsFillingAnswer(true);
+      const result = await fetchCorrectAnswer(question._id);
+      if (!result.success) {
+        toast({
+          title: "Could not fetch answer",
+          description: result.message,
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+        });
+        return;
+      }
+      setUserAnswer(result.correctAnswer);
+    } finally {
+      setIsFillingAnswer(false);
+    }
+  };
+
+  const question = getCurrentQuestion();
+  const hasActiveQuestion = Boolean(sessionId && questions.length > 0 && question);
+
+  if (!hasActiveQuestion) {
     return (
       <VStack spacing={4}>
         <Text>Ready to start your session?</Text>
         <Button onClick={handleStart}>Start Session</Button>
       </VStack>
     );
-  }
-
-  const question = getCurrentQuestion();
-  if (!question) {
-    return <Text>Loading...</Text>;
   }
 
   return (
@@ -61,7 +85,12 @@ const SessionPage = () => {
         onChange={(e) => setUserAnswer(e.target.value)}
         placeholder="Your answer"
       />
-      <Button onClick={handleSubmit}>Submit</Button>
+      <HStack>
+        <Button onClick={handleFillCorrectAnswer} variant="outline" isLoading={isFillingAnswer}>
+          Fill Correct Answer
+        </Button>
+        <Button onClick={handleSubmit}>Submit</Button>
+      </HStack>
     </VStack>
   );
 };

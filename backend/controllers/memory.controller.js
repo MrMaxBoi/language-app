@@ -95,6 +95,11 @@ export const getMemoryHealth = async (req, res) => {
 			return {
 				topic: memory.topic,
 				subtopic: memory.subtopic,
+				skillId: memory.skillId,
+				skillName: memory.skillName,
+				skillPath: memory.skillPath,
+				prerequisiteSkillIds: memory.prerequisiteSkillIds,
+				jlptLevel: memory.jlptLevel,
 				strength: Math.round(strength * 100) / 100,
 				reviewInterval: Math.round(reviewInterval * 100) / 100,
 				nextReviewDate,

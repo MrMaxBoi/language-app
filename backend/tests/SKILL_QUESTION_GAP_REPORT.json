@@ -1,0 +1,666 @@
+{
+  "generatedAt": "2026-06-23T10:02:10.782Z",
+  "targets": {
+    "foundation": 5,
+    "core": 10,
+    "early-intermediate": 5,
+    "unmapped": 1
+  },
+  "summary": {
+    "totalSkills": 39,
+    "currentQuestions": 361,
+    "totalTargetQuestions": 355,
+    "totalGap": 0,
+    "byStatus": {
+      "ready": 39
+    },
+    "byStrand": {
+      "Adjectives": {
+        "skills": 3,
+        "currentQuestions": 31,
+        "targetQuestions": 30,
+        "gap": 0
+      },
+      "Conversation": {
+        "skills": 2,
+        "currentQuestions": 20,
+        "targetQuestions": 20,
+        "gap": 0
+      },
+      "Foundation": {
+        "skills": 3,
+        "currentQuestions": 15,
+        "targetQuestions": 15,
+        "gap": 0
+      },
+      "Grammar": {
+        "skills": 6,
+        "currentQuestions": 50,
+        "targetQuestions": 50,
+        "gap": 0
+      },
+      "Particles": {
+        "skills": 7,
+        "currentQuestions": 65,
+        "targetQuestions": 65,
+        "gap": 0
+      },
+      "Reading": {
+        "skills": 3,
+        "currentQuestions": 31,
+        "targetQuestions": 30,
+        "gap": 0
+      },
+      "Verbs": {
+        "skills": 5,
+        "currentQuestions": 49,
+        "targetQuestions": 45,
+        "gap": 0
+      },
+      "Vocabulary": {
+        "skills": 10,
+        "currentQuestions": 100,
+        "targetQuestions": 100,
+        "gap": 0
+      }
+    },
+    "generatedFallbackCount": 0
+  },
+  "skills": [
+    {
+      "skillId": "adjectives.core",
+      "skillName": "Core adjectives",
+      "strand": "Adjectives",
+      "domain": "adjectives",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 11,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "grammar.basic_sentence_structure"
+      ]
+    },
+    {
+      "skillId": "adjectives.na",
+      "skillName": "Na-adjectives",
+      "strand": "Adjectives",
+      "domain": "adjectives",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "grammar.basic_sentence_structure"
+      ]
+    },
+    {
+      "skillId": "adjectives.weather",
+      "skillName": "Weather adjectives",
+      "strand": "Adjectives",
+      "domain": "adjectives",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "adjectives.core"
+      ]
+    },
+    {
+      "skillId": "greetings.daily",
+      "skillName": "Daily greetings",
+      "strand": "Conversation",
+      "domain": "greetings",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "kana.hiragana"
+      ]
+    },
+    {
+      "skillId": "time.asking_time",
+      "skillName": "Asking time",
+      "strand": "Conversation",
+      "domain": "time/date",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "numbers.basic_counting"
+      ]
+    },
+    {
+      "skillId": "kana.hiragana",
+      "skillName": "Hiragana recognition",
+      "strand": "Foundation",
+      "domain": "kana",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 5,
+      "target": 5,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": []
+    },
+    {
+      "skillId": "kana.katakana",
+      "skillName": "Katakana recognition",
+      "strand": "Foundation",
+      "domain": "kana",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 5,
+      "target": 5,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "kana.hiragana"
+      ]
+    },
+    {
+      "skillId": "pronunciation.basic",
+      "skillName": "Basic pronunciation",
+      "strand": "Foundation",
+      "domain": "pronunciation",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 5,
+      "target": 5,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "kana.hiragana"
+      ]
+    },
+    {
+      "skillId": "grammar.basic_sentence_structure",
+      "skillName": "Basic sentence structure",
+      "strand": "Grammar",
+      "domain": "grammar",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "kana.hiragana"
+      ]
+    },
+    {
+      "skillId": "grammar.clauses_uncertainty",
+      "skillName": "Clauses and uncertainty",
+      "strand": "Grammar",
+      "domain": "grammar",
+      "level": "early-intermediate",
+      "jlptLevel": "N5",
+      "questionCount": 5,
+      "target": 5,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "grammar.basic_sentence_structure",
+        "verbs.present_polite"
+      ]
+    },
+    {
+      "skillId": "grammar.comparison_conditionals",
+      "skillName": "Comparison and conditionals",
+      "strand": "Grammar",
+      "domain": "grammar",
+      "level": "early-intermediate",
+      "jlptLevel": "N5",
+      "questionCount": 5,
+      "target": 5,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "adjectives.core",
+        "grammar.basic_sentence_structure"
+      ]
+    },
+    {
+      "skillId": "grammar.likes_dislikes",
+      "skillName": "Likes and dislikes",
+      "strand": "Grammar",
+      "domain": "grammar",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "particles.subject_ga",
+        "adjectives.na"
+      ]
+    },
+    {
+      "skillId": "grammar.questions",
+      "skillName": "Questions with ka",
+      "strand": "Grammar",
+      "domain": "grammar",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "grammar.basic_sentence_structure"
+      ]
+    },
+    {
+      "skillId": "grammar.wants_desires",
+      "skillName": "Wants and desires",
+      "strand": "Grammar",
+      "domain": "grammar",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "verbs.present_polite",
+        "adjectives.core"
+      ]
+    },
+    {
+      "skillId": "particles.advanced",
+      "skillName": "Advanced particles",
+      "strand": "Particles",
+      "domain": "particles",
+      "level": "early-intermediate",
+      "jlptLevel": "N5",
+      "questionCount": 5,
+      "target": 5,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "particles.topic_wa",
+        "particles.subject_ga",
+        "particles.object_wo"
+      ]
+    },
+    {
+      "skillId": "particles.destination_ni",
+      "skillName": "Destination particle ni",
+      "strand": "Particles",
+      "domain": "particles",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "grammar.basic_sentence_structure",
+        "vocab.transportation"
+      ]
+    },
+    {
+      "skillId": "particles.location_de",
+      "skillName": "Location and means particles",
+      "strand": "Particles",
+      "domain": "particles",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "grammar.basic_sentence_structure"
+      ]
+    },
+    {
+      "skillId": "particles.noun_links",
+      "skillName": "Noun-linking particles",
+      "strand": "Particles",
+      "domain": "particles",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "grammar.basic_sentence_structure"
+      ]
+    },
+    {
+      "skillId": "particles.object_wo",
+      "skillName": "Object particle wo",
+      "strand": "Particles",
+      "domain": "particles",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "grammar.basic_sentence_structure",
+        "verbs.present_polite"
+      ]
+    },
+    {
+      "skillId": "particles.subject_ga",
+      "skillName": "Subject particle ga and existence",
+      "strand": "Particles",
+      "domain": "particles",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "grammar.basic_sentence_structure"
+      ]
+    },
+    {
+      "skillId": "particles.topic_wa",
+      "skillName": "Topic particle wa",
+      "strand": "Particles",
+      "domain": "particles",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "grammar.basic_sentence_structure"
+      ]
+    },
+    {
+      "skillId": "reading.context_understanding",
+      "skillName": "Context understanding",
+      "strand": "Reading",
+      "domain": "reading",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 11,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "reading.sentence_reading"
+      ]
+    },
+    {
+      "skillId": "reading.sentence_reading",
+      "skillName": "Sentence reading",
+      "strand": "Reading",
+      "domain": "reading",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "reading.word_recognition",
+        "grammar.basic_sentence_structure"
+      ]
+    },
+    {
+      "skillId": "reading.word_recognition",
+      "skillName": "Word recognition",
+      "strand": "Reading",
+      "domain": "reading",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "kana.hiragana",
+        "kana.katakana"
+      ]
+    },
+    {
+      "skillId": "verbs.advanced_forms",
+      "skillName": "Advanced verb forms",
+      "strand": "Verbs",
+      "domain": "verbs",
+      "level": "early-intermediate",
+      "jlptLevel": "N5",
+      "questionCount": 9,
+      "target": 5,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "verbs.te_form",
+        "verbs.negative_polite"
+      ]
+    },
+    {
+      "skillId": "verbs.negative_polite",
+      "skillName": "Negative polite verbs",
+      "strand": "Verbs",
+      "domain": "verbs",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "verbs.present_polite"
+      ]
+    },
+    {
+      "skillId": "verbs.past_polite",
+      "skillName": "Past polite verbs",
+      "strand": "Verbs",
+      "domain": "verbs",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "verbs.present_polite"
+      ]
+    },
+    {
+      "skillId": "verbs.present_polite",
+      "skillName": "Present polite verbs",
+      "strand": "Verbs",
+      "domain": "verbs",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "grammar.basic_sentence_structure"
+      ]
+    },
+    {
+      "skillId": "verbs.te_form",
+      "skillName": "Te-form and requests",
+      "strand": "Verbs",
+      "domain": "verbs",
+      "level": "core",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "verbs.present_polite"
+      ]
+    },
+    {
+      "skillId": "numbers.basic_counting",
+      "skillName": "Basic counting",
+      "strand": "Vocabulary",
+      "domain": "numbers",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "kana.hiragana"
+      ]
+    },
+    {
+      "skillId": "time.weekdays",
+      "skillName": "Weekdays and daily time",
+      "strand": "Vocabulary",
+      "domain": "time/date",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "numbers.basic_counting"
+      ]
+    },
+    {
+      "skillId": "vocab.animals",
+      "skillName": "Animal vocabulary",
+      "strand": "Vocabulary",
+      "domain": "vocabulary",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "kana.hiragana"
+      ]
+    },
+    {
+      "skillId": "vocab.basic_nouns",
+      "skillName": "Basic nouns",
+      "strand": "Vocabulary",
+      "domain": "vocabulary",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "kana.hiragana"
+      ]
+    },
+    {
+      "skillId": "vocab.daily_activities",
+      "skillName": "Daily activities vocabulary",
+      "strand": "Vocabulary",
+      "domain": "vocabulary",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "kana.hiragana"
+      ]
+    },
+    {
+      "skillId": "vocab.family",
+      "skillName": "Family vocabulary",
+      "strand": "Vocabulary",
+      "domain": "vocabulary",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "kana.hiragana"
+      ]
+    },
+    {
+      "skillId": "vocab.food_drinks",
+      "skillName": "Food and drinks",
+      "strand": "Vocabulary",
+      "domain": "food",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "kana.hiragana"
+      ]
+    },
+    {
+      "skillId": "vocab.people_school",
+      "skillName": "People and school vocabulary",
+      "strand": "Vocabulary",
+      "domain": "vocabulary",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "kana.hiragana"
+      ]
+    },
+    {
+      "skillId": "vocab.places",
+      "skillName": "Places vocabulary",
+      "strand": "Vocabulary",
+      "domain": "travel",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "kana.hiragana"
+      ]
+    },
+    {
+      "skillId": "vocab.transportation",
+      "skillName": "Transportation vocabulary",
+      "strand": "Vocabulary",
+      "domain": "travel",
+      "level": "foundation",
+      "jlptLevel": "N5",
+      "questionCount": 10,
+      "target": 10,
+      "gap": 0,
+      "status": "ready",
+      "prerequisites": [
+        "kana.hiragana"
+      ]
+    }
+  ],
+  "topGaps": []
+}

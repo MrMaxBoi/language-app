@@ -1,9 +1,11 @@
 import express from 'express';
-import { startSession, submitAnswer, completeSession, getSessionReport } from "../controllers/session.controller.js";
+import { startSession, submitAnswer, completeSession, getSessionReport, getQuestionAnswer } from "../controllers/session.controller.js";
 
 const router = express.Router();
 
 router.post('/start', startSession);
+
+router.get('/questions/:questionId/answer', getQuestionAnswer);
 
 router.post('/:id/answer', submitAnswer);
 

@@ -34,12 +34,16 @@ const MetricCard = ({ label, value, helpText, bg }) => (
 	</Box>
 );
 
+const formatSkillLabel = (item = {}) =>
+	item.skillName || item.subtopic || item.topic || item.skillId || "Unknown skill";
+
 const AdaptiveEngineDashboard = () => {
 	const [engineData, setEngineData] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 	const toast = useToast();
 	const bgCard = useColorModeValue("white", "gray.800");
+	const bgPage = useColorModeValue("gray.50", "gray.900");
 	const userId = "guest";
 
 	useEffect(() => {
@@ -74,7 +78,7 @@ const AdaptiveEngineDashboard = () => {
 
 	if (loading) {
 		return (
-			<Box minH="100vh" py={16} bg={useColorModeValue("gray.50", "gray.900")}>
+			<Box minH="100vh" py={16} bg={bgPage}>
 				<Container maxW="container.xl" textAlign="center">
 					<Spinner size="xl" />
 					<Text mt={4}>Loading adaptive engine intelligence...</Text>
@@ -85,7 +89,7 @@ const AdaptiveEngineDashboard = () => {
 
 	if (error) {
 		return (
-			<Box minH="100vh" py={16} bg={useColorModeValue("gray.50", "gray.900")}>
+			<Box minH="100vh" py={16} bg={bgPage}>
 				<Container maxW="container.xl">
 					<Box p={6} bg={bgCard} borderRadius="lg" boxShadow="md">
 						<Heading size="md" mb={4}>
@@ -102,6 +106,7 @@ const AdaptiveEngineDashboard = () => {
 		skills,
 		memories,
 		coverage,
+		skillGraph,
 		exposure,
 		analytics,
 		engineHealth,
@@ -110,7 +115,7 @@ const AdaptiveEngineDashboard = () => {
 	} = engineData || {};
 
 	return (
-		<Box minH="100vh" py={8} bg={useColorModeValue("gray.50", "gray.900")}>
+		<Box minH="100vh" py={8} bg={bgPage}>
 			<Container maxW="container.xl">
 				<Stack spacing={8}>
 					<Box>
@@ -128,17 +133,52 @@ const AdaptiveEngineDashboard = () => {
 						<SimpleGrid columns={{ base: 1, md: 3, xl: 6 }} spacing={4}>
 							<MetricCard label="Skills Tracked" value={skills?.length ?? 0} helpText="Current skill subtopics" bg={bgCard} />
 							<MetricCard label="Memory Entries" value={memories?.length ?? 0} helpText="Spaced repetition memories" bg={bgCard} />
-							<MetricCard label="Coverage Concepts" value={coverage?.coverageMetrics?.totalSubtopics ?? 0} helpText="Known subtopic universe" bg={bgCard} />
-							<MetricCard label="Covered" value={coverage?.coverageMetrics?.coveredSubtopics ?? 0} helpText="Subtopics with sufficient exposure" bg={bgCard} />
-							<MetricCard label="Uncovered" value={coverage?.coverageMetrics?.uncoveredSubtopics ?? 0} helpText="Concepts requiring more practice" bg={bgCard} />
+							<MetricCard label="Graph Skills" value={skillGraph?.totalSkills ?? coverage?.coverageMetrics?.totalSubtopics ?? 0} helpText="Canonical N5 skill graph" bg={bgCard} />
+							<MetricCard label="Skills With Questions" value={skillGraph?.mappedSkills ?? coverage?.coverageMetrics?.coveredSubtopics ?? 0} helpText="Graph skills backed by content" bg={bgCard} />
+							<MetricCard label="Content Gaps" value={skillGraph?.unmappedSkills ?? coverage?.coverageMetrics?.uncoveredSubtopics ?? 0} helpText="Graph skills needing questions" bg={bgCard} />
 							<MetricCard label="Avg Skill Mastery" value={`${learningProgress?.avgSkillMastery ?? 0}%`} helpText="Mean skill mastery" bg={bgCard} />
 						</SimpleGrid>
+					</Box>
+
+					{/* Skill Graph Readiness */}
+					<Box p={6} bg={bgCard} borderRadius="xl" boxShadow="sm">
+						<Heading size="md" mb={4}>
+							2. Skill Graph Readiness
+						</Heading>
+						<SimpleGrid columns={{ base: 1, md: 4 }} spacing={4} mb={6}>
+							<MetricCard label="Mapped Questions" value={skillGraph?.mappedQuestions ?? 0} helpText="Questions resolved to canonical skills" bg={bgCard} />
+							<MetricCard label="Generated Fallbacks" value={skillGraph?.generatedFallbackCount ?? 0} helpText="Question mappings missing from graph" bg={bgCard} />
+							<MetricCard label="Mapped Skills" value={skillGraph?.mappedSkills ?? 0} helpText="Skills with at least one question" bg={bgCard} />
+							<MetricCard label="Missing Content" value={skillGraph?.unmappedSkills ?? 0} helpText="Planned N5 skills with no questions yet" bg={bgCard} />
+						</SimpleGrid>
+						<TableContainer>
+							<Table variant="simple" size="sm">
+								<Thead>
+									<Tr>
+										<Th>Skill</Th>
+										<Th>Strand</Th>
+										<Th>Domain</Th>
+										<Th>Prerequisites</Th>
+									</Tr>
+								</Thead>
+								<Tbody>
+									{skillGraph?.skillsNeedingQuestions?.slice(0, 8).map((skill) => (
+										<Tr key={skill.skillId}>
+											<Td>{skill.skillName}</Td>
+											<Td>{skill.strand}</Td>
+											<Td>{skill.domain}</Td>
+											<Td>{skill.prerequisites?.slice(0, 2).join(", ") || "—"}</Td>
+										</Tr>
+									))}
+								</Tbody>
+							</Table>
+						</TableContainer>
 					</Box>
 
 					{/* Engine Health */}
 					<Box p={6} bg={bgCard} borderRadius="xl" boxShadow="sm">
 						<Heading size="md" mb={4}>
-							2. Engine Health
+							3. Engine Health
 						</Heading>
 						<SimpleGrid columns={{ base: 1, md: 4 }} spacing={4}>
 							<MetricCard label="Repeat Rate" value={`${Math.round((engineHealth?.repeatRate ?? 0) * 100)}%`} helpText="Higher means more repeated questions" bg={bgCard} />
@@ -151,7 +191,7 @@ const AdaptiveEngineDashboard = () => {
 					{/* Selection Intelligence */}
 					<Box p={6} bg={bgCard} borderRadius="xl" boxShadow="sm">
 						<Heading size="md" mb={4}>
-							3. Selection Intelligence
+							4. Selection Intelligence
 						</Heading>
 						<SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
 							<Box>
@@ -172,20 +212,20 @@ const AdaptiveEngineDashboard = () => {
 							</Box>
 							<Box>
 								<Heading size="sm" mb={3}>
-									Weakest and Strongest Topics
+									Weakest and Strongest Skills
 								</Heading>
 								<Box mb={3}>
 									<Text fontWeight="bold">Weakest</Text>
 									{selectionInsights?.weakestTopics?.length ? (
 										<Stack spacing={1}>
 											{selectionInsights.weakestTopics.map((topic) => (
-												<Tag key={`${topic.topic}-${topic.subtopic}`}>
-													{topic.topic} / {topic.subtopic} ({Math.round(topic.mastery * 100)}%)
+												<Tag key={topic.skillId || `${topic.topic}-${topic.subtopic}`}>
+													{formatSkillLabel(topic)} ({Math.round(topic.mastery * 100)}%)
 												</Tag>
 											))}
 										</Stack>
 									) : (
-										<Text>No weak topics found.</Text>
+										<Text>No weak skills found.</Text>
 									)}
 								</Box>
 								<Box>
@@ -193,13 +233,13 @@ const AdaptiveEngineDashboard = () => {
 									{selectionInsights?.strongestTopics?.length ? (
 										<Stack spacing={1}>
 											{selectionInsights.strongestTopics.map((topic) => (
-												<Tag key={`${topic.topic}-${topic.subtopic}`}>
-													{topic.topic} / {topic.subtopic} ({Math.round(topic.mastery * 100)}%)
+												<Tag key={topic.skillId || `${topic.topic}-${topic.subtopic}`}>
+													{formatSkillLabel(topic)} ({Math.round(topic.mastery * 100)}%)
 												</Tag>
 											))}
 										</Stack>
 									) : (
-										<Text>No strong topics found.</Text>
+										<Text>No strong skills found.</Text>
 									)}
 								</Box>
 							</Box>
@@ -209,28 +249,28 @@ const AdaptiveEngineDashboard = () => {
 					{/* Coverage Analysis */}
 					<Box p={6} bg={bgCard} borderRadius="xl" boxShadow="sm">
 						<Heading size="md" mb={4}>
-							4. Coverage Analysis
+							5. Coverage Analysis
 						</Heading>
 						<SimpleGrid columns={{ base: 1, md: 3 }} spacing={4} mb={6}>
 							<MetricCard label="Topic Coverage" value={`${coverage?.coverageMetrics?.topicCoveragePercent ?? 0}%`} helpText="Average topic coverage" bg={bgCard} />
-							<MetricCard label="Subtopic Coverage" value={`${coverage?.coverageMetrics?.subtopicCoveragePercent ?? 0}%`} helpText="Percent of subtopics covered" bg={bgCard} />
-							<MetricCard label="Uncovered Concepts" value={coverage?.coverageMetrics?.uncoveredSubtopics ?? 0} helpText="Subtopics needing more exposure" bg={bgCard} />
+							<MetricCard label="Skill Coverage" value={`${coverage?.coverageMetrics?.subtopicCoveragePercent ?? 0}%`} helpText="Percent of skills covered" bg={bgCard} />
+							<MetricCard label="Uncovered Skills" value={coverage?.coverageMetrics?.uncoveredSubtopics ?? 0} helpText="Skills needing more exposure" bg={bgCard} />
 						</SimpleGrid>
 						<TableContainer>
 							<Table variant="simple" size="sm">
 								<Thead>
 									<Tr>
-										<Th>Topic</Th>
-										<Th>Subtopic</Th>
+										<Th>Skill</Th>
+										<Th>Domain</Th>
 										<Th>Exposure</Th>
 										<Th>Mastery</Th>
 									</Tr>
 								</Thead>
 								<Tbody>
 									{coverage?.uncoveredSubtopics?.slice(0, 10).map((item) => (
-										<Tr key={`${item.topic}-${item.subtopic}`}>
+										<Tr key={item.skillId || `${item.topic}-${item.subtopic}`}>
+											<Td>{formatSkillLabel(item)}</Td>
 											<Td>{item.topic}</Td>
-											<Td>{item.subtopic}</Td>
 											<Td>{item.exposureCount}</Td>
 											<Td>{Math.round((item.mastery || 0) * 100)}%</Td>
 										</Tr>
@@ -243,7 +283,7 @@ const AdaptiveEngineDashboard = () => {
 					{/* Exposure Analysis */}
 					<Box p={6} bg={bgCard} borderRadius="xl" boxShadow="sm">
 						<Heading size="md" mb={4}>
-							5. Exposure Analysis
+							6. Exposure Analysis
 						</Heading>
 						<TableContainer>
 							<Table variant="striped" size="sm">
@@ -270,7 +310,7 @@ const AdaptiveEngineDashboard = () => {
 					{/* Recommendation Analysis */}
 					<Box p={6} bg={bgCard} borderRadius="xl" boxShadow="sm">
 						<Heading size="md" mb={4}>
-							6. Recommendation Analysis
+							7. Recommendation Analysis
 						</Heading>
 						<SimpleGrid columns={{ base: 1, md: 3 }} spacing={4} mb={6}>
 							<MetricCard label="Avg Accuracy" value={`${analytics?.averageAccuracy ?? 0}%`} helpText="From completed sessions" bg={bgCard} />

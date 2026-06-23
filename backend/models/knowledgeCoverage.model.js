@@ -17,6 +17,27 @@ const knowledgeCoverageSchema = new mongoose.Schema(
       required: true,
       index: true,
     },
+    skillId: {
+      type: String,
+      index: true,
+    },
+    skillName: {
+      type: String,
+    },
+    skillPath: [
+      {
+        type: String,
+      },
+    ],
+    prerequisiteSkillIds: [
+      {
+        type: String,
+      },
+    ],
+    jlptLevel: {
+      type: String,
+      default: "N5",
+    },
     exposureCount: {
       type: Number,
       default: 0,
@@ -36,6 +57,7 @@ const knowledgeCoverageSchema = new mongoose.Schema(
 );
 
 knowledgeCoverageSchema.index({ userId: 1, topic: 1, subtopic: 1 }, { unique: true });
+knowledgeCoverageSchema.index({ userId: 1, skillId: 1 });
 
 const KnowledgeCoverage = mongoose.model("KnowledgeCoverage", knowledgeCoverageSchema);
 

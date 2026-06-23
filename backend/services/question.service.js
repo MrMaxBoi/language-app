@@ -3,6 +3,9 @@ import Skill from "../models/skill.model.js";
 import Memory from "../models/memory.model.js";
 import Attempt from "../models/attempt.model.js";
 import mockQuestions from "../data/questions.js";
+import { isLocalQuestionFallbackEnabled } from "../config/questionBank.js";
+
+const getStableQuestionId = (question) => String(question.questionId || question._id);
 
 export const getAdaptiveQuestions = async (userId = "guest") => {
   try {
@@ -136,7 +139,7 @@ export const getAdaptiveQuestions = async (userId = "guest") => {
       }).limit(10);
 
       for (const question of questions) {
-        const qId = question._id.toString();
+        const qId = getStableQuestionId(question);
 
         // Calculate recommendation score
         let score = topicItem.scoreBonus;
@@ -176,7 +179,7 @@ export const getAdaptiveQuestions = async (userId = "guest") => {
     for (const question of candidateQuestions) {
       if (selectedQuestions.length >= 10) break;
 
-      const qId = question._id.toString();
+      const qId = getStableQuestionId(question);
 
       // Prevent duplicates
       if (!questionIds.has(qId)) {
@@ -210,16 +213,24 @@ export const getAdaptiveQuestions = async (userId = "guest") => {
 
     // ===== FALLBACK: Use mock questions if DB is empty =====
     if (selectedQuestions.length === 0) {
-      console.log(`⚠️ No adaptive questions found. Using mock questions from data/questions.js`);
-      return mockQuestions.slice(0, 10);
+      const dbQuestionCount = await Question.countDocuments();
+      if (dbQuestionCount === 0 && isLocalQuestionFallbackEnabled()) {
+        console.log(`⚠️ No DB questions found. Using local questions.js seed data as fallback`);
+        return mockQuestions.slice(0, 10);
+      }
+      console.log(`⚠️ No adaptive questions found in the DB for current learner state`);
+      return [];
     }
 
     // Return maximum 10 questions
     return selectedQuestions.slice(0, 10);
   } catch (error) {
     console.error("❌ Error in getAdaptiveQuestions:", error.message);
-    // Fallback to mock questions on error
-    console.log(`⚠️ Falling back to mock questions...`);
+    if (!isLocalQuestionFallbackEnabled()) {
+      console.log(`⚠️ Local question fallback disabled.`);
+      return [];
+    }
+    console.log(`⚠️ Falling back to local questions.js seed data...`);
     return mockQuestions.slice(0, 10);
   }
 };

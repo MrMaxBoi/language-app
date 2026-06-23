@@ -1,5 +1,17 @@
 import { create } from 'zustand';
 
+const LAST_REPORT_SESSION_ID_KEY = "kokoro:lastReportSessionId";
+
+const getStoredReportSessionId = () => {
+	if (typeof window === "undefined") return null;
+	return window.localStorage.getItem(LAST_REPORT_SESSION_ID_KEY);
+};
+
+const storeReportSessionId = (sessionId) => {
+	if (typeof window === "undefined" || !sessionId) return;
+	window.localStorage.setItem(LAST_REPORT_SESSION_ID_KEY, sessionId);
+};
+
 export const useSessionStore = create((set, get) => ({
 	sessionId: null,
 	questions: [],
@@ -22,6 +34,9 @@ export const useSessionStore = create((set, get) => ({
 
 	submitAnswer: async (questionId, userAnswer) => {
 		const { sessionId } = get();
+		if (!sessionId) {
+			return { success: false, message: "No active session" };
+		}
 		const res = await fetch(`/api/sessions/${sessionId}/answer`, {
 			method: "POST",
 			headers: {
@@ -45,6 +60,15 @@ export const useSessionStore = create((set, get) => ({
 		}
 	},
 
+	fetchCorrectAnswer: async (questionId) => {
+		const res = await fetch(`/api/sessions/questions/${questionId}/answer`);
+		const data = await res.json();
+		if (data.success) {
+			return { success: true, correctAnswer: data.data.correctAnswer };
+		}
+		return { success: false, message: data.message || "Failed to fetch correct answer" };
+	},
+
 	nextQuestion: () => set((state) => ({ currentIndex: state.currentIndex + 1 })),
 
 	getCurrentQuestion: () => {
@@ -61,7 +85,14 @@ export const useSessionStore = create((set, get) => ({
 		const data = await res.json();
 		console.log("completeSession response:", data);
 		if (data.success) {
-			set({ report: data.data });
+			storeReportSessionId(sessionId);
+			set({
+				sessionId: null,
+				questions: [],
+				currentIndex: 0,
+				answers: [],
+				report: data.data,
+			});
 			console.log("Stored report in Zustand:", data.data);
 			return { success: true, data: data.data };
 		} else {
@@ -70,10 +101,15 @@ export const useSessionStore = create((set, get) => ({
 	},
 
 	fetchReport: async () => {
-		const { sessionId } = get();
+		const sessionId = get().report?.sessionId || getStoredReportSessionId();
+		if (!sessionId) {
+			return { success: false, message: "No completed session found" };
+		}
 		const res = await fetch(`/api/sessions/${sessionId}/report`);
 		const data = await res.json();
 		if (data.success) {
+			storeReportSessionId(sessionId);
+			set({ report: data.data });
 			return { success: true, data: data.data };
 		} else {
 			return { success: false, message: data.message };

@@ -1,0 +1,854 @@
+{
+  "generatedAt": "2026-06-23T10:02:52.703Z",
+  "database": "kokoro-dev",
+  "host": "ac-rnj00re-shard-00-01.5bi3exz.mongodb.net",
+  "userId": "guest",
+  "summary": {
+    "learnerStage": "foundation_building",
+    "totalSessions": 3,
+    "totalAttempts": 15,
+    "recentAccuracy": 0.9333333333333333,
+    "recentAccuracyPercent": 93.3,
+    "averageMastery": 0.9,
+    "averageMasteryPercent": 90,
+    "coveredSkillCount": 10,
+    "weakSkillCount": 1,
+    "strongSkillCount": 9,
+    "memoryCount": 10,
+    "dueMemoryCount": 0,
+    "lowMemoryCount": 1,
+    "questionExposureCount": 15,
+    "unlockedSkillCount": 17,
+    "blockedSkillCount": 22
+  },
+  "weakSkills": [
+    {
+      "skillId": "pronunciation.basic",
+      "skillName": "Basic pronunciation",
+      "mastery": 0
+    }
+  ],
+  "strongSkills": [
+    {
+      "skillId": "kana.hiragana",
+      "skillName": "Hiragana recognition",
+      "mastery": 1
+    },
+    {
+      "skillId": "kana.katakana",
+      "skillName": "Katakana recognition",
+      "mastery": 1
+    },
+    {
+      "skillId": "numbers.basic_counting",
+      "skillName": "Basic counting",
+      "mastery": 1
+    },
+    {
+      "skillId": "time.weekdays",
+      "skillName": "Weekdays and daily time",
+      "mastery": 1
+    },
+    {
+      "skillId": "vocab.animals",
+      "skillName": "Animal vocabulary",
+      "mastery": 1
+    },
+    {
+      "skillId": "vocab.basic_nouns",
+      "skillName": "Basic nouns",
+      "mastery": 1
+    },
+    {
+      "skillId": "vocab.family",
+      "skillName": "Family vocabulary",
+      "mastery": 1
+    },
+    {
+      "skillId": "vocab.food_drinks",
+      "skillName": "Food and drinks",
+      "mastery": 1
+    },
+    {
+      "skillId": "vocab.places",
+      "skillName": "Places vocabulary",
+      "mastery": 1
+    }
+  ],
+  "recentAttempts": [
+    {
+      "questionId": "mock_294",
+      "skillId": "time.weekdays",
+      "topic": "time/date",
+      "subtopic": "days of the week",
+      "difficulty": "medium",
+      "isCorrect": true,
+      "createdAt": "2026-06-23T09:55:33.702Z"
+    },
+    {
+      "questionId": "mock_103",
+      "skillId": "pronunciation.basic",
+      "topic": "pronunciation",
+      "subtopic": "basic pronunciation",
+      "difficulty": "medium",
+      "isCorrect": false,
+      "createdAt": "2026-06-23T09:55:32.644Z"
+    },
+    {
+      "questionId": "mock_102",
+      "skillId": "kana.katakana",
+      "topic": "kana",
+      "subtopic": "katakana recognition",
+      "difficulty": "easy",
+      "isCorrect": true,
+      "createdAt": "2026-06-23T09:55:30.367Z"
+    },
+    {
+      "questionId": "mock_226",
+      "skillId": "vocab.basic_nouns",
+      "topic": "vocabulary",
+      "subtopic": "basic nouns",
+      "difficulty": "easy",
+      "isCorrect": true,
+      "createdAt": "2026-06-23T09:55:28.771Z"
+    },
+    {
+      "questionId": "mock_256",
+      "skillId": "vocab.food_drinks",
+      "topic": "food",
+      "subtopic": "food vocabulary",
+      "difficulty": "easy",
+      "isCorrect": true,
+      "createdAt": "2026-06-23T09:55:27.745Z"
+    },
+    {
+      "questionId": "mock_273",
+      "skillId": "vocab.places",
+      "topic": "travel",
+      "subtopic": "places",
+      "difficulty": "medium",
+      "isCorrect": true,
+      "createdAt": "2026-06-23T09:54:18.814Z"
+    },
+    {
+      "questionId": "mock_249",
+      "skillId": "vocab.family",
+      "topic": "vocabulary",
+      "subtopic": "family",
+      "difficulty": "medium",
+      "isCorrect": true,
+      "createdAt": "2026-06-23T09:54:17.294Z"
+    },
+    {
+      "questionId": "mock_054",
+      "skillId": "numbers.basic_counting",
+      "topic": "numbers",
+      "subtopic": "basic counting",
+      "difficulty": "easy",
+      "isCorrect": true,
+      "createdAt": "2026-06-23T09:54:16.240Z"
+    },
+    {
+      "questionId": "mock_242",
+      "skillId": "vocab.animals",
+      "topic": "vocabulary",
+      "subtopic": "animals",
+      "difficulty": "easy",
+      "isCorrect": true,
+      "createdAt": "2026-06-23T09:54:15.261Z"
+    },
+    {
+      "questionId": "mock_024",
+      "skillId": "numbers.basic_counting",
+      "topic": "numbers",
+      "subtopic": "counting",
+      "difficulty": "easy",
+      "isCorrect": true,
+      "createdAt": "2026-06-23T09:54:13.534Z"
+    }
+  ],
+  "attemptedSkills": [
+    {
+      "skillId": "kana.hiragana",
+      "skillName": "Hiragana recognition",
+      "attempts": 5,
+      "correct": 5,
+      "latestAt": "2026-06-23T09:49:50.788Z",
+      "accuracy": 1
+    },
+    {
+      "skillId": "numbers.basic_counting",
+      "skillName": "Basic counting",
+      "attempts": 2,
+      "correct": 2,
+      "latestAt": "2026-06-23T09:54:16.240Z",
+      "accuracy": 1
+    },
+    {
+      "skillId": "kana.katakana",
+      "skillName": "Katakana recognition",
+      "attempts": 1,
+      "correct": 1,
+      "latestAt": "2026-06-23T09:55:30.367Z",
+      "accuracy": 1
+    },
+    {
+      "skillId": "pronunciation.basic",
+      "skillName": "Basic pronunciation",
+      "attempts": 1,
+      "correct": 0,
+      "latestAt": "2026-06-23T09:55:32.644Z",
+      "accuracy": 0
+    },
+    {
+      "skillId": "time.weekdays",
+      "skillName": "Weekdays and daily time",
+      "attempts": 1,
+      "correct": 1,
+      "latestAt": "2026-06-23T09:55:33.702Z",
+      "accuracy": 1
+    },
+    {
+      "skillId": "vocab.animals",
+      "skillName": "Animal vocabulary",
+      "attempts": 1,
+      "correct": 1,
+      "latestAt": "2026-06-23T09:54:15.261Z",
+      "accuracy": 1
+    },
+    {
+      "skillId": "vocab.basic_nouns",
+      "skillName": "Basic nouns",
+      "attempts": 1,
+      "correct": 1,
+      "latestAt": "2026-06-23T09:55:28.771Z",
+      "accuracy": 1
+    },
+    {
+      "skillId": "vocab.family",
+      "skillName": "Family vocabulary",
+      "attempts": 1,
+      "correct": 1,
+      "latestAt": "2026-06-23T09:54:17.294Z",
+      "accuracy": 1
+    },
+    {
+      "skillId": "vocab.food_drinks",
+      "skillName": "Food and drinks",
+      "attempts": 1,
+      "correct": 1,
+      "latestAt": "2026-06-23T09:55:27.745Z",
+      "accuracy": 1
+    },
+    {
+      "skillId": "vocab.places",
+      "skillName": "Places vocabulary",
+      "attempts": 1,
+      "correct": 1,
+      "latestAt": "2026-06-23T09:54:18.814Z",
+      "accuracy": 1
+    }
+  ],
+  "prerequisiteStatus": {
+    "unlocked": [
+      {
+        "skillId": "kana.hiragana",
+        "skillName": "Hiragana recognition",
+        "level": "foundation",
+        "strand": "Foundation",
+        "prerequisites": [],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "kana.katakana",
+        "skillName": "Katakana recognition",
+        "level": "foundation",
+        "strand": "Foundation",
+        "prerequisites": [
+          "kana.hiragana"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "pronunciation.basic",
+        "skillName": "Basic pronunciation",
+        "level": "foundation",
+        "strand": "Foundation",
+        "prerequisites": [
+          "kana.hiragana"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "grammar.basic_sentence_structure",
+        "skillName": "Basic sentence structure",
+        "level": "foundation",
+        "strand": "Grammar",
+        "prerequisites": [
+          "kana.hiragana"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "vocab.basic_nouns",
+        "skillName": "Basic nouns",
+        "level": "foundation",
+        "strand": "Vocabulary",
+        "prerequisites": [
+          "kana.hiragana"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "vocab.people_school",
+        "skillName": "People and school vocabulary",
+        "level": "foundation",
+        "strand": "Vocabulary",
+        "prerequisites": [
+          "kana.hiragana"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "vocab.animals",
+        "skillName": "Animal vocabulary",
+        "level": "foundation",
+        "strand": "Vocabulary",
+        "prerequisites": [
+          "kana.hiragana"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "vocab.family",
+        "skillName": "Family vocabulary",
+        "level": "foundation",
+        "strand": "Vocabulary",
+        "prerequisites": [
+          "kana.hiragana"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "vocab.food_drinks",
+        "skillName": "Food and drinks",
+        "level": "foundation",
+        "strand": "Vocabulary",
+        "prerequisites": [
+          "kana.hiragana"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "vocab.transportation",
+        "skillName": "Transportation vocabulary",
+        "level": "foundation",
+        "strand": "Vocabulary",
+        "prerequisites": [
+          "kana.hiragana"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "vocab.places",
+        "skillName": "Places vocabulary",
+        "level": "foundation",
+        "strand": "Vocabulary",
+        "prerequisites": [
+          "kana.hiragana"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "vocab.daily_activities",
+        "skillName": "Daily activities vocabulary",
+        "level": "foundation",
+        "strand": "Vocabulary",
+        "prerequisites": [
+          "kana.hiragana"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "greetings.daily",
+        "skillName": "Daily greetings",
+        "level": "foundation",
+        "strand": "Conversation",
+        "prerequisites": [
+          "kana.hiragana"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "numbers.basic_counting",
+        "skillName": "Basic counting",
+        "level": "foundation",
+        "strand": "Vocabulary",
+        "prerequisites": [
+          "kana.hiragana"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "time.weekdays",
+        "skillName": "Weekdays and daily time",
+        "level": "foundation",
+        "strand": "Vocabulary",
+        "prerequisites": [
+          "numbers.basic_counting"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "time.asking_time",
+        "skillName": "Asking time",
+        "level": "foundation",
+        "strand": "Conversation",
+        "prerequisites": [
+          "numbers.basic_counting"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      },
+      {
+        "skillId": "reading.word_recognition",
+        "skillName": "Word recognition",
+        "level": "foundation",
+        "strand": "Reading",
+        "prerequisites": [
+          "kana.hiragana",
+          "kana.katakana"
+        ],
+        "unmetPrerequisites": [],
+        "unlocked": true
+      }
+    ],
+    "blocked": [
+      {
+        "skillId": "particles.topic_wa",
+        "skillName": "Topic particle wa",
+        "level": "foundation",
+        "strand": "Particles",
+        "prerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unmetPrerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "particles.subject_ga",
+        "skillName": "Subject particle ga and existence",
+        "level": "foundation",
+        "strand": "Particles",
+        "prerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unmetPrerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "particles.object_wo",
+        "skillName": "Object particle wo",
+        "level": "foundation",
+        "strand": "Particles",
+        "prerequisites": [
+          "grammar.basic_sentence_structure",
+          "verbs.present_polite"
+        ],
+        "unmetPrerequisites": [
+          "grammar.basic_sentence_structure",
+          "verbs.present_polite"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "particles.destination_ni",
+        "skillName": "Destination particle ni",
+        "level": "foundation",
+        "strand": "Particles",
+        "prerequisites": [
+          "grammar.basic_sentence_structure",
+          "vocab.transportation"
+        ],
+        "unmetPrerequisites": [
+          "grammar.basic_sentence_structure",
+          "vocab.transportation"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "particles.location_de",
+        "skillName": "Location and means particles",
+        "level": "foundation",
+        "strand": "Particles",
+        "prerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unmetPrerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "particles.noun_links",
+        "skillName": "Noun-linking particles",
+        "level": "foundation",
+        "strand": "Particles",
+        "prerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unmetPrerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "particles.advanced",
+        "skillName": "Advanced particles",
+        "level": "early-intermediate",
+        "strand": "Particles",
+        "prerequisites": [
+          "particles.topic_wa",
+          "particles.subject_ga",
+          "particles.object_wo"
+        ],
+        "unmetPrerequisites": [
+          "particles.topic_wa",
+          "particles.subject_ga",
+          "particles.object_wo"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "verbs.present_polite",
+        "skillName": "Present polite verbs",
+        "level": "foundation",
+        "strand": "Verbs",
+        "prerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unmetPrerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "verbs.past_polite",
+        "skillName": "Past polite verbs",
+        "level": "foundation",
+        "strand": "Verbs",
+        "prerequisites": [
+          "verbs.present_polite"
+        ],
+        "unmetPrerequisites": [
+          "verbs.present_polite"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "verbs.negative_polite",
+        "skillName": "Negative polite verbs",
+        "level": "foundation",
+        "strand": "Verbs",
+        "prerequisites": [
+          "verbs.present_polite"
+        ],
+        "unmetPrerequisites": [
+          "verbs.present_polite"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "verbs.te_form",
+        "skillName": "Te-form and requests",
+        "level": "core",
+        "strand": "Verbs",
+        "prerequisites": [
+          "verbs.present_polite"
+        ],
+        "unmetPrerequisites": [
+          "verbs.present_polite"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "verbs.advanced_forms",
+        "skillName": "Advanced verb forms",
+        "level": "early-intermediate",
+        "strand": "Verbs",
+        "prerequisites": [
+          "verbs.te_form",
+          "verbs.negative_polite"
+        ],
+        "unmetPrerequisites": [
+          "verbs.te_form",
+          "verbs.negative_polite"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "adjectives.core",
+        "skillName": "Core adjectives",
+        "level": "foundation",
+        "strand": "Adjectives",
+        "prerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unmetPrerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "adjectives.weather",
+        "skillName": "Weather adjectives",
+        "level": "foundation",
+        "strand": "Adjectives",
+        "prerequisites": [
+          "adjectives.core"
+        ],
+        "unmetPrerequisites": [
+          "adjectives.core"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "adjectives.na",
+        "skillName": "Na-adjectives",
+        "level": "foundation",
+        "strand": "Adjectives",
+        "prerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unmetPrerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "grammar.questions",
+        "skillName": "Questions with ka",
+        "level": "foundation",
+        "strand": "Grammar",
+        "prerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unmetPrerequisites": [
+          "grammar.basic_sentence_structure"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "grammar.likes_dislikes",
+        "skillName": "Likes and dislikes",
+        "level": "foundation",
+        "strand": "Grammar",
+        "prerequisites": [
+          "particles.subject_ga",
+          "adjectives.na"
+        ],
+        "unmetPrerequisites": [
+          "particles.subject_ga",
+          "adjectives.na"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "grammar.wants_desires",
+        "skillName": "Wants and desires",
+        "level": "foundation",
+        "strand": "Grammar",
+        "prerequisites": [
+          "verbs.present_polite",
+          "adjectives.core"
+        ],
+        "unmetPrerequisites": [
+          "verbs.present_polite",
+          "adjectives.core"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "grammar.comparison_conditionals",
+        "skillName": "Comparison and conditionals",
+        "level": "early-intermediate",
+        "strand": "Grammar",
+        "prerequisites": [
+          "adjectives.core",
+          "grammar.basic_sentence_structure"
+        ],
+        "unmetPrerequisites": [
+          "adjectives.core",
+          "grammar.basic_sentence_structure"
+        ],
+        "unlocked": false
+      },
+      {
+        "skillId": "grammar.clauses_uncertainty",
+        "skillName": "Clauses and uncertainty",
+        "level": "early-intermediate",
+        "strand": "Grammar",
+        "prerequisites": [
+          "grammar.basic_sentence_structure",
+          "verbs.present_polite"
+        ],
+        "unmetPrerequisites": [
+          "grammar.basic_sentence_structure",
+          "verbs.present_polite"
+        ],
+        "unlocked": false
+      }
+    ]
+  },
+  "nextSelectionPreview": {
+    "learnerStage": "foundation_building",
+    "stats": {
+      "totalQuestions": 361,
+      "candidatePool": 147,
+      "exploitationPool": 147,
+      "explorationPool": 102,
+      "selectedQuestions": 5,
+      "prerequisiteBlocked": 206
+    },
+    "difficultyCounts": {
+      "easy": 3,
+      "medium": 2,
+      "hard": 0
+    },
+    "adaptiveInfluence": {
+      "selectedBecauseWeakSkill": 1,
+      "selectedBecauseMemory": 1,
+      "selectedBecauseRecentMistakes": 0,
+      "selectedBecauseExploration": 0,
+      "selectedBecauseDueReview": 0,
+      "selectedWithPrerequisiteGap": 0,
+      "selectedWithStageBias": 5
+    },
+    "selectedQuestionIds": [
+      "mock_112",
+      "mock_260",
+      "mock_277",
+      "mock_125",
+      "mock_319"
+    ],
+    "topReasons": [
+      {
+        "reason": "stage: foundation path",
+        "count": 5
+      },
+      {
+        "reason": "new skill",
+        "count": 3
+      },
+      {
+        "reason": "unseen coverage",
+        "count": 3
+      },
+      {
+        "reason": "low coverage",
+        "count": 2
+      },
+      {
+        "reason": "weak skill",
+        "count": 1
+      }
+    ],
+    "questions": [
+      {
+        "questionId": "mock_112",
+        "skillId": "reading.word_recognition",
+        "skillName": "Word recognition",
+        "topic": "reading",
+        "subtopic": "word recognition",
+        "difficulty": "easy",
+        "reasons": [
+          "new skill",
+          "unseen coverage",
+          "stage: foundation path"
+        ],
+        "unmetPrerequisites": [],
+        "stageBias": 25
+      },
+      {
+        "questionId": "mock_260",
+        "skillId": "vocab.food_drinks",
+        "skillName": "Food and drinks",
+        "topic": "food",
+        "subtopic": "drinks",
+        "difficulty": "easy",
+        "reasons": [
+          "low coverage",
+          "stage: foundation path"
+        ],
+        "unmetPrerequisites": [],
+        "stageBias": 25
+      },
+      {
+        "questionId": "mock_277",
+        "skillId": "vocab.daily_activities",
+        "skillName": "Daily activities vocabulary",
+        "topic": "vocabulary",
+        "subtopic": "daily activities",
+        "difficulty": "easy",
+        "reasons": [
+          "new skill",
+          "unseen coverage",
+          "stage: foundation path"
+        ],
+        "unmetPrerequisites": [],
+        "stageBias": 25
+      },
+      {
+        "questionId": "mock_125",
+        "skillId": "pronunciation.basic",
+        "skillName": "Basic pronunciation",
+        "topic": "pronunciation",
+        "subtopic": "basic pronunciation",
+        "difficulty": "medium",
+        "reasons": [
+          "weak skill",
+          "low memory",
+          "low coverage",
+          "stage: foundation path",
+          "stage: foundation boost"
+        ],
+        "unmetPrerequisites": [],
+        "stageBias": 35
+      },
+      {
+        "questionId": "mock_319",
+        "skillId": "time.asking_time",
+        "skillName": "Asking time",
+        "topic": "time/date",
+        "subtopic": "asking time",
+        "difficulty": "medium",
+        "reasons": [
+          "new skill",
+          "unseen coverage",
+          "stage: foundation path"
+        ],
+        "unmetPrerequisites": [],
+        "stageBias": 25
+      }
+    ]
+  }
+}

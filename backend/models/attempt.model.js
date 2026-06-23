@@ -1,6 +1,13 @@
 import mongoose from "mongoose";
 
 const AttemptSchema = new mongoose.Schema({
+  userId: {
+    type: String,
+    required: true,
+    default: "guest",
+    index: true,
+  },
+
   sessionId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Session",
@@ -20,6 +27,14 @@ const AttemptSchema = new mongoose.Schema({
 
   topic: String,
   subtopic: String,
+  skillId: {
+    type: String,
+    index: true,
+  },
+  skillName: String,
+  skillPath: [String],
+  prerequisiteSkillIds: [String],
+  jlptLevel: String,
   
   difficulty: String,
   tags: [String],

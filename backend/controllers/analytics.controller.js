@@ -72,6 +72,8 @@ export const getUserAnalytics = async (req, res) => {
 			});
 		}
 
+		const currentSkills = await Skill.find({ userId }).lean();
+
 		// ==========================================
 		// 1. CALCULATE AVERAGE SESSION ACCURACY
 		// ==========================================
@@ -143,6 +145,22 @@ export const getUserAnalytics = async (req, res) => {
 			.slice(0, 5)
 			.map(([topic]) => topic);
 
+		const sortedSkills = [...currentSkills].sort((a, b) => (a.mastery || 0) - (b.mastery || 0));
+		const weakestSkills = sortedSkills.slice(0, 5).map((skill) => ({
+			skillId: skill.skillId,
+			skillName: skill.skillName || skill.subtopic || skill.topic,
+			topic: skill.topic,
+			subtopic: skill.subtopic,
+			mastery: skill.mastery || 0,
+		}));
+		const strongestSkills = sortedSkills.slice(-5).reverse().map((skill) => ({
+			skillId: skill.skillId,
+			skillName: skill.skillName || skill.subtopic || skill.topic,
+			topic: skill.topic,
+			subtopic: skill.subtopic,
+			mastery: skill.mastery || 0,
+		}));
+
 		// ==========================================
 		// 4. CALCULATE AVERAGE RECOMMENDATION EFFECTIVENESS
 		// ==========================================
@@ -209,6 +227,8 @@ export const getUserAnalytics = async (req, res) => {
 				averageAccuracy,
 				weakestTopics,
 				strongestTopics,
+				weakestSkills,
+				strongestSkills,
 				averageRecommendationEffectiveness,
 				recentSessions,
 			},
