@@ -171,6 +171,45 @@ const sessionSchema = new mongoose.Schema(
 				default: 0,
 			},
 		},
+		roadmap: {
+			mode: {
+				type: String,
+				enum: ["adaptive", "roadmap_lesson", "review", "daily_review"],
+				default: "adaptive",
+			},
+			lessonId: {
+				type: String,
+				default: null,
+			},
+			lessonTitle: {
+				type: String,
+				default: "",
+			},
+			unitId: {
+				type: String,
+				default: "",
+			},
+			unitTitle: {
+				type: String,
+				default: "",
+			},
+			primarySkillIds: [String],
+			supportSkillIds: [String],
+			skillIds: [String],
+			reviewTaskIds: [String],
+			estimatedMinutes: {
+				type: Number,
+				default: 0,
+			},
+			reviewSummary: {
+				type: mongoose.Schema.Types.Mixed,
+				default: null,
+			},
+			reviewCompletionSummary: {
+				type: mongoose.Schema.Types.Mixed,
+				default: null,
+			},
+		},
 
 		completedAt: {
 			type: Date,

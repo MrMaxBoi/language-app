@@ -87,6 +87,37 @@ Weakest Skills
 
 Add prerequisite-aware learning.
 
+Roadmap planning:
+
+- Roadmap model draft: `docs/ROADMAP_MODEL.md` ✅
+- Recommended direction: start with the current 39-skill roadmap architecture, but keep Unit 1 replaceable with finer kana lessons later.
+- Roadmap unit/lesson definition added in `backend/data/roadmap.js` ✅
+- Read-only roadmap API added at `GET /api/roadmap` ✅
+- Session start supports optional lesson-scoped mode through `POST /api/sessions/start` with `{ "lessonId": "..." }` ✅
+- Locked lessons are protected by default, with `{ "allowLocked": true }` available for development testing ✅
+- Lesson sessions are tagged on the Session document so roadmap progress can be derived from completed attempts ✅
+- Question selection can now be constrained to roadmap lesson skill IDs while preserving adaptive scoring ✅
+- Dashboard now shows the current roadmap path, next lesson, lesson status, and lesson start buttons ✅
+- Session page now displays roadmap lesson context during lesson-scoped sessions ✅
+- Report page now labels completed roadmap lesson sessions ✅
+- Session UI now renders generated choice buttons for `multiple_choice`, `meaning_match`, and `translation_choice` style questions ✅
+- Translation/conjugation prompts are inferred as typed `fill_in_blank` questions until the bank has explicit question-type data ✅
+- Question type audit script added at `npm run audit:question-types` ✅
+- Latest audit report written to `backend/tests/QUESTION_TYPE_AUDIT.md` ✅
+- Question type migration script added at `npm run migrate:question-types:dry-run` and `npm run migrate:question-types` ✅
+- Atlas question types migrated: 133 `translation_choice`, 157 `multiple_choice`, 71 `fill_in_blank` ✅
+- Post-migration audit shows `typeMismatchCount: 0` ✅
+- Question option audit script added at `npm run audit:question-options:write` ✅
+- Latest option audit report written to `backend/tests/QUESTION_OPTION_AUDIT.md` ✅
+- Auto-ready option migration script added at `npm run migrate:question-options:dry-run` and `npm run migrate:question-options` ✅
+- Atlas options migrated for 200 auto-ready choice questions ✅
+- Curated particle option batch added in `backend/data/curatedQuestionOptions.js` ✅
+- Curated option migration added at `npm run migrate:curated-options:dry-run` and `npm run migrate:curated-options` ✅
+- Atlas options migrated for 53 curated particle/particle-adjacent questions ✅
+- Curated option batch expanded to all remaining 90 review/manual questions ✅
+- Post-migration audit shows all 290 choice-style questions have stored options ✅
+- Question type audit shows all 361 questions are OK ✅
+
 Current implementation status:
 
 - Selection scoring checks skill prerequisites ✅
@@ -99,6 +130,7 @@ Current implementation status:
 - Foundation building also blocks questions with unmet prerequisites so early progression stays prerequisite-safe ✅
 - Learner audit script previews stage, skill state, prerequisite blockers, and next selection ✅
 - Foundation building reserves a remediation slot when weak-skill or recent-mistake candidates are available ✅
+- Roadmap lesson sessions preserve the same adaptive engine, but narrow the candidate pool to the lesson's primary/support skills ✅
 
 Examples:
 
@@ -179,29 +211,94 @@ Manual validation status:
 - High performer profile showed safe behavior but needed faster stage promotion ✅
 - Report page now summarizes accuracy, practiced skills, weak skills, strong skills, difficulty mix, written feedback, and question review ✅
 - Dashboard now summarizes learner stage, next focus, weak skills, strong skills, review queue, recent sessions, and recommendation reasons ✅
+- Backend learner-state summary endpoint now powers the dashboard stage, metrics, weak skills, strong skills, review queue, next lesson, and recommended action ✅
 
 The next implementation priority is:
 
-Validate and polish the learner dashboard with real learner profiles.
+Validate and deepen the mobile learner flow without expanding the adaptive engine.
 
 Target behavior:
 
-- Confirm `/dashboard` gives useful guidance after fresh, average, struggling, and high-performing sessions.
-- Confirm `/engine` remains useful as a developer/debug view.
-- Keep report and dashboard language learner-facing rather than engine-facing.
-- Decide whether the frontend learner-stage heuristic should be replaced by a backend learner-state summary endpoint.
+- Validate Review of the Day ready, completed, caught-up, and next-day reset states on a physical phone.
+- Persist selected session question IDs and progress so an interrupted mobile session can resume exactly.
+- Replace the Review tab placeholder with guided daily review and focused topic repair.
+- Design the Progress skill constellation using truthful SkillState, Memory, and prerequisite data.
+- Add real teaching/introduction content before the first roadmap lesson questions.
+- Validate map density and scrolling with first-time, active, and advanced learner histories.
+- Create several mistake and memory-due ReviewTasks.
+- Confirm ReviewPage summary matches the active ReviewTask count and type breakdown.
+- Start Today's Review and confirm every selected skill receives question coverage where bank content exists.
+- Complete a mixed-answer session and confirm only tasks meeting their own clear condition are completed.
+- Confirm remaining tasks stay active and Home/Review counts refresh on the next load.
+- Confirm a refreshed Result page retains its daily-review completion summary.
+- Confirm no-task state recommends the next roadmap lesson.
+- Recheck focused Fix this topic and normal roadmap/adaptive sessions for regressions.
+
+Question-type audit result:
+
+- Total questions: 361
+- Inferred `translation_choice`: 133
+- Inferred `multiple_choice`: 157
+- Inferred `fill_in_blank`: 71
+- Explicit DB `questionType` exists on all 361 questions and now matches inference.
+- Remaining type mismatches: 0
+- 290 choice-style questions need explicit options if choices should be stored instead of generated at runtime.
+
+Question-option audit result:
+
+- Choice questions: 290
+- Stored options: 290
+- Missing stored options: 0
+- Auto-ready option sets migrated: 200
+- Curated option sets migrated: 90
+- Needs review: 0
+- Manual-only: 0
+- Question type audit action counts: 361 OK
 
 Next refinement target:
 
-- QA dashboard empty state for a fresh learner.
-- QA dashboard after one completed session.
-- QA dashboard after weak-skill remediation appears.
-- Add a dedicated backend learner-state summary if the frontend heuristic diverges from engine audit output.
+- QA roadmap progress after completing the first lesson session from the dashboard.
+- QA `/api/learner-state/guest` against the dashboard and `npm run audit:learner -- guest`.
+- Decide whether the roadmap deserves its own `/roadmap` route after dashboard validation.
+- Decide whether the dashboard should become the permanent app home or remain a temporary learner intelligence panel.
 
 Useful audit command:
 
 ```bash
 npm run audit:learner -- guest
+```
+
+Question type audit command:
+
+```bash
+npm run audit:question-types:write
+```
+
+Question type migration commands:
+
+```bash
+npm run migrate:question-types:dry-run
+npm run migrate:question-types
+```
+
+Question option audit command:
+
+```bash
+npm run audit:question-options:write
+```
+
+Question option migration commands:
+
+```bash
+npm run migrate:question-options:dry-run
+npm run migrate:question-options
+```
+
+Curated option migration commands:
+
+```bash
+npm run migrate:curated-options:dry-run
+npm run migrate:curated-options
 ```
 
 Related maintenance command:

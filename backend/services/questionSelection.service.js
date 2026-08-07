@@ -8,6 +8,7 @@ import KnowledgeCoverage from "../models/knowledgeCoverage.model.js";
 import mockQuestions from "../data/questions.js";
 import { isLocalQuestionFallbackEnabled } from "../config/questionBank.js";
 import { getLearningKey, getQuestionSkill, getSkillById } from "../data/skillGraph.js";
+import { CHOICE_QUESTION_TYPES, getOptionText, inferQuestionType } from "../utils/questionType.js";
 
 // DEBUG flag: enable verbose selection explanations and reports
 const DEBUG_SELECTION = true;
@@ -79,6 +80,9 @@ const buildQuestionFromSource = (sourceQuestion) => {
     _id: sourceQuestion._id,
     questionId: String(sourceQuestion.questionId || sourceQuestion._id),
     questionText: sourceQuestion.questionText,
+    questionType: inferQuestionType(sourceQuestion),
+    options: sourceQuestion.options || [],
+    correctAnswer: sourceQuestion.correctAnswer,
     topic: sourceQuestion.topic,
     subtopic: sourceQuestion.subtopic,
     skillId: skill.skillId,
@@ -467,7 +471,7 @@ const getCurriculumBias = (question, learnerStage) => {
   return { stageBias, reasons };
 };
 
-const persistQuestionExposure = async (userId, questions, now = new Date()) => {
+export const persistQuestionExposure = async (userId, questions, now = new Date()) => {
   if (!questions || questions.length === 0) return;
 
   const bulkOps = questions.map((question) => ({
@@ -714,6 +718,42 @@ const countByDifficulty = (items) =>
     { easy: 0, medium: 0, hard: 0 }
   );
 
+const buildQuestionOptions = (question, allQuestions) => {
+  const existingOptions = (question.options || [])
+    .map(getOptionText)
+    .filter(Boolean);
+
+  if (existingOptions.length > 0) {
+    return shuffleArray([...new Set(existingOptions)]).map((text) => ({ text }));
+  }
+
+  const questionType = question.questionType || "multiple_choice";
+  const supportsGeneratedOptions = CHOICE_QUESTION_TYPES.has(questionType);
+  if (!supportsGeneratedOptions || !question.correctAnswer) return [];
+
+  const correctAnswer = String(question.correctAnswer).trim();
+  const sameSkillAnswers = allQuestions
+    .filter((candidate) => getQuestionLearningKey(candidate) === getQuestionLearningKey(question))
+    .map((candidate) => candidate.correctAnswer)
+    .filter(Boolean);
+  const sameTopicAnswers = allQuestions
+    .filter((candidate) => candidate.topic === question.topic)
+    .map((candidate) => candidate.correctAnswer)
+    .filter(Boolean);
+  const fallbackAnswers = allQuestions.map((candidate) => candidate.correctAnswer).filter(Boolean);
+
+  const distractors = [...sameSkillAnswers, ...sameTopicAnswers, ...fallbackAnswers]
+    .map((answer) => String(answer).trim())
+    .filter((answer) => answer && answer.toLowerCase() !== correctAnswer.toLowerCase());
+
+  const uniqueDistractors = [...new Set(distractors)].slice(0, 12);
+  const selectedDistractors = shuffleArray(uniqueDistractors).slice(0, 3);
+
+  if (selectedDistractors.length < 2) return [];
+
+  return shuffleArray([correctAnswer, ...selectedDistractors]).map((text) => ({ text }));
+};
+
 const isRemediationCandidate = (question) => {
   const debug = question?._debug || {};
   return Boolean(debug.weakSkill || debug.lowMemory || debug.recentIncorrect || debug.dueReview);
@@ -859,6 +899,9 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
   const exposureAware = options.exposureAware !== false;
   const persistExposure = options.persistExposure === true;
   const personaType = detectPersonaType(userId);
+  const lessonSkillIds = Array.isArray(options.lessonSkillIds)
+    ? new Set(options.lessonSkillIds.filter(Boolean))
+    : null;
 
   try {
     const now = new Date();
@@ -911,11 +954,20 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
     console.log("🧠 v5 Engine Active");
     console.log("🧭 Learner stage:", learnerStage);
     console.log("🧠 Weak skills detected:", weakSkills.length > 0 ? weakSkills.join(", ") : "None");
+    if (lessonSkillIds?.size) {
+      console.log("🗺️ Roadmap lesson scope:", [...lessonSkillIds].join(", "));
+    }
 
     let candidateQuestions = allQuestions.filter((question) => !lastSessionSet.has(question.questionId));
+    if (lessonSkillIds?.size) {
+      candidateQuestions = candidateQuestions.filter((question) => lessonSkillIds.has(getQuestionLearningKey(question)));
+    }
     if (candidateQuestions.length === 0) {
-      console.log("⚠️ All questions excluded by last-session history; using full pool as fallback.");
-      candidateQuestions = shuffleArray(allQuestions);
+      const fallbackPool = lessonSkillIds?.size
+        ? allQuestions.filter((question) => lessonSkillIds.has(getQuestionLearningKey(question)))
+        : allQuestions;
+      console.log("⚠️ All questions excluded by last-session history; using scoped pool as fallback.");
+      candidateQuestions = shuffleArray(fallbackPool);
     }
 
     const exposureLookup = buildExposureLookup(exposures || []);
@@ -1060,6 +1112,8 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       explorationPool: explorationPool.length,
       selectedQuestions: 0,
       prerequisiteBlocked: prerequisiteBlockedCount,
+      lessonScoped: Boolean(lessonSkillIds?.size),
+      lessonSkillIds: lessonSkillIds ? [...lessonSkillIds] : [],
     };
 
     const adaptiveInfluence = {
@@ -1296,6 +1350,12 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       difficultyCounts,
       difficultyWarning,
       coveragePercent: Math.round(coveragePercent * 100) / 100,
+      roadmap: {
+        lessonId: options.lessonId || null,
+        lessonTitle: options.lessonTitle || "",
+        lessonScoped: Boolean(lessonSkillIds?.size),
+        lessonSkillIds: lessonSkillIds ? [...lessonSkillIds] : [],
+      },
       selectedQuestionIds: completedSet.map((q) => q.questionId),
       explorationQuestions: completedSet.filter((q) => q.selectionSource === "exploration").map((q) => q.questionId),
       exploitationQuestions: completedSet.filter((q) => q.selectionSource === "exploitation").map((q) => q.questionId),
@@ -1356,6 +1416,8 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       questionId: question.questionId,
       _id: question._id,
       questionText: question.questionText,
+      questionType: question.questionType,
+      options: buildQuestionOptions(question, allQuestions),
       topic: question.topic,
       subtopic: question.subtopic,
       skillId: question.skillId,
@@ -1366,6 +1428,7 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       difficulty: question.difficulty,
       exposureCount: question.exposureCount,
       exposurePenalty: question.exposurePenalty,
+      lessonId: options.lessonId || null,
       // include debug details when enabled
       ...(DEBUG_SELECTION
         ? {
@@ -1389,6 +1452,8 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       questionId: question.questionId,
       _id: question._id,
       questionText: question.questionText,
+      questionType: question.questionType,
+      options: buildQuestionOptions(question, fallback),
       topic: question.topic,
       subtopic: question.subtopic,
       skillId: question.skillId,

@@ -66,3 +66,51 @@ export const fetchEngineIntelligence = async (userId = "guest") => {
 		throw error;
 	}
 };
+
+export const fetchRoadmap = async (userId = "guest") => {
+	try {
+		const response = await fetch(`${API_BASE}/roadmap?userId=${encodeURIComponent(userId)}`);
+		if (!response.ok) throw new Error("Failed to fetch roadmap");
+		const json = await response.json();
+		return json.data;
+	} catch (error) {
+		console.error("Error fetching roadmap:", error);
+		throw error;
+	}
+};
+
+export const fetchLearnerState = async (userId = "guest") => {
+	try {
+		const response = await fetch(`${API_BASE}/learner-state/${encodeURIComponent(userId)}`);
+		if (!response.ok) throw new Error("Failed to fetch learner state");
+		const json = await response.json();
+		return json.data;
+	} catch (error) {
+		console.error("Error fetching learner state:", error);
+		throw error;
+	}
+};
+
+export const fetchReviewTasks = async (userId = "guest") => {
+	try {
+		const response = await fetch(`${API_BASE}/review-tasks/${encodeURIComponent(userId)}`);
+		if (!response.ok) throw new Error("Failed to fetch review tasks");
+		const json = await response.json();
+		return json.data;
+	} catch (error) {
+		console.error("Error fetching review tasks:", error);
+		throw error;
+	}
+};
+
+export const fetchHomeRecommendation = async (userId = "guest") => {
+	try {
+		const response = await fetch(`${API_BASE}/recommendations/home/${encodeURIComponent(userId)}`);
+		if (!response.ok) throw new Error("Failed to fetch home recommendation");
+		const json = await response.json();
+		return json.data;
+	} catch (error) {
+		console.error("Error fetching home recommendation:", error);
+		throw error;
+	}
+};

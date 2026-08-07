@@ -1,0 +1,6892 @@
+{
+  "generatedAt": "2026-06-28T03:34:47.751Z",
+  "summary": {
+    "source": "atlas",
+    "database": "kokoro-dev",
+    "host": "ac-rnj00re-shard-00-02.5bi3exz.mongodb.net",
+    "questionCount": 361,
+    "localSeedQuestionCount": 361,
+    "explicitTypeCount": 361,
+    "missingExplicitTypeCount": 0,
+    "inferredTypeCounts": {
+      "translation_choice": 133,
+      "multiple_choice": 157,
+      "fill_in_blank": 71
+    },
+    "choiceQuestionCount": 290,
+    "typedQuestionCount": 71,
+    "choiceQuestionsMissingOptions": 0,
+    "typeMismatchCount": 0,
+    "actionCounts": {
+      "ok": 361
+    }
+  },
+  "needsReview": [],
+  "questions": [
+    {
+      "questionId": "mock_001",
+      "questionText": "What is the Japanese word for 'water'?",
+      "skillId": "vocab.basic_nouns",
+      "topic": "vocabulary",
+      "subtopic": "basic nouns",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "みず",
+        "ほん",
+        "おかね",
+        "a little"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_002",
+      "questionText": "Choose the correct greeting for the morning.",
+      "skillId": "greetings.daily",
+      "topic": "greetings",
+      "subtopic": "daily greetings",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "おはよう",
+        "hello",
+        "ありがとうございます",
+        "good evening"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_003",
+      "questionText": "Which particle marks the topic of a sentence?",
+      "skillId": "particles.topic_wa",
+      "topic": "particles",
+      "subtopic": "topic particle",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "は",
+        "marking the topic",
+        "あしたはべんきょうします",
+        "わたし"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_004",
+      "questionText": "What is the Japanese number for 3?",
+      "skillId": "numbers.basic_counting",
+      "topic": "numbers",
+      "subtopic": "basic counting",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "さん",
+        "はち",
+        "じゅうご",
+        "じゅう"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_005",
+      "questionText": "Translate 'I eat sushi.' into Japanese.",
+      "skillId": "verbs.present_polite",
+      "topic": "verbs",
+      "subtopic": "present tense verbs",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_006",
+      "questionText": "What does たかい mean?",
+      "skillId": "adjectives.core",
+      "topic": "adjectives",
+      "subtopic": "i-adjectives",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "expensive",
+        "ちいさい",
+        "cheap",
+        "あたらしい"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_007",
+      "questionText": "Choose the correct particle: がっこう___いきます。",
+      "skillId": "particles.destination_ni",
+      "topic": "particles",
+      "subtopic": "destination particle",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "に",
+        "としょかんにいきます",
+        "destination",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_008",
+      "questionText": "What is the Japanese word for 'train station'?",
+      "skillId": "vocab.transportation",
+      "topic": "travel",
+      "subtopic": "transportation",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "えき",
+        "くうこう",
+        "ホテル",
+        "くるま"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_009",
+      "questionText": "Convert the verb のむ into past tense.",
+      "skillId": "verbs.past_polite",
+      "topic": "verbs",
+      "subtopic": "past tense",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_010",
+      "questionText": "What does こんにちは mean?",
+      "skillId": "greetings.daily",
+      "topic": "greetings",
+      "subtopic": "daily greetings",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "hello",
+        "おはよう",
+        "ありがとうございます",
+        "good evening"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_011",
+      "questionText": "How do you say 'Monday' in Japanese?",
+      "skillId": "time.weekdays",
+      "topic": "time/date",
+      "subtopic": "days of the week",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "げつようび",
+        "にちようび",
+        "きょう",
+        "かようび"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_012",
+      "questionText": "Choose the correct adjective for 'small'.",
+      "skillId": "adjectives.core",
+      "topic": "adjectives",
+      "subtopic": "descriptive adjectives",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ちいさい",
+        "expensive",
+        "cheap",
+        "あたらしい"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_013",
+      "questionText": "Translate 'What time is it?' into Japanese.",
+      "skillId": "time.asking_time",
+      "topic": "time/date",
+      "subtopic": "asking time",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_014",
+      "questionText": "Which particle indicates possession?",
+      "skillId": "particles.noun_links",
+      "topic": "particles",
+      "subtopic": "possession",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "の",
+        "と",
+        "にほんごのせんせい",
+        "ともだちと"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_015",
+      "questionText": "What is the Japanese word for 'rice'?",
+      "skillId": "vocab.food_drinks",
+      "topic": "food",
+      "subtopic": "basic food vocabulary",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ごはん",
+        "さかな",
+        "パン",
+        "おみず"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_016",
+      "questionText": "Choose the correct negative form of たべます.",
+      "skillId": "verbs.negative_polite",
+      "topic": "verbs",
+      "subtopic": "negative verbs",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "たべません",
+        "いきません",
+        "すしをたべませんでした",
+        "おちゃをのみません"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_017",
+      "questionText": "What does あつい mean when talking about weather?",
+      "skillId": "adjectives.weather",
+      "topic": "adjectives",
+      "subtopic": "weather adjectives",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "hot",
+        "cold",
+        "きょうはあついです",
+        "warm"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_018",
+      "questionText": "Translate 'I went to Tokyo yesterday.'",
+      "skillId": "verbs.past_polite",
+      "topic": "travel",
+      "subtopic": "travel sentences",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_019",
+      "questionText": "What is the Japanese word for 'teacher'?",
+      "skillId": "vocab.people_school",
+      "topic": "vocabulary",
+      "subtopic": "people",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "せんせい",
+        "がくせい",
+        "friend",
+        "ひと"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_020",
+      "questionText": "Choose the correct particle: わたし___がくせいです。",
+      "skillId": "particles.topic_wa",
+      "topic": "particles",
+      "subtopic": "topic marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "は",
+        "marking the topic",
+        "あしたはべんきょうします",
+        "わたし"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_021",
+      "questionText": "What is the Japanese word for 'cat'?",
+      "skillId": "vocab.animals",
+      "topic": "vocabulary",
+      "subtopic": "animals",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ねこ",
+        "いぬ",
+        "bird",
+        "さかな"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_022",
+      "questionText": "How do you say 'thank you' politely?",
+      "skillId": "greetings.daily",
+      "topic": "greetings",
+      "subtopic": "polite expressions",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ありがとうございます",
+        "おはよう",
+        "hello",
+        "good evening"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_023",
+      "questionText": "Choose the correct particle: パン___たべます。",
+      "skillId": "particles.object_wo",
+      "topic": "particles",
+      "subtopic": "object particle",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "を",
+        "パン",
+        "ほんをよみます",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_024",
+      "questionText": "What is the Japanese number for 8?",
+      "skillId": "numbers.basic_counting",
+      "topic": "numbers",
+      "subtopic": "counting",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "はち",
+        "さん",
+        "じゅうご",
+        "じゅう"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_025",
+      "questionText": "Translate 'I drink coffee every morning.'",
+      "skillId": "verbs.present_polite",
+      "topic": "verbs",
+      "subtopic": "daily routine",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_026",
+      "questionText": "What does やすい mean?",
+      "skillId": "adjectives.core",
+      "topic": "adjectives",
+      "subtopic": "shopping adjectives",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "cheap",
+        "expensive",
+        "ちいさい",
+        "あたらしい"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_027",
+      "questionText": "Choose the correct particle: うち___かえります。",
+      "skillId": "particles.destination_ni",
+      "topic": "particles",
+      "subtopic": "movement destination",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "に",
+        "としょかんにいきます",
+        "destination",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_028",
+      "questionText": "What is the Japanese word for 'airport'?",
+      "skillId": "vocab.transportation",
+      "topic": "travel",
+      "subtopic": "travel locations",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "くうこう",
+        "えき",
+        "ホテル",
+        "くるま"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_029",
+      "questionText": "Convert the verb みます into past tense.",
+      "skillId": "verbs.past_polite",
+      "topic": "verbs",
+      "subtopic": "past tense verbs",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_030",
+      "questionText": "What does こんばんは mean?",
+      "skillId": "greetings.daily",
+      "topic": "greetings",
+      "subtopic": "daily greetings",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "good evening",
+        "おはよう",
+        "hello",
+        "ありがとうございます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_031",
+      "questionText": "How do you say 'Sunday' in Japanese?",
+      "skillId": "time.weekdays",
+      "topic": "time/date",
+      "subtopic": "days of the week",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "にちようび",
+        "げつようび",
+        "きょう",
+        "かようび"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_032",
+      "questionText": "Choose the correct adjective for 'new'.",
+      "skillId": "adjectives.core",
+      "topic": "adjectives",
+      "subtopic": "descriptive adjectives",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "あたらしい",
+        "expensive",
+        "ちいさい",
+        "cheap"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_033",
+      "questionText": "Translate 'today' into Japanese.",
+      "skillId": "time.weekdays",
+      "topic": "time/date",
+      "subtopic": "daily time expressions",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_034",
+      "questionText": "Which particle connects two nouns to show ownership?",
+      "skillId": "particles.noun_links",
+      "topic": "grammar",
+      "subtopic": "noun connection",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "の",
+        "と",
+        "にほんごのせんせい",
+        "ともだちと"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_035",
+      "questionText": "What is the Japanese word for 'fish'?",
+      "skillId": "vocab.food_drinks",
+      "topic": "food",
+      "subtopic": "food vocabulary",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "さかな",
+        "ごはん",
+        "パン",
+        "おみず"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_036",
+      "questionText": "Choose the correct negative form of いきます.",
+      "skillId": "verbs.negative_polite",
+      "topic": "verbs",
+      "subtopic": "negative polite form",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "いきません",
+        "たべません",
+        "すしをたべませんでした",
+        "おちゃをのみません"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_037",
+      "questionText": "What does さむい mean?",
+      "skillId": "adjectives.weather",
+      "topic": "adjectives",
+      "subtopic": "weather",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "cold",
+        "hot",
+        "きょうはあついです",
+        "warm"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_038",
+      "questionText": "Translate 'I will study Japanese tomorrow.'",
+      "skillId": "verbs.present_polite",
+      "topic": "grammar",
+      "subtopic": "future intention",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_039",
+      "questionText": "What is the Japanese word for 'student'?",
+      "skillId": "vocab.people_school",
+      "topic": "vocabulary",
+      "subtopic": "school vocabulary",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "がくせい",
+        "せんせい",
+        "friend",
+        "ひと"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_040",
+      "questionText": "Choose the correct particle: にほん___いきたいです。",
+      "skillId": "particles.destination_ni",
+      "topic": "particles",
+      "subtopic": "destination",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "に",
+        "としょかんにいきます",
+        "destination",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_041",
+      "questionText": "What is the Japanese word for 'book'?",
+      "skillId": "vocab.basic_nouns",
+      "topic": "vocabulary",
+      "subtopic": "objects",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ほん",
+        "みず",
+        "おかね",
+        "a little"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_042",
+      "questionText": "How do you say 'good night' in Japanese?",
+      "skillId": "greetings.daily",
+      "topic": "greetings",
+      "subtopic": "night expressions",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "おやすみ",
+        "おはよう",
+        "hello",
+        "ありがとうございます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_043",
+      "questionText": "Choose the correct particle: ともだち___はなします。",
+      "skillId": "particles.noun_links",
+      "topic": "particles",
+      "subtopic": "companion particle",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "と",
+        "の",
+        "にほんごのせんせい",
+        "ともだちと"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_044",
+      "questionText": "What is the Japanese number for 15?",
+      "skillId": "numbers.basic_counting",
+      "topic": "numbers",
+      "subtopic": "compound numbers",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "じゅうご",
+        "さん",
+        "はち",
+        "じゅう"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_045",
+      "questionText": "Translate 'She reads a newspaper every day.'",
+      "skillId": "verbs.present_polite",
+      "topic": "verbs",
+      "subtopic": "daily habits",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_046",
+      "questionText": "What does おもしろい mean?",
+      "skillId": "adjectives.core",
+      "topic": "adjectives",
+      "subtopic": "opinions",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "interesting",
+        "expensive",
+        "ちいさい",
+        "cheap"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_047",
+      "questionText": "Choose the correct particle: スーパー___かいものします。",
+      "skillId": "particles.location_de",
+      "topic": "particles",
+      "subtopic": "location of action",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "で",
+        "いえでべんきょうします",
+        "がっこうでたべます",
+        "action location"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_048",
+      "questionText": "What is the Japanese word for 'hotel'?",
+      "skillId": "vocab.transportation",
+      "topic": "travel",
+      "subtopic": "accommodation",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ホテル",
+        "えき",
+        "くうこう",
+        "くるま"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_049",
+      "questionText": "Convert the verb かきます into past tense.",
+      "skillId": "verbs.past_polite",
+      "topic": "verbs",
+      "subtopic": "past tense conjugation",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_050",
+      "questionText": "What does さようなら mean?",
+      "skillId": "greetings.daily",
+      "topic": "greetings",
+      "subtopic": "farewells",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "goodbye",
+        "おはよう",
+        "hello",
+        "ありがとうございます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_051",
+      "questionText": "What is the Japanese word for 'bread'?",
+      "skillId": "vocab.food_drinks",
+      "topic": "food",
+      "subtopic": "basic food vocabulary",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "パン",
+        "ごはん",
+        "さかな",
+        "おみず"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_052",
+      "questionText": "How do you say 'good afternoon' in Japanese?",
+      "skillId": "greetings.daily",
+      "topic": "greetings",
+      "subtopic": "daily greetings",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "こんにちは",
+        "おはよう",
+        "hello",
+        "ありがとうございます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_053",
+      "questionText": "What is the Japanese word for 'dog'?",
+      "skillId": "vocab.animals",
+      "topic": "vocabulary",
+      "subtopic": "animals",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "いぬ",
+        "ねこ",
+        "bird",
+        "さかな"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_054",
+      "questionText": "What is the Japanese number for 10?",
+      "skillId": "numbers.basic_counting",
+      "topic": "numbers",
+      "subtopic": "basic counting",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "じゅう",
+        "さん",
+        "はち",
+        "じゅうご"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_055",
+      "questionText": "What does すき mean?",
+      "skillId": "adjectives.core",
+      "topic": "adjectives",
+      "subtopic": "feelings",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "like",
+        "expensive",
+        "ちいさい",
+        "cheap"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_056",
+      "questionText": "What is the Japanese word for 'money'?",
+      "skillId": "vocab.basic_nouns",
+      "topic": "vocabulary",
+      "subtopic": "daily objects",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "おかね",
+        "みず",
+        "ほん",
+        "a little"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_057",
+      "questionText": "How do you say 'yes' in Japanese?",
+      "skillId": "greetings.daily",
+      "topic": "greetings",
+      "subtopic": "basic responses",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "はい",
+        "おはよう",
+        "hello",
+        "ありがとうございます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_058",
+      "questionText": "What is the Japanese word for 'car'?",
+      "skillId": "vocab.transportation",
+      "topic": "travel",
+      "subtopic": "transport",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "くるま",
+        "えき",
+        "くうこう",
+        "ホテル"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_059",
+      "questionText": "What does ひくい mean?",
+      "skillId": "adjectives.core",
+      "topic": "adjectives",
+      "subtopic": "descriptions",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "low",
+        "expensive",
+        "ちいさい",
+        "cheap"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_060",
+      "questionText": "What is the Japanese word for 'water' (polite context)?",
+      "skillId": "vocab.food_drinks",
+      "topic": "food",
+      "subtopic": "drinks",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "おみず",
+        "ごはん",
+        "さかな",
+        "パン"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_061",
+      "questionText": "Choose the correct particle: いえ___かえります。",
+      "skillId": "particles.destination_ni",
+      "topic": "particles",
+      "subtopic": "movement",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "に",
+        "としょかんにいきます",
+        "destination",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_062",
+      "questionText": "Translate 'I study at home.'",
+      "skillId": "particles.location_de",
+      "topic": "grammar",
+      "subtopic": "location of action",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_063",
+      "questionText": "What is the te-form of かきます?",
+      "skillId": "verbs.te_form",
+      "topic": "verbs",
+      "subtopic": "te-form",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_064",
+      "questionText": "What particle is used for means of transportation?",
+      "skillId": "particles.location_de",
+      "topic": "particles",
+      "subtopic": "means",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "で",
+        "いえでべんきょうします",
+        "がっこうでたべます",
+        "action location"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_065",
+      "questionText": "Translate 'I didn't eat sushi.'",
+      "skillId": "verbs.negative_polite",
+      "topic": "verbs",
+      "subtopic": "past negative",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_066",
+      "questionText": "What does つよい mean?",
+      "skillId": "adjectives.core",
+      "topic": "adjectives",
+      "subtopic": "characteristics",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "strong",
+        "expensive",
+        "ちいさい",
+        "cheap"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_067",
+      "questionText": "What is the correct way to say 'I will go' (casual)?",
+      "skillId": "verbs.advanced_forms",
+      "topic": "verbs",
+      "subtopic": "casual form",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_068",
+      "questionText": "Choose correct particle: ほん___よみます。",
+      "skillId": "particles.object_wo",
+      "topic": "particles",
+      "subtopic": "object marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "を",
+        "パン",
+        "ほんをよみます",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_069",
+      "questionText": "Translate 'I want to eat sushi.'",
+      "skillId": "verbs.advanced_forms",
+      "topic": "grammar",
+      "subtopic": "desire form",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_070",
+      "questionText": "What is the meaning of しずか?",
+      "skillId": "adjectives.core",
+      "topic": "adjectives",
+      "subtopic": "descriptions",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "quiet",
+        "expensive",
+        "ちいさい",
+        "cheap"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_071",
+      "questionText": "How do you say 'I met a friend yesterday'?",
+      "skillId": "verbs.past_polite",
+      "topic": "verbs",
+      "subtopic": "past interaction",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "きのうともだちにあいました",
+        "のみました",
+        "きのうとうきょうにいきました",
+        "みました"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_072",
+      "questionText": "What particle indicates location where something exists?",
+      "skillId": "particles.subject_ga",
+      "topic": "particles",
+      "subtopic": "existence",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "に",
+        "つくえのうえにほんがあります",
+        "いる for living things, ある for objects",
+        "が"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_073",
+      "questionText": "Translate 'There is a book on the table.'",
+      "skillId": "particles.subject_ga",
+      "topic": "grammar",
+      "subtopic": "existence",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_074",
+      "questionText": "What is the te-form of のみます?",
+      "skillId": "verbs.te_form",
+      "topic": "verbs",
+      "subtopic": "te-form",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_075",
+      "questionText": "Translate 'Please eat.'",
+      "skillId": "verbs.te_form",
+      "topic": "grammar",
+      "subtopic": "requests",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_076",
+      "questionText": "What does ふべん mean?",
+      "skillId": "adjectives.core",
+      "topic": "adjectives",
+      "subtopic": "abstract adjectives",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "inconvenient",
+        "expensive",
+        "ちいさい",
+        "cheap"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_077",
+      "questionText": "Translate 'I will meet my friend tomorrow.'",
+      "skillId": "verbs.present_polite",
+      "topic": "verbs",
+      "subtopic": "future plan",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_078",
+      "questionText": "What particle is used for comparison?",
+      "skillId": "grammar.comparison_conditionals",
+      "topic": "grammar",
+      "subtopic": "comparison",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "より",
+        "これはそれよりたかいです",
+        "あめがふったらそとにいきません",
+        "べんきょうしたのにテストにおちました"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_079",
+      "questionText": "Translate 'This is more expensive than that.'",
+      "skillId": "grammar.comparison_conditionals",
+      "topic": "grammar",
+      "subtopic": "comparison",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_080",
+      "questionText": "What is the meaning of べんり?",
+      "skillId": "adjectives.core",
+      "topic": "adjectives",
+      "subtopic": "abstract",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "convenient",
+        "expensive",
+        "ちいさい",
+        "cheap"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_081",
+      "questionText": "Translate 'I can speak Japanese a little.'",
+      "skillId": "verbs.advanced_forms",
+      "topic": "verbs",
+      "subtopic": "ability",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_082",
+      "questionText": "What is the meaning of すこし?",
+      "skillId": "vocab.basic_nouns",
+      "topic": "vocabulary",
+      "subtopic": "quantity",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "a little",
+        "みず",
+        "ほん",
+        "おかね"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_083",
+      "questionText": "Translate 'If it rains, I will not go out.'",
+      "skillId": "grammar.comparison_conditionals",
+      "topic": "grammar",
+      "subtopic": "conditional",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_084",
+      "questionText": "Explain difference between は and が in emphasis.",
+      "skillId": "particles.advanced",
+      "topic": "particles",
+      "subtopic": "advanced particles",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "は marks topic, が marks subject focus",
+        "も",
+        "only",
+        "from"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_085",
+      "questionText": "Translate 'Although I studied, I failed the test.'",
+      "skillId": "grammar.comparison_conditionals",
+      "topic": "grammar",
+      "subtopic": "contrast expressions",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_086",
+      "questionText": "What is the honorific form of いく?",
+      "skillId": "verbs.advanced_forms",
+      "topic": "grammar",
+      "subtopic": "keigo",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "いらっしゃる",
+        "いく",
+        "すしをたべたいです",
+        "にほんごがすこしはなせます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_087",
+      "questionText": "Translate 'The book which I bought yesterday is interesting.'",
+      "skillId": "grammar.clauses_uncertainty",
+      "topic": "grammar",
+      "subtopic": "relative clauses",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_088",
+      "questionText": "What does させる form indicate?",
+      "skillId": "verbs.advanced_forms",
+      "topic": "verbs",
+      "subtopic": "causative",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "causative (make/let someone do)",
+        "いく",
+        "すしをたべたいです",
+        "にほんごがすこしはなせます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_089",
+      "questionText": "Translate 'I was made to study Japanese.'",
+      "skillId": "verbs.advanced_forms",
+      "topic": "verbs",
+      "subtopic": "causative passive",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_090",
+      "questionText": "What does 〜ばいいですか express?",
+      "skillId": "verbs.advanced_forms",
+      "topic": "grammar",
+      "subtopic": "advice expressions",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "asking for advice",
+        "いく",
+        "すしをたべたいです",
+        "にほんごがすこしはなせます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_091",
+      "questionText": "Translate 'Even if I go, I will not meet him.'",
+      "skillId": "grammar.comparison_conditionals",
+      "topic": "grammar",
+      "subtopic": "concessive",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_092",
+      "questionText": "What is the difference between いる and ある?",
+      "skillId": "particles.subject_ga",
+      "topic": "grammar",
+      "subtopic": "existence verbs",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "いる for living things, ある for objects",
+        "に",
+        "つくえのうえにほんがあります",
+        "が"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_093",
+      "questionText": "Translate 'I have never eaten sushi.'",
+      "skillId": "verbs.advanced_forms",
+      "topic": "grammar",
+      "subtopic": "experience",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_094",
+      "questionText": "What does 〜ようにする mean?",
+      "skillId": "verbs.present_polite",
+      "topic": "grammar",
+      "subtopic": "intentions",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "make an effort to do",
+        "わたしはすしをたべます",
+        "まいあさコーヒーをのみます",
+        "あしたにほんごをべんきょうします"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_095",
+      "questionText": "Translate 'I will try not to be late.'",
+      "skillId": "verbs.present_polite",
+      "topic": "grammar",
+      "subtopic": "intentions",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_096",
+      "questionText": "What is the meaning of 〜らしい?",
+      "skillId": "grammar.clauses_uncertainty",
+      "topic": "grammar",
+      "subtopic": "speculation",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "seems like / apparently",
+        "きのうかったほんはおもしろいです",
+        "かれはいそがしいらしいです",
+        "might / may be"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_097",
+      "questionText": "Translate 'It seems that he is busy.'",
+      "skillId": "grammar.clauses_uncertainty",
+      "topic": "grammar",
+      "subtopic": "speculation",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_098",
+      "questionText": "What does 〜かもしれない mean?",
+      "skillId": "grammar.clauses_uncertainty",
+      "topic": "grammar",
+      "subtopic": "uncertainty",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "might / may be",
+        "きのうかったほんはおもしろいです",
+        "seems like / apparently",
+        "かれはいそがしいらしいです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_099",
+      "questionText": "Translate 'It might rain tomorrow.'",
+      "skillId": "grammar.clauses_uncertainty",
+      "topic": "grammar",
+      "subtopic": "uncertainty",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_100",
+      "questionText": "What is the nuance of 〜てしまう?",
+      "skillId": "verbs.advanced_forms",
+      "topic": "verbs",
+      "subtopic": "aspect",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "completion or regret",
+        "いく",
+        "すしをたべたいです",
+        "にほんごがすこしはなせます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_101",
+      "questionText": "Which hiragana represents the sound 'a'?",
+      "skillId": "kana.hiragana",
+      "topic": "kana",
+      "subtopic": "hiragana recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "あ",
+        "い",
+        "く",
+        "ね"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_102",
+      "questionText": "Which katakana represents the sound 'ka'?",
+      "skillId": "kana.katakana",
+      "topic": "kana",
+      "subtopic": "katakana recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "カ",
+        "ア",
+        "ス",
+        "ト"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_103",
+      "questionText": "How many mora are in the word がっこう?",
+      "skillId": "pronunciation.basic",
+      "topic": "pronunciation",
+      "subtopic": "basic pronunciation",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "4",
+        "5",
+        "a doubled consonant or brief pause",
+        "おかあさん"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_104",
+      "questionText": "What is the basic word order of a simple Japanese sentence?",
+      "skillId": "grammar.basic_sentence_structure",
+      "topic": "grammar",
+      "subtopic": "basic sentence structure",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "subject object verb",
+        "のみます",
+        "わたしはみずをのみます",
+        "end"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_105",
+      "questionText": "What is the Japanese word for 'mother' in a general/polite context?",
+      "skillId": "vocab.family",
+      "topic": "vocabulary",
+      "subtopic": "family",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "おかあさん",
+        "おとうさん",
+        "older brother",
+        "あね"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_106",
+      "questionText": "What is the Japanese word for 'library'?",
+      "skillId": "vocab.places",
+      "topic": "travel",
+      "subtopic": "places",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "としょかん",
+        "がっこう",
+        "hospital",
+        "みせ"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_107",
+      "questionText": "What does べんきょうします mean?",
+      "skillId": "vocab.daily_activities",
+      "topic": "vocabulary",
+      "subtopic": "daily activities",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "study",
+        "sleep",
+        "wake up",
+        "work"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_108",
+      "questionText": "Which word is a na-adjective meaning 'quiet'?",
+      "skillId": "adjectives.na",
+      "topic": "adjectives",
+      "subtopic": "na-adjectives",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "しずか",
+        "べんり",
+        "healthy",
+        "ゆうめいなひと"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_109",
+      "questionText": "What particle usually marks a polite question?",
+      "skillId": "grammar.questions",
+      "topic": "grammar",
+      "subtopic": "questions",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "か",
+        "これはほんですか",
+        "who",
+        "what"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_110",
+      "questionText": "Translate 'I like cats.'",
+      "skillId": "grammar.likes_dislikes",
+      "topic": "grammar",
+      "subtopic": "likes and dislikes",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_111",
+      "questionText": "Translate 'I want water.'",
+      "skillId": "grammar.wants_desires",
+      "topic": "grammar",
+      "subtopic": "wants and desires",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_112",
+      "questionText": "Read this word: ねこ",
+      "skillId": "reading.word_recognition",
+      "topic": "reading",
+      "subtopic": "word recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "cat",
+        "water",
+        "station",
+        "rice"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_113",
+      "questionText": "Read and translate: わたしはがくせいです。",
+      "skillId": "reading.sentence_reading",
+      "topic": "reading",
+      "subtopic": "sentence reading",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "I am a student",
+        "This is water",
+        "There is a cat",
+        "I eat sushi"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_114",
+      "questionText": "Read: あした、としょかんにいきます。 What will the speaker do tomorrow?",
+      "skillId": "reading.context_understanding",
+      "topic": "reading",
+      "subtopic": "context understanding",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "go to the library",
+        "hot",
+        "teacher",
+        "cats"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_115",
+      "questionText": "Which hiragana represents the sound 'i'?",
+      "skillId": "kana.hiragana",
+      "topic": "kana",
+      "subtopic": "hiragana recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "い",
+        "あ",
+        "く",
+        "ね"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_116",
+      "questionText": "Which hiragana represents the sound 'ku'?",
+      "skillId": "kana.hiragana",
+      "topic": "kana",
+      "subtopic": "hiragana recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "く",
+        "あ",
+        "い",
+        "ね"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_117",
+      "questionText": "Which hiragana represents the sound 'ne'?",
+      "skillId": "kana.hiragana",
+      "topic": "kana",
+      "subtopic": "hiragana recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ね",
+        "あ",
+        "い",
+        "く"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_118",
+      "questionText": "Which hiragana represents the sound 'mo'?",
+      "skillId": "kana.hiragana",
+      "topic": "kana",
+      "subtopic": "hiragana recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "も",
+        "あ",
+        "い",
+        "く"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_119",
+      "questionText": "Which katakana represents the sound 'a'?",
+      "skillId": "kana.katakana",
+      "topic": "kana",
+      "subtopic": "katakana recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ア",
+        "カ",
+        "ス",
+        "ト"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_120",
+      "questionText": "Which katakana represents the sound 'su'?",
+      "skillId": "kana.katakana",
+      "topic": "kana",
+      "subtopic": "katakana recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ス",
+        "カ",
+        "ア",
+        "ト"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_121",
+      "questionText": "Which katakana represents the sound 'to'?",
+      "skillId": "kana.katakana",
+      "topic": "kana",
+      "subtopic": "katakana recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ト",
+        "カ",
+        "ア",
+        "ス"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_122",
+      "questionText": "Which katakana represents the sound 'mi'?",
+      "skillId": "kana.katakana",
+      "topic": "kana",
+      "subtopic": "katakana recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ミ",
+        "カ",
+        "ア",
+        "ス"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_123",
+      "questionText": "How many mora are in こんにちは?",
+      "skillId": "pronunciation.basic",
+      "topic": "pronunciation",
+      "subtopic": "basic pronunciation",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "5",
+        "4",
+        "a doubled consonant or brief pause",
+        "おかあさん"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_124",
+      "questionText": "What does a small っ usually indicate?",
+      "skillId": "pronunciation.basic",
+      "topic": "pronunciation",
+      "subtopic": "basic pronunciation",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "a doubled consonant or brief pause",
+        "4",
+        "5",
+        "おかあさん"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_125",
+      "questionText": "Which word has a long vowel sound?",
+      "skillId": "pronunciation.basic",
+      "topic": "pronunciation",
+      "subtopic": "basic pronunciation",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "おかあさん",
+        "4",
+        "5",
+        "a doubled consonant or brief pause"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_126",
+      "questionText": "In せんせい, what sound does ん represent?",
+      "skillId": "pronunciation.basic",
+      "topic": "pronunciation",
+      "subtopic": "basic pronunciation",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "n",
+        "4",
+        "5",
+        "a doubled consonant or brief pause"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_127",
+      "questionText": "Read this word: みず",
+      "skillId": "reading.word_recognition",
+      "topic": "reading",
+      "subtopic": "word recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "water",
+        "cat",
+        "station",
+        "rice"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_128",
+      "questionText": "Read this word: えき",
+      "skillId": "reading.word_recognition",
+      "topic": "reading",
+      "subtopic": "word recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "station",
+        "cat",
+        "water",
+        "rice"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_129",
+      "questionText": "Read this word: ごはん",
+      "skillId": "reading.word_recognition",
+      "topic": "reading",
+      "subtopic": "word recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "rice",
+        "cat",
+        "water",
+        "station"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_130",
+      "questionText": "Read this word: せんせい",
+      "skillId": "reading.word_recognition",
+      "topic": "reading",
+      "subtopic": "word recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "teacher",
+        "cat",
+        "water",
+        "station"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_131",
+      "questionText": "Read this word: がっこう",
+      "skillId": "reading.word_recognition",
+      "topic": "reading",
+      "subtopic": "word recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "school",
+        "cat",
+        "water",
+        "station"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_132",
+      "questionText": "Read this word: おちゃ",
+      "skillId": "reading.word_recognition",
+      "topic": "reading",
+      "subtopic": "word recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "tea",
+        "cat",
+        "water",
+        "station"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_133",
+      "questionText": "Read this word: ともだち",
+      "skillId": "reading.word_recognition",
+      "topic": "reading",
+      "subtopic": "word recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "friend",
+        "cat",
+        "water",
+        "station"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_134",
+      "questionText": "Read this word: でんしゃ",
+      "skillId": "reading.word_recognition",
+      "topic": "reading",
+      "subtopic": "word recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "train",
+        "cat",
+        "water",
+        "station"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_135",
+      "questionText": "Read and translate: これはみずです。",
+      "skillId": "reading.sentence_reading",
+      "topic": "reading",
+      "subtopic": "sentence reading",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "This is water",
+        "I am a student",
+        "There is a cat",
+        "I eat sushi"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_136",
+      "questionText": "Read and translate: ねこがいます。",
+      "skillId": "reading.sentence_reading",
+      "topic": "reading",
+      "subtopic": "sentence reading",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "There is a cat",
+        "I am a student",
+        "This is water",
+        "I eat sushi"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_137",
+      "questionText": "Read and translate: すしをたべます。",
+      "skillId": "reading.sentence_reading",
+      "topic": "reading",
+      "subtopic": "sentence reading",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "I eat sushi",
+        "I am a student",
+        "This is water",
+        "There is a cat"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_138",
+      "questionText": "Read and translate: えきにいきます。",
+      "skillId": "reading.sentence_reading",
+      "topic": "reading",
+      "subtopic": "sentence reading",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "I go to the station",
+        "I am a student",
+        "This is water",
+        "There is a cat"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_139",
+      "questionText": "Read and translate: きょうはあついです。",
+      "skillId": "reading.sentence_reading",
+      "topic": "reading",
+      "subtopic": "sentence reading",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "Today is hot",
+        "I am a student",
+        "This is water",
+        "There is a cat"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_140",
+      "questionText": "Read and translate: あしたべんきょうします。",
+      "skillId": "reading.sentence_reading",
+      "topic": "reading",
+      "subtopic": "sentence reading",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "I will study tomorrow",
+        "I am a student",
+        "This is water",
+        "There is a cat"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_141",
+      "questionText": "Read and translate: これはしずかなまちです。",
+      "skillId": "reading.sentence_reading",
+      "topic": "reading",
+      "subtopic": "sentence reading",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "This is a quiet town",
+        "I am a student",
+        "This is water",
+        "There is a cat"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_142",
+      "questionText": "Read: きょうはあついです。 What is the weather like today?",
+      "skillId": "reading.context_understanding",
+      "topic": "reading",
+      "subtopic": "context understanding",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "hot",
+        "go to the library",
+        "teacher",
+        "cats"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_143",
+      "questionText": "Read: たなかさんはせんせいです。 Who is Tanaka?",
+      "skillId": "reading.context_understanding",
+      "topic": "reading",
+      "subtopic": "context understanding",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "teacher",
+        "go to the library",
+        "hot",
+        "cats"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_144",
+      "questionText": "Read: ねこがすきです。 What does the speaker like?",
+      "skillId": "reading.context_understanding",
+      "topic": "reading",
+      "subtopic": "context understanding",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "cats",
+        "go to the library",
+        "hot",
+        "teacher"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_145",
+      "questionText": "Read: みずがほしいです。 What does the speaker want?",
+      "skillId": "reading.context_understanding",
+      "topic": "reading",
+      "subtopic": "context understanding",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "water",
+        "go to the library",
+        "hot",
+        "teacher"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_146",
+      "questionText": "Read: きのうすしをたべました。 When did the speaker eat sushi?",
+      "skillId": "reading.context_understanding",
+      "topic": "reading",
+      "subtopic": "context understanding",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "yesterday",
+        "go to the library",
+        "hot",
+        "teacher"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_147",
+      "questionText": "Read: ともだちとえきにいきます。 Who will the speaker go with?",
+      "skillId": "reading.context_understanding",
+      "topic": "reading",
+      "subtopic": "context understanding",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "friend",
+        "go to the library",
+        "hot",
+        "teacher"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_148",
+      "questionText": "Read: としょかんでべんきょうします。 Where does the speaker study?",
+      "skillId": "reading.context_understanding",
+      "topic": "reading",
+      "subtopic": "context understanding",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "library",
+        "go to the library",
+        "hot",
+        "teacher"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_149",
+      "questionText": "Read: あしたでんしゃでいきます。 How will the speaker go tomorrow?",
+      "skillId": "reading.context_understanding",
+      "topic": "reading",
+      "subtopic": "context understanding",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "by train",
+        "go to the library",
+        "hot",
+        "teacher"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_150",
+      "questionText": "Read: げつようびにがっこうにいきます。 When does the speaker go to school?",
+      "skillId": "reading.context_understanding",
+      "topic": "reading",
+      "subtopic": "context understanding",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "Monday",
+        "go to the library",
+        "hot",
+        "teacher"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_151",
+      "questionText": "Read: これはたかいです。 What does the speaker think about it?",
+      "skillId": "reading.context_understanding",
+      "topic": "reading",
+      "subtopic": "context understanding",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "expensive",
+        "go to the library",
+        "hot",
+        "teacher"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_152",
+      "questionText": "Read this word: かぞく",
+      "skillId": "reading.word_recognition",
+      "topic": "reading",
+      "subtopic": "word recognition",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "family",
+        "cat",
+        "water",
+        "station"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_153",
+      "questionText": "Read and translate: わたしはねこがすきです。",
+      "skillId": "reading.sentence_reading",
+      "topic": "reading",
+      "subtopic": "sentence reading",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "I like cats",
+        "I am a student",
+        "This is water",
+        "There is a cat"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_154",
+      "questionText": "Read and translate: でんしゃでがっこうにいきます。",
+      "skillId": "reading.sentence_reading",
+      "topic": "reading",
+      "subtopic": "sentence reading",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "I go to school by train",
+        "I am a student",
+        "This is water",
+        "There is a cat"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_155",
+      "questionText": "Choose the correct particle: わたし___がくせいです。",
+      "skillId": "particles.topic_wa",
+      "topic": "particles",
+      "subtopic": "topic marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "は",
+        "marking the topic",
+        "あしたはべんきょうします",
+        "わたし"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_156",
+      "questionText": "Choose the correct particle: これはほんです。 What is は doing?",
+      "skillId": "particles.topic_wa",
+      "topic": "particles",
+      "subtopic": "topic marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "marking the topic",
+        "は",
+        "あしたはべんきょうします",
+        "わたし"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_157",
+      "questionText": "Choose the correct particle: きょう___あついです。",
+      "skillId": "particles.topic_wa",
+      "topic": "particles",
+      "subtopic": "topic marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "は",
+        "marking the topic",
+        "あしたはべんきょうします",
+        "わたし"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_158",
+      "questionText": "Translate: 'As for tomorrow, I will study.'",
+      "skillId": "particles.topic_wa",
+      "topic": "particles",
+      "subtopic": "topic marking",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_159",
+      "questionText": "Choose the correct particle: たなかさん___せんせいです。",
+      "skillId": "particles.topic_wa",
+      "topic": "particles",
+      "subtopic": "topic marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "は",
+        "marking the topic",
+        "あしたはべんきょうします",
+        "わたし"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_160",
+      "questionText": "In わたしはすしをたべます, which word is marked as the topic?",
+      "skillId": "particles.topic_wa",
+      "topic": "particles",
+      "subtopic": "topic marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "わたし",
+        "は",
+        "marking the topic",
+        "あしたはべんきょうします"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_161",
+      "questionText": "Choose the correct particle: これ___なんですか。",
+      "skillId": "particles.topic_wa",
+      "topic": "particles",
+      "subtopic": "topic marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "は",
+        "marking the topic",
+        "あしたはべんきょうします",
+        "わたし"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_162",
+      "questionText": "Choose the correct particle: わたし___にほんごをべんきょうします。",
+      "skillId": "particles.topic_wa",
+      "topic": "particles",
+      "subtopic": "topic marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "は",
+        "marking the topic",
+        "あしたはべんきょうします",
+        "わたし"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_163",
+      "questionText": "Choose the correct particle: ねこ___います。",
+      "skillId": "particles.subject_ga",
+      "topic": "particles",
+      "subtopic": "existence",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "が",
+        "に",
+        "つくえのうえにほんがあります",
+        "いる for living things, ある for objects"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_164",
+      "questionText": "Choose the correct particle: みず___ほしいです。",
+      "skillId": "particles.subject_ga",
+      "topic": "particles",
+      "subtopic": "existence",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "が",
+        "に",
+        "つくえのうえにほんがあります",
+        "いる for living things, ある for objects"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_165",
+      "questionText": "Choose the correct particle: ねこ___すきです。",
+      "skillId": "particles.subject_ga",
+      "topic": "particles",
+      "subtopic": "existence",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "が",
+        "に",
+        "つくえのうえにほんがあります",
+        "いる for living things, ある for objects"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_166",
+      "questionText": "In だれがきますか, what does が mark?",
+      "skillId": "particles.subject_ga",
+      "topic": "particles",
+      "subtopic": "existence",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "the subject",
+        "に",
+        "つくえのうえにほんがあります",
+        "いる for living things, ある for objects"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_167",
+      "questionText": "Choose the correct particle: いぬ___いますか。",
+      "skillId": "particles.subject_ga",
+      "topic": "particles",
+      "subtopic": "existence",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "が",
+        "に",
+        "つくえのうえにほんがあります",
+        "いる for living things, ある for objects"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_168",
+      "questionText": "Choose the correct particle: あめ___ふります。",
+      "skillId": "particles.subject_ga",
+      "topic": "particles",
+      "subtopic": "existence",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "が",
+        "に",
+        "つくえのうえにほんがあります",
+        "いる for living things, ある for objects"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_169",
+      "questionText": "Translate: 'There is a book.'",
+      "skillId": "particles.subject_ga",
+      "topic": "particles",
+      "subtopic": "existence",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_170",
+      "questionText": "Choose the correct particle: すし___たべます。",
+      "skillId": "particles.object_wo",
+      "topic": "particles",
+      "subtopic": "object marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "を",
+        "パン",
+        "ほんをよみます",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_171",
+      "questionText": "Choose the correct particle: みず___のみます。",
+      "skillId": "particles.object_wo",
+      "topic": "particles",
+      "subtopic": "object marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "を",
+        "パン",
+        "ほんをよみます",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_172",
+      "questionText": "Choose the correct particle: にほんご___べんきょうします。",
+      "skillId": "particles.object_wo",
+      "topic": "particles",
+      "subtopic": "object marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "を",
+        "パン",
+        "ほんをよみます",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_173",
+      "questionText": "In パンをかいます, what is being bought?",
+      "skillId": "particles.object_wo",
+      "topic": "particles",
+      "subtopic": "object marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "パン",
+        "を",
+        "ほんをよみます",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_174",
+      "questionText": "Translate: 'I read a book.'",
+      "skillId": "particles.object_wo",
+      "topic": "particles",
+      "subtopic": "object marking",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_175",
+      "questionText": "Choose the correct particle: てがみ___かきます。",
+      "skillId": "particles.object_wo",
+      "topic": "particles",
+      "subtopic": "object marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "を",
+        "パン",
+        "ほんをよみます",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_176",
+      "questionText": "Choose the correct particle: おんがく___ききます。",
+      "skillId": "particles.object_wo",
+      "topic": "particles",
+      "subtopic": "object marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "を",
+        "パン",
+        "ほんをよみます",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_177",
+      "questionText": "Choose the correct particle: えいが___みます。",
+      "skillId": "particles.object_wo",
+      "topic": "particles",
+      "subtopic": "object marking",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "を",
+        "パン",
+        "ほんをよみます",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_178",
+      "questionText": "Choose the correct particle: がっこう___いきます。",
+      "skillId": "particles.destination_ni",
+      "topic": "particles",
+      "subtopic": "destination",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "に",
+        "としょかんにいきます",
+        "destination",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_179",
+      "questionText": "Choose the correct particle: えき___いきます。",
+      "skillId": "particles.destination_ni",
+      "topic": "particles",
+      "subtopic": "destination",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "に",
+        "としょかんにいきます",
+        "destination",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_180",
+      "questionText": "Translate: 'I go to the library.'",
+      "skillId": "particles.destination_ni",
+      "topic": "particles",
+      "subtopic": "destination",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_181",
+      "questionText": "Choose the correct particle: うち___かえります。",
+      "skillId": "particles.destination_ni",
+      "topic": "particles",
+      "subtopic": "destination",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "に",
+        "としょかんにいきます",
+        "destination",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_182",
+      "questionText": "Choose the correct particle: げつようび___がっこうにいきます。",
+      "skillId": "particles.destination_ni",
+      "topic": "particles",
+      "subtopic": "destination",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "に",
+        "としょかんにいきます",
+        "destination",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_183",
+      "questionText": "In とうきょうにいきました, what does に mark?",
+      "skillId": "particles.destination_ni",
+      "topic": "particles",
+      "subtopic": "destination",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "destination",
+        "に",
+        "としょかんにいきます",
+        "は"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_184",
+      "questionText": "Choose the correct particle: としょかん___べんきょうします。",
+      "skillId": "particles.location_de",
+      "topic": "particles",
+      "subtopic": "location of action",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "で",
+        "いえでべんきょうします",
+        "がっこうでたべます",
+        "action location"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_185",
+      "questionText": "Choose the correct particle: でんしゃ___いきます。",
+      "skillId": "particles.location_de",
+      "topic": "particles",
+      "subtopic": "means",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "で",
+        "いえでべんきょうします",
+        "がっこうでたべます",
+        "action location"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_186",
+      "questionText": "Translate: 'I eat at school.'",
+      "skillId": "particles.location_de",
+      "topic": "particles",
+      "subtopic": "location of action",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_187",
+      "questionText": "Choose the correct particle: はし___たべます。",
+      "skillId": "particles.location_de",
+      "topic": "particles",
+      "subtopic": "means",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "で",
+        "いえでべんきょうします",
+        "がっこうでたべます",
+        "action location"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_188",
+      "questionText": "In へやでねます, what does で mark?",
+      "skillId": "particles.location_de",
+      "topic": "particles",
+      "subtopic": "location of action",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "action location",
+        "で",
+        "いえでべんきょうします",
+        "がっこうでたべます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_189",
+      "questionText": "Choose the correct particle: にほんご___はなします。",
+      "skillId": "particles.location_de",
+      "topic": "particles",
+      "subtopic": "means",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "で",
+        "いえでべんきょうします",
+        "がっこうでたべます",
+        "action location"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_190",
+      "questionText": "Choose the correct particle: レストラン___ひるごはんをたべます。",
+      "skillId": "particles.location_de",
+      "topic": "particles",
+      "subtopic": "location of action",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "で",
+        "いえでべんきょうします",
+        "がっこうでたべます",
+        "action location"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_191",
+      "questionText": "Choose the correct particle: わたし___ほん",
+      "skillId": "particles.noun_links",
+      "topic": "particles",
+      "subtopic": "possession",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "の",
+        "と",
+        "にほんごのせんせい",
+        "ともだちと"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_192",
+      "questionText": "Translate: 'Japanese teacher'",
+      "skillId": "particles.noun_links",
+      "topic": "particles",
+      "subtopic": "possession",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_193",
+      "questionText": "Choose the correct particle: ともだち___いきます。",
+      "skillId": "particles.noun_links",
+      "topic": "particles",
+      "subtopic": "companion particle",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "と",
+        "の",
+        "にほんごのせんせい",
+        "ともだちと"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_194",
+      "questionText": "Translate: 'with my friend'",
+      "skillId": "particles.noun_links",
+      "topic": "particles",
+      "subtopic": "companion particle",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_195",
+      "questionText": "Choose the correct particle: ねこ___いぬ",
+      "skillId": "particles.noun_links",
+      "topic": "particles",
+      "subtopic": "companion particle",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "と",
+        "の",
+        "にほんごのせんせい",
+        "ともだちと"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_196",
+      "questionText": "In たなかさんのかばん, what does の show?",
+      "skillId": "particles.noun_links",
+      "topic": "particles",
+      "subtopic": "possession",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "possession",
+        "の",
+        "と",
+        "にほんごのせんせい"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_197",
+      "questionText": "Choose the correct particle: がっこう___ともだちとあいます。",
+      "skillId": "particles.noun_links",
+      "topic": "particles",
+      "subtopic": "companion particle",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "で",
+        "の",
+        "と",
+        "にほんごのせんせい"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_198",
+      "questionText": "Choose the correct particle: わたし___いきます。",
+      "skillId": "particles.advanced",
+      "topic": "particles",
+      "subtopic": "advanced particles",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "も",
+        "は marks topic, が marks subject focus",
+        "only",
+        "from"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_199",
+      "questionText": "What does だけ mean in みずだけ?",
+      "skillId": "particles.advanced",
+      "topic": "particles",
+      "subtopic": "advanced particles",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "only",
+        "は marks topic, が marks subject focus",
+        "も",
+        "from"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_200",
+      "questionText": "What does から mean in とうきょうから?",
+      "skillId": "particles.advanced",
+      "topic": "particles",
+      "subtopic": "advanced particles",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "from",
+        "は marks topic, が marks subject focus",
+        "も",
+        "only"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_201",
+      "questionText": "What does まで mean in えきまで?",
+      "skillId": "particles.advanced",
+      "topic": "particles",
+      "subtopic": "advanced particles",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "until",
+        "は marks topic, が marks subject focus",
+        "も",
+        "only"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_202",
+      "questionText": "What is the polite present form of いく?",
+      "skillId": "verbs.present_polite",
+      "topic": "verbs",
+      "subtopic": "present tense verbs",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "いきます",
+        "わたしはすしをたべます",
+        "まいあさコーヒーをのみます",
+        "あしたにほんごをべんきょうします"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_203",
+      "questionText": "Translate: 'I drink water.'",
+      "skillId": "verbs.present_polite",
+      "topic": "verbs",
+      "subtopic": "present tense verbs",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_204",
+      "questionText": "Choose the correct polite present verb: まいにちべんきょう___.",
+      "skillId": "verbs.present_polite",
+      "topic": "verbs",
+      "subtopic": "present tense verbs",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "します",
+        "わたしはすしをたべます",
+        "まいあさコーヒーをのみます",
+        "あしたにほんごをべんきょうします"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_205",
+      "questionText": "What is the polite past form of いきます?",
+      "skillId": "verbs.past_polite",
+      "topic": "verbs",
+      "subtopic": "past tense verbs",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "いきました",
+        "のみました",
+        "きのうとうきょうにいきました",
+        "みました"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_206",
+      "questionText": "Translate: 'I ate rice.'",
+      "skillId": "verbs.past_polite",
+      "topic": "verbs",
+      "subtopic": "past tense verbs",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_207",
+      "questionText": "Convert のみます to polite past tense.",
+      "skillId": "verbs.past_polite",
+      "topic": "verbs",
+      "subtopic": "past tense verbs",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_208",
+      "questionText": "Choose the past tense: きのうがっこうに___.",
+      "skillId": "verbs.past_polite",
+      "topic": "verbs",
+      "subtopic": "past tense verbs",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "いきました",
+        "のみました",
+        "きのうとうきょうにいきました",
+        "みました"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_209",
+      "questionText": "Translate: 'I studied yesterday.'",
+      "skillId": "verbs.past_polite",
+      "topic": "verbs",
+      "subtopic": "past tense verbs",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_210",
+      "questionText": "What is the polite negative form of たべます?",
+      "skillId": "verbs.negative_polite",
+      "topic": "verbs",
+      "subtopic": "negative polite form",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "たべません",
+        "いきません",
+        "すしをたべませんでした",
+        "おちゃをのみません"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_211",
+      "questionText": "Convert いきます to polite negative.",
+      "skillId": "verbs.negative_polite",
+      "topic": "verbs",
+      "subtopic": "negative polite form",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_212",
+      "questionText": "Translate: 'I do not drink tea.'",
+      "skillId": "verbs.negative_polite",
+      "topic": "verbs",
+      "subtopic": "negative polite form",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_213",
+      "questionText": "Choose the correct negative: あしたがっこうに___.",
+      "skillId": "verbs.negative_polite",
+      "topic": "verbs",
+      "subtopic": "negative polite form",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "いきません",
+        "たべません",
+        "すしをたべませんでした",
+        "おちゃをのみません"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_214",
+      "questionText": "What is the polite negative of します?",
+      "skillId": "verbs.negative_polite",
+      "topic": "verbs",
+      "subtopic": "negative polite form",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "しません",
+        "たべません",
+        "いきません",
+        "すしをたべませんでした"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_215",
+      "questionText": "Translate: 'I do not study on Sunday.'",
+      "skillId": "verbs.negative_polite",
+      "topic": "verbs",
+      "subtopic": "negative polite form",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_216",
+      "questionText": "Choose the correct form: すしはたべます。でも、さかなは___.",
+      "skillId": "verbs.negative_polite",
+      "topic": "verbs",
+      "subtopic": "negative polite form",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "たべません",
+        "いきません",
+        "すしをたべませんでした",
+        "おちゃをのみません"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_217",
+      "questionText": "What is the te-form of たべます?",
+      "skillId": "verbs.te_form",
+      "topic": "verbs",
+      "subtopic": "te-form",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_218",
+      "questionText": "What is the te-form of いきます?",
+      "skillId": "verbs.te_form",
+      "topic": "verbs",
+      "subtopic": "te-form",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_219",
+      "questionText": "Translate: 'Please eat.'",
+      "skillId": "verbs.te_form",
+      "topic": "verbs",
+      "subtopic": "te-form",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_220",
+      "questionText": "Translate: 'Please drink water.'",
+      "skillId": "verbs.te_form",
+      "topic": "verbs",
+      "subtopic": "te-form",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_221",
+      "questionText": "What is the te-form of よみます?",
+      "skillId": "verbs.te_form",
+      "topic": "verbs",
+      "subtopic": "te-form",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_222",
+      "questionText": "Choose the correct request: ここに名前を___.",
+      "skillId": "verbs.te_form",
+      "topic": "verbs",
+      "subtopic": "te-form",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "かいてください",
+        "かいて",
+        "のんで",
+        "たべてください"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_223",
+      "questionText": "What does まってください mean?",
+      "skillId": "verbs.te_form",
+      "topic": "verbs",
+      "subtopic": "te-form",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "please wait",
+        "かいて",
+        "のんで",
+        "たべてください"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_224",
+      "questionText": "What is the Japanese word for 'book'?",
+      "skillId": "vocab.basic_nouns",
+      "topic": "vocabulary",
+      "subtopic": "basic nouns",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ほん",
+        "みず",
+        "おかね",
+        "a little"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_225",
+      "questionText": "What does かばん mean?",
+      "skillId": "vocab.basic_nouns",
+      "topic": "vocabulary",
+      "subtopic": "basic nouns",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "bag",
+        "みず",
+        "ほん",
+        "おかね"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_226",
+      "questionText": "What is the Japanese word for 'chair'?",
+      "skillId": "vocab.basic_nouns",
+      "topic": "vocabulary",
+      "subtopic": "basic nouns",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "いす",
+        "みず",
+        "ほん",
+        "おかね"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_227",
+      "questionText": "What does つくえ mean?",
+      "skillId": "vocab.basic_nouns",
+      "topic": "vocabulary",
+      "subtopic": "basic nouns",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "desk",
+        "みず",
+        "ほん",
+        "おかね"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_228",
+      "questionText": "What is the Japanese word for 'umbrella'?",
+      "skillId": "vocab.basic_nouns",
+      "topic": "vocabulary",
+      "subtopic": "basic nouns",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "かさ",
+        "みず",
+        "ほん",
+        "おかね"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_229",
+      "questionText": "What does いえ mean?",
+      "skillId": "vocab.basic_nouns",
+      "topic": "vocabulary",
+      "subtopic": "basic nouns",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "house",
+        "みず",
+        "ほん",
+        "おかね"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_230",
+      "questionText": "What is the Japanese word for 'student'?",
+      "skillId": "vocab.people_school",
+      "topic": "vocabulary",
+      "subtopic": "school vocabulary",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "がくせい",
+        "せんせい",
+        "friend",
+        "ひと"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_231",
+      "questionText": "What does ともだち mean?",
+      "skillId": "vocab.people_school",
+      "topic": "vocabulary",
+      "subtopic": "people",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "friend",
+        "せんせい",
+        "がくせい",
+        "ひと"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_232",
+      "questionText": "What is the Japanese word for 'person'?",
+      "skillId": "vocab.people_school",
+      "topic": "vocabulary",
+      "subtopic": "people",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ひと",
+        "せんせい",
+        "がくせい",
+        "friend"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_233",
+      "questionText": "What does クラス mean?",
+      "skillId": "vocab.people_school",
+      "topic": "vocabulary",
+      "subtopic": "school vocabulary",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "class",
+        "せんせい",
+        "がくせい",
+        "friend"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_234",
+      "questionText": "What is the Japanese word for 'homework'?",
+      "skillId": "vocab.people_school",
+      "topic": "vocabulary",
+      "subtopic": "school vocabulary",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "しゅくだい",
+        "せんせい",
+        "がくせい",
+        "friend"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_235",
+      "questionText": "What does きょうしつ mean?",
+      "skillId": "vocab.people_school",
+      "topic": "vocabulary",
+      "subtopic": "school vocabulary",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "classroom",
+        "せんせい",
+        "がくせい",
+        "friend"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_236",
+      "questionText": "What is the Japanese word for 'name'?",
+      "skillId": "vocab.people_school",
+      "topic": "vocabulary",
+      "subtopic": "people",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "なまえ",
+        "せんせい",
+        "がくせい",
+        "friend"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_237",
+      "questionText": "What does せいと mean?",
+      "skillId": "vocab.people_school",
+      "topic": "vocabulary",
+      "subtopic": "school vocabulary",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "pupil",
+        "せんせい",
+        "がくせい",
+        "friend"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_238",
+      "questionText": "What is the Japanese word for 'dog'?",
+      "skillId": "vocab.animals",
+      "topic": "vocabulary",
+      "subtopic": "animals",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "いぬ",
+        "ねこ",
+        "bird",
+        "さかな"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_239",
+      "questionText": "What does とり mean?",
+      "skillId": "vocab.animals",
+      "topic": "vocabulary",
+      "subtopic": "animals",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "bird",
+        "ねこ",
+        "いぬ",
+        "さかな"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_240",
+      "questionText": "What is the Japanese word for 'fish'?",
+      "skillId": "vocab.animals",
+      "topic": "vocabulary",
+      "subtopic": "animals",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "さかな",
+        "ねこ",
+        "いぬ",
+        "bird"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_241",
+      "questionText": "What does うま mean?",
+      "skillId": "vocab.animals",
+      "topic": "vocabulary",
+      "subtopic": "animals",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "horse",
+        "ねこ",
+        "いぬ",
+        "bird"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_242",
+      "questionText": "What is the Japanese word for 'cow'?",
+      "skillId": "vocab.animals",
+      "topic": "vocabulary",
+      "subtopic": "animals",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "うし",
+        "ねこ",
+        "いぬ",
+        "bird"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_243",
+      "questionText": "What does ねずみ mean?",
+      "skillId": "vocab.animals",
+      "topic": "vocabulary",
+      "subtopic": "animals",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "mouse",
+        "ねこ",
+        "いぬ",
+        "bird"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_244",
+      "questionText": "What is the Japanese word for 'rabbit'?",
+      "skillId": "vocab.animals",
+      "topic": "vocabulary",
+      "subtopic": "animals",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "うさぎ",
+        "ねこ",
+        "いぬ",
+        "bird"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_245",
+      "questionText": "What does ぶた mean?",
+      "skillId": "vocab.animals",
+      "topic": "vocabulary",
+      "subtopic": "animals",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "pig",
+        "ねこ",
+        "いぬ",
+        "bird"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_246",
+      "questionText": "What is the Japanese word for 'father' in a general/polite context?",
+      "skillId": "vocab.family",
+      "topic": "vocabulary",
+      "subtopic": "family",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "おとうさん",
+        "おかあさん",
+        "older brother",
+        "あね"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_247",
+      "questionText": "What does あに mean?",
+      "skillId": "vocab.family",
+      "topic": "vocabulary",
+      "subtopic": "family",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "older brother",
+        "おかあさん",
+        "おとうさん",
+        "あね"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_248",
+      "questionText": "What is the Japanese word for 'older sister'?",
+      "skillId": "vocab.family",
+      "topic": "vocabulary",
+      "subtopic": "family",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "あね",
+        "おかあさん",
+        "おとうさん",
+        "older brother"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_249",
+      "questionText": "What does おとうと mean?",
+      "skillId": "vocab.family",
+      "topic": "vocabulary",
+      "subtopic": "family",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "younger brother",
+        "おかあさん",
+        "おとうさん",
+        "older brother"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_250",
+      "questionText": "What is the Japanese word for 'younger sister'?",
+      "skillId": "vocab.family",
+      "topic": "vocabulary",
+      "subtopic": "family",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "いもうと",
+        "おかあさん",
+        "おとうさん",
+        "older brother"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_251",
+      "questionText": "What does かぞく mean?",
+      "skillId": "vocab.family",
+      "topic": "vocabulary",
+      "subtopic": "family",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "family",
+        "おかあさん",
+        "おとうさん",
+        "older brother"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_252",
+      "questionText": "What is the Japanese word for 'child'?",
+      "skillId": "vocab.family",
+      "topic": "vocabulary",
+      "subtopic": "family",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "こども",
+        "おかあさん",
+        "おとうさん",
+        "older brother"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_253",
+      "questionText": "What does りょうしん mean?",
+      "skillId": "vocab.family",
+      "topic": "vocabulary",
+      "subtopic": "family",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "parents",
+        "おかあさん",
+        "おとうさん",
+        "older brother"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_254",
+      "questionText": "What is the Japanese word for 'grandmother'?",
+      "skillId": "vocab.family",
+      "topic": "vocabulary",
+      "subtopic": "family",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "おばあさん",
+        "おかあさん",
+        "おとうさん",
+        "older brother"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_255",
+      "questionText": "What is the Japanese word for 'tea'?",
+      "skillId": "vocab.food_drinks",
+      "topic": "food",
+      "subtopic": "drinks",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "おちゃ",
+        "ごはん",
+        "さかな",
+        "パン"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_256",
+      "questionText": "What does パン mean?",
+      "skillId": "vocab.food_drinks",
+      "topic": "food",
+      "subtopic": "food vocabulary",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "bread",
+        "ごはん",
+        "さかな",
+        "パン"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_257",
+      "questionText": "What is the Japanese word for 'meat'?",
+      "skillId": "vocab.food_drinks",
+      "topic": "food",
+      "subtopic": "food vocabulary",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "にく",
+        "ごはん",
+        "さかな",
+        "パン"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_258",
+      "questionText": "What does やさい mean?",
+      "skillId": "vocab.food_drinks",
+      "topic": "food",
+      "subtopic": "food vocabulary",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "vegetables",
+        "ごはん",
+        "さかな",
+        "パン"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_259",
+      "questionText": "What is the Japanese word for 'fish' as food?",
+      "skillId": "vocab.food_drinks",
+      "topic": "food",
+      "subtopic": "food vocabulary",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "さかな",
+        "ごはん",
+        "パン",
+        "おみず"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_260",
+      "questionText": "What does ジュース mean?",
+      "skillId": "vocab.food_drinks",
+      "topic": "food",
+      "subtopic": "drinks",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "juice",
+        "ごはん",
+        "さかな",
+        "パン"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_261",
+      "questionText": "What is the Japanese word for 'car'?",
+      "skillId": "vocab.transportation",
+      "topic": "travel",
+      "subtopic": "transportation",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "くるま",
+        "えき",
+        "くうこう",
+        "ホテル"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_262",
+      "questionText": "What does バス mean?",
+      "skillId": "vocab.transportation",
+      "topic": "travel",
+      "subtopic": "transportation",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "bus",
+        "えき",
+        "くうこう",
+        "ホテル"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_263",
+      "questionText": "What is the Japanese word for 'bicycle'?",
+      "skillId": "vocab.transportation",
+      "topic": "travel",
+      "subtopic": "transportation",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "じてんしゃ",
+        "えき",
+        "くうこう",
+        "ホテル"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_264",
+      "questionText": "What does ひこうき mean?",
+      "skillId": "vocab.transportation",
+      "topic": "travel",
+      "subtopic": "transportation",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "airplane",
+        "えき",
+        "くうこう",
+        "ホテル"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_265",
+      "questionText": "What is the Japanese word for 'taxi'?",
+      "skillId": "vocab.transportation",
+      "topic": "travel",
+      "subtopic": "transportation",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "タクシー",
+        "えき",
+        "くうこう",
+        "ホテル"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_266",
+      "questionText": "What does ちかてつ mean?",
+      "skillId": "vocab.transportation",
+      "topic": "travel",
+      "subtopic": "transportation",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "subway",
+        "えき",
+        "くうこう",
+        "ホテル"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_267",
+      "questionText": "What is the Japanese word for 'school'?",
+      "skillId": "vocab.places",
+      "topic": "travel",
+      "subtopic": "places",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "がっこう",
+        "としょかん",
+        "hospital",
+        "みせ"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_268",
+      "questionText": "What does びょういん mean?",
+      "skillId": "vocab.places",
+      "topic": "travel",
+      "subtopic": "places",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "hospital",
+        "としょかん",
+        "がっこう",
+        "みせ"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_269",
+      "questionText": "What is the Japanese word for 'store'?",
+      "skillId": "vocab.places",
+      "topic": "travel",
+      "subtopic": "places",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "みせ",
+        "としょかん",
+        "がっこう",
+        "hospital"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_270",
+      "questionText": "What does こうえん mean?",
+      "skillId": "vocab.places",
+      "topic": "travel",
+      "subtopic": "places",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "park",
+        "としょかん",
+        "がっこう",
+        "hospital"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_271",
+      "questionText": "What is the Japanese word for 'restaurant'?",
+      "skillId": "vocab.places",
+      "topic": "travel",
+      "subtopic": "places",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "レストラン",
+        "としょかん",
+        "がっこう",
+        "hospital"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_272",
+      "questionText": "What does ぎんこう mean?",
+      "skillId": "vocab.places",
+      "topic": "travel",
+      "subtopic": "places",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "bank",
+        "としょかん",
+        "がっこう",
+        "hospital"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_273",
+      "questionText": "What is the Japanese word for 'post office'?",
+      "skillId": "vocab.places",
+      "topic": "travel",
+      "subtopic": "places",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ゆうびんきょく",
+        "としょかん",
+        "がっこう",
+        "hospital"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_274",
+      "questionText": "What does まち mean?",
+      "skillId": "vocab.places",
+      "topic": "travel",
+      "subtopic": "places",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "town",
+        "としょかん",
+        "がっこう",
+        "hospital"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_275",
+      "questionText": "What is the Japanese word for 'room'?",
+      "skillId": "vocab.places",
+      "topic": "travel",
+      "subtopic": "places",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "へや",
+        "としょかん",
+        "がっこう",
+        "hospital"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_276",
+      "questionText": "What does ねます mean?",
+      "skillId": "vocab.daily_activities",
+      "topic": "vocabulary",
+      "subtopic": "daily activities",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "sleep",
+        "study",
+        "wake up",
+        "work"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_277",
+      "questionText": "What is the meaning of おきます?",
+      "skillId": "vocab.daily_activities",
+      "topic": "vocabulary",
+      "subtopic": "daily activities",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "wake up",
+        "study",
+        "sleep",
+        "work"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_278",
+      "questionText": "What does はたらきます mean?",
+      "skillId": "vocab.daily_activities",
+      "topic": "vocabulary",
+      "subtopic": "daily activities",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "work",
+        "study",
+        "sleep",
+        "wake up"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_279",
+      "questionText": "What is the meaning of かえります?",
+      "skillId": "vocab.daily_activities",
+      "topic": "vocabulary",
+      "subtopic": "daily activities",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "return home",
+        "study",
+        "sleep",
+        "wake up"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_280",
+      "questionText": "What does みます mean?",
+      "skillId": "vocab.daily_activities",
+      "topic": "vocabulary",
+      "subtopic": "daily activities",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "watch",
+        "study",
+        "sleep",
+        "wake up"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_281",
+      "questionText": "What does ききます mean?",
+      "skillId": "vocab.daily_activities",
+      "topic": "vocabulary",
+      "subtopic": "daily activities",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "listen",
+        "study",
+        "sleep",
+        "wake up"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_282",
+      "questionText": "What is the meaning of かきます?",
+      "skillId": "vocab.daily_activities",
+      "topic": "vocabulary",
+      "subtopic": "daily activities",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "write",
+        "study",
+        "sleep",
+        "wake up"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_283",
+      "questionText": "What does よみます mean?",
+      "skillId": "vocab.daily_activities",
+      "topic": "vocabulary",
+      "subtopic": "daily activities",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "read",
+        "study",
+        "sleep",
+        "wake up"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_284",
+      "questionText": "What does あそびます mean?",
+      "skillId": "vocab.daily_activities",
+      "topic": "vocabulary",
+      "subtopic": "daily activities",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "play",
+        "study",
+        "sleep",
+        "wake up"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_285",
+      "questionText": "What is the Japanese number for 4?",
+      "skillId": "numbers.basic_counting",
+      "topic": "numbers",
+      "subtopic": "basic counting",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "よん",
+        "さん",
+        "はち",
+        "じゅうご"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_286",
+      "questionText": "What is the Japanese number for 5?",
+      "skillId": "numbers.basic_counting",
+      "topic": "numbers",
+      "subtopic": "basic counting",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ご",
+        "さん",
+        "はち",
+        "じゅうご"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_287",
+      "questionText": "What does なな mean?",
+      "skillId": "numbers.basic_counting",
+      "topic": "numbers",
+      "subtopic": "basic counting",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "seven",
+        "さん",
+        "はち",
+        "じゅうご"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_288",
+      "questionText": "What is the Japanese number for 8?",
+      "skillId": "numbers.basic_counting",
+      "topic": "numbers",
+      "subtopic": "basic counting",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "はち",
+        "さん",
+        "じゅうご",
+        "じゅう"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_289",
+      "questionText": "What does きゅう mean?",
+      "skillId": "numbers.basic_counting",
+      "topic": "numbers",
+      "subtopic": "basic counting",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "nine",
+        "さん",
+        "はち",
+        "じゅうご"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_290",
+      "questionText": "What is the Japanese number for 10?",
+      "skillId": "numbers.basic_counting",
+      "topic": "numbers",
+      "subtopic": "basic counting",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "じゅう",
+        "さん",
+        "はち",
+        "じゅうご"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_291",
+      "questionText": "What is the Japanese word for 'Tuesday'?",
+      "skillId": "time.weekdays",
+      "topic": "time/date",
+      "subtopic": "days of the week",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "かようび",
+        "げつようび",
+        "にちようび",
+        "きょう"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_292",
+      "questionText": "What does すいようび mean?",
+      "skillId": "time.weekdays",
+      "topic": "time/date",
+      "subtopic": "days of the week",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "Wednesday",
+        "げつようび",
+        "にちようび",
+        "きょう"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_293",
+      "questionText": "What is the Japanese word for 'Thursday'?",
+      "skillId": "time.weekdays",
+      "topic": "time/date",
+      "subtopic": "days of the week",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "もくようび",
+        "げつようび",
+        "にちようび",
+        "きょう"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_294",
+      "questionText": "What does きんようび mean?",
+      "skillId": "time.weekdays",
+      "topic": "time/date",
+      "subtopic": "days of the week",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "Friday",
+        "げつようび",
+        "にちようび",
+        "きょう"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_295",
+      "questionText": "What is the Japanese word for 'Saturday'?",
+      "skillId": "time.weekdays",
+      "topic": "time/date",
+      "subtopic": "days of the week",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "どようび",
+        "げつようび",
+        "にちようび",
+        "きょう"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_296",
+      "questionText": "What does にちようび mean?",
+      "skillId": "time.weekdays",
+      "topic": "time/date",
+      "subtopic": "days of the week",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "Sunday",
+        "げつようび",
+        "にちようび",
+        "きょう"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_297",
+      "questionText": "What does あさ mean?",
+      "skillId": "time.weekdays",
+      "topic": "time/date",
+      "subtopic": "daily time expressions",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "morning",
+        "げつようび",
+        "にちようび",
+        "きょう"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_298",
+      "questionText": "Which na-adjective means 'convenient'?",
+      "skillId": "adjectives.na",
+      "topic": "adjectives",
+      "subtopic": "na-adjectives",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "べんり",
+        "しずか",
+        "healthy",
+        "ゆうめいなひと"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_299",
+      "questionText": "What does げんき mean?",
+      "skillId": "adjectives.na",
+      "topic": "adjectives",
+      "subtopic": "na-adjectives",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "healthy",
+        "しずか",
+        "べんり",
+        "ゆうめいなひと"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_300",
+      "questionText": "Which phrase correctly says 'a famous person'?",
+      "skillId": "adjectives.na",
+      "topic": "adjectives",
+      "subtopic": "na-adjectives",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ゆうめいなひと",
+        "しずか",
+        "べんり",
+        "healthy"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_301",
+      "questionText": "What does すき mean?",
+      "skillId": "adjectives.na",
+      "topic": "adjectives",
+      "subtopic": "na-adjectives",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "liked",
+        "しずか",
+        "べんり",
+        "healthy"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_302",
+      "questionText": "Which phrase means 'a clean room'?",
+      "skillId": "adjectives.na",
+      "topic": "adjectives",
+      "subtopic": "na-adjectives",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "きれいなへや",
+        "しずか",
+        "べんり",
+        "healthy"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_303",
+      "questionText": "Translate: 'This town is quiet.'",
+      "skillId": "adjectives.na",
+      "topic": "adjectives",
+      "subtopic": "na-adjectives",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_304",
+      "questionText": "Which na-adjective means 'disliked' or 'not liked'?",
+      "skillId": "adjectives.na",
+      "topic": "adjectives",
+      "subtopic": "na-adjectives",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "きらい",
+        "しずか",
+        "べんり",
+        "healthy"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_305",
+      "questionText": "Which sentence means 'The store is convenient'?",
+      "skillId": "adjectives.na",
+      "topic": "adjectives",
+      "subtopic": "na-adjectives",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "みせはべんりです",
+        "しずか",
+        "べんり",
+        "healthy"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_306",
+      "questionText": "What connects a na-adjective to a noun?",
+      "skillId": "adjectives.na",
+      "topic": "adjectives",
+      "subtopic": "na-adjectives",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "な",
+        "しずか",
+        "べんり",
+        "healthy"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_307",
+      "questionText": "What does あつい mean when talking about weather?",
+      "skillId": "adjectives.weather",
+      "topic": "adjectives",
+      "subtopic": "weather adjectives",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "hot",
+        "cold",
+        "きょうはあついです",
+        "warm"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_308",
+      "questionText": "What does さむい mean?",
+      "skillId": "adjectives.weather",
+      "topic": "adjectives",
+      "subtopic": "weather adjectives",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "cold",
+        "hot",
+        "きょうはあついです",
+        "warm"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_309",
+      "questionText": "Translate: 'Today is hot.'",
+      "skillId": "adjectives.weather",
+      "topic": "adjectives",
+      "subtopic": "weather adjectives",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_310",
+      "questionText": "What does あたたかい mean?",
+      "skillId": "adjectives.weather",
+      "topic": "adjectives",
+      "subtopic": "weather adjectives",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "warm",
+        "hot",
+        "cold",
+        "きょうはあついです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_311",
+      "questionText": "What does すずしい mean?",
+      "skillId": "adjectives.weather",
+      "topic": "adjectives",
+      "subtopic": "weather adjectives",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "cool",
+        "hot",
+        "cold",
+        "きょうはあついです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_312",
+      "questionText": "Which sentence means 'It is cold today'?",
+      "skillId": "adjectives.weather",
+      "topic": "adjectives",
+      "subtopic": "weather adjectives",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "きょうはさむいです",
+        "hot",
+        "cold",
+        "きょうはあついです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_313",
+      "questionText": "What does いいてんき mean?",
+      "skillId": "adjectives.weather",
+      "topic": "adjectives",
+      "subtopic": "weather adjectives",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "good weather",
+        "hot",
+        "cold",
+        "きょうはあついです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_314",
+      "questionText": "Translate: 'The weather is nice.'",
+      "skillId": "adjectives.weather",
+      "topic": "adjectives",
+      "subtopic": "weather adjectives",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_315",
+      "questionText": "How do you ask 'What time is it?'",
+      "skillId": "time.asking_time",
+      "topic": "time/date",
+      "subtopic": "asking time",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "なんじですか",
+        "now",
+        "さんじです",
+        "half"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_316",
+      "questionText": "What does いま mean?",
+      "skillId": "time.asking_time",
+      "topic": "time/date",
+      "subtopic": "asking time",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "now",
+        "なんじですか",
+        "さんじです",
+        "half"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_317",
+      "questionText": "Translate: 'It is three o'clock.'",
+      "skillId": "time.asking_time",
+      "topic": "time/date",
+      "subtopic": "asking time",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_318",
+      "questionText": "What does はん mean in time expressions like さんじはん?",
+      "skillId": "time.asking_time",
+      "topic": "time/date",
+      "subtopic": "asking time",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "half",
+        "なんじですか",
+        "now",
+        "さんじです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_319",
+      "questionText": "Translate: 'It is seven thirty.'",
+      "skillId": "time.asking_time",
+      "topic": "time/date",
+      "subtopic": "asking time",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_320",
+      "questionText": "How do you ask 'What time do you sleep?'",
+      "skillId": "time.asking_time",
+      "topic": "time/date",
+      "subtopic": "asking time",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "なんじにねますか",
+        "なんじですか",
+        "now",
+        "さんじです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_321",
+      "questionText": "Which particle marks the time an action happens?",
+      "skillId": "time.asking_time",
+      "topic": "time/date",
+      "subtopic": "asking time",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "に",
+        "なんじですか",
+        "now",
+        "さんじです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_322",
+      "questionText": "Translate: 'I wake up at six o'clock.'",
+      "skillId": "time.asking_time",
+      "topic": "time/date",
+      "subtopic": "asking time",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_323",
+      "questionText": "What does ごぜん mean?",
+      "skillId": "time.asking_time",
+      "topic": "time/date",
+      "subtopic": "asking time",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "morning",
+        "なんじですか",
+        "now",
+        "さんじです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_324",
+      "questionText": "How do you say 'good evening' in Japanese?",
+      "skillId": "greetings.daily",
+      "topic": "conversation",
+      "subtopic": "daily greetings",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "こんばんは",
+        "おはよう",
+        "hello",
+        "ありがとうございます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_325",
+      "questionText": "How do you say 'see you tomorrow'?",
+      "skillId": "greetings.daily",
+      "topic": "conversation",
+      "subtopic": "daily greetings",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "またあした",
+        "おはよう",
+        "hello",
+        "ありがとうございます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_326",
+      "questionText": "In わたしはみずをのみます, which word is the verb?",
+      "skillId": "grammar.basic_sentence_structure",
+      "topic": "grammar",
+      "subtopic": "basic sentence structure",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "のみます",
+        "subject object verb",
+        "わたしはみずをのみます",
+        "end"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_327",
+      "questionText": "Translate: 'I drink water.'",
+      "skillId": "grammar.basic_sentence_structure",
+      "topic": "grammar",
+      "subtopic": "basic sentence structure",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_328",
+      "questionText": "Where does the main verb usually appear in a simple Japanese sentence?",
+      "skillId": "grammar.basic_sentence_structure",
+      "topic": "grammar",
+      "subtopic": "basic sentence structure",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "end",
+        "subject object verb",
+        "のみます",
+        "わたしはみずをのみます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_329",
+      "questionText": "Which sentence means 'The student reads a book'?",
+      "skillId": "grammar.basic_sentence_structure",
+      "topic": "grammar",
+      "subtopic": "basic sentence structure",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "がくせいはほんをよみます",
+        "subject object verb",
+        "のみます",
+        "わたしはみずをのみます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_330",
+      "questionText": "What is the function of particles in Japanese sentences?",
+      "skillId": "grammar.basic_sentence_structure",
+      "topic": "grammar",
+      "subtopic": "basic sentence structure",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "mark roles",
+        "subject object verb",
+        "のみます",
+        "わたしはみずをのみます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_331",
+      "questionText": "Translate: 'This is a book.'",
+      "skillId": "grammar.basic_sentence_structure",
+      "topic": "grammar",
+      "subtopic": "basic sentence structure",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_332",
+      "questionText": "Which sentence means 'I am a teacher'?",
+      "skillId": "grammar.basic_sentence_structure",
+      "topic": "grammar",
+      "subtopic": "basic sentence structure",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "わたしはせんせいです",
+        "subject object verb",
+        "のみます",
+        "わたしはみずをのみます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_333",
+      "questionText": "What does です do in a simple noun sentence?",
+      "skillId": "grammar.basic_sentence_structure",
+      "topic": "grammar",
+      "subtopic": "basic sentence structure",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "makes it polite",
+        "subject object verb",
+        "のみます",
+        "わたしはみずをのみます"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_334",
+      "questionText": "Translate: 'I go to school.'",
+      "skillId": "grammar.basic_sentence_structure",
+      "topic": "grammar",
+      "subtopic": "basic sentence structure",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_335",
+      "questionText": "Translate: 'I like sushi.'",
+      "skillId": "grammar.likes_dislikes",
+      "topic": "grammar",
+      "subtopic": "likes and dislikes",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_336",
+      "questionText": "Translate: 'I dislike fish.'",
+      "skillId": "grammar.likes_dislikes",
+      "topic": "grammar",
+      "subtopic": "likes and dislikes",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_337",
+      "questionText": "Which particle usually marks the thing liked with すき?",
+      "skillId": "grammar.likes_dislikes",
+      "topic": "grammar",
+      "subtopic": "likes and dislikes",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "が",
+        "ねこがすきです",
+        "すしがすきです",
+        "さかながきらいです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_338",
+      "questionText": "How do you say 'Do you like cats?'",
+      "skillId": "grammar.likes_dislikes",
+      "topic": "grammar",
+      "subtopic": "likes and dislikes",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ねこがすきですか",
+        "ねこがすきです",
+        "すしがすきです",
+        "さかながきらいです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_339",
+      "questionText": "Translate: 'I like Japanese.'",
+      "skillId": "grammar.likes_dislikes",
+      "topic": "grammar",
+      "subtopic": "likes and dislikes",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_340",
+      "questionText": "Translate: 'I do not like meat.'",
+      "skillId": "grammar.likes_dislikes",
+      "topic": "grammar",
+      "subtopic": "likes and dislikes",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_341",
+      "questionText": "Which sentence means 'I like music'?",
+      "skillId": "grammar.likes_dislikes",
+      "topic": "grammar",
+      "subtopic": "likes and dislikes",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "おんがくがすきです",
+        "ねこがすきです",
+        "すしがすきです",
+        "さかながきらいです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_342",
+      "questionText": "What does だいすき mean?",
+      "skillId": "grammar.likes_dislikes",
+      "topic": "grammar",
+      "subtopic": "likes and dislikes",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "really like",
+        "ねこがすきです",
+        "すしがすきです",
+        "さかながきらいです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_343",
+      "questionText": "Translate: 'I really like dogs.'",
+      "skillId": "grammar.likes_dislikes",
+      "topic": "grammar",
+      "subtopic": "likes and dislikes",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_344",
+      "questionText": "How do you turn これはほんです into a question?",
+      "skillId": "grammar.questions",
+      "topic": "grammar",
+      "subtopic": "questions",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "これはほんですか",
+        "か",
+        "who",
+        "what"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_345",
+      "questionText": "What does だれ mean?",
+      "skillId": "grammar.questions",
+      "topic": "grammar",
+      "subtopic": "questions",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "who",
+        "か",
+        "これはほんですか",
+        "what"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_346",
+      "questionText": "What does なに mean?",
+      "skillId": "grammar.questions",
+      "topic": "grammar",
+      "subtopic": "questions",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "what",
+        "か",
+        "これはほんですか",
+        "who"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_347",
+      "questionText": "What does どこ mean?",
+      "skillId": "grammar.questions",
+      "topic": "grammar",
+      "subtopic": "questions",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "where",
+        "か",
+        "これはほんですか",
+        "who"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_348",
+      "questionText": "Translate: 'Where is the school?'",
+      "skillId": "grammar.questions",
+      "topic": "grammar",
+      "subtopic": "questions",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_349",
+      "questionText": "Translate: 'Who is that person?'",
+      "skillId": "grammar.questions",
+      "topic": "grammar",
+      "subtopic": "questions",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_350",
+      "questionText": "What does いつ mean?",
+      "skillId": "grammar.questions",
+      "topic": "grammar",
+      "subtopic": "questions",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "when",
+        "か",
+        "これはほんですか",
+        "who"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_351",
+      "questionText": "How do you ask 'What is this?'",
+      "skillId": "grammar.questions",
+      "topic": "grammar",
+      "subtopic": "questions",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "これはなんですか",
+        "か",
+        "これはほんですか",
+        "who"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_352",
+      "questionText": "Which question word asks about a place?",
+      "skillId": "grammar.questions",
+      "topic": "grammar",
+      "subtopic": "questions",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "どこ",
+        "か",
+        "これはほんですか",
+        "who"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_353",
+      "questionText": "Which word expresses wanting an object?",
+      "skillId": "grammar.wants_desires",
+      "topic": "grammar",
+      "subtopic": "wants and desires",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "ほしい",
+        "みずがほしいです",
+        "ほんがほしいです",
+        "が"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_354",
+      "questionText": "Translate: 'I want a book.'",
+      "skillId": "grammar.wants_desires",
+      "topic": "grammar",
+      "subtopic": "wants and desires",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_355",
+      "questionText": "Which particle usually marks the thing wanted with ほしい?",
+      "skillId": "grammar.wants_desires",
+      "topic": "grammar",
+      "subtopic": "wants and desires",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "が",
+        "みずがほしいです",
+        "ほしい",
+        "ほんがほしいです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_356",
+      "questionText": "Translate: 'I want coffee.'",
+      "skillId": "grammar.wants_desires",
+      "topic": "grammar",
+      "subtopic": "wants and desires",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_357",
+      "questionText": "What does たべたい mean?",
+      "skillId": "grammar.wants_desires",
+      "topic": "grammar",
+      "subtopic": "wants and desires",
+      "explicitType": "translation_choice",
+      "inferredType": "translation_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "want to eat",
+        "みずがほしいです",
+        "ほしい",
+        "ほんがほしいです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_358",
+      "questionText": "Translate: 'I want to go to Japan.'",
+      "skillId": "grammar.wants_desires",
+      "topic": "grammar",
+      "subtopic": "wants and desires",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_359",
+      "questionText": "What ending means 'want to do' with verbs?",
+      "skillId": "grammar.wants_desires",
+      "topic": "grammar",
+      "subtopic": "wants and desires",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "たい",
+        "みずがほしいです",
+        "ほしい",
+        "ほんがほしいです"
+      ],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_360",
+      "questionText": "Translate: 'I want to read a book.'",
+      "skillId": "grammar.wants_desires",
+      "topic": "grammar",
+      "subtopic": "wants and desires",
+      "explicitType": "fill_in_blank",
+      "inferredType": "fill_in_blank",
+      "hasExplicitType": true,
+      "optionCount": 0,
+      "generatedOptionPreview": [],
+      "action": [
+        "ok"
+      ]
+    },
+    {
+      "questionId": "mock_361",
+      "questionText": "Choose the sentence that means 'I want a new phone.'",
+      "skillId": "grammar.wants_desires",
+      "topic": "grammar",
+      "subtopic": "wants and desires",
+      "explicitType": "multiple_choice",
+      "inferredType": "multiple_choice",
+      "hasExplicitType": true,
+      "optionCount": 4,
+      "generatedOptionPreview": [
+        "あたらしいでんわがほしいです",
+        "みずがほしいです",
+        "ほしい",
+        "ほんがほしいです"
+      ],
+      "action": [
+        "ok"
+      ]
+    }
+  ]
+}

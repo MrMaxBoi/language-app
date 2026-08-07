@@ -42,6 +42,28 @@
 
 ✅ Learner-facing dashboard foundation
 
+✅ Roadmap backend foundation
+
+✅ Lesson-scoped adaptive sessions
+
+✅ Dashboard roadmap UI foundation
+
+✅ First question-type-aware session UI
+
+✅ Question type audit script and report
+
+✅ Atlas questionType migration
+
+✅ Question option audit script and report
+
+✅ Auto-ready option migration
+
+✅ Curated particle option migration
+
+✅ Full choice-option migration
+
+✅ Backend learner-state summary endpoint
+
 ---
 
 ## In Progress
@@ -49,7 +71,9 @@
 - Review-vs-expansion calibration
 - Skill-first analytics
 - Recommendation calibration
+- Question-type metadata audit
 - Learner UI polish and validation
+- Learner-state dashboard validation
 
 ---
 
@@ -93,6 +117,26 @@ Recent progress:
 - The report page can reload the latest completed session through `/api/sessions/:id/report` instead of relying only on temporary frontend state.
 - `/dashboard` now shows a learner-facing home with stage summary, next focus, weak skills, strong skills, review queue, recent sessions, and recommendation reasons.
 - The previous adaptive intelligence dashboard remains available as a developer/debug view at `/engine`.
+- The roadmap model now exists in backend data with 33 lessons across 8 N5 foundation units.
+- `GET /api/roadmap` returns units, lessons, unlock status, progress, and validation data.
+- `POST /api/sessions/start` can start a lesson-scoped session with `{ "lessonId": "..." }`.
+- Roadmap lesson sessions are stored on the Session document and still use the adaptive engine inside the lesson skill scope.
+- `/dashboard` now shows the roadmap path, next lesson, current unit lesson states, and lesson start/review buttons.
+- `/session` shows lesson context during roadmap-scoped sessions.
+- `/report` labels completed roadmap lesson sessions.
+- `/session` now renders choice buttons for choice-style questions and keeps typed input for inferred fill-in-blank prompts.
+- Choice options can be generated from nearby answers when legacy seed questions do not define explicit options.
+- `npm run audit:question-types:write` now reports inferred question types, mismatches, missing options, and review actions.
+- `npm run migrate:question-types` updated Atlas question types so inferred/runtime type and stored DB type now agree.
+- Current question type split: 133 `translation_choice`, 157 `multiple_choice`, 71 `fill_in_blank`.
+- `npm run audit:question-options:write` now generates draft options and quality warnings for all 290 choice-style questions.
+- `npm run migrate:question-options` stored options for 200 auto-ready choice questions.
+- `npm run migrate:curated-options` stored options for 53 curated particle and particle-adjacent questions.
+- `npm run migrate:curated-options` was expanded to cover all remaining review/manual items.
+- Current option audit: all 290 choice-style questions have stored options.
+- Current question type audit: all 361 questions are OK.
+- `GET /api/learner-state/:userId` now returns the product-facing learner summary: stage, stage message, metrics, weak skills, strong skills, review queue, roadmap progress, next lesson, recent sessions, and recommended action.
+- `/dashboard` now uses the backend learner-state summary when available instead of relying only on a frontend learner-stage heuristic.
 
 ## Current Product Question
 
@@ -100,7 +144,7 @@ The next question is not "does the engine work?"
 
 The next question is:
 
-"How much should Kokoro review weak skills versus expand into new safe skills during foundation building?"
+"Does the dashboard now explain the learner state clearly enough to become the app home?"
 
 Observed behavior:
 
@@ -114,9 +158,11 @@ Observed behavior:
 
 Recommended near-term focus:
 
-1. Manually test the new learner dashboard after fresh, average, struggling, and high-performing sessions.
-2. Decide whether learner stage should come from a dedicated backend field instead of a frontend heuristic.
-3. Continue polishing the learning flow now that report and dashboard explain the engine better.
+1. Manually test roadmap progress after completing a dashboard-started lesson.
+2. Confirm `/dashboard` stage, next lesson, weak skills, review queue, and recent sessions match the learner audit output.
+3. Manually spot-check stored options during real sessions, especially grammar and reading items.
+4. Decide whether the roadmap needs a dedicated `/roadmap` page after dashboard validation.
+5. Decide which dashboard blocks should stay for MVP and which should move to a debug/developer view.
 
 ## Learner Profile Validation Log
 
@@ -221,3 +267,53 @@ Then run:
 ```bash
 ALLOW_LOCAL_QUESTION_FALLBACK=false npm run audit:learner -- guest
 ```
+
+## Guided Daily Review
+
+Kokoro now supports one guided daily review session built from active `ReviewTask` records.
+
+- `ReviewSessionBuilder` prioritizes active tasks, merges duplicate skill targets, sizes a session from 5-30 questions, and estimates completion time.
+- Daily review reuses the existing session question, attempt, memory, and skill-state pipeline.
+- Session documents retain review task IDs, skill IDs, the starting review summary, estimated minutes, and the completion summary.
+- Review tasks are evaluated independently by skill when the session completes. Overall session accuracy does not clear unrelated tasks.
+- `ReviewPage` now leads with Today's Review and keeps topic-specific Fix this topic actions as a secondary flow.
+- `ResultPage` shows tasks refreshed and tasks still practicing for daily review sessions.
+- Home recommendations can now identify daily review as the primary action while preserving the next roadmap lesson.
+
+Local verification completed:
+
+- Backend syntax checks: passed
+- Backend import checks: passed
+- Frontend lint: passed
+- Frontend production build: passed
+
+Remaining validation is a live Atlas-backed mixed-answer review session confirming task counts before and after completion.
+
+## Mobile Learner App Foundation
+
+Kokoro now has a separate Expo/React Native learner application under `mobile/`.
+
+- The web frontend remains intact for developer analytics and engine debugging.
+- Mobile Home is now the learning Map, not an analytics dashboard.
+- The map renders all eight roadmap units and 33 lessons from the existing roadmap API.
+- Lesson nodes expose completed, current, unlocked, in-progress, and locked states.
+- Tapping a node opens a native lesson detail sheet with description and real lesson progress.
+- The compact Review of the Day strip reports ready, completed, and caught-up states.
+- Tapping a ready Review of the Day opens a preview sheet before the session starts.
+- The preview groups active ReviewTasks into roadmap areas and shows their task-weighted focus, learner-friendly reasons, total questions, and estimated time.
+- The preview exposes every included roadmap area in a scrollable list, uses a semantic reason legend, and supports in-sheet drill-down to the underlying review skills.
+- Focus proportions are runtime guidance, not guaranteed per-area question counts; the question bank and question schema are unchanged.
+- Only one completed Daily Review is allowed per learner per server-local calendar day.
+- Map actions start real roadmap or daily-review sessions through the existing backend.
+- A first native Session and Result flow is connected end-to-end.
+- Bottom navigation establishes Map, Review, Progress, and Profile as the learner-facing information architecture.
+
+Verification completed:
+
+- Mobile TypeScript: passed
+- Mobile ESLint: passed
+- Expo universal web export: passed
+- Phone viewport visual QA: passed at 390 x 844
+- Roadmap node to lesson-detail interaction: passed
+- Real Atlas-backed roadmap lesson start: passed
+- Immediate answer feedback: passed

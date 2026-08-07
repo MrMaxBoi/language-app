@@ -1,188 +1,249 @@
 # Kokoro
 
-Kokoro is an adaptive Japanese learning app in active development. It combines a structured skill graph, a MongoDB-backed question bank, spaced repetition memory, and learner-facing progress views to explore how a language app can personalize practice without losing curriculum structure.
+Kokoro is a roadmap-first Japanese learning application that combines structured lessons with adaptive practice, persistent learner state, memory-aware review, and learner-friendly recommendations.
 
-The current version is a working prototype focused on the learning engine, question selection, reporting, and dashboard experience.
+The project currently includes:
 
----
+- An Express and MongoDB learning backend
+- A React web application for learner flows, analytics, and engine debugging
+- An Expo React Native application for the mobile learner experience
 
-## What Kokoro Does
+Kokoro is an active prototype. The current milestone proves the learning architecture and mobile flow; it is not yet a production-ready language course.
 
-Kokoro tracks how a learner performs over time, identifies weak and strong skills, and uses that state to choose better practice questions.
+## Product Model
 
-The app currently supports:
+Kokoro separates curriculum decisions from adaptive practice:
 
-- Session-based Japanese practice
-- Atlas-backed question bank
-- Stable `questionId` identity for questions
-- Skill graph metadata for N5 foundation skills
-- Skill-based attempt tracking
-- Memory tracking for review and decay risk
-- Adaptive question selection
-- Prerequisite-aware gating
-- Weak-skill and recent-mistake review
-- Skill-first session reports
-- Learner-facing dashboard
-- Developer engine dashboard for debugging
-
----
-
-## Learning Model
-
-Kokoro is moving toward a roadmap-first product model:
-
-- The roadmap gives learners a clear learning path.
-- Each lesson focuses on one skill or a small skill group.
-- The adaptive engine personalizes question choice inside that lesson.
-- Review sessions use memory, weak skills, and recent mistakes.
-- Free adaptive practice remains available for broader mixed practice.
-
-In short:
-
-```txt
-Roadmap = what the learner should study
-Engine = which questions fit the learner right now
-Memory = what should come back later
-Report = what Kokoro learned from the session
+```text
+Roadmap       -> what the learner is ready to study
+Lesson        -> the skill group being practised
+Adaptive engine -> which questions fit the learner now
+Memory        -> what may be forgotten
+ReviewTask    -> what needs a concrete review action
+Recommendation -> what the learner should do next and why
 ```
 
----
+The adaptive engine remains active inside roadmap lessons and review sessions. The roadmap does not replace adaptation; it limits adaptation to a meaningful learning context.
 
-## Current Architecture
+## Current Capabilities
 
-### Backend
+### Roadmap and sessions
 
-- Node.js
-- Express
-- MongoDB Atlas
-- Mongoose
+- Eight N5 foundation units containing 33 roadmap lessons
+- Completed, current, unlocked, in-progress, and locked lesson states
+- Lesson-scoped adaptive question selection
+- Broad adaptive practice for mixed sessions
+- Immediate answer feedback and persisted session reports
+- Prerequisite-aware lesson progression
 
-Main backend responsibilities:
+### Learner model and review
 
-- Session lifecycle
-- Question bank access
-- Attempt storage
-- Skill aggregation
-- Memory updates
-- Recommendation explanations
-- Analytics and debug endpoints
+- Attempt history linked to stable `questionId` and `skillId` values
+- Persistent SkillState aggregation
+- Memory strength, decay, and next-review tracking
+- ReviewTasks created from mistakes and due memories
+- Focused topic repair and guided Daily Review sessions
+- Review clearing based on correct answers for the targeted skill
+- Once-per-day completed Daily Review behavior
+- Home recommendations generated from roadmap and active ReviewTasks
+- Review of the Day preview grouped by roadmap area with skill-level details
 
-### Frontend
+### Question bank
 
-- React
-- Vite
-- Chakra UI
-- Zustand
+- MongoDB Atlas is the runtime question source
+- 361 questions mapped to 39 graph skills
+- Explicit question types on all 361 questions
+- Stored options for all 290 choice-style questions
+- 200 automatically prepared and 90 manually curated option sets
+- Audit and migration scripts for question types, options, mappings, and skill coverage
+- `backend/data/questions.js` retained as seed and backup data rather than the intended runtime source
 
-Main frontend surfaces:
+## Applications
 
-- `/session` - learning session flow
-- `/report` - skill-first session report
-- `/dashboard` - learner-facing progress dashboard
-- `/engine` - developer/debug engine dashboard
+### Mobile learner app
 
----
+The Expo application under `mobile/` is the primary learner-facing direction.
 
-## Question Bank Status
+Implemented mobile surfaces:
 
-The project has migrated from a giant local question file as the runtime source toward a MongoDB Atlas-backed question bank.
+- Roadmap-first Map home
+- Review of the Day preview and start flow
+- Roadmap lesson detail sheet
+- Native question session with immediate feedback
+- Native session result screen
+- Bottom navigation for Map, Review, Progress, and Profile
 
-Current question-bank state:
+The Review, Progress, and Profile tabs currently establish navigation and product direction; their complete learner experiences are still under development.
 
-- 361 mapped questions
-- 39 graph skills
-- 0 unmapped skill gaps
-- 0 generated fallback mappings
-- `questions.js` is kept as seed/backup data, not the intended runtime source
+### React web app
 
-Useful commands:
+The Vite application under `frontend/` remains useful for browser testing, deeper reporting, and engine inspection.
 
-```bash
-npm run seed:questions
-npm run seed:questions:dry-run
-npm run audit:question-bank
-npm run report:skill-gaps
+Main routes:
+
+- `/` - learner Home
+- `/roadmap` - learning roadmap
+- `/session` - lesson or review session
+- `/result` - session completion
+- `/review` - review queue and topic repair
+- `/insights` - progress and analytics
+- `/report` - detailed session report
+- `/engine` - developer-facing engine diagnostics
+
+## Architecture
+
+```text
+Expo mobile app ----\
+                     -> Express API -> Sessions / Roadmap / Recommendations
+React web app ------/                        |
+                                              v
+                              Questions / Attempts / SkillState
+                                     Memory / ReviewTask
+                                              |
+                                              v
+                                       MongoDB Atlas
 ```
 
----
+Key backend areas:
+
+- `backend/controllers/session.controller.js` - session start, answer, completion, and reports
+- `backend/services/questionSelection.service.js` - adaptive and lesson-scoped selection
+- `backend/services/roadmap.service.js` - lesson progress and unlocking
+- `backend/services/skillState.service.js` - persistent skill summaries
+- `backend/services/reviewTask.service.js` - review task lifecycle and clearing
+- `backend/services/reviewSessionBuilder.service.js` - guided Daily Review composition
+- `backend/services/recommendation.service.js` - learner-facing next actions
 
 ## Getting Started
 
-Install dependencies:
+### 1. Install dependencies
 
 ```bash
 npm install
 npm install --prefix frontend
+npm install --prefix mobile
 ```
 
-Create a `.env` file in the project root:
+### 2. Configure the backend
 
-```bash
+Create a root `.env` file:
+
+```env
 MONGO_URI=mongodb+srv://<username>:<password>@<cluster-url>/kokoro-dev
 PORT=5050
 ```
 
-Seed questions:
+Never commit the real `.env` file or Atlas credentials.
+
+### 3. Configure the mobile API address
+
+Copy the mobile example:
 
 ```bash
-npm run seed:questions
+cp mobile/.env.example mobile/.env.local
 ```
 
-Run the backend:
+For a physical phone, use the Mac's LAN address:
+
+```env
+EXPO_PUBLIC_API_URL=http://<mac-lan-ip>:5050
+```
+
+The Mac and phone must be on the same network. Only public API configuration belongs in an `EXPO_PUBLIC_` variable; never put database credentials there.
+
+### 4. Run Kokoro
+
+Backend:
 
 ```bash
 npm run dev
 ```
 
-Run the frontend:
+Web application:
 
 ```bash
 npm run dev --prefix frontend
 ```
 
----
+Mobile application:
 
-## Useful Development Commands
+```bash
+npm run mobile:start
+```
+
+Scan the QR code with Expo Go, or press `w` to open the Expo web target.
+
+## Data and Audit Commands
+
+Question bank:
+
+```bash
+npm run seed:questions:dry-run
+npm run seed:questions
+npm run audit:question-bank
+npm run audit:question-types
+npm run audit:question-options
+npm run report:skill-gaps
+```
+
+Migrations should be inspected in dry-run mode before applying them:
+
+```bash
+npm run migrate:question-options:dry-run
+npm run migrate:curated-options:dry-run
+npm run migrate:question-types:dry-run
+```
+
+Learner data:
 
 ```bash
 npm run audit:learner -- guest
-npm run backfill:skill-graph
 npm run backfill:attempt-user-ids:dry-run
 npm run audit:skill-duplicates
 npm run merge:skill-duplicates
 ```
 
-Frontend checks:
+## Verification
+
+Web checks:
 
 ```bash
 npm run lint --prefix frontend
 npm run build --prefix frontend
 ```
 
----
+Mobile checks:
 
-## Current Product Focus
+```bash
+npm run mobile:lint
+npm run mobile:typecheck
+cd mobile && npx expo export --platform web
+```
 
-The adaptive engine is now strong enough that the next major priority is product structure.
+## Current Limitations
 
-Near-term focus:
+- The prototype currently defaults to the `guest` learner rather than full authentication and profile selection.
+- Roadmap lessons provide scoped practice, but complete teaching content before assessment is not implemented yet.
+- Interrupted mobile sessions do not yet resume at the exact saved question.
+- Mobile Review, Progress, and Profile are not complete product surfaces.
+- The roadmap currently covers an N5 foundation rather than a complete N5-to-N1 course.
+- Recommendation and review behavior still needs broader validation with first-time, struggling, and long-term learner histories.
 
-1. Define the roadmap and lesson model.
-2. Make sessions lesson-based instead of only broad adaptive practice.
-3. Keep the adaptive engine active inside each lesson.
-4. Use review sessions for weak skills, memory decay, and recent mistakes.
-5. Polish the learner-facing session, report, and dashboard flow.
+## Next Priorities
 
----
+1. Add a real teaching and introduction layer before lesson assessment.
+2. Persist and resume interrupted mobile sessions exactly.
+3. Complete guided review and focused topic repair on mobile.
+4. Build a truthful learner progress visualization from SkillState and Memory.
+5. Validate Daily Review reset, completion, and clearing behavior on physical devices.
 
-## Project Status
+## Documentation
 
-Kokoro is not production-ready yet. It is an active prototype for validating adaptive learning systems, skill-based progression, and Japanese learning UX.
-
-For detailed project notes, see:
+Detailed architecture and project decisions are maintained in:
 
 - `docs/PROJECT_OVERVIEW.md`
 - `docs/ENGINE_ARCHITECTURE.md`
 - `docs/LEARNING_MODEL.md`
+- `docs/ROADMAP_MODEL.md`
 - `docs/CURRENT_STATUS.md`
 - `docs/NEXT_STEPS.md`

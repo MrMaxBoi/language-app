@@ -1,27 +1,64 @@
-# Logs
-logs
+# Dependencies
+node_modules/
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.local
+
+# Build and generated output
+dist/
+dist-ssr/
+build/
+web-build/
+coverage/
+*.tsbuildinfo
+
+# Expo and Metro local state
+.expo/
+expo-env.d.ts
+.metro-health-check*
+
+# Local agent configuration generated during scaffolding
+mobile/.claude/
+mobile/CLAUDE.md
+mobile/AGENTS.md
+
+# Logs and caches
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+.eslintcache
+.parcel-cache/
+.vite/
+.npm/
 
-node_modules
-dist
-dist-ssr
-*.local
+# Native signing material and local build files
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.pem
+*.orig.*
+.kotlin/
 
-.env
-
-
-# Editor directories and files
+# Editors
+.idea/
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Operating system files
+.DS_Store
+Thumbs.db

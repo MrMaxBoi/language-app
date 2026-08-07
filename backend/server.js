@@ -12,6 +12,9 @@ import analyticsRoutes from "./routes/analytics.route.js";
 import memoryRoutes from "./routes/memory.route.js";
 import recommendationsRoutes from "./routes/recommendations.route.js";
 import debugRoutes from "./routes/debug.route.js";
+import roadmapRoutes from "./routes/roadmap.route.js";
+import learnerStateRoutes from "./routes/learnerState.route.js";
+import reviewTaskRoutes from "./routes/reviewTask.route.js";
 
 dotenv.config();
 
@@ -28,6 +31,9 @@ app.use('/api/analytics', analyticsRoutes);
 app.use('/api/memory', memoryRoutes);
 app.use('/api/recommendations', recommendationsRoutes);
 app.use('/api/debug', debugRoutes);
+app.use('/api/roadmap', roadmapRoutes);
+app.use('/api/learner-state', learnerStateRoutes);
+app.use('/api/review-tasks', reviewTaskRoutes);
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "/frontend/dist")));

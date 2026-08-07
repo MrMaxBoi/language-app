@@ -18,14 +18,33 @@ export const useSessionStore = create((set, get) => ({
 	currentIndex: 0,
 	answers: [],
 	report: null,
+	activeRoadmap: null,
+	reviewSessionMeta: null,
 
-	startSession: async () => {
+	startSession: async (sessionOptions = null) => {
+		const body =
+			typeof sessionOptions === "string"
+				? { lessonId: sessionOptions }
+				: sessionOptions && typeof sessionOptions === "object"
+					? sessionOptions
+					: {};
 		const res = await fetch("/api/sessions/start", {
 			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(body),
 		});
 		const data = await res.json();
 		if (data.success) {
-			set({ sessionId: data.data.sessionId, questions: data.data.questions, currentIndex: 0, answers: [], report: null });
+			set({
+				sessionId: data.data.sessionId,
+				questions: data.data.questions,
+				currentIndex: 0,
+				answers: [],
+				report: null,
+				activeRoadmap: data.data.roadmap || null,
+			});
 			return { success: true };
 		} else {
 			return { success: false, message: "Failed to start session" };
@@ -60,6 +79,36 @@ export const useSessionStore = create((set, get) => ({
 		}
 	},
 
+	startDailyReview: async (settings = {}) => {
+		const res = await fetch("/api/sessions/start", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ mode: "daily_review", ...settings }),
+		});
+		const data = await res.json();
+		if (!data.success) {
+			return { success: false, message: data.message || "Failed to start today's review" };
+		}
+
+		const reviewSessionMeta = {
+			taskIds: data.data.taskIds || [],
+			skillIds: data.data.skillIds || [],
+			questionCount: data.data.questionCount || data.data.questions?.length || 0,
+			estimatedMinutes: data.data.estimatedMinutes || 0,
+			summary: data.data.summary || {},
+		};
+		set({
+			sessionId: data.data.sessionId,
+			questions: data.data.questions || [],
+			currentIndex: 0,
+			answers: [],
+			report: null,
+			activeRoadmap: data.data.roadmap || { mode: "daily_review", ...reviewSessionMeta },
+			reviewSessionMeta,
+		});
+		return { success: true, data: data.data };
+	},
+
 	fetchCorrectAnswer: async (questionId) => {
 		const res = await fetch(`/api/sessions/questions/${questionId}/answer`);
 		const data = await res.json();
@@ -83,8 +132,22 @@ export const useSessionStore = create((set, get) => ({
 			method: "POST",
 		});
 		const data = await res.json();
+		// completeSession response shape:
+		// { success, data: { score, skillSummary, weakSkills, strongSkills, nextFocus,
+		//   suggestedPractice, answers, analysis, analytics, roadmap,
+		//   reviewRefreshResults, reviewTaskResults, reviewCompletionSummary } }
 		console.log("completeSession response:", data);
 		if (data.success) {
+			if (["review", "daily_review"].includes(data.data?.roadmap?.mode)) {
+				console.log("🧹 Review refresh result:", data.data.reviewRefreshResults || []);
+				try {
+					const learnerStateRes = await fetch("/api/learner-state/guest");
+					const learnerStateJson = await learnerStateRes.json();
+					console.log("🧠 Review queue after session:", learnerStateJson.data?.reviewQueue || []);
+				} catch (error) {
+					console.log("Could not fetch learner state after review session:", error.message);
+				}
+			}
 			storeReportSessionId(sessionId);
 			set({
 				sessionId: null,
@@ -92,6 +155,8 @@ export const useSessionStore = create((set, get) => ({
 				currentIndex: 0,
 				answers: [],
 				report: data.data,
+				activeRoadmap: null,
+				reviewSessionMeta: null,
 			});
 			console.log("Stored report in Zustand:", data.data);
 			return { success: true, data: data.data };

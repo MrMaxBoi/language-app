@@ -1,5 +1,5 @@
 import express from "express";
-import { explainRecommendations } from "../controllers/recommendations.controller.js";
+import { explainRecommendations, getHomeRecommendation } from "../controllers/recommendations.controller.js";
 
 const router = express.Router();
 
@@ -8,5 +8,6 @@ const router = express.Router();
  * Explain why questions are recommended
  */
 router.get("/explain/:userId", explainRecommendations);
+router.get("/home/:userId", getHomeRecommendation);
 
 export default router;

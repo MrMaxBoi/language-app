@@ -129,6 +129,7 @@ const ReportPage = () => {
   const nextFocus = report.nextFocus;
   const difficultyBreakdown = analytics.difficultyBreakdown || analysis.difficultyBreakdown || {};
   const aiFeedback = analysis.aiFeedback || "";
+  const roadmap = report.roadmap || {};
   const feedbackLines = aiFeedback
     .split("\n")
     .map((line) => line.trim())
@@ -158,6 +159,25 @@ const ReportPage = () => {
           <MetricCard label="Skills Practiced" value={skillSummary.length} helpText={`${weakSkills.length} need review`} tone="purple" />
           <MetricCard label="Strong Skills" value={strongSkills.length} helpText="Skills at 80%+ this session" tone="green" />
         </SimpleGrid>
+
+        {roadmap.mode === "roadmap_lesson" ? (
+          <Box bg="white" borderWidth="1px" borderColor="gray.200" borderRadius="md" p={6}>
+            <HStack justify="space-between" align="start" spacing={4}>
+              <Box>
+                <Badge colorScheme="purple" mb={3}>
+                  Roadmap Lesson
+                </Badge>
+                <Heading size="md">{roadmap.lessonTitle}</Heading>
+                <Text color="gray.600" mt={2}>
+                  {roadmap.unitTitle}
+                </Text>
+              </Box>
+              <Button colorScheme="blue" variant="outline" onClick={() => navigate("/dashboard")}>
+                View Roadmap
+              </Button>
+            </HStack>
+          </Box>
+        ) : null}
 
         <Box bg="white" borderWidth="1px" borderColor="gray.200" borderRadius="md" p={6}>
           <Heading size="md" mb={3}>

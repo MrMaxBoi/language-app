@@ -8,6 +8,22 @@ import Question from "../models/question.model.js";
 import Skill from "../models/skill.model.js";
 import Memory from "../models/memory.model.js";
 import { getLearningKey, getQuestionSkill } from "../data/skillGraph.js";
+import { buildHomeRecommendation } from "../services/recommendation.service.js";
+
+export const getHomeRecommendation = async (req, res) => {
+	try {
+		const { userId = "guest" } = req.params;
+		const data = await buildHomeRecommendation(userId);
+
+		return res.status(200).json({
+			success: true,
+			data,
+		});
+	} catch (error) {
+		console.log("error in building home recommendation:", error.message);
+		res.status(500).json({ success: false, message: "Server Error" });
+	}
+};
 
 /**
  * GET /api/recommendations/explain/:userId
