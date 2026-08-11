@@ -5,6 +5,8 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 
 import localQuestions from "../data/questions.js";
+import { CONCEPTS } from "../data/concepts.js";
+import { flattenAllRoadmapLessons } from "../data/roadmap.js";
 import { buildSkillQuestionCoverage, getQuestionSkill, SKILL_GRAPH } from "../data/skillGraph.js";
 import Question from "../models/question.model.js";
 
@@ -54,12 +56,16 @@ const getIndexStatus = async () => {
   const hasSkillId = indexes.some((index) => index.key?.skillId === 1);
   const hasTopicSubtopic = indexes.some((index) => index.key?.topic === 1 && index.key?.subtopic === 1);
   const hasDifficulty = indexes.some((index) => index.key?.difficulty === 1);
+  const hasLessonIds = indexes.some((index) => index.key?.lessonIds === 1);
+  const hasConceptIds = indexes.some((index) => index.key?.conceptIds === 1);
 
   return {
     hasQuestionIdUnique,
     hasSkillId,
     hasTopicSubtopic,
     hasDifficulty,
+    hasLessonIds,
+    hasConceptIds,
     indexes: indexes.map((index) => ({
       name: index.name,
       key: index.key,
@@ -79,6 +85,8 @@ const buildAuditReport = async () => {
   const host = mongoose.connection.host;
   const questions = await Question.find({}).lean();
   const skillIds = new Set(SKILL_GRAPH.map((skill) => skill.id));
+  const lessonIds = new Set(flattenAllRoadmapLessons().map((lesson) => lesson.id));
+  const conceptIds = new Set(CONCEPTS.map((item) => item.id));
   const coverage = buildSkillQuestionCoverage(questions);
   const indexStatus = await getIndexStatus();
 
@@ -107,6 +115,16 @@ const buildAuditReport = async () => {
   const duplicateQuestionIds = findDuplicateValues(
     questions.filter((question) => question.questionId),
     (question) => question.questionId
+  );
+  const invalidLessonIds = questions.flatMap((question) =>
+    (question.lessonIds || [])
+      .filter((lessonId) => !lessonIds.has(lessonId))
+      .map((lessonId) => ({ questionId: question.questionId, lessonId }))
+  );
+  const invalidConceptIds = questions.flatMap((question) =>
+    (question.conceptIds || [])
+      .filter((conceptId) => !conceptIds.has(conceptId))
+      .map((conceptId) => ({ questionId: question.questionId, conceptId }))
   );
 
   const skills = coverage.bySkill.map((skill) => {
@@ -139,11 +157,18 @@ const buildAuditReport = async () => {
     missingSkillIdCount: missingSkillId.length,
     invalidSkillIdCount: invalidSkillIds.length,
     duplicateQuestionIdGroups: duplicateQuestionIds.length,
+    lessonPlacedQuestionCount: questions.filter((question) => question.lessonIds?.length > 0).length,
+    unplacedQuestionCount: questions.filter((question) => !question.lessonIds?.length).length,
+    conceptTaggedQuestionCount: questions.filter((question) => question.conceptIds?.length > 0).length,
+    invalidLessonIdCount: invalidLessonIds.length,
+    invalidConceptIdCount: invalidConceptIds.length,
     indexes: {
       questionIdUnique: indexStatus.hasQuestionIdUnique,
       skillId: indexStatus.hasSkillId,
       topicSubtopic: indexStatus.hasTopicSubtopic,
       difficulty: indexStatus.hasDifficulty,
+      lessonIds: indexStatus.hasLessonIds,
+      conceptIds: indexStatus.hasConceptIds,
     },
   };
 
@@ -153,12 +178,16 @@ const buildAuditReport = async () => {
   if (summary.missingSkillIdCount > 0) failures.push("Some questions are missing skillId");
   if (summary.invalidSkillIdCount > 0) failures.push("Some questions use skillId values not present in SKILL_GRAPH");
   if (summary.duplicateQuestionIdGroups > 0) failures.push("Duplicate questionId values found");
+  if (summary.invalidLessonIdCount > 0) failures.push("Some questions reference unknown roadmap lessons");
+  if (summary.invalidConceptIdCount > 0) failures.push("Some questions reference unknown concepts");
   if (summary.totalGap > 0) failures.push("Skill coverage has remaining gaps");
   if (summary.generatedFallbackCount > 0) failures.push("Some DB questions only map through generated fallback skills");
   if (!indexStatus.hasQuestionIdUnique) failures.push("Missing unique index on questionId");
   if (!indexStatus.hasSkillId) failures.push("Missing index on skillId");
   if (!indexStatus.hasTopicSubtopic) failures.push("Missing compound index on topic/subtopic");
   if (!indexStatus.hasDifficulty) failures.push("Missing index on difficulty");
+  if (!indexStatus.hasLessonIds) failures.push("Missing index on lessonIds");
+  if (!indexStatus.hasConceptIds) failures.push("Missing index on conceptIds");
 
   return {
     generatedAt: new Date().toISOString(),
@@ -169,6 +198,8 @@ const buildAuditReport = async () => {
     missingQuestionId,
     missingSkillId,
     invalidSkillIds,
+    invalidLessonIds,
+    invalidConceptIds,
     generatedFallbacks,
     skills,
     indexDetails: indexStatus.indexes,

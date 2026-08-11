@@ -1,21 +1,7 @@
 import { getSkillById } from "./skillGraph.js";
-
-const lessonNode = ({
-  id,
-  title,
-  description,
-  primarySkillIds,
-  supportSkillIds = [],
-  recommendedQuestionTypes = ["multiple_choice", "fill_in_blank"],
-}) => ({
-  id,
-  title,
-  description,
-  primarySkillIds,
-  supportSkillIds,
-  skillIds: [...new Set([...primarySkillIds, ...supportSkillIds])],
-  recommendedQuestionTypes,
-});
+import { getConceptById } from "./concepts.js";
+import { lessonNode } from "./roadmapBuilder.js";
+import { JAPANESE_FOUNDATIONS_ROADMAP } from "./roadmaps/japaneseFoundations.js";
 
 export const ROADMAP_UNITS = [
   {
@@ -310,25 +296,64 @@ export const ROADMAP_UNITS = [
   },
 ];
 
-export const flattenRoadmapLessons = () =>
-  ROADMAP_UNITS.flatMap((unit, unitIndex) =>
+export const DEFAULT_ROADMAP_ID = "n5-foundation";
+
+export const N5_FOUNDATION_ROADMAP = {
+  id: DEFAULT_ROADMAP_ID,
+  title: "JLPT N5 Foundation",
+  shortLabel: "N5",
+  description: "Build practical beginner Japanese through an adaptive N5 learning path.",
+  level: "N5",
+  units: ROADMAP_UNITS,
+};
+
+export const ROADMAPS = [JAPANESE_FOUNDATIONS_ROADMAP, N5_FOUNDATION_ROADMAP];
+
+const roadmapsById = new Map(ROADMAPS.map((roadmap) => [roadmap.id, roadmap]));
+
+export const getRoadmapById = (roadmapId = DEFAULT_ROADMAP_ID) =>
+  roadmapsById.get(roadmapId) || null;
+
+const flattenUnits = (roadmap) =>
+  roadmap.units.flatMap((unit, unitIndex) =>
     unit.lessons.map((lesson, lessonIndex) => ({
       ...lesson,
+      roadmapId: roadmap.id,
+      roadmapTitle: roadmap.title,
       unitId: unit.id,
       unitTitle: unit.title,
       unitIndex,
       lessonIndex,
-      globalIndex: ROADMAP_UNITS.slice(0, unitIndex).reduce((sum, current) => sum + current.lessons.length, 0) + lessonIndex,
+      globalIndex: roadmap.units.slice(0, unitIndex).reduce((sum, current) => sum + current.lessons.length, 0) + lessonIndex,
     }))
   );
 
-const lessonsById = new Map(flattenRoadmapLessons().map((lesson) => [lesson.id, lesson]));
+export const flattenRoadmapLessons = (roadmapId = DEFAULT_ROADMAP_ID) => {
+  const roadmap = getRoadmapById(roadmapId);
+  return roadmap ? flattenUnits(roadmap) : [];
+};
+
+export const flattenAllRoadmapLessons = () => ROADMAPS.flatMap(flattenUnits);
+
+const lessonsById = new Map(flattenAllRoadmapLessons().map((lesson) => [lesson.id, lesson]));
 
 export const getRoadmapLessonById = (lessonId) => lessonsById.get(lessonId) || null;
 
-export const validateRoadmap = () =>
-  flattenRoadmapLessons().flatMap((lesson) =>
-    lesson.skillIds
-      .filter((skillId) => !getSkillById(skillId))
-      .map((skillId) => ({ lessonId: lesson.id, skillId }))
-  );
+export const validateRoadmap = (roadmapId) => {
+  const lessons = roadmapId ? flattenRoadmapLessons(roadmapId) : flattenAllRoadmapLessons();
+  const duplicateLessonIds = flattenAllRoadmapLessons()
+    .filter((lesson, index, allLessons) => allLessons.findIndex((item) => item.id === lesson.id) !== index)
+    .map((lesson) => ({ lessonId: lesson.id, issue: "duplicate_lesson_id" }));
+
+  return [
+    ...duplicateLessonIds,
+    ...lessons.flatMap((lesson) => [
+      ...lesson.skillIds
+        .filter((skillId) => !getSkillById(skillId))
+        .map((skillId) => ({ lessonId: lesson.id, skillId, issue: "missing_skill" })),
+      ...lesson.conceptIds
+        .filter((conceptId) => !getConceptById(conceptId))
+        .map((conceptId) => ({ lessonId: lesson.id, conceptId, issue: "missing_concept" })),
+    ]),
+  ];
+};

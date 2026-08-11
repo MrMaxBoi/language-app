@@ -8,7 +8,7 @@ import { useSessionStore } from '@/store/session-store';
 
 type ReportShape = {
   score?: { correct?: number; total?: number; percentage?: number };
-  roadmap?: { mode?: string; lessonTitle?: string };
+  roadmap?: { mode?: string; roadmapId?: string; lessonTitle?: string };
   reviewCompletionSummary?: {
     tasksCleared?: number;
     tasksRemaining?: number;
@@ -25,8 +25,9 @@ export default function ResultScreen() {
   const review = report?.reviewCompletionSummary;
 
   const returnToMap = () => {
+    const roadmapId = report?.roadmap?.roadmapId;
     reset();
-    router.replace('/');
+    router.replace(roadmapId ? { pathname: '/', params: { roadmapId } } : '/');
   };
 
   return (

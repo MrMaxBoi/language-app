@@ -128,9 +128,35 @@ The MVP roadmap should:
 
 The first roadmap should be an N5 foundation path.
 
+Question curriculum metadata now follows two ownership rules:
+
+- `lessonIds` lists lessons where the question's skill is primary.
+- `conceptIds` lists reviewed, finer-grained concepts when they exist.
+
+Support skills remain part of lesson-scoped adaptive selection, but their
+questions are not marked as owned by the supporting lesson. This prevents a
+Hiragana question from appearing to belong to every later lesson that uses
+Hiragana as reinforcement.
+
+The Japanese Foundations concept registry contains 102 planned core-kana,
+sound-pattern, and pronunciation concepts. Twenty-eight current questions
+exercise the first 14 concepts. Other N5 strands remain concept-unassigned
+until their curriculum is reviewed.
+
+The roadmap registry currently exposes:
+
+- `japanese-foundations`: 5 units and 23 pre-N5 lessons
+- `n5-foundation`: the existing 8-unit, 33-lesson default path
+
+Clients may request a roadmap through `GET /api/roadmap?roadmapId=...`. N5
+remains the compatibility default, while mobile learners can now choose the
+learner-ready Japanese Foundations path from the map header.
+
 Current implementation files:
 
-- `backend/data/roadmap.js` defines units and lessons.
+- `backend/data/roadmap.js` registers roadmaps and preserves the default export.
+- `backend/data/roadmaps/` defines the separate N5 and Japanese Foundations paths.
+- `backend/data/lessonContent/` stores validated teaching sequences.
 - `backend/services/roadmap.service.js` derives lesson status from completed sessions and attempts.
 - `GET /api/roadmap` returns the learner roadmap.
 - `POST /api/sessions/start` can accept `{ "lessonId": "lesson-hiragana-recognition" }` to start a roadmap lesson.

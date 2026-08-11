@@ -8,6 +8,7 @@ Kokoro Mobile is the learner-facing Expo application. It consumes the existing E
 - Compact Review of the Day state with a task-weighted roadmap-area preview
 - Interactive completed/current/unlocked/locked lesson nodes
 - Native lesson detail sheet
+- Teaching-before-assessment lessons with character focus, ordered tracing, word context, and recap steps
 - Real roadmap lesson and daily review start actions
 - Native question session with immediate feedback
 - Mobile result screen
@@ -17,6 +18,11 @@ Review and Progress currently contain product-direction placeholders. The Map, l
 
 The Review of the Day focus bar summarizes active ReviewTasks by roadmap area. It explains the intended focus without claiming an exact per-area question allocation.
 Its preview includes a scrollable chapter list, semantic mistake/memory/practice indicators, and skill-level chapter details.
+
+Hiragana Vowels is the current lesson-component pilot. Its tracing interaction
+uses local ordered stroke validation and haptics; tracing does not create an
+Attempt or change learner mastery. Only the final backend session writes
+learning evidence.
 
 ## Local Setup
 
@@ -32,7 +38,9 @@ Copy the example mobile environment file:
 cp mobile/.env.example mobile/.env.local
 ```
 
-Set `EXPO_PUBLIC_API_URL` to an address the device can reach:
+From the repository root, `npm run mobile:start` detects the Mac's LAN address
+and passes it to Expo automatically. For a manual override, set
+`EXPO_PUBLIC_API_URL` to an address the device can reach:
 
 ```env
 EXPO_PUBLIC_API_URL=http://192.168.1.100:5050

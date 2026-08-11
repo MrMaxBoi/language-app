@@ -1,6 +1,6 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { useFocusEffect, useRouter } from 'expo-router';
-import { useCallback, useMemo, useState } from 'react';
+import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   ActivityIndicator,
   Alert,
@@ -16,6 +16,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { LessonDetailSheet } from '@/components/lesson-detail-sheet';
 import { ReviewPreviewSheet } from '@/components/review-preview-sheet';
 import { ReviewOfDayStrip } from '@/components/review-of-day-strip';
+import { RoadmapSelectorSheet } from '@/components/roadmap-selector-sheet';
 import { RoadmapUnit } from '@/components/roadmap-unit';
 import { palette, type } from '@/constants/kokoro-theme';
 import { getHomeRecommendation, getRoadmap } from '@/services/kokoro-api';
@@ -24,14 +25,21 @@ import type { HomeRecommendation, RoadmapLesson, RoadmapResponse } from '@/types
 
 export default function MapScreen() {
   const router = useRouter();
+  const { roadmapId: routeRoadmapId } = useLocalSearchParams<{ roadmapId?: string }>();
   const [roadmap, setRoadmap] = useState<RoadmapResponse | null>(null);
   const [recommendation, setRecommendation] = useState<HomeRecommendation | null>(null);
   const [selectedLesson, setSelectedLesson] = useState<RoadmapLesson | null>(null);
   const [reviewPreviewVisible, setReviewPreviewVisible] = useState(false);
+  const [roadmapSelectorVisible, setRoadmapSelectorVisible] = useState(false);
+  const [selectedRoadmapId, setSelectedRoadmapId] = useState(routeRoadmapId || 'n5-foundation');
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const { isStarting, startError, startLesson, startDailyReview } = useSessionStore();
+
+  useEffect(() => {
+    if (routeRoadmapId && routeRoadmapId !== selectedRoadmapId) setSelectedRoadmapId(routeRoadmapId);
+  }, [routeRoadmapId, selectedRoadmapId]);
 
   const loadMap = useCallback(async (isRefresh = false) => {
     try {
@@ -39,8 +47,8 @@ export default function MapScreen() {
       else setLoading(true);
       setError(null);
       const [roadmapData, recommendationData] = await Promise.all([
-        getRoadmap('guest'),
-        getHomeRecommendation('guest'),
+        getRoadmap('guest', selectedRoadmapId),
+        getHomeRecommendation('guest', selectedRoadmapId),
       ]);
       setRoadmap(roadmapData);
       setRecommendation(recommendationData);
@@ -50,7 +58,7 @@ export default function MapScreen() {
       setLoading(false);
       setRefreshing(false);
     }
-  }, []);
+  }, [selectedRoadmapId]);
 
   useFocusEffect(
     useCallback(() => {
@@ -65,6 +73,11 @@ export default function MapScreen() {
   }, [roadmap]);
 
   const beginLesson = async (lesson: RoadmapLesson) => {
+    if (lesson.content.hasTeachingContent) {
+      setSelectedLesson(null);
+      router.push({ pathname: '/lesson/[lessonId]', params: { lessonId: lesson.id } });
+      return;
+    }
     const started = await startLesson(lesson.id);
     if (started) {
       setSelectedLesson(null);
@@ -86,6 +99,13 @@ export default function MapScreen() {
   const continueNextLesson = () => {
     const nextLesson = roadmap?.nextLesson;
     if (nextLesson) setSelectedLesson(nextLesson);
+  };
+
+  const selectRoadmap = (roadmapId: string) => {
+    setRoadmapSelectorVisible(false);
+    setSelectedLesson(null);
+    setSelectedRoadmapId(roadmapId);
+    router.setParams({ roadmapId });
   };
 
   if (loading) {
@@ -125,10 +145,14 @@ export default function MapScreen() {
               <Text style={styles.wordmark}>Kokoro</Text>
               <Text style={styles.japaneseMark}>こころ</Text>
             </View>
-            <View style={styles.progressPill}>
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={`Change roadmap. Current path: ${roadmap.title}`}
+              onPress={() => setRoadmapSelectorVisible(true)}
+              style={({ pressed }) => [styles.progressPill, pressed && styles.pressedPill]}>
               <Text style={styles.progressValue}>{progress.percent}%</Text>
-              <Text style={styles.progressLabel}>N5 PATH</Text>
-            </View>
+              <Text style={styles.progressLabel}>{roadmap.shortLabel} PATH</Text>
+            </Pressable>
           </View>
 
           <ReviewOfDayStrip
@@ -141,7 +165,7 @@ export default function MapScreen() {
 
           <View style={styles.pathIntro}>
             <Text style={styles.pathEyebrow}>YOUR LEARNING MAP</Text>
-            <Text style={styles.pathTitle}>The path to Japanese</Text>
+            <Text style={styles.pathTitle}>{roadmap.title}</Text>
             <Text style={styles.pathMeta}>{progress.completed} of {progress.total} lessons complete</Text>
           </View>
 
@@ -158,7 +182,7 @@ export default function MapScreen() {
           <View style={styles.journeyEnd}>
             <Ionicons name="flower-outline" size={25} color={palette.gold} />
             <Text style={styles.journeyEndTitle}>More of the journey is still being written</Text>
-            <Text style={styles.journeyEndText}>Kokoro will grow beyond this N5 foundation path.</Text>
+            <Text style={styles.journeyEndText}>Kokoro will keep growing beyond this path.</Text>
           </View>
         </View>
       </ScrollView>
@@ -178,6 +202,13 @@ export default function MapScreen() {
         onClose={() => setReviewPreviewVisible(false)}
         onStart={beginDailyReview}
       />
+      <RoadmapSelectorSheet
+        visible={roadmapSelectorVisible}
+        roadmaps={roadmap.availableRoadmaps}
+        selectedRoadmapId={roadmap.roadmapId}
+        onClose={() => setRoadmapSelectorVisible(false)}
+        onSelect={selectRoadmap}
+      />
     </SafeAreaView>
   );
 }
@@ -189,9 +220,10 @@ const styles = StyleSheet.create({
   header: { minHeight: 80, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   wordmark: { color: palette.ink, fontFamily: type.display, fontSize: 27, lineHeight: 30 },
   japaneseMark: { color: palette.accent, fontFamily: type.body, fontSize: 10, fontWeight: '700', marginTop: 1 },
-  progressPill: { width: 60, height: 60, borderRadius: 30, borderWidth: 1, borderColor: palette.line, backgroundColor: palette.surface, alignItems: 'center', justifyContent: 'center' },
+  progressPill: { minWidth: 68, height: 60, borderRadius: 30, borderWidth: 1, borderColor: palette.line, backgroundColor: palette.surface, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 8 },
   progressValue: { color: palette.ink, fontSize: 16, fontWeight: '900' },
   progressLabel: { color: palette.muted, fontSize: 8, fontWeight: '800', marginTop: 1 },
+  pressedPill: { opacity: 0.76 },
   inlineError: { color: palette.danger, fontSize: 12, marginTop: 8 },
   pathIntro: { alignItems: 'center', marginTop: 38, marginBottom: 4 },
   pathEyebrow: { color: palette.accent, fontFamily: type.body, fontSize: 10, fontWeight: '900' },

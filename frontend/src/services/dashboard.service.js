@@ -67,9 +67,10 @@ export const fetchEngineIntelligence = async (userId = "guest") => {
 	}
 };
 
-export const fetchRoadmap = async (userId = "guest") => {
+export const fetchRoadmap = async (userId = "guest", roadmapId = null) => {
 	try {
-		const response = await fetch(`${API_BASE}/roadmap?userId=${encodeURIComponent(userId)}`);
+		const roadmapQuery = roadmapId ? `&roadmapId=${encodeURIComponent(roadmapId)}` : "";
+		const response = await fetch(`${API_BASE}/roadmap?userId=${encodeURIComponent(userId)}${roadmapQuery}`);
 		if (!response.ok) throw new Error("Failed to fetch roadmap");
 		const json = await response.json();
 		return json.data;

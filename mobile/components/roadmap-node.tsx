@@ -28,6 +28,8 @@ export function RoadmapNode({ lesson, index, isCurrent, isLast, onPress }: Props
       ? 'Next lesson'
       : lesson.status === 'in_progress'
         ? `${lesson.progress.accuracy}% so far`
+        : lesson.status === 'coming_soon'
+          ? 'Coming soon'
         : lesson.status === 'locked'
           ? 'Locked'
           : 'Ready';

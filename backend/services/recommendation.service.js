@@ -90,10 +90,10 @@ const buildReviewTopics = (mergedSkills = [], roadmapUnits = []) => {
     .sort((a, b) => b.relativeWeight - a.relativeWeight || b.taskCount - a.taskCount);
 };
 
-export const buildHomeRecommendation = async (userId = "guest") => {
+export const buildHomeRecommendation = async (userId = "guest", roadmapId) => {
   const { start, end } = getLocalDayBounds();
   const [roadmap, reviewTasks, completedDailyReview] = await Promise.all([
-    buildRoadmapForUser(userId),
+    buildRoadmapForUser(userId, roadmapId),
     getActiveReviewTasks(userId),
     Session.findOne({
       userId,

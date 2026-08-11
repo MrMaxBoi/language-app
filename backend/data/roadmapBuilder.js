@@ -1,0 +1,22 @@
+export const lessonNode = ({
+  id,
+  title,
+  description,
+  primarySkillIds,
+  supportSkillIds = [],
+  conceptIds = [],
+  minimumQuestionCount = 5,
+  recommendedQuestionTypes = ["multiple_choice", "fill_in_blank"],
+  requiresTeachingContent = false,
+}) => ({
+  id,
+  title,
+  description,
+  primarySkillIds,
+  supportSkillIds,
+  skillIds: [...new Set([...primarySkillIds, ...supportSkillIds])],
+  conceptIds,
+  minimumQuestionCount,
+  recommendedQuestionTypes,
+  requiresTeachingContent,
+});

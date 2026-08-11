@@ -17,6 +17,7 @@ const statusCopy = (lesson: RoadmapLesson, isCurrent: boolean) => {
   if (isCurrent && lesson.status !== 'completed') return 'Your next step';
   if (lesson.status === 'completed') return 'Lesson completed';
   if (lesson.status === 'in_progress') return 'Continue learning';
+  if (lesson.status === 'coming_soon') return 'Learning content is being prepared';
   if (lesson.status === 'locked') return 'Complete the previous lesson to unlock this';
   return 'Ready when you are';
 };
@@ -24,6 +25,7 @@ const statusCopy = (lesson: RoadmapLesson, isCurrent: boolean) => {
 export function LessonDetailSheet({ lesson, isCurrent, visible, isStarting, onClose, onStart }: Props) {
   if (!lesson) return null;
   const locked = lesson.status === 'locked';
+  const unavailable = locked || lesson.status === 'coming_soon';
   const accuracy = lesson.progress?.accuracy || 0;
 
   return (
@@ -65,16 +67,18 @@ export function LessonDetailSheet({ lesson, isCurrent, visible, isStarting, onCl
 
           <Pressable
             accessibilityRole="button"
-            disabled={locked || isStarting}
+            disabled={unavailable || isStarting}
             onPress={() => onStart(lesson)}
             style={({ pressed }) => [
               styles.primaryButton,
-              locked && styles.disabledButton,
-              pressed && !locked && styles.pressedButton,
+              unavailable && styles.disabledButton,
+              pressed && !unavailable && styles.pressedButton,
             ]}>
-            <Text style={[styles.primaryButtonText, locked && styles.disabledButtonText]}>
-              {locked
-                ? 'Locked'
+            <Text style={[styles.primaryButtonText, unavailable && styles.disabledButtonText]}>
+              {lesson.status === 'coming_soon'
+                ? 'Coming soon'
+                : locked
+                  ? 'Locked'
                 : isStarting
                   ? 'Preparing lesson...'
                   : lesson.status === 'completed'

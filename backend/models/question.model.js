@@ -20,6 +20,7 @@ const QuestionSchema = new mongoose.Schema({
 
   options: [
     {
+      _id: false,
       text: String,
       isCorrect: Boolean,
     },
@@ -61,6 +62,18 @@ const QuestionSchema = new mongoose.Schema({
   ],
 
   prerequisiteSkillIds: [
+    {
+      type: String,
+    },
+  ],
+
+  lessonIds: [
+    {
+      type: String,
+    },
+  ],
+
+  conceptIds: [
     {
       type: String,
     },
@@ -118,6 +131,8 @@ const QuestionSchema = new mongoose.Schema({
 
 QuestionSchema.index({ topic: 1, subtopic: 1 });
 QuestionSchema.index({ difficulty: 1 });
+QuestionSchema.index({ lessonIds: 1 });
+QuestionSchema.index({ conceptIds: 1 });
 
 const Question = mongoose.model("Question", QuestionSchema);
 

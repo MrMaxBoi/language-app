@@ -177,6 +177,10 @@ const sessionSchema = new mongoose.Schema(
 				enum: ["adaptive", "roadmap_lesson", "review", "daily_review"],
 				default: "adaptive",
 			},
+			roadmapId: {
+				type: String,
+				default: "",
+			},
 			lessonId: {
 				type: String,
 				default: null,

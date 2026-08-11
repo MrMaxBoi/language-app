@@ -30,11 +30,17 @@ The adaptive engine remains active inside roadmap lessons and review sessions. T
 ### Roadmap and sessions
 
 - Eight N5 foundation units containing 33 roadmap lessons
+- Separate Japanese Foundations roadmap with 5 units and 23 pre-N5 lessons
+- Multiple-roadmap API selection while preserving N5 as the current default
 - Completed, current, unlocked, in-progress, and locked lesson states
 - Lesson-scoped adaptive question selection
 - Broad adaptive practice for mixed sessions
 - Immediate answer feedback and persisted session reports
 - Prerequisite-aware lesson progression
+- A roadmap selector for Japanese Foundations and the existing N5 path
+- A teaching-before-assessment flow for Hiragana Vowels, K-row, and S-row
+- Reusable character-focus, guided tracing, and quiet word-context components piloted in Hiragana Vowels
+- Teaching interactions that do not write attempts or learner state before scored practice
 
 ### Learner model and review
 
@@ -51,12 +57,14 @@ The adaptive engine remains active inside roadmap lessons and review sessions. T
 ### Question bank
 
 - MongoDB Atlas is the runtime question source
-- 361 questions mapped to 39 graph skills
-- Explicit question types on all 361 questions
-- Stored options for all 290 choice-style questions
-- 200 automatically prepared and 90 manually curated option sets
+- 404 questions mapped to 39 graph skills
+- Explicit question types on all 404 questions
+- Stored options for all 333 choice-style questions
+- 200 automatically prepared, 90 manually curated, and 13 lesson-authored option sets
+- 360 questions placed into at least one roadmap lesson
+- 102 planned Foundation concepts, with 58 current questions exercising 26
 - Audit and migration scripts for question types, options, mappings, and skill coverage
-- `backend/data/questions.js` retained as seed and backup data rather than the intended runtime source
+- Skill-aligned base-question packs under `backend/data/questions/`, retained as seed and fallback data rather than the intended runtime source
 
 ## Applications
 
@@ -69,6 +77,8 @@ Implemented mobile surfaces:
 - Roadmap-first Map home
 - Review of the Day preview and start flow
 - Roadmap lesson detail sheet
+- Compact roadmap chooser for Japanese Foundations and N5
+- Data-driven lesson teaching screens with kana audio, haptics, ordered tracing, and word contexts
 - Native question session with immediate feedback
 - Native session result screen
 - Bottom navigation for Map, Review, Progress, and Profile
@@ -109,6 +119,8 @@ Key backend areas:
 - `backend/controllers/session.controller.js` - session start, answer, completion, and reports
 - `backend/services/questionSelection.service.js` - adaptive and lesson-scoped selection
 - `backend/services/roadmap.service.js` - lesson progress and unlocking
+- `backend/data/lessonContent/` - version-controlled teaching sequences
+- `backend/controllers/lesson.controller.js` - learner-ready lesson content API
 - `backend/services/skillState.service.js` - persistent skill summaries
 - `backend/services/reviewTask.service.js` - review task lifecycle and clearing
 - `backend/services/reviewSessionBuilder.service.js` - guided Daily Review composition
@@ -137,13 +149,16 @@ Never commit the real `.env` file or Atlas credentials.
 
 ### 3. Configure the mobile API address
 
-Copy the mobile example:
+`npm run mobile:start` automatically detects the Mac's current LAN address and
+passes it to Expo. The phone and Mac must be on the same local network.
+
+For a manual override, copy the mobile example:
 
 ```bash
 cp mobile/.env.example mobile/.env.local
 ```
 
-For a physical phone, use the Mac's LAN address:
+Then set the address explicitly:
 
 ```env
 EXPO_PUBLIC_API_URL=http://<mac-lan-ip>:5050
@@ -178,6 +193,9 @@ Scan the QR code with Expo Go, or press `w` to open the Expo web target.
 Question bank:
 
 ```bash
+npm run validate:questions
+npm run validate:lesson-content
+npm run sync:question-source:dry-run
 npm run seed:questions:dry-run
 npm run seed:questions
 npm run audit:question-bank
@@ -223,7 +241,7 @@ cd mobile && npx expo export --platform web
 ## Current Limitations
 
 - The prototype currently defaults to the `guest` learner rather than full authentication and profile selection.
-- Roadmap lessons provide scoped practice, but complete teaching content before assessment is not implemented yet.
+- Teaching-before-assessment is implemented for the first three Foundations lessons; later lessons remain intentionally `coming_soon` until their content is ready.
 - Interrupted mobile sessions do not yet resume at the exact saved question.
 - Mobile Review, Progress, and Profile are not complete product surfaces.
 - The roadmap currently covers an N5 foundation rather than a complete N5-to-N1 course.
@@ -231,11 +249,11 @@ cd mobile && npx expo export --platform web
 
 ## Next Priorities
 
-1. Add a real teaching and introduction layer before lesson assessment.
-2. Persist and resume interrupted mobile sessions exactly.
-3. Complete guided review and focused topic repair on mobile.
-4. Build a truthful learner progress visualization from SkillState and Memory.
-5. Validate Daily Review reset, completion, and clearing behavior on physical devices.
+1. Tune Vowels tracing tolerance and lesson pacing on a physical phone.
+2. Validate K-row completion and S-row unlocking before migrating the new lesson templates.
+3. Persist and resume interrupted mobile sessions exactly.
+4. Complete guided review and focused topic repair on mobile.
+5. Build a truthful learner progress visualization from SkillState and Memory.
 
 ## Documentation
 

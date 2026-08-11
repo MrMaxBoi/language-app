@@ -89,6 +89,8 @@ const buildQuestionFromSource = (sourceQuestion) => {
     skillName: skill.skillName,
     skillPath: skill.skillPath,
     prerequisiteSkillIds: skill.prerequisiteSkillIds,
+    lessonIds: sourceQuestion.lessonIds || [],
+    conceptIds: sourceQuestion.conceptIds || [],
     jlptLevel: skill.jlptLevel,
     difficulty: normalizeDifficulty(sourceQuestion.difficulty),
   };
@@ -958,16 +960,27 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       console.log("🗺️ Roadmap lesson scope:", [...lessonSkillIds].join(", "));
     }
 
-    let candidateQuestions = allQuestions.filter((question) => !lastSessionSet.has(question.questionId));
-    if (lessonSkillIds?.size) {
-      candidateQuestions = candidateQuestions.filter((question) => lessonSkillIds.has(getQuestionLearningKey(question)));
-    }
-    if (candidateQuestions.length === 0) {
-      const fallbackPool = lessonSkillIds?.size
+    const lessonTaggedQuestions = options.lessonId
+      ? allQuestions.filter((question) => question.lessonIds.includes(options.lessonId))
+      : [];
+    const scopedQuestions = lessonTaggedQuestions.length > 0
+      ? lessonTaggedQuestions
+      : lessonSkillIds?.size
         ? allQuestions.filter((question) => lessonSkillIds.has(getQuestionLearningKey(question)))
         : allQuestions;
+
+    if (options.lessonId) {
+      console.log("🧩 Lesson content scope:", {
+        lessonId: options.lessonId,
+        source: lessonTaggedQuestions.length > 0 ? "explicit_lesson_ids" : "skill_compatibility_fallback",
+        questionCount: scopedQuestions.length,
+      });
+    }
+
+    let candidateQuestions = scopedQuestions.filter((question) => !lastSessionSet.has(question.questionId));
+    if (candidateQuestions.length === 0) {
       console.log("⚠️ All questions excluded by last-session history; using scoped pool as fallback.");
-      candidateQuestions = shuffleArray(fallbackPool);
+      candidateQuestions = shuffleArray(scopedQuestions);
     }
 
     const exposureLookup = buildExposureLookup(exposures || []);
@@ -1353,7 +1366,8 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       roadmap: {
         lessonId: options.lessonId || null,
         lessonTitle: options.lessonTitle || "",
-        lessonScoped: Boolean(lessonSkillIds?.size),
+        lessonScoped: Boolean(options.lessonId || lessonSkillIds?.size),
+        explicitLessonContentScope: lessonTaggedQuestions.length > 0,
         lessonSkillIds: lessonSkillIds ? [...lessonSkillIds] : [],
       },
       selectedQuestionIds: completedSet.map((q) => q.questionId),
@@ -1424,6 +1438,8 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       skillName: question.skillName,
       skillPath: question.skillPath,
       prerequisiteSkillIds: question.prerequisiteSkillIds,
+      lessonIds: question.lessonIds,
+      conceptIds: question.conceptIds,
       jlptLevel: question.jlptLevel,
       difficulty: question.difficulty,
       exposureCount: question.exposureCount,
@@ -1447,7 +1463,14 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       console.log("⚠️ Local question fallback disabled. Returning no questions.");
       return [];
     }
-    const fallback = shuffleArray(mockQuestions.map(buildQuestionFromSource)).slice(0, count);
+    const fallbackQuestions = mockQuestions.map(buildQuestionFromSource);
+    const lessonFallback = options.lessonId
+      ? fallbackQuestions.filter((question) => question.lessonIds.includes(options.lessonId))
+      : [];
+    const skillFallback = lessonSkillIds?.size
+      ? fallbackQuestions.filter((question) => lessonSkillIds.has(getQuestionLearningKey(question)))
+      : fallbackQuestions;
+    const fallback = shuffleArray(lessonFallback.length > 0 ? lessonFallback : skillFallback).slice(0, count);
     return fallback.map((question) => ({
       questionId: question.questionId,
       _id: question._id,

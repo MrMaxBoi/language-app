@@ -1,11 +1,18 @@
 import { buildRoadmapForUser } from "../services/roadmap.service.js";
-import { validateRoadmap } from "../data/roadmap.js";
+import { DEFAULT_ROADMAP_ID, getRoadmapById, validateRoadmap } from "../data/roadmap.js";
 
 export const getRoadmap = async (req, res) => {
   try {
     const userId = req.query.userId || "guest";
-    const validationIssues = validateRoadmap();
-    const roadmap = await buildRoadmapForUser(userId);
+    const roadmapId = req.query.roadmapId || DEFAULT_ROADMAP_ID;
+    const definition = getRoadmapById(roadmapId);
+
+    if (!definition) {
+      return res.status(404).json({ success: false, message: "Roadmap not found" });
+    }
+
+    const validationIssues = validateRoadmap(roadmapId);
+    const roadmap = await buildRoadmapForUser(userId, roadmapId);
 
     return res.status(200).json({
       success: true,

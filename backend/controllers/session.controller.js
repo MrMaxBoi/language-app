@@ -383,6 +383,13 @@ export const startSession = async (req, res) => {
       return res.status(403).json({ success: false, message: "Roadmap lesson is locked" });
     }
 
+    if (roadmapLesson?.status === "coming_soon") {
+      return res.status(422).json({
+        success: false,
+        message: "This lesson is planned, but its learning content is not ready yet.",
+      });
+    }
+
     const newSession = new Session({
       userId,
       roadmap: isDailyReview
@@ -400,6 +407,7 @@ export const startSession = async (req, res) => {
         : roadmapLesson
         ? {
             mode: "roadmap_lesson",
+            roadmapId: roadmapLesson.roadmapId,
             lessonId: roadmapLesson.id,
             lessonTitle: roadmapLesson.title,
             unitId: roadmapLesson.unitId,

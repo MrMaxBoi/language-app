@@ -22,7 +22,7 @@
 Current conservative target report:
 
 - Report file: `backend/tests/SKILL_QUESTION_GAP_REPORT.md`
-- Current mapped questions: 361
+- Current mapped questions: 404
 - Target questions: 355
 - Total gap: 0
 - Ready skills: 39
@@ -105,7 +105,7 @@ Roadmap planning:
 - Question type audit script added at `npm run audit:question-types` ✅
 - Latest audit report written to `backend/tests/QUESTION_TYPE_AUDIT.md` ✅
 - Question type migration script added at `npm run migrate:question-types:dry-run` and `npm run migrate:question-types` ✅
-- Atlas question types migrated: 133 `translation_choice`, 157 `multiple_choice`, 71 `fill_in_blank` ✅
+- Atlas question types are explicit: 133 `translation_choice`, 200 `multiple_choice`, 71 `fill_in_blank` ✅
 - Post-migration audit shows `typeMismatchCount: 0` ✅
 - Question option audit script added at `npm run audit:question-options:write` ✅
 - Latest option audit report written to `backend/tests/QUESTION_OPTION_AUDIT.md` ✅
@@ -179,6 +179,33 @@ while maintaining adaptive personalization.
 
 ## Immediate Priority
 
+Question-bank authoring foundation:
+
+- Split the monolithic local bank into strand and skill-aligned source packs ✅
+- Preserve the existing `backend/data/questions.js` compatibility import ✅
+- Add source validation for IDs, required fields, mappings, and pack placement ✅
+- Confirm all 361 source objects and their ordering remain unchanged ✅
+- Fold migrated `questionType` and stored `options` back into the canonical source packs ✅
+- Add guarded local-versus-Atlas content and metadata comparison tooling ✅
+- Add indexed lesson and concept references without changing question identity ✅
+- Map existing questions only to primary-skill roadmap lessons ✅
+- Define the first 14 fine-grained Foundation concepts ✅
+- Design the dedicated Syllabary/Foundation roadmap before expanding its question bank ✅
+- Multi-roadmap registry and dedicated 23-lesson Japanese Foundations syllabus ✅
+- Content-readiness guards for underfilled lessons ✅
+- Explicit lesson-ID question selection before skill-level fallback ✅
+- Add reviewed concept taxonomies to N5 strands incrementally rather than deriving them from inconsistent legacy subtopics
+- Build `foundations-hiragana-vowels` as the first complete lesson vertical slice ✅
+- Define reusable teaching content before adding the remaining Foundation question batches ✅
+- Expose the roadmap selector in mobile only after at least one Foundation lesson is learner-ready ✅
+- Validate the full Hiragana Vowels flow on a physical phone before copying the pattern ✅
+- Refine the lesson content schema only from observed authoring or learner needs ✅
+- Pilot reusable `character_focus` and `word_example` steps in Hiragana Vowels ✅
+- Pilot reusable `character_trace` and quiet `word_context` steps in Hiragana Vowels ✅
+- Keep tracing as teaching state rather than mastery evidence ✅
+- Build Hiragana K-row as the second lesson after the first vertical slice is accepted ✅
+- Build Hiragana S-row and verify the lesson schema handles its special `shi` reading ✅
+
 The completed milestone is:
 
 Raise question density per skill from starter coverage to useful practice depth, validate the early adaptive loop, and expose session outcomes through a skill-first report.
@@ -186,7 +213,7 @@ Raise question density per skill from starter coverage to useful practice depth,
 Current graph coverage:
 
 - 39 skills
-- 361 mapped questions
+- 404 mapped questions
 - 0 unmapped skills
 - 0 generated fallback mappings
 
@@ -223,7 +250,7 @@ Target behavior:
 - Persist selected session question IDs and progress so an interrupted mobile session can resume exactly.
 - Replace the Review tab placeholder with guided daily review and focused topic repair.
 - Design the Progress skill constellation using truthful SkillState, Memory, and prerequisite data.
-- Add real teaching/introduction content before the first roadmap lesson questions.
+- Validate the first teaching/introduction lesson with a beginner on a physical phone.
 - Validate map density and scrolling with first-time, active, and advanced learner histories.
 - Create several mistake and memory-due ReviewTasks.
 - Confirm ReviewPage summary matches the active ReviewTask count and type breakdown.
@@ -236,28 +263,34 @@ Target behavior:
 
 Question-type audit result:
 
-- Total questions: 361
+- Total questions: 404
 - Inferred `translation_choice`: 133
-- Inferred `multiple_choice`: 157
+- Inferred `multiple_choice`: 200
 - Inferred `fill_in_blank`: 71
-- Explicit DB `questionType` exists on all 361 questions and now matches inference.
+- Explicit DB `questionType` exists on all 404 questions.
 - Remaining type mismatches: 0
-- 290 choice-style questions need explicit options if choices should be stored instead of generated at runtime.
+- All 333 choice-style questions have explicit stored options in Atlas and the local source packs.
 
 Question-option audit result:
 
-- Choice questions: 290
-- Stored options: 290
+- Choice questions: 333
+- Stored options: 333
 - Missing stored options: 0
 - Auto-ready option sets migrated: 200
 - Curated option sets migrated: 90
 - Needs review: 0
 - Manual-only: 0
-- Question type audit action counts: 361 OK
+- Question source validation count: 404
 
 Next refinement target:
 
-- QA roadmap progress after completing the first lesson session from the dashboard.
+- Validate whether the new 15-step explain/focus/trace/context Vowels flow feels deliberate rather than slow on a physical phone.
+- Tune tracing tolerance and stroke-guide pacing from physical-phone use before expanding tracing beyond the five vowels.
+- Design a consistent background-free spot-illustration system before replacing the temporary generated word artwork.
+- Review pronunciation cues and segmented readings before migrating the new pattern to K-row or S-row.
+- QA K-row completion and confirm that S-row unlocks immediately on the physical phone.
+- QA S-row pacing, the `shi` explanation, speech playback, and final practice selection.
+- Confirm the three-lesson sequence returns to the correct Foundations roadmap after each result.
 - QA `/api/learner-state/guest` against the dashboard and `npm run audit:learner -- guest`.
 - Decide whether the roadmap deserves its own `/roadmap` route after dashboard validation.
 - Decide whether the dashboard should become the permanent app home or remain a temporary learner intelligence panel.

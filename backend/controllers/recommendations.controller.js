@@ -13,7 +13,8 @@ import { buildHomeRecommendation } from "../services/recommendation.service.js";
 export const getHomeRecommendation = async (req, res) => {
 	try {
 		const { userId = "guest" } = req.params;
-		const data = await buildHomeRecommendation(userId);
+		const { roadmapId } = req.query;
+		const data = await buildHomeRecommendation(userId, roadmapId);
 
 		return res.status(200).json({
 			success: true,

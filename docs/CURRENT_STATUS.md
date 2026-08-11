@@ -64,6 +64,40 @@
 
 ✅ Backend learner-state summary endpoint
 
+✅ Local question bank split into 39 skill-aligned source packs
+
+✅ Local question source validation command
+
+✅ Canonical question types and options folded into local source packs
+
+✅ Read-only local-versus-Atlas question metadata comparison
+
+✅ Additive lesson and Foundation concept placement on canonical questions
+
+✅ Multi-roadmap backend registry with N5 compatibility default
+
+✅ Dedicated Japanese Foundations roadmap model
+
+✅ Explicit lesson-scoped question selection and content readiness guard
+
+✅ First teaching-before-assessment lesson: Hiragana Vowels
+
+✅ Hiragana K-row and S-row teaching lessons
+
+✅ First three-lesson Japanese Foundations sequence
+
+✅ Deliberate Hiragana Vowels lesson-component pilot
+
+✅ Reusable character-focus and illustrated word-example steps
+
+✅ Guided Hiragana vowel tracing with ordered stroke validation
+
+✅ Simplified word-context and haptic lesson interactions
+
+✅ Version-controlled lesson content registry and validation
+
+✅ Mobile roadmap selector for Japanese Foundations and N5
+
 ---
 
 ## In Progress
@@ -110,7 +144,7 @@ Recent progress:
 - `npm run backfill:skill-graph` can enrich existing DB rows with canonical skill metadata.
 - Backfill enriched existing learner state for attempts, skills, memories, and coverage.
 - Duplicate `Skill`, `Memory`, and `KnowledgeCoverage` rows were merged by `userId + skillId`.
-- Current Atlas question bank covers all 39 graph skills with 361 mapped questions and no generated fallbacks.
+- Current Atlas question bank covers all 39 graph skills with 404 mapped questions and no generated fallbacks.
 - Fresh learner testing validated the expected path: hiragana-only cold start, then expansion into safe beginner vocabulary, katakana, particles, and foundation skills.
 - Foundation-building testing confirmed weak skills and recent mistakes are detected and can be reintroduced.
 - Session completion now returns a skill-first report payload with practiced skills, weak skills, strong skills, question review, difficulty mix, and next focus.
@@ -128,13 +162,44 @@ Recent progress:
 - Choice options can be generated from nearby answers when legacy seed questions do not define explicit options.
 - `npm run audit:question-types:write` now reports inferred question types, mismatches, missing options, and review actions.
 - `npm run migrate:question-types` updated Atlas question types so inferred/runtime type and stored DB type now agree.
-- Current question type split: 133 `translation_choice`, 157 `multiple_choice`, 71 `fill_in_blank`.
+- Current question type split: 133 `translation_choice`, 200 `multiple_choice`, 71 `fill_in_blank`.
 - `npm run audit:question-options:write` now generates draft options and quality warnings for all 290 choice-style questions.
 - `npm run migrate:question-options` stored options for 200 auto-ready choice questions.
 - `npm run migrate:curated-options` stored options for 53 curated particle and particle-adjacent questions.
 - `npm run migrate:curated-options` was expanded to cover all remaining review/manual items.
-- Current option audit: all 290 choice-style questions have stored options.
-- Current question type audit: all 361 questions are OK.
+- Current option coverage: all 333 choice-style questions have stored options.
+- Current question type coverage: all 404 questions have explicit types.
+- The former 4,702-line `backend/data/questions.js` bank is now organized into 39 skill files under `backend/data/questions/`, grouped by the eight skill-graph strands.
+- `backend/data/questions.js` remains a compatibility export, so existing services, tests, audits, and seed scripts continue to consume one stable question array.
+- `npm run validate:questions` checks required content, duplicate IDs, skill-graph membership, pack placement, difficulty values, and aggregate integrity before seeding.
+- The split preserves all 361 source objects and their original order exactly. Atlas data was not changed by this source-only restructuring.
+- All 404 source questions include explicit `questionType`, and all 333 choice questions include stored options.
+- `npm run sync:question-source:dry-run` compares IDs, base content, question types, and options against Atlas without writing either source.
+- A post-sync comparison reports zero missing questions, zero base-content mismatches, and zero metadata changes.
+- A reset seed can now restore question types and options directly from the source packs; the older migration scripts remain useful for historical recovery and auditing.
+- Question documents now support indexed `lessonIds` and `conceptIds` without changing their stable `questionId` values.
+- 360 questions are mapped to at least one roadmap lesson where their skill is primary. Support-skill lessons are not duplicated into question ownership metadata.
+- 44 questions across six future/extension skills remain intentionally unplaced until those roadmap lessons are designed.
+- The concept registry defines 102 planned core-kana, pattern, and pronunciation concepts. The 58 current concept-tagged questions exercise 26 concepts.
+- Atlas was updated through the normal upsert seed: 361 matched, 361 updated, 0 inserted, and no reset.
+- The post-seed Atlas audit reports zero invalid lesson references, zero invalid concept references, and both curriculum indexes present.
+- `GET /api/roadmap` still defaults to `n5-foundation`; callers can request `roadmapId=japanese-foundations` without changing existing clients.
+- Japanese Foundations contains 5 units and 23 lessons across Hiragana, Katakana, sound patterns, and pronunciation.
+- Runtime roadmap responses expose available roadmaps, lesson content counts, and roadmap content readiness.
+- Lessons below their minimum five explicitly assigned questions are marked `coming_soon` and rejected by session start.
+- Japanese Foundations currently has 3 content-ready lessons and 58 available questions across the roadmap. Hiragana Vowels has 15 explicitly scoped questions, K-row has 16, and S-row has 15.
+- Roadmap lesson selection now prefers explicit `lessonIds`; skill-scoped selection remains a compatibility fallback.
+- N5 remains fully ready with all 33 lessons, and an unchanged seed now reports 0 modified Atlas questions.
+- `GET /api/lessons/:lessonId/content` returns validated teaching content without exposing answer persistence or changing learner state.
+- Hiragana Vowels now uses a 15-step version 3 flow: one explanation, five focused character screens, five ordered tracing screens, three quiet word contexts, and a recap before adaptive practice.
+- K-row and S-row retain their validated eight-step format until the richer Vowels pacing is accepted.
+- Character pronunciation, word audio, sound segments, and recap characters can trigger Japanese speech without recording teaching interactions as learner Attempts.
+- Tracing uses ordered AnimCJK median paths, forgiving local validation, direct haptic feedback, and an accessibility guide-completion path.
+- Tracing completion is intentionally local-only; only the final five-question session updates Attempts, SkillState, Memory, and ReviewTask.
+- The latest non-reset seed inserted 30 K-row and S-row questions, matched the existing 374, and brought Atlas to 404 questions.
+- The post-seed Atlas audit reports 404 database and source questions, 39 ready skills, zero invalid curriculum references, and zero duplicate question IDs.
+- Live roadmap verification reports Vowels completed, K-row unlocked and content-ready, and S-row content-ready but correctly locked until K-row completion for the current guest learner.
+- A live session smoke test confirmed all five selected questions came from the 15-question explicit Hiragana Vowels scope.
 - `GET /api/learner-state/:userId` now returns the product-facing learner summary: stage, stage message, metrics, weak skills, strong skills, review queue, roadmap progress, next lesson, recent sessions, and recommended action.
 - `/dashboard` now uses the backend learner-state summary when available instead of relying only on a frontend learner-stage heuristic.
 

@@ -15,11 +15,13 @@ import debugRoutes from "./routes/debug.route.js";
 import roadmapRoutes from "./routes/roadmap.route.js";
 import learnerStateRoutes from "./routes/learnerState.route.js";
 import reviewTaskRoutes from "./routes/reviewTask.route.js";
+import lessonRoutes from "./routes/lesson.route.js";
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5050;
+const HOST = process.env.HOST || "0.0.0.0";
 
 const __dirname = path.resolve();
 
@@ -34,6 +36,7 @@ app.use('/api/debug', debugRoutes);
 app.use('/api/roadmap', roadmapRoutes);
 app.use('/api/learner-state', learnerStateRoutes);
 app.use('/api/review-tasks', reviewTaskRoutes);
+app.use('/api/lessons', lessonRoutes);
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "/frontend/dist")));
@@ -42,9 +45,9 @@ if (process.env.NODE_ENV === "production") {
     });
 }
 
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
     if (process.env.NODE_ENV !== "test") {
         connectDB();
     }
-    console.log(`Server is running at http://localhost:${PORT}`);
+    console.log(`Server is listening on http://${HOST}:${PORT}`);
 });
