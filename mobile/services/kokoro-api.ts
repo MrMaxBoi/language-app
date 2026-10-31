@@ -1,14 +1,32 @@
+import Constants from 'expo-constants';
 import { Platform } from 'react-native';
 
 import type { HomeRecommendation, LessonContent, RoadmapResponse, SessionStartResponse } from '@/types/learning';
 
-const developmentBaseUrl = Platform.select({
-  android: 'http://10.0.2.2:5050',
-  ios: 'http://127.0.0.1:5050',
-  default: 'http://localhost:5050',
-});
+const API_PORT = 5050;
 
-export const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || developmentBaseUrl;
+// The backend runs on the same Mac as the Expo dev server, so reuse the host
+// the app was loaded from. Expo Go reports it as hostUri ("192.168.x.x:8081"),
+// which follows the Mac's current Wi-Fi address with no configuration.
+const devServerHost = (): string => {
+  if (Platform.OS === 'web' && typeof window !== 'undefined') {
+    return window.location.hostname;
+  }
+  // Different Expo versions expose the dev server address in different fields,
+  // so try each: "192.168.x.x:8081" or "exp://192.168.x.x:8081/...".
+  const candidates = [
+    Constants.expoConfig?.hostUri,
+    Constants.expoGoConfig?.debuggerHost,
+    Constants.linkingUri,
+  ];
+  for (const candidate of candidates) {
+    const host = candidate?.replace(/^[a-z]+:\/\//i, '').split(/[:/]/)[0];
+    if (host && host !== 'localhost' && host !== '127.0.0.1') return host;
+  }
+  return Platform.OS === 'android' ? '10.0.2.2' : 'localhost';
+};
+
+export const API_BASE_URL = `http://${devServerHost()}:${API_PORT}`;
 
 const request = async <T>(path: string, options?: RequestInit): Promise<T> => {
   const controller = new AbortController();
@@ -29,7 +47,7 @@ const request = async <T>(path: string, options?: RequestInit): Promise<T> => {
     }
     return payload.data as T;
   } catch (error) {
-    if (error instanceof Error && error.name === 'AbortError') {
+    if (error instanceof Error && (error.name === 'AbortError' || error.name === 'TypeError')) {
       throw new Error(`Could not reach Kokoro at ${API_BASE_URL}. Check the local network and try again.`);
     }
     throw error;
@@ -58,7 +76,7 @@ export const startLearningSession = (payload: Record<string, unknown>) =>
   });
 
 export const submitSessionAnswer = (sessionId: string, questionId: string, userAnswer: string) =>
-  request<{ isCorrect: boolean; correctAnswer: string }>(`/api/sessions/${sessionId}/answer`, {
+  request<{ isCorrect: boolean; correctAnswer: string; explanation?: string | null }>(`/api/sessions/${sessionId}/answer`, {
     method: 'POST',
     body: JSON.stringify({ questionId, userAnswer }),
   });

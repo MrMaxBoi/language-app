@@ -15,6 +15,8 @@ const allowedStepTypes = new Set([
   "word_context",
   "kana_group",
   "guided_choice",
+  "synthesis",
+  "scene",
   "recap",
 ]);
 
@@ -96,6 +98,33 @@ for (const content of LESSON_CONTENT) {
       }
     }
 
+
+    if (step.type === "synthesis") {
+      const segments = step.segments || [];
+      if (!step.japanese || !step.meaning || !step.audioText) {
+        errors.push(`${content.lessonId}/${step.id}: synthesis is missing required word content`);
+      }
+      if (segments.length < 2) {
+        errors.push(`${content.lessonId}/${step.id}: synthesis must combine at least two segments`);
+      }
+      if (segments.map((segment) => segment.character).join("") !== step.japanese) {
+        errors.push(`${content.lessonId}/${step.id}: synthesis segments do not match ${step.japanese}`);
+      }
+      if (!step.conceptIds?.length) {
+        errors.push(`${content.lessonId}/${step.id}: synthesis must reference at least one concept`);
+      }
+    }
+
+    if (step.type === "scene") {
+      if (!step.setting || !step.lines?.length) {
+        errors.push(`${content.lessonId}/${step.id}: scene needs a setting and at least one line`);
+      }
+      for (const line of step.lines || []) {
+        if (!line.speaker || !line.japanese || !line.meaning) {
+          errors.push(`${content.lessonId}/${step.id}: scene line is missing speaker, japanese or meaning`);
+        }
+      }
+    }
 
     if (step.type === "word_context") {
       const segments = step.segments || [];

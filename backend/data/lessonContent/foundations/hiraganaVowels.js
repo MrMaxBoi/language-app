@@ -20,7 +20,23 @@ const characterTrace = ({ id, conceptId, character, romanization, tracingKey }) 
   tracingKey,
 });
 
-const wordContext = ({
+// Quick ear-calibration check: the prompt is spoken, the learner picks the kana.
+const soundCheck = ({ id, answer, distractors, hint }) => {
+  const choices = [answer, ...distractors];
+  return {
+    id,
+    type: "guided_choice",
+    prompt: "Which sound did you hear?",
+    audioText: answer,
+    choices: choices.map((text) => ({ text, isCorrect: text === answer })),
+    correctAnswer: answer,
+    explanation: `That was ${answer}.`,
+    hint,
+  };
+};
+
+// Characters the learner has just met fuse into a real word.
+const synthesis = ({
   id,
   conceptIds,
   illustrationKey,
@@ -30,7 +46,7 @@ const wordContext = ({
   segments,
 }) => ({
   id,
-  type: "word_context",
+  type: "synthesis",
   conceptIds,
   illustrationKey,
   illustrationAlt,
@@ -42,7 +58,7 @@ const wordContext = ({
 
 export const HIRAGANA_VOWELS_CONTENT = {
   lessonId: "foundations-hiragana-vowels",
-  version: 3,
+  version: 6,
   eyebrow: "HIRAGANA BEGINNINGS",
   title: "Hiragana Vowels",
   description: "Meet the five vowel sounds that appear throughout Japanese.",
@@ -55,9 +71,29 @@ export const HIRAGANA_VOWELS_CONTENT = {
     {
       id: "welcome",
       type: "introduction",
-      title: "Five sounds unlock Hiragana",
-      body: "Every Hiragana row is built around five clear vowel sounds: a, i, u, e, and o.",
-      callout: "Keep each sound short and steady. Japanese vowels do not slide into a second sound.",
+      title: "How Hiragana works",
+      body: "Hiragana is a syllabary: each character stands for one sound, not one letter.",
+      statements: [
+        "Japanese writes with three scripts: hiragana, katakana and kanji.",
+        "Hiragana comes first. It spells native words and the grammar that holds a sentence together.",
+      ],
+    },
+    {
+      id: "vowel-grid",
+      type: "introduction",
+      title: "Five vowels, every row",
+      body: "Hiragana is laid out as a grid of rows, called the gojūon.",
+      statements: [
+        "Almost every row ends on the same five vowels: a, i, u, e, o.",
+      ],
+      callout: "In this lesson: hear, write and read あ い う え お.",
+      beats: [
+        { label: "あ", reading: "a", audioText: "あ" },
+        { label: "い", reading: "i", audioText: "い" },
+        { label: "う", reading: "u", audioText: "う" },
+        { label: "え", reading: "e", audioText: "え" },
+        { label: "お", reading: "o", audioText: "お" },
+      ],
     },
     characterFocus({
       id: "focus-a",
@@ -91,8 +127,14 @@ export const HIRAGANA_VOWELS_CONTENT = {
       romanization: "i",
       tracingKey: "hiragana-i",
     }),
-    wordContext({
-      id: "context-ai",
+    soundCheck({
+      id: "check-a-i",
+      answer: "い",
+      distractors: ["あ"],
+      hint: "Listen for the quick, bright \"ee\".",
+    }),
+    synthesis({
+      id: "synthesis-ai",
       conceptIds: ["kana.hiragana.a", "kana.hiragana.i"],
       illustrationKey: "vowels-ai-love",
       illustrationAlt: "Two hands holding a red heart",
@@ -135,8 +177,14 @@ export const HIRAGANA_VOWELS_CONTENT = {
       romanization: "e",
       tracingKey: "hiragana-e",
     }),
-    wordContext({
-      id: "context-ue",
+    soundCheck({
+      id: "check-u-e",
+      answer: "う",
+      distractors: ["え", "い"],
+      hint: "Relaxed lips, a light \"oo\".",
+    }),
+    synthesis({
+      id: "synthesis-ue",
       conceptIds: ["kana.hiragana.u", "kana.hiragana.e"],
       illustrationKey: "vowels-ue-above",
       illustrationAlt: "A red ball floating above a blue block",
@@ -163,8 +211,14 @@ export const HIRAGANA_VOWELS_CONTENT = {
       romanization: "o",
       tracingKey: "hiragana-o",
     }),
-    wordContext({
-      id: "context-ao",
+    soundCheck({
+      id: "check-a-o",
+      answer: "お",
+      distractors: ["あ", "う"],
+      hint: "A short, rounded \"oh\" with no glide.",
+    }),
+    synthesis({
+      id: "synthesis-ao",
       conceptIds: ["kana.hiragana.a", "kana.hiragana.o"],
       illustrationKey: "vowels-ao-blue",
       illustrationAlt: "A vivid blue sky with one white cloud",
@@ -175,6 +229,18 @@ export const HIRAGANA_VOWELS_CONTENT = {
         { character: "お", romanization: "o" },
       ],
     }),
+    // PLACEHOLDER SCENE: replace setting and lines with the final Kokoro story copy.
+    {
+      id: "scene-rooftop",
+      type: "scene",
+      conceptIds: ["kana.hiragana.a", "kana.hiragana.i", "kana.hiragana.u", "kana.hiragana.e", "kana.hiragana.o"],
+      setting: "Evening on the rooftop. Hana points at the sky while Grandma watches.",
+      lines: [
+        { speaker: "Hana", japanese: "うえ！", meaning: "Up there!" },
+        { speaker: "Hana", japanese: "あお…", meaning: "So blue…" },
+        { speaker: "Grandma", japanese: "あい", meaning: "Love." },
+      ],
+    },
     {
       id: "recap",
       type: "recap",

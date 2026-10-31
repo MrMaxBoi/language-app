@@ -636,6 +636,7 @@ export const submitAnswer = async (req, res) => {
       data: {
         isCorrect,
         correctAnswer: question.correctAnswer,
+        explanation: question.explanation || null,
       },
     });
   } catch (error) {

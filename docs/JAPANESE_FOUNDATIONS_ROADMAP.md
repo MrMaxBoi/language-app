@@ -60,7 +60,7 @@ The Vowels, K-row, and S-row lessons now provide:
 4. Explicit lesson-scoped adaptive selection for the final five-question practice.
 5. A mobile roadmap selector that exposes Foundations alongside N5.
 
-The version 3 Vowels pilot adds reusable `character_focus`, `character_trace`,
+The version 4 Vowels pilot adds a reusable roadmap-sheet preview plus `character_focus`, `character_trace`,
 and `word_context` content types. Each vowel receives a dedicated pronunciation
 screen and ordered tracing screen. Learned pairs are then used in the quiet
 contexts `あい`, `うえ`, and `あお` before the real five-question practice.

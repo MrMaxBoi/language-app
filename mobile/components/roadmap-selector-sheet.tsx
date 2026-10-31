@@ -67,7 +67,7 @@ export function RoadmapSelectorSheet({ visible, roadmaps, selectedRoadmapId, onC
 
 const styles = StyleSheet.create({
   modalRoot: { flex: 1, justifyContent: 'flex-end' },
-  backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(24, 21, 17, 0.42)' },
+  backdrop: { ...StyleSheet.absoluteFill, backgroundColor: 'rgba(24, 21, 17, 0.42)' },
   sheet: { backgroundColor: palette.surface, borderTopLeftRadius: 28, borderTopRightRadius: 28, paddingHorizontal: 22, paddingTop: 10, paddingBottom: 34, ...shadow },
   handle: { width: 42, height: 4, borderRadius: 2, backgroundColor: palette.line, alignSelf: 'center', marginBottom: 18 },
   header: { flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-between', gap: 16 },

@@ -51,6 +51,19 @@ export function LessonDetailSheet({ lesson, isCurrent, visible, isStarting, onCl
           <Text style={styles.title}>{lesson.title}</Text>
           <Text style={styles.description}>{lesson.description}</Text>
 
+          {lesson.preview?.characters?.length ? (
+            <View style={styles.previewSection}>
+              <Text style={styles.previewLabel}>{lesson.preview.label.toUpperCase()}</Text>
+              <View style={styles.previewCharacters}>
+                {lesson.preview.characters.map((character) => (
+                  <View key={character} style={styles.previewCharacterTile}>
+                    <Text style={styles.previewCharacter}>{character}</Text>
+                  </View>
+                ))}
+              </View>
+            </View>
+          ) : null}
+
           {!locked && lesson.progress?.attempts > 0 ? (
             <View style={styles.progressRow}>
               <View>
@@ -96,7 +109,7 @@ export function LessonDetailSheet({ lesson, isCurrent, visible, isStarting, onCl
 
 const styles = StyleSheet.create({
   modalRoot: { flex: 1, justifyContent: 'flex-end' },
-  backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(24, 21, 17, 0.42)' },
+  backdrop: { ...StyleSheet.absoluteFill, backgroundColor: 'rgba(24, 21, 17, 0.42)' },
   sheet: {
     backgroundColor: palette.surface,
     borderTopLeftRadius: 28,
@@ -113,6 +126,11 @@ const styles = StyleSheet.create({
   eyebrow: { marginTop: 22, color: palette.accent, fontFamily: type.body, fontSize: 12, fontWeight: '800' },
   title: { marginTop: 7, color: palette.ink, fontFamily: type.display, fontSize: 29, lineHeight: 35 },
   description: { marginTop: 10, color: palette.muted, fontFamily: type.body, fontSize: 16, lineHeight: 24 },
+  previewSection: { marginTop: 22 },
+  previewLabel: { color: palette.accent, fontFamily: type.body, fontSize: 11, fontWeight: '900' },
+  previewCharacters: { flexDirection: 'row', gap: 8, marginTop: 10 },
+  previewCharacterTile: { flex: 1, minWidth: 0, minHeight: 58, borderRadius: 8, backgroundColor: palette.canvas, alignItems: 'center', justifyContent: 'center' },
+  previewCharacter: { color: palette.ink, fontFamily: type.display, fontSize: 30, lineHeight: 38 },
   progressRow: { flexDirection: 'row', alignItems: 'center', gap: 22, backgroundColor: palette.canvas, borderRadius: 8, padding: 16, marginTop: 22 },
   metricValue: { color: palette.ink, fontSize: 20, fontWeight: '800' },
   metricLabel: { color: palette.muted, fontSize: 12, marginTop: 2 },

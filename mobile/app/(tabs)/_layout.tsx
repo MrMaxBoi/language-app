@@ -10,7 +10,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarButton: HapticTab,
+        tabBarButton: HapticTab as any,
         tabBarActiveTintColor: palette.accent,
         tabBarInactiveTintColor: '#918A81',
         tabBarStyle: {
@@ -30,28 +30,28 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Map',
-          tabBarIcon: ({ color, focused }) => <Ionicons size={24} name={focused ? 'map' : 'map-outline'} color={color} />,
+          tabBarIcon: ({ color, focused }) => <Ionicons size={24} name={focused ? 'map' : 'map-outline'} color={typeof color === 'string' ? color : undefined} />,
         }}
       />
       <Tabs.Screen
         name="review"
         options={{
           title: 'Review',
-          tabBarIcon: ({ color, focused }) => <Ionicons size={24} name={focused ? 'refresh-circle' : 'refresh-circle-outline'} color={color} />,
+          tabBarIcon: ({ color, focused }) => <Ionicons size={24} name={focused ? 'refresh-circle' : 'refresh-circle-outline'} color={typeof color === 'string' ? color : undefined} />,
         }}
       />
       <Tabs.Screen
         name="progress"
         options={{
           title: 'Progress',
-          tabBarIcon: ({ color, focused }) => <Ionicons size={24} name={focused ? 'git-network' : 'git-network-outline'} color={color} />,
+          tabBarIcon: ({ color, focused }) => <Ionicons size={24} name={focused ? 'git-network' : 'git-network-outline'} color={typeof color === 'string' ? color : undefined} />,
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
           title: 'Profile',
-          tabBarIcon: ({ color, focused }) => <Ionicons size={24} name={focused ? 'person' : 'person-outline'} color={color} />,
+          tabBarIcon: ({ color, focused }) => <Ionicons size={24} name={focused ? 'person' : 'person-outline'} color={typeof color === 'string' ? color : undefined} />,
         }}
       />
     </Tabs>

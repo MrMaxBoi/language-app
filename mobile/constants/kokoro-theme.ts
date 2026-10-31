@@ -20,6 +20,16 @@ export const palette = {
 export const type = {
   display: Platform.select({ ios: 'Georgia', android: 'serif', default: 'serif' }),
   body: Platform.select({ ios: 'System', android: 'sans-serif', default: 'sans-serif' }),
+  /**
+   * Textbook-style (kyōkasho) kana, close to handwriting, so a kana the learner is shown has the
+   * same shape as the one they trace. Klee One SemiBold, subset to hiragana and katakana (OFL).
+   * Loaded in app/_layout.tsx.
+   */
+  kana: 'KleeOne-SemiBold',
+};
+
+export const KANA_FONT_ASSETS = {
+  [type.kana]: require('../assets/fonts/KleeOne-SemiBold-kana.ttf'),
 };
 
 export const shadow = Platform.select({

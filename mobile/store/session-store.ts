@@ -5,13 +5,26 @@ import {
   startLearningSession,
   submitSessionAnswer,
 } from '@/services/kokoro-api';
+import type { HubKana } from '@/store/kana-hub-progress';
 import type { Question, SessionRoadmap } from '@/types/learning';
+
+/**
+ * The lesson's kana row, shared by the lesson, practice and result screens.
+ * The lesson screen writes `met`; practice writes `inkEarned`/`inkAsked`; result only reads.
+ * Kept in memory only: leaving and re-entering a lesson starts the row blank again.
+ */
+type KanaHubProgress = {
+  lessonId: string;
+  kana: HubKana[];
+  met: Record<string, boolean>;
+};
 
 type AnswerFeedback = {
   questionId: string;
   userAnswer: string;
   isCorrect: boolean;
   correctAnswer: string;
+  explanation?: string | null;
 };
 
 type SessionState = {
@@ -23,6 +36,14 @@ type SessionState = {
   report: Record<string, unknown> | null;
   isStarting: boolean;
   startError: string | null;
+  hub: KanaHubProgress | null;
+  inkEarned: Record<string, number>;
+  inkAsked: Record<string, boolean>;
+  /** Start a blank row for a lesson. `metAll` reveals every kana (practice opened without teaching). */
+  beginHub: (lessonId: string, kana: HubKana[], metAll?: boolean) => void;
+  markMet: (keys: string[]) => void;
+  /** Mark these concepts as asked and add `credit` ink to each (0 for a miss). */
+  recordInk: (conceptIds: string[], credit: number) => void;
   startLesson: (lessonId: string) => Promise<boolean>;
   startDailyReview: () => Promise<boolean>;
   submitAnswer: (questionId: string, userAnswer: string) => Promise<AnswerFeedback>;
@@ -39,6 +60,9 @@ const initialSession = {
   answers: [],
   report: null,
   startError: null,
+  hub: null,
+  inkEarned: {},
+  inkAsked: {},
 };
 
 export const useSessionStore = create<SessionState>((set, get) => {
@@ -54,6 +78,9 @@ export const useSessionStore = create<SessionState>((set, get) => {
         answers: [],
         report: null,
         isStarting: false,
+        // Ink is earned per session; the revealed kana (hub.met) carry over from the lesson.
+        inkEarned: {},
+        inkAsked: {},
       });
       return true;
     } catch (error) {
@@ -68,6 +95,28 @@ export const useSessionStore = create<SessionState>((set, get) => {
   return {
     ...initialSession,
     isStarting: false,
+    beginHub: (lessonId, kana, metAll = false) => set({
+      hub: {
+        lessonId,
+        kana,
+        met: metAll ? Object.fromEntries(kana.map((item) => [item.key, true])) : {},
+      },
+    }),
+    markMet: (keys) => set((state) => {
+      if (!state.hub || keys.every((key) => state.hub?.met[key])) return state;
+      const met = { ...state.hub.met };
+      keys.forEach((key) => { met[key] = true; });
+      return { hub: { ...state.hub, met } };
+    }),
+    recordInk: (conceptIds, credit) => set((state) => {
+      const inkEarned = { ...state.inkEarned };
+      const inkAsked = { ...state.inkAsked };
+      for (const conceptId of new Set(conceptIds)) {
+        inkAsked[conceptId] = true;
+        inkEarned[conceptId] = (inkEarned[conceptId] || 0) + credit;
+      }
+      return { inkEarned, inkAsked };
+    }),
     startLesson: (lessonId) => start({ lessonId }),
     startDailyReview: () => start({ mode: 'daily_review' }),
     submitAnswer: async (questionId, userAnswer) => {

@@ -50,6 +50,7 @@
     "@google/generative-ai": "^0.24.1",
     "cors": "^2.8.6",
     "dotenv": "^17.2.1",
+    "expo": "^44.0.6",
     "express": "^5.1.0",
     "mongodb": "^7.3.0",
     "mongoose": "^8.18.0",
@@ -58,6 +59,6 @@
   "devDependencies": {
     "cross-env": "^10.1.0",
     "nodeman": "^1.1.2",
-    "nodemon": "^3.1.10"
+    "nodemon": "^1.14.10"
   }
 }

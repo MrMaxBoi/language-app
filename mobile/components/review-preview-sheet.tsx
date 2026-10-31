@@ -235,7 +235,7 @@ export function ReviewPreviewSheet({ review, visible, isStarting, onClose, onSta
 
 const styles = StyleSheet.create({
   modalRoot: { flex: 1, justifyContent: 'flex-end' },
-  backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(24, 21, 17, 0.42)' },
+  backdrop: { ...StyleSheet.absoluteFill, backgroundColor: 'rgba(24, 21, 17, 0.42)' },
   sheet: {
     height: '86%',
     backgroundColor: palette.surface,

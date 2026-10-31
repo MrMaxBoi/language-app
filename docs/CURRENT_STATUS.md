@@ -191,7 +191,7 @@ Recent progress:
 - Roadmap lesson selection now prefers explicit `lessonIds`; skill-scoped selection remains a compatibility fallback.
 - N5 remains fully ready with all 33 lessons, and an unchanged seed now reports 0 modified Atlas questions.
 - `GET /api/lessons/:lessonId/content` returns validated teaching content without exposing answer persistence or changing learner state.
-- Hiragana Vowels now uses a 15-step version 3 flow: one explanation, five focused character screens, five ordered tracing screens, three quiet word contexts, and a recap before adaptive practice.
+- Hiragana Vowels now uses a 15-step version 4 flow: a roadmap-sheet character preview, one teacher-style explanation, five focused character screens, five ordered tracing screens, three quiet word contexts, and a recap before adaptive practice.
 - K-row and S-row retain their validated eight-step format until the richer Vowels pacing is accepted.
 - Character pronunciation, word audio, sound segments, and recap characters can trigger Japanese speech without recording teaching interactions as learner Attempts.
 - Tracing uses ordered AnimCJK median paths, forgiving local validation, direct haptic feedback, and an accessibility guide-completion path.

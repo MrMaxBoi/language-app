@@ -8,6 +8,7 @@ export const lessonNode = ({
   minimumQuestionCount = 5,
   recommendedQuestionTypes = ["multiple_choice", "fill_in_blank"],
   requiresTeachingContent = false,
+  preview = null,
 }) => ({
   id,
   title,
@@ -19,4 +20,5 @@ export const lessonNode = ({
   minimumQuestionCount,
   recommendedQuestionTypes,
   requiresTeachingContent,
+  preview,
 });

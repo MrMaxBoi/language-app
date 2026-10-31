@@ -19,6 +19,10 @@ export type RoadmapLesson = {
   minimumQuestionCount: number;
   roadmapId: string;
   status: LessonStatus;
+  preview?: {
+    label: string;
+    characters: string[];
+  } | null;
   content: {
     availableQuestionCount: number;
     minimumQuestionCount: number;
@@ -116,6 +120,8 @@ export type Question = {
   skillId?: string;
   skillName?: string;
   difficulty?: string;
+  /** Concepts (e.g. kana.hiragana.a) the question exercises; drives the practice kana hub's ink. */
+  conceptIds?: string[];
 };
 
 export type SessionRoadmap = {
@@ -148,6 +154,9 @@ export type LessonContentStep =
       title: string;
       body: string;
       callout?: string;
+      statements?: string[];
+      /** Optional tappable sound "beats" shown under the prologue copy. */
+      beats?: { label: string; reading: string; audioText: string }[];
     }
   | {
       id: string;
@@ -217,6 +226,33 @@ export type LessonContentStep =
       correctAnswer: string;
       explanation: string;
       hint: string;
+      /** When present the prompt is spoken, turning the step into a sound check. */
+      audioText?: string;
+    }
+  | {
+      id: string;
+      type: 'synthesis';
+      conceptIds: string[];
+      japanese: string;
+      meaning: string;
+      audioText: string;
+      illustrationKey?: string;
+      illustrationAlt?: string;
+      segments: {
+        character: string;
+        romanization: string;
+      }[];
+    }
+  | {
+      id: string;
+      type: 'scene';
+      conceptIds: string[];
+      setting: string;
+      lines: {
+        speaker: string;
+        japanese: string;
+        meaning: string;
+      }[];
     }
   | {
       id: string;

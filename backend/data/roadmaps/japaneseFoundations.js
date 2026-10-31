@@ -21,7 +21,17 @@ export const JAPANESE_FOUNDATIONS_ROADMAP = {
       title: "Hiragana Beginnings",
       description: "Start with the most common sound rows in the native Japanese script.",
       lessons: [
-        foundationLesson({ id: "foundations-hiragana-vowels", title: "Hiragana Vowels", description: "Learn あ, い, う, え, and お.", primarySkillIds: ["kana.hiragana"], conceptIds: concepts.hiragana.vowels }),
+        foundationLesson({
+          id: "foundations-hiragana-vowels",
+          title: "Hiragana Vowels",
+          description: "Meet the first five sounds of Hiragana.",
+          primarySkillIds: ["kana.hiragana"],
+          conceptIds: concepts.hiragana.vowels,
+          preview: {
+            label: "Words to encounter",
+            characters: ["あ", "い", "う", "え", "お"],
+          },
+        }),
         foundationLesson({ id: "foundations-hiragana-k-row", title: "Hiragana K-row", description: "Learn か, き, く, け, and こ.", primarySkillIds: ["kana.hiragana"], conceptIds: concepts.hiragana.k }),
         foundationLesson({ id: "foundations-hiragana-s-row", title: "Hiragana S-row", description: "Learn さ, し, す, せ, and そ.", primarySkillIds: ["kana.hiragana"], conceptIds: concepts.hiragana.s }),
         foundationLesson({ id: "foundations-hiragana-t-row", title: "Hiragana T-row", description: "Learn た, ち, つ, て, and と.", primarySkillIds: ["kana.hiragana"], conceptIds: concepts.hiragana.t }),
