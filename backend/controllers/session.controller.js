@@ -3,7 +3,8 @@ import Session from "../models/session.model.js";
 import Question from "../models/question.model.js";
 import { analyzeSession } from "../services/analysis.service.js";
 import { generateLearningFeedback } from "../services/ai.service.js";
-import { getSessionQuestions } from "../services/questionSelection.service.js";
+import { getSessionQuestions, getLearnerStageSignals } from "../services/questionSelection.service.js";
+import { decideSessionLength, MAX_SESSION_QUESTIONS } from "../services/sessionLength.service.js";
 import { updateMemoryAfterAttempt } from "../services/memory.service.js";
 import { generateSessionAnalytics } from "../services/analytics.service.js";
 import Attempt from "../models/attempt.model.js";
@@ -434,14 +435,41 @@ export const startSession = async (req, res) => {
     console.log(`👤 Active userId: ${newSession.userId}`);
 
     // ✅ SESSION QUESTION ENGINE v2
-    const questions = isDailyReview
-      ? dailyReview.questions
-      : await getSessionQuestions(newSession.userId, 5, {
-          persistExposure: true,
-          lessonId: roadmapLesson?.id,
-          lessonTitle: roadmapLesson?.title || (isReviewSession ? newSession.roadmap.lessonTitle : undefined),
-          lessonSkillIds: roadmapLesson?.skillIds || (isReviewSession ? normalizedReviewSkillIds : undefined),
-        });
+    // Adaptive session length (Today item 3): the server decides the starting
+    // question count (3-6) from the learner's stage and whether they have a weak
+    // skill in this lesson's scope, replacing the old hard-coded 5. Daily review
+    // keeps its own length (built by buildDailyReviewSession).
+    const lessonScopeSkillIds =
+      roadmapLesson?.skillIds || (isReviewSession ? normalizedReviewSkillIds : undefined);
+
+    let questions;
+    let sessionLength = null;
+    if (isDailyReview) {
+      questions = dailyReview.questions;
+    } else {
+      const signals = await getLearnerStageSignals(newSession.userId, {
+        lessonSkillIds: lessonScopeSkillIds,
+      });
+      sessionLength = decideSessionLength({
+        learnerStage: signals.learnerStage,
+        hasWeakSkillInScope: signals.hasWeakSkillInScope,
+      });
+      console.log("📏 Adaptive session length:", { count: sessionLength.count, basis: sessionLength.basis });
+
+      questions = await getSessionQuestions(newSession.userId, sessionLength.count, {
+        persistExposure: true,
+        lessonId: roadmapLesson?.id,
+        lessonTitle: roadmapLesson?.title || (isReviewSession ? newSession.roadmap.lessonTitle : undefined),
+        lessonSkillIds: lessonScopeSkillIds,
+      });
+
+      // Record the planned size on the session doc (D6) so it is auditable and
+      // the future /:id/extend logic has a baseline. Persist what was actually
+      // returned in case the lesson pool was smaller than the planned count.
+      newSession.roadmap.plannedQuestionCount = sessionLength.count;
+      newSession.roadmap.startingQuestionCount = questions.length;
+      await newSession.save();
+    }
 
     if (isReviewSession) {
       console.log("🧪 Review session target:", {
@@ -462,6 +490,17 @@ export const startSession = async (req, res) => {
         sessionId: newSession._id,
         roadmap: newSession.roadmap,
         questions,
+        ...(sessionLength
+          ? {
+              sessionLength: {
+                plannedQuestionCount: sessionLength.count,
+                startingQuestionCount: questions.length,
+                min: sessionLength.basis.min,
+                max: sessionLength.basis.max,
+                basis: sessionLength.basis,
+              },
+            }
+          : {}),
         ...(isDailyReview
           ? {
               mode: dailyReview.mode,
@@ -478,6 +517,84 @@ export const startSession = async (req, res) => {
     console.log(error);
   }
 };
+
+// Adaptive session length — extend path (Today item 3, Core stub for the mobile
+// half). When a learner is struggling, mobile can ask for 1-3 MORE questions to
+// append to its queue, biased to the layers (cognitiveType) they are missing.
+// This is a thin stub: it reuses getSessionQuestions over the same lesson scope,
+// excludes questions already asked in this session, and caps the total session
+// size at MAX_SESSION_QUESTIONS. The MOBILE side (session.tsx + session store)
+// that decides WHEN to call this and appends the result is Lesson Design's lane.
+export const extendSession = async (req, res) => {
+  const { id } = req.params;
+  const requested = Number(req.body?.count);
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(404).json({ success: false, message: "Invalid Session Id" });
+  }
+
+  try {
+    const session = await Session.findById(id);
+    if (!session) {
+      return res.status(404).json({ success: false, message: "Session not found" });
+    }
+    if (session.status === "completed") {
+      return res.status(409).json({ success: false, message: "Session is already complete" });
+    }
+
+    const askedCount = await Attempt.countDocuments({ sessionId: id });
+    const alreadyAsked = await Attempt.find({ sessionId: id }).select({ questionId: 1 }).lean();
+    const askedIds = new Set(alreadyAsked.map((a) => String(a.questionId)));
+
+    // How many more we are allowed to add: 1-3 requested, but never past the max
+    // session size relative to what has already been asked.
+    const headroom = Math.max(0, MAX_SESSION_QUESTIONS - askedCount);
+    const want = clampExtendCount(Number.isFinite(requested) ? requested : 1);
+    const toAdd = Math.min(want, headroom);
+
+    if (toAdd <= 0) {
+      return res.status(200).json({
+        success: true,
+        data: { questions: [], added: 0, reason: "max_length_reached", askedCount, max: MAX_SESSION_QUESTIONS },
+      });
+    }
+
+    const lessonScopeSkillIds = Array.isArray(session.roadmap?.skillIds)
+      ? session.roadmap.skillIds.filter(Boolean)
+      : undefined;
+
+    // Over-fetch, then drop anything already asked, then trim to toAdd.
+    const pool = await getSessionQuestions(session.userId, toAdd + askedCount, {
+      persistExposure: false,
+      lessonId: session.roadmap?.lessonId || undefined,
+      lessonTitle: session.roadmap?.lessonTitle || undefined,
+      lessonSkillIds: lessonScopeSkillIds,
+    });
+    const fresh = pool.filter((q) => !askedIds.has(String(q.questionId))).slice(0, toAdd);
+
+    session.roadmap.plannedQuestionCount = Math.min(
+      MAX_SESSION_QUESTIONS,
+      (session.roadmap.plannedQuestionCount || askedCount) + fresh.length
+    );
+    await session.save();
+
+    return res.status(200).json({
+      success: true,
+      data: {
+        questions: fresh,
+        added: fresh.length,
+        askedCount,
+        plannedQuestionCount: session.roadmap.plannedQuestionCount,
+        max: MAX_SESSION_QUESTIONS,
+      },
+    });
+  } catch (error) {
+    console.log("❌ Error extending session:", error.message);
+    res.status(500).json({ success: false, message: "Server Error" });
+  }
+};
+
+const clampExtendCount = (n) => Math.max(1, Math.min(3, Math.round(n)));
 
 export const getQuestionAnswer = async (req, res) => {
   const { questionId } = req.params;

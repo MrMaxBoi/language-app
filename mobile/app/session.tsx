@@ -1,6 +1,7 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRouter } from 'expo-router';
-import { useEffect, useMemo, useState } from 'react';
+import * as Speech from 'expo-speech';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   ActivityIndicator,
   Alert,
@@ -36,6 +37,22 @@ type QueueEntry = { questionIndex: number; isRetry: boolean };
 type TurnRecord = { answer: string; feedback: Feedback };
 
 const choiceTypes = new Set(['multiple_choice', 'meaning_match', 'translation_choice']);
+
+// A struggling session grows once: after this many first-try misses, ask for EXTEND_COUNT
+// repair questions. The server caps the whole session at 6. Nothing tells the learner;
+// the extra questions read as ordinary ones.
+const STRUGGLE_MISSES = 2;
+const EXTEND_COUNT = 2;
+
+/**
+ * Add new turns after the live one and before any pending second looks, so retries stay last.
+ * Answered turns never move, so records keyed by turn position stay valid.
+ */
+function insertRepairTurns(queue: QueueEntry[], livePosition: number, added: QueueEntry[]) {
+  const firstPendingRetry = queue.findIndex((entry, index) => index > livePosition && entry.isRetry);
+  const at = firstPendingRetry === -1 ? queue.length : firstPendingRetry;
+  return [...queue.slice(0, at), ...added, ...queue.slice(at)];
+}
 
 // Mirrors the backend comparison in session.controller.js so a second look is judged identically.
 const normalize = (value: string) => value.toLowerCase().trim();
@@ -73,6 +90,7 @@ export default function SessionScreen() {
   const inkAsked = useSessionStore((state) => state.inkAsked);
   const beginHub = useSessionStore((state) => state.beginHub);
   const recordInk = useSessionStore((state) => state.recordInk);
+  const extendSession = useSessionStore((state) => state.extendSession);
   const [queue, setQueue] = useState<QueueEntry[]>(
     () => questions.map((_, questionIndex) => ({ questionIndex, isRetry: false })),
   );
@@ -83,6 +101,19 @@ export default function SessionScreen() {
   const [submitting, setSubmitting] = useState(false);
   const [viewportHeight, setViewportHeight] = useState(0);
   const [contentHeight, setContentHeight] = useState(0);
+  // The repair request, once made. Finishing waits for it so the extra questions are never skipped.
+  const extendRequest = useRef<Promise<number> | null>(null);
+  // Mirrors `queue` synchronously, so code that resumes after an await sees the latest turns.
+  const queueRef = useRef(queue);
+  const updateQueue = (change: (current: QueueEntry[]) => QueueEntry[]) => {
+    queueRef.current = change(queueRef.current);
+    setQueue(queueRef.current);
+  };
+  // The live turn, read when the repair questions arrive (the learner may have moved on).
+  const livePosition = useRef(0);
+  useEffect(() => {
+    livePosition.current = position;
+  }, [position]);
 
   // Previous only ever shows an earlier turn read-only; the live turn stays at `position`.
   const shownPosition = viewPosition ?? position;
@@ -99,6 +130,31 @@ export default function SessionScreen() {
     [question],
   );
   const isChoice = Boolean(question && choiceTypes.has(question.questionType) && options.length > 0);
+  const audioText = question?.audioText;
+  const [isSpeaking, setIsSpeaking] = useState(false);
+
+  const playQuestionAudio = (text: string) => {
+    setIsSpeaking(true);
+    const finish = () => setIsSpeaking(false);
+    try {
+      void Speech.stop();
+      Speech.speak(text, { language: 'ja-JP', rate: 0.78, onDone: finish, onStopped: finish, onError: finish });
+    } catch {
+      finish();
+    }
+  };
+
+  // A question answered by ear plays its sound once when it opens live; Hear replays it.
+  const liveAudio = !isReviewingPast && !feedback ? audioText : undefined;
+  useEffect(() => {
+    if (!liveAudio) return undefined;
+    const timer = setTimeout(() => playQuestionAudio(liveAudio), 350);
+    return () => {
+      clearTimeout(timer);
+      void Speech.stop();
+    };
+  }, [liveAudio, shownPosition]);
+
   const title = roadmap?.mode === 'daily_review' ? 'Review of the day' : roadmap?.lessonTitle || 'Practice';
   const scrollEnabled = contentHeight > viewportHeight + 1;
 
@@ -175,13 +231,35 @@ export default function SessionScreen() {
       recordInk(question.conceptIds || [], result.isCorrect ? FIRST_TRY_CREDIT : 0);
       // A missed question comes back once, at the end of the session.
       if (!result.isCorrect) {
-        setQueue((current) => [...current, { questionIndex: entry.questionIndex, isRetry: true }]);
+        updateQueue((current) => [...current, { questionIndex: entry.questionIndex, isRetry: true }]);
+        requestRepairIfStruggling();
       }
     } catch (error) {
       Alert.alert('Answer could not be checked', error instanceof Error ? error.message : 'Please try again.');
     } finally {
       setSubmitting(false);
     }
+  };
+
+  // Asked once, as soon as the second first-try miss lands, so the extra questions are
+  // usually ready before the learner taps Continue. A failed request just ends as planned.
+  const requestRepairIfStruggling = () => {
+    if (extendRequest.current) return;
+    const earlierMisses = Object.entries(records).filter(
+      ([turn, value]) => !queue[Number(turn)]?.isRetry && !value.feedback.isCorrect,
+    ).length;
+    if (earlierMisses + 1 < STRUGGLE_MISSES) return;
+
+    extendRequest.current = extendSession(EXTEND_COUNT).then(({ firstIndex, added }) => {
+      if (added > 0) {
+        const turns = Array.from({ length: added }, (_, offset) => ({
+          questionIndex: firstIndex + offset,
+          isRetry: false,
+        }));
+        updateQueue((current) => insertRepairTurns(current, livePosition.current, turns));
+      }
+      return added;
+    });
   };
 
   const continueSession = async () => {
@@ -192,6 +270,15 @@ export default function SessionScreen() {
     }
 
     setSubmitting(true);
+    // Repair questions still on their way land after this turn: go to them instead of finishing.
+    if (extendRequest.current) await extendRequest.current;
+    if (queueRef.current.length - 1 > position) {
+      setSubmitting(false);
+      setPosition((current) => current + 1);
+      setAnswer('');
+      return;
+    }
+
     const completed = await completeSession();
     setSubmitting(false);
     if (completed) router.replace('/result');
@@ -243,6 +330,17 @@ export default function SessionScreen() {
         <View style={styles.stage}>
           {entry.isRetry ? <Text style={styles.secondLook}>One more look</Text> : null}
           <Text style={styles.prompt}>{question.questionText}</Text>
+          {audioText ? (
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Hear it again"
+              accessibilityState={{ busy: isSpeaking }}
+              onPress={() => playQuestionAudio(audioText)}
+              style={({ pressed }) => [styles.hearButton, isSpeaking && styles.hearButtonActive, pressed && { opacity: 0.72 }]}>
+              <Ionicons name="volume-high" size={20} color={palette.accent} />
+              <Text style={styles.hearButtonText}>{isSpeaking ? 'Playing...' : 'Hear it'}</Text>
+            </Pressable>
+          ) : null}
 
           {isChoice ? (
             <View style={styles.options}>
@@ -358,6 +456,23 @@ const styles = StyleSheet.create({
   },
   secondLook: { color: palette.muted, fontSize: 13, fontWeight: '700', textAlign: 'center', marginBottom: 8 },
   prompt: { color: palette.ink, fontFamily: type.display, fontSize: 29, lineHeight: 38, textAlign: 'center' },
+  // Same outlined style as the listen card's Hear button, so the filled button stays the only loud one.
+  hearButton: {
+    alignSelf: 'center',
+    minHeight: 46,
+    marginTop: 14,
+    paddingHorizontal: 22,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: palette.line,
+    backgroundColor: palette.surface,
+    flexDirection: 'row',
+    gap: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  hearButtonActive: { borderColor: palette.accent, backgroundColor: palette.accentSoft },
+  hearButtonText: { color: palette.accent, fontSize: 15, fontWeight: '800' },
   options: { gap: 12, marginTop: 26 },
   option: { minHeight: 56, borderRadius: 8, borderWidth: 1, borderColor: palette.line, backgroundColor: palette.canvas, justifyContent: 'center', paddingHorizontal: 18 },
   selectedOption: { borderColor: palette.accent, backgroundColor: palette.accentSoft },

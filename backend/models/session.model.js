@@ -201,6 +201,17 @@ const sessionSchema = new mongoose.Schema(
 			supportSkillIds: [String],
 			skillIds: [String],
 			reviewTaskIds: [String],
+			// Adaptive session length (Today item 3). plannedQuestionCount is the
+			// size the engine decided at start (3-6); startingQuestionCount is how
+			// many were actually served (may be lower if the lesson pool is small).
+			plannedQuestionCount: {
+				type: Number,
+				default: null,
+			},
+			startingQuestionCount: {
+				type: Number,
+				default: null,
+			},
 			estimatedMinutes: {
 				type: Number,
 				default: 0,

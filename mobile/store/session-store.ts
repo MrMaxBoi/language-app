@@ -2,6 +2,7 @@ import { create } from 'zustand';
 
 import {
   completeLearningSession,
+  extendLearningSession,
   startLearningSession,
   submitSessionAnswer,
 } from '@/services/kokoro-api';
@@ -48,6 +49,12 @@ type SessionState = {
   startDailyReview: () => Promise<boolean>;
   submitAnswer: (questionId: string, userAnswer: string) => Promise<AnswerFeedback>;
   nextQuestion: () => void;
+  /**
+   * Ask the server for up to `count` repair questions and add them to `questions`.
+   * Resolves to the index of the first added question and how many were added (0 when
+   * the server is at its cap or the request fails; the session then simply ends as planned).
+   */
+  extendSession: (count: number) => Promise<{ firstIndex: number; added: number }>;
   completeSession: () => Promise<boolean>;
   reset: () => void;
 };
@@ -128,6 +135,25 @@ export const useSessionStore = create<SessionState>((set, get) => {
       return feedback;
     },
     nextQuestion: () => set((state) => ({ currentIndex: state.currentIndex + 1 })),
+    extendSession: async (count) => {
+      const sessionId = get().sessionId;
+      const none = { firstIndex: get().questions.length, added: 0 };
+      if (!sessionId) return none;
+      try {
+        const result = await extendLearningSession(sessionId, count);
+        // The server only excludes questions already answered, so drop any that are
+        // still waiting in this session's queue.
+        const idOf = (question: Question) => String(question._id || question.questionId);
+        const current = get().questions;
+        const known = new Set(current.map(idOf));
+        const fresh = (result.questions || []).filter((question) => !known.has(idOf(question)));
+        if (!fresh.length || get().sessionId !== sessionId) return none;
+        set({ questions: [...current, ...fresh] });
+        return { firstIndex: current.length, added: fresh.length };
+      } catch {
+        return none;
+      }
+    },
     completeSession: async () => {
       const sessionId = get().sessionId;
       if (!sessionId) return false;

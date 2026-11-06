@@ -73,7 +73,7 @@ const normalizeDifficulty = (difficulty) => {
   return "easy";
 };
 
-const buildQuestionFromSource = (sourceQuestion) => {
+export const buildQuestionFromSource = (sourceQuestion) => {
   const skill = getQuestionSkill(sourceQuestion);
 
   return {
@@ -93,6 +93,12 @@ const buildQuestionFromSource = (sourceQuestion) => {
     conceptIds: sourceQuestion.conceptIds || [],
     jlptLevel: skill.jlptLevel,
     difficulty: normalizeDifficulty(sourceQuestion.difficulty),
+    // Pass the layer tag through so the engine (and later repair-by-layer) and
+    // the app can see it. Mirror the model default for untagged questions.
+    cognitiveType: sourceQuestion.cognitiveType || "recognition",
+    // Pass audioText only when present so production questions play their sound
+    // on the phone; non-audio questions stay without the field.
+    ...(sourceQuestion.audioText ? { audioText: sourceQuestion.audioText } : {}),
   };
 };
 
@@ -896,6 +902,46 @@ const calculateCoveragePercent = (coverageLookup, allQuestions) => {
   return Math.min(100, (coveredSkills / skillIdsInBank.size) * 100);
 };
 
+// Lightweight read of the learner-stage signals used to size a session, without
+// running full question selection. Mirrors the stage block inside
+// getSessionQuestions so the two stay consistent. Used by the adaptive
+// session-length decision (sessionLength.service.js). lessonSkillIds scopes the
+// "weak skill in scope" check to the lesson being started.
+export const getLearnerStageSignals = async (userId, { lessonSkillIds } = {}) => {
+  const scope = Array.isArray(lessonSkillIds)
+    ? new Set(lessonSkillIds.filter(Boolean))
+    : lessonSkillIds instanceof Set
+      ? lessonSkillIds
+      : null;
+
+  const [skills, recentAttempts, totalAttemptCount, coverages] = await Promise.all([
+    Skill.find({ userId }).lean(),
+    Attempt.find({ userId }).sort({ createdAt: -1 }).limit(10).lean(),
+    Attempt.countDocuments({ userId }),
+    KnowledgeCoverage.find({ userId }).lean(),
+  ]);
+
+  const masteryLookup = buildMasteryLookup(skills);
+  const weakSkills = Object.entries(masteryLookup.bySkill)
+    .filter(([, mastery]) => mastery < 0.4)
+    .map(([skillId]) => skillId);
+
+  const learnerStageMetrics = {
+    totalAttemptCount,
+    coveredSkillCount: countCoveredSkills(coverages || []),
+    averageMastery: calculateAverageMastery(masteryLookup),
+    recentAccuracy: calculateRecentAccuracy(recentAttempts),
+    weakSkillCount: weakSkills.length,
+  };
+  const learnerStage = detectLearnerStage(learnerStageMetrics);
+
+  const hasWeakSkillInScope = scope?.size
+    ? weakSkills.some((skillId) => scope.has(skillId))
+    : weakSkills.length > 0;
+
+  return { learnerStage, learnerStageMetrics, weakSkills, hasWeakSkillInScope };
+};
+
 export const getSessionQuestions = async (userId, count = 5, options = {}) => {
   const exploitCount = Math.max(Math.floor(count * 0.8), count - 1);
   const exposureAware = options.exposureAware !== false;
@@ -1442,6 +1488,10 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       conceptIds: question.conceptIds,
       jlptLevel: question.jlptLevel,
       difficulty: question.difficulty,
+      // The layer tag and the by-ear audio must reach the app: the quiz screen
+      // plays audioText (Hear button) and item 3 repairs by cognitiveType.
+      cognitiveType: question.cognitiveType || "recognition",
+      ...(question.audioText ? { audioText: question.audioText } : {}),
       exposureCount: question.exposureCount,
       exposurePenalty: question.exposurePenalty,
       lessonId: options.lessonId || null,
@@ -1485,6 +1535,8 @@ export const getSessionQuestions = async (userId, count = 5, options = {}) => {
       prerequisiteSkillIds: question.prerequisiteSkillIds,
       jlptLevel: question.jlptLevel,
       difficulty: question.difficulty,
+      cognitiveType: question.cognitiveType || "recognition",
+      ...(question.audioText ? { audioText: question.audioText } : {}),
     }));
   }
 };

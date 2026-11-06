@@ -58,7 +58,7 @@ const synthesis = ({
 
 export const HIRAGANA_VOWELS_CONTENT = {
   lessonId: "foundations-hiragana-vowels",
-  version: 6,
+  version: 8,
   eyebrow: "HIRAGANA BEGINNINGS",
   title: "Hiragana Vowels",
   description: "Meet the five vowel sounds that appear throughout Japanese.",
@@ -229,16 +229,16 @@ export const HIRAGANA_VOWELS_CONTENT = {
         { character: "お", romanization: "o" },
       ],
     }),
-    // PLACEHOLDER SCENE: replace setting and lines with the final Kokoro story copy.
+    // The acceptance moment: catch one word someone says while pointing. The situation, not the
+    // gloss, carries the meaning, so the connection questions can test うえ and あお without it.
     {
       id: "scene-rooftop",
       type: "scene",
-      conceptIds: ["kana.hiragana.a", "kana.hiragana.i", "kana.hiragana.u", "kana.hiragana.e", "kana.hiragana.o"],
-      setting: "Evening on the rooftop. Hana points at the sky while Grandma watches.",
+      conceptIds: ["kana.hiragana.u", "kana.hiragana.e", "kana.hiragana.a", "kana.hiragana.o"],
+      setting: "Golden hour on the rooftop. Hana's red balloon slips from her hand.",
       lines: [
-        { speaker: "Hana", japanese: "うえ！", meaning: "Up there!" },
-        { speaker: "Hana", japanese: "あお…", meaning: "So blue…" },
-        { speaker: "Grandma", japanese: "あい", meaning: "Love." },
+        { speaker: "Hana", japanese: "うえ！", meaning: "Up!" },
+        { speaker: "Grandma", japanese: "あお…", meaning: "Into the blue…" },
       ],
     },
     {
@@ -257,7 +257,7 @@ export const HIRAGANA_VOWELS_CONTENT = {
   practice: {
     questionCount: 5,
     title: "Now make the sounds yours",
-    description: "Five short questions will check what stayed with you.",
+    description: "A few short questions will check what stayed with you.",
     ctaLabel: "Start practice",
   },
 };

@@ -1,7 +1,7 @@
 import Constants from 'expo-constants';
 import { Platform } from 'react-native';
 
-import type { HomeRecommendation, LessonContent, RoadmapResponse, SessionStartResponse } from '@/types/learning';
+import type { HomeRecommendation, LessonContent, Question, RoadmapResponse, SessionStartResponse } from '@/types/learning';
 
 const API_PORT = 5050;
 
@@ -80,6 +80,13 @@ export const submitSessionAnswer = (sessionId: string, questionId: string, userA
     method: 'POST',
     body: JSON.stringify({ questionId, userAnswer }),
   });
+
+/** Ask for up to `count` (1-3) repair questions. The server caps the session at 6, so `added` may be 0. */
+export const extendLearningSession = (sessionId: string, count: number) =>
+  request<{ questions: Question[]; added: number; plannedQuestionCount?: number; max: number }>(
+    `/api/sessions/${sessionId}/extend`,
+    { method: 'POST', body: JSON.stringify({ count }) },
+  );
 
 export const completeLearningSession = (sessionId: string) =>
   request<Record<string, unknown>>(`/api/sessions/${sessionId}/complete`, { method: 'POST' });

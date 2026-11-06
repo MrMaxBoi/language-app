@@ -122,6 +122,10 @@ export type Question = {
   difficulty?: string;
   /** Concepts (e.g. kana.hiragana.a) the question exercises; drives the practice kana hub's ink. */
   conceptIds?: string[];
+  /** recognition, production or connection. */
+  cognitiveType?: string;
+  /** Japanese the quiz speaks aloud, for questions answered by ear ("Which kana did you hear?"). */
+  audioText?: string;
 };
 
 export type SessionRoadmap = {

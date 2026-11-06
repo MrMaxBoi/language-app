@@ -90,6 +90,13 @@ const QuestionSchema = new mongoose.Schema({
     default: "recognition",
   },
 
+  // Optional: the text a production question's quiz screen speaks aloud (the
+  // sound the learner must identify). Present only on audio questions; omit it
+  // elsewhere so non-audio questions stay clean. No default on purpose.
+  audioText: {
+    type: String,
+  },
+
   learningObjective: {
     type: String,
     default: "",
