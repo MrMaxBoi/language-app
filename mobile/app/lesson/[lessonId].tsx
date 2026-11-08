@@ -23,6 +23,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { CharacterTraceStep, type TraceGuidance } from '@/components/lesson/character-trace-step';
 import { KANA_GLYPH_SCALE, KanaPageLayout } from '@/components/lesson/kana-page-layout';
 import { KANA_HUB_TILE, KANA_UNLOCK_DARKEN_AT_MS, KanaHub, kanaTileSize, type KanaHubItem } from '@/components/lesson/kana-hub';
+import { MomentStep } from '@/components/lesson/moment-step';
 import { SceneStep } from '@/components/lesson/scene-step';
 import { SynthesisStep } from '@/components/lesson/synthesis-step';
 import { palette, shadow, type } from '@/constants/kokoro-theme';
@@ -1118,6 +1119,13 @@ export default function LessonScreen() {
               step={step}
               speakingId={speakingId}
               onPlayLine={(index, japanese) => playSpeech(`${step.id}-line-${index}`, japanese)}
+            />
+          ) : null}
+          {step.type === 'moment' ? (
+            <MomentStep
+              key={step.id}
+              step={step}
+              onPlayWord={(japanese, auto) => playSpeech(`${step.id}-word`, japanese, { haptic: !auto })}
             />
           ) : null}
           {step.type === 'recap' ? (

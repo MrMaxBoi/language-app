@@ -249,6 +249,19 @@ export type LessonContentStep =
     }
   | {
       id: string;
+      /** One short English story with a single Japanese word woven in, revealed phrase by phrase. */
+      type: 'moment';
+      conceptIds: string[];
+      /** Colour of the Japanese word: terracotta (default) or indigo. */
+      tone?: 'accent' | 'indigo';
+      lines: {
+        phrases: string[];
+        /** The Japanese word, always at the end of its line, with optional trailing punctuation. */
+        word?: { japanese: string; romanization: string; tail?: string };
+      }[];
+    }
+  | {
+      id: string;
       type: 'scene';
       conceptIds: string[];
       setting: string;

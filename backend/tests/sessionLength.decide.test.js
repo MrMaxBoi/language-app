@@ -9,6 +9,7 @@
 import assert from "node:assert/strict";
 import {
   decideSessionLength,
+  allowedExtendCount,
   MIN_SESSION_QUESTIONS,
   MAX_SESSION_QUESTIONS,
 } from "../services/sessionLength.service.js";
@@ -67,6 +68,41 @@ check("an unknown stage falls back to core_practice (4)", () => {
 check("no args at all is safe and in range", () => {
   const { count } = decideSessionLength();
   assert.ok(count >= MIN_SESSION_QUESTIONS && count <= MAX_SESSION_QUESTIONS);
+});
+
+console.log("\nallowedExtendCount (the 6-question cap):");
+
+check("a session started at 5 may add only 1, even when 3 are requested", () => {
+  assert.equal(allowedExtendCount({ currentSize: 5, requested: 3 }), 1);
+});
+
+check("the cap is on ISSUED size, not answered — 5 issued, 0 answered still caps at +1", () => {
+  // Regression guard for the bug: headroom must use currentSize (5), not asked (0).
+  assert.equal(allowedExtendCount({ currentSize: 5, requested: 3 }), 1);
+});
+
+check("a session already at the cap (6) adds nothing", () => {
+  assert.equal(allowedExtendCount({ currentSize: 6, requested: 3 }), 0);
+});
+
+check("a session started at 3 may add up to the per-call max (3), reaching 6", () => {
+  assert.equal(allowedExtendCount({ currentSize: 3, requested: 3 }), 3);
+});
+
+check("a session at 4 may add only 2 (reaching 6), not the 3 requested", () => {
+  assert.equal(allowedExtendCount({ currentSize: 4, requested: 3 }), 2);
+});
+
+check("per-extend ceiling is 3 even when far below the cap", () => {
+  assert.equal(allowedExtendCount({ currentSize: 0, requested: 10 }), 3);
+});
+
+check("a request below 1 is floored to 1", () => {
+  assert.equal(allowedExtendCount({ currentSize: 2, requested: 0 }), 1);
+});
+
+check("never returns a negative even if currentSize somehow exceeds the cap", () => {
+  assert.equal(allowedExtendCount({ currentSize: 9, requested: 3 }), 0);
 });
 
 console.log(`\n${passed} assertions passed.`);

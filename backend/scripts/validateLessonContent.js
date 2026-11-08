@@ -17,6 +17,7 @@ const allowedStepTypes = new Set([
   "guided_choice",
   "synthesis",
   "scene",
+  "moment",
   "recap",
 ]);
 
@@ -123,6 +124,29 @@ for (const content of LESSON_CONTENT) {
         if (!line.speaker || !line.japanese || !line.meaning) {
           errors.push(`${content.lessonId}/${step.id}: scene line is missing speaker, japanese or meaning`);
         }
+      }
+    }
+
+    if (step.type === "moment") {
+      const lines = step.lines || [];
+      const words = lines.filter((line) => line.word);
+      if (!lines.length || lines.some((line) => !line.phrases?.length || line.phrases.some((phrase) => !phrase))) {
+        errors.push(`${content.lessonId}/${step.id}: moment needs lines of non-empty phrases`);
+      }
+      // One Japanese word per moment, so the reveal has a single beat.
+      if (words.length !== 1) {
+        errors.push(`${content.lessonId}/${step.id}: moment needs exactly one Japanese word`);
+      }
+      for (const { word } of words) {
+        if (!word.japanese || !word.romanization) {
+          errors.push(`${content.lessonId}/${step.id}: moment word needs japanese and romanization`);
+        }
+      }
+      if (step.tone && !["accent", "indigo"].includes(step.tone)) {
+        errors.push(`${content.lessonId}/${step.id}: moment tone must be accent or indigo`);
+      }
+      if (!step.conceptIds?.length) {
+        errors.push(`${content.lessonId}/${step.id}: moment must reference at least one concept`);
       }
     }
 

@@ -26,7 +26,47 @@ flow — do NOT expand the adaptive engine.
 
 ---
 
-## Today — set 2026-11-06 by Plan
+## Today — set 2026-11-09 by Plan
+
+**Focus: close the Vowels learning outcome, then build K-row.** Mechanics are
+proven (item A passed). The open question is whether a beginner understands
+あお / うえ without romaji, so the scene gets reworked first and tested once, on
+the version we'd ship.
+
+**Step 1 · Small fixes, now, in parallel.** All three come before K-row because
+K-row reuses each one.
+- [x] **Lesson Design** — Trace card centring fixed (done 2026-11-09, see Done
+      log). Not yet seen on the phone.
+- [x] **Core** — Extend 6-question cap enforced (done 2026-11-09, see Done log).
+      The cap now measures ISSUED size, not answered count.
+- [x] **Question Bank** — Unlinked `mock_101` / `mock_115` from
+      `foundations-hiragana-vowels` and reseeded (done 2026-11-09, see Done log).
+
+**Step 2 · Scene rework + K-row pool, in parallel.**
+- [x] **Lesson Design** — Two-moment scene rework built in the app within the
+      two-session time box (done 2026-11-09, lesson content v9, see Done log).
+      Not yet seen on the phone. Counts as the beta version of Product's
+      end-of-lesson moment card.
+- [x] **Question Bank** — K-row question pool built across the three layers
+      (done 2026-11-09, see Done log). Scene/lesson content still Lesson Design's.
+
+**Step 3 · Outcome check (after the rework).**
+- [ ] **Max** — Quick phone pass first: check the trace centring on あ い う え お
+      and watch both moments (`moment-ue`, `moment-ao`) with sound on and with
+      Reduce Motion on. Fix only what blocks the beginner test.
+- [ ] **Lesson Design** — Update `.kiro/priorities/VOWELS-MOMENT-CHECKS.md` for
+      the new scene (it still refers to the rooftop and the sea-at-dusk image).
+- [ ] **Max** — Run the moment checks with a beginner who can't read kana.
+      Pass bar: 2 of 3 on the first try, no romaji spoken. A pass closes the
+      Vowels milestone.
+
+**Step 4 · K-row lesson content (after step 3).** Build K-row's lesson steps and
+scene on the proven pattern. Hakanai rebrand stays a separate migration, queued
+behind K-row.
+
+---
+
+## Milestone record — intelligent Vowels lesson (set 2026-11-06)
 
 **Milestone: the intelligent Vowels lesson.** Prove the first lesson teaches
 something meaningful, asks better questions, adapts to the learner, and completes
@@ -51,12 +91,15 @@ Order of work:
       threshold in `roadmap.service.js` was intentionally left as-is (separate
       cross-session mastery rule, not session length). **Mobile half is a new
       Blocked item below (Lesson Design).**
-- [ ] **4 · Integration (after 3)** — Physical-phone test: one clean run that
-      ends early, one struggling run that extends and repairs; check completion,
-      result screen, and leaving mid-session.
+- [x] **4a · Mechanics (phone test, item A)** — CLOSED 2026-11-09. Passed
+      across five runs on 2026-11-07 (see Done log).
+- [ ] **4b · Learning outcome (moment checks, item B)** — OPEN. Not yet run.
+      Carried to Today step 3, after the two-moment scene rework, with a
+      beginner who can't read kana.
 
-Deferred until the milestone passes: Hakanai rebrand (own migration), K-row /
-S-row upgrade, roadmap home UI, knowledge graph.
+K-row question pool may start now (Today step 2). K-row lesson content and
+scene wait for 4b. Still deferred: Hakanai rebrand (own migration), S-row
+upgrade, roadmap home UI, knowledge graph.
 
 ---
 
@@ -64,6 +107,30 @@ S-row upgrade, roadmap home UI, knowledge graph.
 
 _Owned by Kokoro · Lesson Design. Expo mobile look and feel. Source: `docs/NEXT_STEPS.md`._
 
+- [ ] **Fix: off-centre character on the Trace card** (usability test
+      2026-11-08). Device bug, allowed under the freeze. Likely the Klee One
+      glyph vs the trace paths (`KANA_GLYPH_SCALE`, `kana-page-layout.tsx`).
+- [ ] **Two-moment rework of the Vowels scene** (from the 2026-11-08 usability
+      test: scene "feels generic"; tester lost on word romaji). Approved by Max
+      2026-11-09, **needs Plan to place it** (new interaction on a frozen lesson).
+      Decisions taken:
+      - Split the one clumped scene into two moments, each one section after
+        its word is taught: **うえ** around step 16 (after お's trace), **あお**
+        at the end, replacing `scene-rooftop`. Same balloon story.
+      - Diglot sentences, phrases fading in ~0.4s apart, pause before the
+        Japanese word: "It drifts **うえ**, high over the rooftop." / "Grandma
+        watches it fade into the evening **あお**."
+      - Japanese word 1.5–2× the English size; うえ terracotta, あお indigo.
+        Sound plays as the word lands; tap replays.
+      - Romaji small and grey under the word, fading in last. No English
+        meaning line (the sentence carries it).
+      - Moment badge: ~22pt golden circle with a half-set sun drawn in code,
+        top right, fades in as the Japanese word lands, before the romaji. No
+        count/pop/sound; screen readers hear "A moment". Swap for the real logo
+        after the rebrand; may grow into the v2 "recorded into your graph" badge.
+      - Reduce motion: everything in one fade, sound still plays.
+      - Plan romaji fading for later rows (full in Vowels, less in K-row on).
+      - Build a replayable preview in chat before touching the app.
 - [ ] Validate the Vowels flow feels deliberate on a physical phone; tune tracing
       tolerance and stroke-guide pacing before expanding tracing past the vowels.
 - [ ] Validate Review of the Day states on device (ready / completed / caught-up /
@@ -101,7 +168,9 @@ _Owned by Kokoro · Core. Backend + app logic. Source: `docs/NEXT_STEPS.md`._
       takes effect in Atlas after `npm run seed:questions:reset`.** Item 3 can
       then repair by `cognitiveType` layer.
 
-- [ ] **For Question Bank (after the Core passthrough lands):** reseed Atlas.
+- [x] **For Question Bank:** DONE 2026-11-07 — `seed:questions:reset` run,
+      Atlas holds exactly 406 with retired IDs gone (see Done log). Original note:
+      reseed Atlas.
       Removal is solved: `npm run seed:questions` is upsert-only and leaves
       retired IDs (001–003, 009–013, and the newly retired vowel 014–018, 021,
       022) live, so use **`npm run seed:questions:reset`** (`--reset` runs
@@ -114,7 +183,8 @@ _Owned by Kokoro · Core. Backend + app logic. Source: `docs/NEXT_STEPS.md`._
 
 ---
 
-- [ ] **For Lesson Design (mobile half of item 3):** wire the "grow the session
+- [x] **For Lesson Design:** DONE 2026-11-07 — practice grows once on the 2nd
+      first-try miss via `/extend` (see Done log). Original note: wire the "grow the session
       when the learner struggles" turn. Core added `POST /api/sessions/:id/extend`
       (body `{ count: 1-3 }`) → `{ questions, added, plannedQuestionCount, max }`;
       it returns repair questions excluding ones already asked and caps the total
@@ -128,6 +198,17 @@ _Owned by Kokoro · Core. Backend + app logic. Source: `docs/NEXT_STEPS.md`._
 ## Product proposals — for Plan to prioritize
 
 _Raised by Kokoro · Product. Not yet scheduled. Plan decides when/where these land._
+
+- [ ] **End-of-lesson "moment" reflection card (beta-sized).** Raised 2026-11-07.
+      After a lesson, show the learner the lesson's scene exchange COMPLETE (e.g.
+      the rooftop うえ / あお moment), let them re-hear it, and let them feel "I
+      just understood a whole real Japanese moment." NO tapping, NO graph, NO
+      badges — it reuses the scene-card component that already exists and works.
+      Gives ~80% of the "full moment" emotional payoff for ~5% of the build, and
+      is indistinguishable from the Hakanai soul. The v2 tap-to-reveal immersion
+      page (see Parked) is a later upgrade TO this card once the graph exists.
+      Note: builder-fatigue, not a design flaw, is why the existing scene card
+      feels stale — the cure is building the NEXT row, not re-feeling the first.
 
 - [ ] **REBRAND: Kokoro → Hakanai.** Brand direction approved by Max (see brief
       below). Needs a real migration pass when a lane picks it up. Concrete scope
@@ -189,15 +270,180 @@ to build against. This is the core-lesson direction, not UI details._
 - **The three-question test** for any candidate: (1) which layer does it test?
   (2) does it need something only Hakanai has? (3) does it move the learner
   toward a real-world moment? Must pass all three or it's filler.
-- **OPEN — for Max:** name the smallest real-world moment a beginner should be
-  ready for (read a train sign / catch one shopkeeper word / say one greeting
-  back). That target is what question types serve.
+- **ANSWERED 2026-11-06:** the first real-world moment is seeing or hearing a
+  tiny word such as あお or うえ in a visual situation and understanding it
+  without romaji (the Vowels acceptance outcome). Later lessons build toward
+  bigger moments such as a sign or a greeting.
+
+---
+
+## Parked — v2 ideas (NOT in the Jan beta)
+
+_Owned by Kokoro · Product. Good ideas deliberately held back so the beta stays
+small enough to ship. The test: "if this is missing, does the beta stop proving
+the soul?" If no, it lives here. Do not pull these into Today without Plan + Max
+re-scoping the beta first._
+
+- **Knowledge graph — the "layered word reveal" experience (v2 centerpiece).**
+  Max's vision, 2026-11-07. When you learn a new word, a small moment/animation
+  marks it as newly *attained* for your graph. A word is not fully revealed at
+  first contact — it *expands in layers* as you keep learning: deeper meaning,
+  associated words, and callbacks to the golden-hour situations the word appeared
+  in across lessons. Clicking a word opens its growing node. This is the emotional
+  payoff of the whole word-network idea — build it WELL, with time, AFTER the beta
+  proves people want the honest-teaching core. The MongoDB `links` collection
+  (already noted in Core backlog) is its foundation. Beta ships without it and
+  still fully expresses Hakanai; the graph makes it better, not valid.
+- **"Full moment" immersion / reflection page (v2 — the graph's front door).**
+  Max's vision, 2026-11-07. A reflective page that shows the learner a COMPLETE
+  real Japanese exchange — richer than their current roadmap level — to feel a
+  whole fleeting moment, not just a drilled symbol. Every word is TAPPABLE: tap
+  reveals its meaning and what *unknown connections it still has left*. The page
+  RECORDS what the learner saw into the knowledge graph, with a top badge
+  notifying "new moment / new word recorded into your graph." This is the same v2
+  knowledge-graph feature above, wearing its UI: it depends entirely on unbuilt
+  infra (the `links` graph, graph-write/schema, the attainment-event/badge system,
+  and above-level content authoring). Do NOT pull into the beta — it would eat it.
+  The beta-sized seed of this feeling is the end-of-lesson moment card proposed
+  below; this full page is the v2 upgrade TO that card once the graph exists.
+- **Atmosphere / art direction (v2, raised 2026-11-07).** Per-chapter evocative
+  backgrounds that make the roadmap an emotional journey (e.g. soft Sakura-pink +
+  petals for the first gentle chapters, more ethereal moods later). A loading
+  screen with a "sun" logo animation and short poetic lines on what *ephemeral*
+  means. KEY CONSTRAINT: translate the *feeling* of inspiration art (fleeting,
+  ethereal) into Hakanai's QUIETER register — golden-hour-and-mist, not
+  battlefield-and-fire. Same feeling, our volume. Right time is after the brand
+  + logo are locked.
+- **Character hub as a knowledge-graph surface (v2).** Max's vision, 2026-11-09.
+  The top character strip (あ filled, the rest dotted placeholders) grows into a
+  graph entry point: showing uncovered/locked connections, what a character still
+  links to, the "new attainment" moment. Depends on the same unbuilt graph infra
+  as the two ideas above. IMPORTANT: the LIVE hub today is NOT this — see the
+  usability note below; the live component is already ambient and fine for the
+  beta. This entry is only the future upgrade, once the graph exists.
+
+---
+
+## Usability test — findings for Lesson Design (raised 2026-11-09)
+
+_Raised by Kokoro · Product from Max's 2026-11-08 session with one friend. ONE
+user, Duolingo-anchored, not the target persona — directional signal, not a
+verdict. Observation → likely meaning → the call it raises. Max to discuss the
+UI execution with Lesson Design; Product flags the brand-level calls._
+
+- **Context flag:** the tester pulled out Duolingo and silently compared, unasked.
+  His reference frame is Duolingo, so several "generic" reactions really mean
+  "didn't feel different enough to escape the comparison." Weight accordingly.
+- **No word-level romaji (e.g. あお = "blue").** He had per-vowel romaji but not
+  on whole words and felt lost. BRAND-LEVEL CALL, not a UI nit: withholding
+  word romaji may be correct ("understand あお without romaji" IS the approved
+  acceptance outcome), OR we removed the crutch without a better handhold
+  (audio/visual). Real question for Max: did we remove the crutch without giving
+  a better one? Decide deliberately — do not reflexively add romaji.
+- **Off-centre character on the Trace card.** Genuine device bug; undercuts the
+  calm/precise feel. Straightforward fix. (Lesson Design.)
+- **Character hub felt "useless" — never looked at it.** RESOLVED as a non-issue:
+  the live hub is the ambient top strip (filled あ + dotted placeholders), not an
+  interrupting screen. Ambient progress that some users ignore is working as
+  intended for a calm, anti-streak-counter app — him ignoring it is NOT a failure.
+  Recommendation: LEAVE AS IS for the beta; do not reinvent or build up. The
+  grander graph-surface version is parked for v2 (see above).
+- **Moments page "feels generic, not impactful."** The one that should carry
+  weight. His prescription — "separate the experiences, give more detail, develop
+  one more" — independently CONFIRMS the end-of-lesson "moment" reflection card
+  proposal: two thin lines (うえ! / あお…) are too compressed to land as a
+  *moment*; one developed moment with room to breathe is the fix. Treat as
+  supporting evidence for that proposal, not a new problem.
+- **"UI should improve" (unspecified).** Too vague to action. Do NOT let it
+  trigger another polish spiral; wait until he names something specific.
 
 ---
 
 ## Done log
 
 _Newest first. Dated one-liners._
+
+- 2026-11-09 — [Plan] Steps 1 and 2 complete across all lanes. Ticked them in
+  Today and added a phone pass before the beginner test, since neither the trace
+  fix nor the moments has been seen on a device. Nothing from steps 1–2 is
+  committed yet.
+
+- 2026-11-09 — [Lesson Design] Today step 2, scene rework, built in the app
+  (session 2 of 2). New `moment` step type (`components/lesson/moment-step.tsx`,
+  type + validator): diglot sentence fading in by phrase, Japanese word last in
+  its line, large Klee One, terracotta / new `palette.indigo`, sound as it
+  lands, gold half-sun badge top right, small grey romaji last, reduce-motion =
+  one fade. Lesson content v9: `moment-ue` after `trace-o`, `moment-ao` replaces
+  `scene-rooftop`. tsc clean, no new lint errors, content validator passes,
+  backend serves v9. Not yet seen on the phone.
+- 2026-11-09 — [Lesson Design] Today step 1 done: Trace card centring. The
+  stroke paths sit off-centre in their 1024 box (う −46, い −31, え −29 high);
+  the view window now centres each kana's strokes, with touch and guide dot
+  using the same origin (`character-trace-step.tsx`). Not yet seen on the phone.
+
+- 2026-11-09 — [Question Bank] Built the K-row pool to the Vowels standard
+  (Today step 2). Retired the 15 auto-generated character/sound/pair drills,
+  unlinked `mock_116` (kept on `lesson-hiragana-recognition`), added 15 new
+  layer-tagged questions via a new `createKRowQuestion` factory: 5 recognition
+  (105 medium look-alike, romaji this layer only), 5 production (audioText, ear,
+  110 hard ear-only), 5 connection (golden-hour station: えき/あか/こえ/かお + an
+  あお Vowels callback, no romaji). Spread rec 4e/1m · prod 2e/2m/1h · conn
+  1e/3m/1h. `validate:questions` 406/39, one `seed:questions:reset`. Atlas
+  verified: k-row=15, old drills gone, total still 406.
+  **`lesson-hiragana-recognition` = 50 questions**, unchanged by this change:
+  the 15 new K-row questions dual-link to it (same pattern as the old drills),
+  so removing 15 drills + unlinking mock_116 + adding 15 re-linking questions
+  nets to the same 50.
+
+- 2026-11-09 — [Core] Fixed the extend 6-question cap. `extendSession` was
+  measuring headroom against answered count (`askedCount`), so a session that
+  started at 5 but had few answers could extend to 8. Now it caps on ISSUED
+  size (`plannedQuestionCount` → `startingQuestionCount` → askedCount fallback).
+  Extracted the rule into a pure `allowedExtendCount` helper in
+  `services/sessionLength.service.js`; controller uses it. Live-verified: a
+  5-start session asked to extend by 3 now adds only 1 (→6); a session at 6 adds
+  0. 8 new cap assertions in `tests/sessionLength.decide.test.js` (17 total,
+  pass).
+
+- 2026-11-09 — [Question Bank] Unlinked `mock_101` / `mock_115` (old-style,
+  untagged recognition) from `foundations-hiragana-vowels`; both keep
+  `lesson-hiragana-recognition`. `validate:questions` 406/39, then
+  `seed:questions:reset`. Atlas verified: `foundations-hiragana-vowels` now maps
+  to exactly the 15 designed Vowels questions, so the retired-style pair can't
+  surface in the lesson or the moment checks. (Today step 1.)
+
+- 2026-11-09 — [Plan] Split the Vowels milestone (approved by Max). Mechanics
+  (4a) closed; learning outcome (4b) stays open until the moment checks run on
+  the reworked scene. Placed the trace fix, extend-cap fix and mock_101/115
+  unlink before K-row; two-moment scene rework time-boxed to two sessions,
+  alongside the K-row question pool. The rework counts as the beta version of
+  Product's moment card.
+
+- 2026-11-09 — [Product] Logged the 2026-11-08 usability test (one friend) as an
+  interpreted findings note for Lesson Design: romaji question (brand-level call),
+  off-centre trace bug, hub "useless" (resolved — ambient, leave as is), moments
+  page "generic" (confirms the moment-card proposal), vague "UI should improve"
+  (not actioned). Character hub as a graph surface parked as a v2 idea.
+
+- 2026-11-07 — [Lesson Design] Phone test, item A (fresh `guest`, 5 runs):
+  clean run 3→3 ✅; 1 miss → 3 + 1 retry, no growth ✅; 2 misses → planned 5
+  (+2 before retries) ✅ twice; audio plays, result screen opens, returns to
+  Foundations ✅; result score counts first tries only, as designed ✅; leaving
+  mid-session then reopening starts a fresh session without errors ✅ (resume
+  is the existing UX backlog item). **Item A passed.** Backlog: `mock_101`/`mock_115` (old-style, untagged) still linked to
+  `foundations-hiragana-vowels` → Question Bank; extend can pass 6 when start
+  is 5 → Core. Item B (moment checks) not run yet.
+
+- 2026-11-07 — [Lesson Design] Reset `guest` for the phone test (Max's request):
+  all `guest` records in 8 collections (sessions, attempts, questionexposures,
+  reviewtasks, skills, knowledgecoverages, memories, skillstates) re-labelled
+  `userId: guest-archive-2026-11-07`, nothing deleted. Roadmap now shows guest
+  as new (2 unlocked, 32 locked). Undo: set the userId back. **Core: note this.**
+
+- 2026-11-07 — [Plan] Milestone items 1–3 done and committed (`435eb50`), Atlas
+  reseeded. Today set to item 4, the phone test (mechanics run + moment checks).
+  Housekeeping with Max's OK: ticked the two resolved Blocked items and closed
+  Product's open "first real-world moment" question.
 
 - 2026-11-07 — [Lesson Design] Mobile half of item 3: practice grows once on the
   2nd first-try miss (`/extend` count 2, silent, inserted before pending "One

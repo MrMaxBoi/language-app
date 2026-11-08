@@ -1,6 +1,6 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import * as Haptics from 'expo-haptics';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { AccessibilityInfo, Animated, Pressable, StyleSheet, Text, View } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { useReducedMotion } from 'react-native-reanimated';
@@ -8,8 +8,22 @@ import Svg, { Circle, Path, Polyline, Text as SvgText } from 'react-native-svg';
 
 import { KanaPageLayout } from '@/components/lesson/kana-page-layout';
 import { palette, type } from '@/constants/kokoro-theme';
-import { KANA_TRACING, type TracePoint } from '@/data/kana-tracing';
+import { KANA_TRACING, type KanaTraceDefinition, type TracePoint } from '@/data/kana-tracing';
 import type { LessonContentStep } from '@/types/learning';
+
+/** Top-left of a view window the size of the source box, centred on the kana's strokes. */
+function centredViewOrigin(definition: KanaTraceDefinition | undefined): TracePoint {
+  if (!definition) return [0, 0];
+  const points = definition.strokes.flatMap((stroke) => stroke.points);
+  if (!points.length) return [0, 0];
+  const xs = points.map(([x]) => x);
+  const ys = points.map(([, y]) => y);
+  const half = definition.viewBoxSize / 2;
+  return [
+    Math.round((Math.min(...xs) + Math.max(...xs)) / 2 - half),
+    Math.round((Math.min(...ys) + Math.max(...ys)) / 2 - half),
+  ];
+}
 
 type CharacterTraceStepData = Extract<LessonContentStep, { type: 'character_trace' }>;
 
@@ -159,6 +173,9 @@ export function CharacterTraceStep({
   const currentStroke = definition?.strokes[Math.min(completedCount, definition.strokes.length - 1)];
   const currentStrokePoints = currentStroke?.points || [];
   const showGuides = guidance === 'full' || missedStroke === completedCount;
+  // The source paths aren't centred in their box (う sits ~46 units left of centre), so shift the
+  // view window to centre each kana's strokes. Touch input and the guide dot use the same origin.
+  const viewOrigin = useMemo(() => centredViewOrigin(definition), [definition]);
 
   useEffect(() => {
     Animated.timing(hintOpacity, {
@@ -208,7 +225,7 @@ export function CharacterTraceStep({
 
   const toSourcePoint = (x: number, y: number): TracePoint => {
     const scale = definition.viewBoxSize / canvasSize;
-    return [x * scale, y * scale];
+    return [x * scale + viewOrigin[0], y * scale + viewOrigin[1]];
   };
 
   const startAttempt = (x: number, y: number) => {
@@ -339,7 +356,10 @@ export function CharacterTraceStep({
             onLayout={() => { if (canvasSize !== side) setCanvasSize(side); }}
             style={[styles.canvasWrap, { width: side, height: side }]}>
             <Animated.View style={[StyleSheet.absoluteFill, { transform: [{ scale: settleScale }] }]}>
-              <Svg width="100%" height="100%" viewBox={`0 0 ${definition.viewBoxSize} ${definition.viewBoxSize}`}>
+              <Svg
+                width="100%"
+                height="100%"
+                viewBox={`${viewOrigin[0]} ${viewOrigin[1]} ${definition.viewBoxSize} ${definition.viewBoxSize}`}>
                 {definition.strokes.map((stroke, index) => (
                   <Path
                     key={`guide-${index}`}
@@ -386,8 +406,8 @@ export function CharacterTraceStep({
                 style={[
                   styles.guideDot,
                   {
-                    left: (guidePoint[0] * guideScale) - 11,
-                    top: (guidePoint[1] * guideScale) - 11,
+                    left: ((guidePoint[0] - viewOrigin[0]) * guideScale) - 11,
+                    top: ((guidePoint[1] - viewOrigin[1]) * guideScale) - 11,
                   },
                 ]}
               />

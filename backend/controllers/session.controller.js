@@ -4,7 +4,7 @@ import Question from "../models/question.model.js";
 import { analyzeSession } from "../services/analysis.service.js";
 import { generateLearningFeedback } from "../services/ai.service.js";
 import { getSessionQuestions, getLearnerStageSignals } from "../services/questionSelection.service.js";
-import { decideSessionLength, MAX_SESSION_QUESTIONS } from "../services/sessionLength.service.js";
+import { decideSessionLength, allowedExtendCount, MAX_SESSION_QUESTIONS } from "../services/sessionLength.service.js";
 import { updateMemoryAfterAttempt } from "../services/memory.service.js";
 import { generateSessionAnalytics } from "../services/analytics.service.js";
 import Attempt from "../models/attempt.model.js";
@@ -546,16 +546,36 @@ export const extendSession = async (req, res) => {
     const alreadyAsked = await Attempt.find({ sessionId: id }).select({ questionId: 1 }).lean();
     const askedIds = new Set(alreadyAsked.map((a) => String(a.questionId)));
 
+    // The cap is on how many questions the session has been ISSUED, not how many
+    // have been answered yet. A session that started at 5 and whose learner has
+    // only answered 2 still has 5 live questions — adding 3 would make 8, past
+    // the cap. currentSize = questions already handed out = the starting size
+    // plus any prior extends. plannedQuestionCount tracks exactly that (seeded at
+    // /start, bumped on each extend); fall back to startingQuestionCount, then to
+    // askedCount only if neither was recorded (legacy sessions).
+    const currentSize =
+      session.roadmap?.plannedQuestionCount ??
+      session.roadmap?.startingQuestionCount ??
+      askedCount;
+
     // How many more we are allowed to add: 1-3 requested, but never past the max
-    // session size relative to what has already been asked.
-    const headroom = Math.max(0, MAX_SESSION_QUESTIONS - askedCount);
-    const want = clampExtendCount(Number.isFinite(requested) ? requested : 1);
-    const toAdd = Math.min(want, headroom);
+    // session size relative to what has already been ISSUED.
+    const toAdd = allowedExtendCount({
+      currentSize,
+      requested: Number.isFinite(requested) ? requested : 1,
+    });
 
     if (toAdd <= 0) {
       return res.status(200).json({
         success: true,
-        data: { questions: [], added: 0, reason: "max_length_reached", askedCount, max: MAX_SESSION_QUESTIONS },
+        data: {
+          questions: [],
+          added: 0,
+          reason: "max_length_reached",
+          askedCount,
+          currentSize,
+          max: MAX_SESSION_QUESTIONS,
+        },
       });
     }
 
@@ -572,9 +592,10 @@ export const extendSession = async (req, res) => {
     });
     const fresh = pool.filter((q) => !askedIds.has(String(q.questionId))).slice(0, toAdd);
 
+    // Grow the issued-size baseline by what we actually added, still capped.
     session.roadmap.plannedQuestionCount = Math.min(
       MAX_SESSION_QUESTIONS,
-      (session.roadmap.plannedQuestionCount || askedCount) + fresh.length
+      currentSize + fresh.length
     );
     await session.save();
 
@@ -584,6 +605,7 @@ export const extendSession = async (req, res) => {
         questions: fresh,
         added: fresh.length,
         askedCount,
+        currentSize,
         plannedQuestionCount: session.roadmap.plannedQuestionCount,
         max: MAX_SESSION_QUESTIONS,
       },
@@ -593,8 +615,6 @@ export const extendSession = async (req, res) => {
     res.status(500).json({ success: false, message: "Server Error" });
   }
 };
-
-const clampExtendCount = (n) => Math.max(1, Math.min(3, Math.round(n)));
 
 export const getQuestionAnswer = async (req, res) => {
   const { questionId } = req.params;

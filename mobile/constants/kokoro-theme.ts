@@ -9,6 +9,8 @@ export const palette = {
   accent: '#B74635',
   accentSoft: '#F3DED6',
   gold: '#C58B37',
+  /** The evening blue the golden-hour sun melts into. Used for あお's moment. */
+  indigo: '#3B4A7A',
   goldSoft: '#F5E8C8',
   success: '#4E755B',
   successSoft: '#DFEADF',

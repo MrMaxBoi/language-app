@@ -31,6 +31,26 @@ const BASE_SIZE_BY_STAGE = {
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
 /**
+ * How many questions an extend request may actually add, enforcing the hard cap
+ * on total issued session size. The cap is measured against how many questions
+ * the session has already been ISSUED (its current size), NOT how many have been
+ * answered — a session that started at 5 still has 5 live questions even if the
+ * learner has answered none, so at most one more may be added to reach 6.
+ *
+ * @param {object} args
+ * @param {number} args.currentSize   Questions already issued (start + prior extends).
+ * @param {number} args.requested     How many the caller asked for.
+ * @param {number} [args.maxPerExtend]  Per-call ceiling (default 3).
+ * @returns {number} questions allowed to add (0 when already at the cap).
+ */
+export const allowedExtendCount = ({ currentSize, requested, maxPerExtend = 3 }) => {
+  const size = Number.isFinite(currentSize) ? Math.max(0, currentSize) : 0;
+  const want = clamp(Math.round(Number(requested) || 1), 1, maxPerExtend);
+  const headroom = Math.max(0, MAX_SESSION_QUESTIONS - size);
+  return Math.min(want, headroom);
+};
+
+/**
  * Decide how many questions a session should start with.
  *
  * @param {object} signals

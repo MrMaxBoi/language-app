@@ -58,7 +58,7 @@ const synthesis = ({
 
 export const HIRAGANA_VOWELS_CONTENT = {
   lessonId: "foundations-hiragana-vowels",
-  version: 8,
+  version: 9,
   eyebrow: "HIRAGANA BEGINNINGS",
   title: "Hiragana Vowels",
   description: "Meet the five vowel sounds that appear throughout Japanese.",
@@ -211,6 +211,21 @@ export const HIRAGANA_VOWELS_CONTENT = {
       romanization: "o",
       tracingKey: "hiragana-o",
     }),
+    // Moment 1, one section after うえ was taught, so the learner has to recall it. The sentence
+    // carries the meaning (diglot weave); the Japanese word always ends its line.
+    {
+      id: "moment-ue",
+      type: "moment",
+      conceptIds: ["kana.hiragana.u", "kana.hiragana.e"],
+      tone: "accent",
+      lines: [
+        { phrases: ["Golden hour.", "The wind tugs Hana's balloon", "from her hand."] },
+        {
+          phrases: ["It drifts higher and higher.", "Hana points"],
+          word: { japanese: "うえ", romanization: "ue", tail: "!" },
+        },
+      ],
+    },
     soundCheck({
       id: "check-a-o",
       answer: "お",
@@ -229,16 +244,18 @@ export const HIRAGANA_VOWELS_CONTENT = {
         { character: "お", romanization: "o" },
       ],
     }),
-    // The acceptance moment: catch one word someone says while pointing. The situation, not the
-    // gloss, carries the meaning, so the connection questions can test うえ and あお without it.
+    // Moment 2 closes the same balloon story and the lesson.
     {
-      id: "scene-rooftop",
-      type: "scene",
-      conceptIds: ["kana.hiragana.u", "kana.hiragana.e", "kana.hiragana.a", "kana.hiragana.o"],
-      setting: "Golden hour on the rooftop. Hana's red balloon slips from her hand.",
+      id: "moment-ao",
+      type: "moment",
+      conceptIds: ["kana.hiragana.a", "kana.hiragana.o"],
+      tone: "indigo",
       lines: [
-        { speaker: "Hana", japanese: "うえ！", meaning: "Up!" },
-        { speaker: "Grandma", japanese: "あお…", meaning: "Into the blue…" },
+        { phrases: ["The balloon grows small."] },
+        {
+          phrases: ["Grandma watches it fade", "into the evening"],
+          word: { japanese: "あお", romanization: "ao", tail: "." },
+        },
       ],
     },
     {
