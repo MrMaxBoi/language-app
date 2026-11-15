@@ -50,19 +50,38 @@ K-row reuses each one.
 - [x] **Question Bank** — K-row question pool built across the three layers
       (done 2026-11-09, see Done log). Scene/lesson content still Lesson Design's.
 
-**Step 3 · Outcome check (after the rework).**
-- [ ] **Max** — Quick phone pass first: check the trace centring on あ い う え お
-      and watch both moments (`moment-ue`, `moment-ao`) with sound on and with
-      Reduce Motion on. Fix only what blocks the beginner test.
-- [ ] **Lesson Design** — Update `.kiro/priorities/VOWELS-MOMENT-CHECKS.md` for
-      the new scene (it still refers to the rooftop and the sea-at-dusk image).
-- [ ] **Max** — Run the moment checks with a beginner who can't read kana.
-      Pass bar: 2 of 3 on the first try, no romaji spoken. A pass closes the
-      Vowels milestone.
+**Updated 2026-11-16 by Plan.** The 2026-11-12 beginner (no Japanese) got every
+Vowels question right after the lesson, so the question pool is validated. The
+moments are the weak part ("weird", wants to take part). Max's call: the
+golden-hour moment is a core feature that repeats across the whole roadmap, so
+getting its pattern right comes first.
 
-**Step 4 · K-row lesson content (after step 3).** Build K-row's lesson steps and
-scene on the proven pattern. Hakanai rebrand stays a separate migration, queued
-behind K-row.
+**Step 3 · Golden-hour moment pattern (priority).**
+- [ ] **Lesson Design** — Build the interactive moments (UX backlog item
+      "Interactive moments: dialogue rewrite + pick-the-word"). Preview in chat
+      first. Build it as the REUSABLE moment pattern (content rule, gap +
+      kana chips, tag, badge) that K-row and later rows plug new content into,
+      not as Vowels-only polish. Include the recap replay. The K-row
+      "Remember?" callback card moves to Step 4. Time box: one session for the
+      Vowels instance.
+- [ ] **Question Bank (parallel)** — Rewrite the あい question to name the
+      meaning outright; check the other 14 Vowels questions for the same issue.
+- [ ] **Max** — Phone pass: trace centring on あ い う え お, the new moments
+      with sound on, then with Reduce Motion on. Fix only blockers.
+
+**Step 4 · Outcome check on the new moments.**
+- [ ] **Lesson Design** — Rewrite `.kiro/priorities/VOWELS-MOMENT-CHECKS.md`.
+      The pick-the-word moment rehearses check 1's format, so every check must
+      use a situation the lesson never shows (cat on a shelf for うえ, blue
+      shirt for あお).
+- [ ] **Max** — Run the checks with a NEW beginner who can't read kana. Pass
+      bar: 2 of 3 on the first try, no romaji spoken. A pass closes the Vowels
+      milestone and proves the moment pattern.
+
+**Step 5 · K-row lesson content.** Lesson steps, the えき station moment on the
+proven pattern, and the "Remember?" callback card. Core decides how vowel length
+is made exact in audio (pre-recorded/generated clips) before K-row words ship.
+Hakanai rebrand stays queued behind K-row.
 
 ---
 
@@ -107,30 +126,40 @@ upgrade, roadmap home UI, knowledge graph.
 
 _Owned by Kokoro · Lesson Design. Expo mobile look and feel. Source: `docs/NEXT_STEPS.md`._
 
-- [ ] **Fix: off-centre character on the Trace card** (usability test
-      2026-11-08). Device bug, allowed under the freeze. Likely the Klee One
-      glyph vs the trace paths (`KANA_GLYPH_SCALE`, `kana-page-layout.tsx`).
-- [ ] **Two-moment rework of the Vowels scene** (from the 2026-11-08 usability
-      test: scene "feels generic"; tester lost on word romaji). Approved by Max
-      2026-11-09, **needs Plan to place it** (new interaction on a frozen lesson).
-      Decisions taken:
-      - Split the one clumped scene into two moments, each one section after
-        its word is taught: **うえ** around step 16 (after お's trace), **あお**
-        at the end, replacing `scene-rooftop`. Same balloon story.
-      - Diglot sentences, phrases fading in ~0.4s apart, pause before the
-        Japanese word: "It drifts **うえ**, high over the rooftop." / "Grandma
-        watches it fade into the evening **あお**."
-      - Japanese word 1.5–2× the English size; うえ terracotta, あお indigo.
-        Sound plays as the word lands; tap replays.
-      - Romaji small and grey under the word, fading in last. No English
-        meaning line (the sentence carries it).
-      - Moment badge: ~22pt golden circle with a half-set sun drawn in code,
-        top right, fades in as the Japanese word lands, before the romaji. No
-        count/pop/sound; screen readers hear "A moment". Swap for the real logo
-        after the rebrand; may grow into the v2 "recorded into your graph" badge.
-      - Reduce motion: everything in one fade, sound still plays.
-      - Plan romaji fading for later rows (full in Vowels, less in K-row on).
-      - Build a replayable preview in chat before touching the app.
+- [ ] **Interactive moments: dialogue rewrite + pick-the-word** (from the
+      beginner usability test 2026-11-12: moments feel "weird", an English
+      sentence with one Japanese word dropped in; tester wants to take part).
+      Approved by Max 2026-11-16, **needs Plan to place it** (new interaction
+      on a frozen lesson, before the Step 3 beginner test). One-session time
+      box, then no more Vowels polish. Decisions taken:
+      - **Content rule (all future moments):** the Japanese word is something a
+        character says aloud, in quotes, as a whole utterance. Translation
+        test: swap in the English meaning; the line must read naturally and the
+        situation must point to exactly one meaning. The English sets up the
+        need but never says the word. Current v9 lines fail this ("points
+        うえ" is redundant; "evening あお" contradicts golden hour).
+      - **Rewrite:** うえ = "The wind snatches Hana's balloon. She spins around,
+        searching. Grandma points at the sky: 「うえ！」" / あお = "At the stall,
+        Hana reaches for a new balloon. 'Which colour?' asks Grandma. Hana taps
+        the blue one: 「あお！」"
+      - **Interaction:** quote shows a gap 「＿＿！」 with 2 kana-only chips
+        (no romaji, no sound before the pick). Right pick: word fills the gap
+        in its colour, sound plays, one-line tag **ue · up** under it, then the
+        badge. Wrong pick: that chip shows its own meaning (**あい · love**)
+        and dims; pick again. No red X, no penalty.
+      - **Distractor rule:** only already-taught words, and the distractor's
+        English must make the line obviously wrong. うえ moment: うえ vs あい
+        (not あお, "Blue!" also fits the sky). あお moment: あお vs うえ.
+      - **Not scored:** the pick is not sent to the server / adaptive engine.
+      - **Tag** replaces the separate romaji line (romaji + meaning in one).
+      - UI stays as built (sizes, colours, badge, reduce motion, placement).
+      - **Reinforcement, build now:** recap card replays both quotes (tap to
+        hear); next lesson (K-row) opens with a "Remember?" callback card that
+        reuses the moment with the gap. **Later:** drop the tag for well-known
+        words in later rows; v2 graph badge.
+      - Build a chat preview before touching the app.
+      - Update `VOWELS-MOMENT-CHECKS.md` after: the moment now rehearses the
+        check-1 format, so checks must keep using new situations.
 - [ ] Validate the Vowels flow feels deliberate on a physical phone; tune tracing
       tolerance and stroke-guide pacing before expanding tracing past the vowels.
 - [ ] Validate Review of the Day states on device (ready / completed / caught-up /
@@ -306,6 +335,23 @@ re-scoping the beta first._
   and above-level content authoring). Do NOT pull into the beta — it would eat it.
   The beta-sized seed of this feeling is the end-of-lesson moment card proposed
   below; this full page is the v2 upgrade TO that card once the graph exists.
+- **Golden-hour archive — moments that evolve on re-encounter (v2).** Max's
+  vision, 2026-11-16. The moment page is not a one-time scene; every golden-hour
+  moment is RECORDED into an archive (the word-network / "neural network vocab").
+  Re-encounter escalates difficulty: the FIRST time a moment appears it challenges
+  only one or two words; each later encounter of the same moment challenges
+  DIFFERENT words from the same sentence, getting more complex, until the words in
+  it are archived as learned. This is the same v2 knowledge-graph centerpiece in
+  yet another form — it requires: the `links` graph, per-learner moment STATE
+  (seen / times-seen / which words mastered in this moment), a repetition /
+  escalation scheduler to bring the same moment back harder, and the archive UI.
+  All unbuilt. Do NOT pull into the beta. The beta-sized seed is making the moment
+  INTERACTIVE — the learner picks the word the character speaks (e.g. "Grandma
+  points at the sky — what does she shout?" → 「うえ」). That active "I was there
+  and I answered" challenge is shippable with no graph, and this archive is its v2
+  upgrade. NOTE (2026-11-16): Max is handling the beta interactive-moment build in
+  the Lesson Design chat; keep this entry as the destination it grows toward, not
+  beta scope.
 - **Atmosphere / art direction (v2, raised 2026-11-07).** Per-chapter evocative
   backgrounds that make the roadmap an emotional journey (e.g. soft Sakura-pink +
   petals for the first gentle chapters, more ethereal moods later). A loading
@@ -321,6 +367,8 @@ re-scoping the beta first._
   as the two ideas above. IMPORTANT: the LIVE hub today is NOT this — see the
   usability note below; the live component is already ambient and fine for the
   beta. This entry is only the future upgrade, once the graph exists.
+  Test 2 (2026-11-12) supports the same direction: the hub should "act like a
+  hub of all things, not a placement" and use attention cues on attainment.
 
 ---
 
@@ -357,11 +405,60 @@ UI execution with Lesson Design; Product flags the brand-level calls._
 - **"UI should improve" (unspecified).** Too vague to action. Do NOT let it
   trigger another polish spiral; wait until he names something specific.
 
+### Test 2 — 2026-11-12 (added by Product)
+
+_Second friend: SWE student, no Japanese (recognises some kana shapes, not
+meanings). Tested from a technical/UX standpoint, NOT as a learner, so this is
+NOT the Step 3 moment check — that still needs a beginner engaging as a learner._
+
+- **UX flow: "alright, quite nice."** No flow problems found. Second tester
+  with no structural complaints, so the flow can be treated as settled for the beta.
+- **Immersion / moments: 8/10, "structurally good."** First positive signal on
+  the moments (test 1 called them generic). Not comparable as a straight
+  before/after, because the testers differ and test 2 wasn't engaging as a
+  learner, but it's encouraging for the two-moment rework.
+- **Character hub: also didn't look at it** ("main content is down there").
+  That's now **2 of 2 testers.** His read: the hub isn't bad, it lacks *cues*. He
+  suggested an animation when you get something right (or wrong) that's more than
+  the ink filling in, and having it "act like a hub of all things, not a placement".
+  Product call: the beta verdict doesn't change (leave as is, it doesn't block the
+  soul). Two separate ideas are mixed together here:
+  1. *Right/wrong feedback cue on the strip.* A small micro-interaction, not a
+     reinvention. OPTIONAL Lesson Design candidate, AFTER K-row only. Not Today.
+  2. *"Hub of all things."* This is the v2 graph-surface vision above. Folded
+     into that parked entry.
+- **Gap:** he gave no comment on the romaji question. That decision is still open
+  for Max.
+
 ---
 
 ## Done log
 
 _Newest first. Dated one-liners._
+
+- 2026-11-16 — [Plan] Placed the interactive-moments item as Today Step 3,
+  framed as the reusable golden-hour moment pattern (Max: core feature across
+  the roadmap). Beginner got all Vowels questions right, so the pool is
+  validated. Outcome check moves to Step 4 with a new beginner; K-row is Step 5.
+  K-row callback card deferred to K-row. あい fix sent to Question Bank.
+
+- 2026-11-16 — [Lesson Design] Beginner usability test (2026-11-12, no
+  Japanese at all) sorted. Lesson UX 8.5/10, felt productive, not bored.
+  Moment checks: not reported yet. Logged the interactive-moments item in the
+  UX backlog (needs Plan). Handoffs, not yet sent: **Question Bank** — the あい
+  question is too indirect ("grandma does something related to love"); name
+  the meaning outright, check all 15 Vowels questions. **Core + mobile** —
+  sound inconsistent; long/short vowels must be exact (pre-recorded/generated
+  clips, decide before vocab lessons). **Core + QB** — deliberate
+  reinforcement: same word asked from the other direction later in a session.
+  **Product** — roadmap reads generic/Duolingo-like (low, v2 graph map);
+  preview: keep showing the kana, keep moments as the surprise (tester prefers
+  structure).
+
+- 2026-11-12 — [Product] Usability test 2 logged (SWE student, technical lens):
+  flow fine, immersion 8/10, hub ignored again (2/2) → beta verdict unchanged;
+  optional right/wrong cue noted for after K-row; "hub of all things" folded into
+  the v2 graph-hub entry. Not the Step 3 moment check. Today unchanged.
 
 - 2026-11-09 — [Plan] Steps 1 and 2 complete across all lanes. Ticked them in
   Today and added a phone pass before the beginner test, since neither the trace
